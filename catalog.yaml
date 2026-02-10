@@ -1,0 +1,1159 @@
+entries:
+# ── SOJA (13 indicators) ─────────────────────────────────────────────────────
+- commodity: soja
+  slug: soja-indicador-cepea-esalq-porto-paranagua
+  name: Indicador da Soja ESALQ/B3 - Paranaguá
+  page_type: indicator
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Reference soybean price at Paranaguá port. Settlement price
+    for B3 soybean futures contracts.
+- commodity: soja
+  slug: indicador-cepea-esalq-soja-parana
+  name: Indicador da Soja Cepea/Esalq - Paraná
+  page_type: indicator
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Soybean reference price for Paraná state, calculated by
+    Cepea/Esalq based on spot market transactions.
+- commodity: soja
+  slug: soja-bolsa-de-chicago-cme-group
+  name: Soja - Bolsa de Chicago
+  page_type: cme_futures
+  unit: US$ / Bushel
+  source: CME Group / CBOT
+  frequency: daily
+  description: >-
+    CBOT soybean futures settlement prices in US dollars per
+    bushel. Multiple contract months available.
+- commodity: soja
+  slug: premio-soja-paranagua-pr
+  name: Prêmio Soja Paranaguá/PR
+  page_type: physical_market
+  unit: cents/bu
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Soybean export premium at Paranaguá port over CBOT reference,
+    in US cents per bushel.
+- commodity: soja
+  slug: soja-b3-pregao-regular
+  name: Soja CME - B3 (Pregão Regular)
+  page_type: b3_futures
+  unit: US$/sc 60 kg
+  source: B3 (Brasil Bolsa Balcão)
+  frequency: daily
+  description: >-
+    B3 soybean futures (CME-linked contract) settlement prices
+    in US dollars per 60 kg sack.
+- commodity: soja
+  slug: soja-mercado-fisico-sindicatos-e-cooperativas
+  name: Soja - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Soybean spot prices collected from cooperatives and trade
+    unions across multiple Brazilian states.
+- commodity: soja
+  slug: farelo-de-soja-chicago-cbot
+  name: Farelo de Soja - Bolsa de Chicago
+  page_type: cme_futures
+  unit: US$/short ton
+  source: CME Group / CBOT
+  frequency: daily
+  description: >-
+    CBOT soybean meal futures settlement prices in US dollars
+    per short ton.
+- commodity: soja
+  slug: soja-premio-farelo-de-soja-paranagua-pr
+  name: 'Soja: Prêmio farelo de soja - Paranaguá/PR'
+  page_type: physical_market
+  unit: US$/short ton
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Soybean meal export premium at Paranaguá port over CBOT
+    reference price.
+- commodity: soja
+  slug: farelo-de-soja
+  name: Farelo de Soja
+  page_type: physical_market
+  unit: R$/ton
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Domestic soybean meal spot prices in reais per ton from
+    cooperatives and industry sources.
+- commodity: soja
+  slug: oleo-de-soja-chicago-cbot
+  name: Óleo de Soja - Bolsa de Chicago
+  page_type: cme_futures
+  unit: US cents/lb
+  source: CME Group / CBOT
+  frequency: daily
+  description: >-
+    CBOT soybean oil futures settlement prices in US cents
+    per pound.
+- commodity: soja
+  slug: soja-premio-oleo-de-soja-paranagua-pr
+  name: 'Soja: Prêmio óleo de soja - Paranaguá/PR'
+  page_type: physical_market
+  unit: US$/short ton
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Soybean oil export premium at Paranaguá port over CBOT
+    reference price.
+- commodity: soja
+  slug: soja-mercado-fisico-ms
+  name: Soja - Mercado Físico - MS
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Soybean spot prices in Mato Grosso do Sul state from
+    local cooperatives and trade unions.
+- commodity: soja
+  slug: soja-disponivel-imea
+  name: Soja Disponível - IMEA
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: IMEA (Instituto Mato-Grossense de Economia Agropecuária)
+  frequency: daily
+  description: >-
+    Soybean spot prices in Mato Grosso state, surveyed by IMEA
+    across key producing regions.
+# ── MILHO (6 indicators) ─────────────────────────────────────────────────────
+- commodity: milho
+  slug: indicador-cepea-esalq-milho
+  name: Indicador do Milho Esalq/B3
+  page_type: indicator
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Reference corn price for B3 futures settlement, calculated
+    by Cepea/Esalq from spot market transactions in Campinas/SP.
+- commodity: milho
+  slug: milho-b3-prego-regular
+  name: Milho - B3 (Pregão Regular)
+  page_type: b3_futures
+  unit: R$/sc 60 kg
+  source: B3 (Brasil Bolsa Balcão)
+  frequency: daily
+  description: >-
+    B3 corn futures settlement prices in reais per 60 kg sack.
+    Multiple contract months available.
+- commodity: milho
+  slug: milho-bolsa-de-chicago-cme-group
+  name: Milho - Bolsa de Chicago
+  page_type: cme_futures
+  unit: US$ / Bushel
+  source: CME Group / CBOT
+  frequency: daily
+  description: >-
+    CBOT corn futures settlement prices in US dollars per bushel.
+- commodity: milho
+  slug: milho-mercado-fisico-sindicatos-e-cooperativas
+  name: Milho - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Corn spot prices collected from cooperatives and trade unions
+    across multiple Brazilian states.
+- commodity: milho
+  slug: milho-mercado-fisico-ms
+  name: Milho - Mercado Físico - MS
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Corn spot prices in Mato Grosso do Sul state from local
+    cooperatives and trade unions.
+- commodity: milho
+  slug: milho-disponivel-imea
+  name: Milho Disponível - IMEA
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: IMEA (Instituto Mato-Grossense de Economia Agropecuária)
+  frequency: daily
+  description: >-
+    Corn spot prices in Mato Grosso state, surveyed by IMEA
+    across key producing regions.
+# ── CAFÉ (9 indicators) ──────────────────────────────────────────────────────
+- commodity: cafe
+  slug: indicador-cepea-esalq-cafe-arabica
+  name: Indicador Café Arábica - Cepea/Esalq
+  page_type: indicator
+  unit: R$
+- commodity: cafe
+  slug: indicador-cepea-esalq-cafe-conillon
+  name: Indicador Café Robusta - Cepea/Esalq
+  page_type: indicator
+  unit: R$
+- commodity: cafe
+  slug: cafe-bolsa-de-nova-iorque-nybot
+  name: Café - Bolsa de Nova Iorque (NYBOT)
+  page_type: cme_futures
+  unit: US cents/lb
+- commodity: cafe
+  slug: cafe-arabica-4-5-b3-prego-regular
+  name: Café Arábica 4/5 - B3 (Pregão Regular)
+  page_type: b3_futures
+  unit: US$/sc 60 kg
+- commodity: cafe
+  slug: cafe-bolsa-de-londres-liffe
+  name: Café - Bolsa de Londres (Ice Futures Europe)
+  page_type: cme_futures
+  unit: US$/ton
+- commodity: cafe
+  slug: cafe-arabica-mercado-fisico-tipo-6-7
+  name: Café Arábica - Mercado Físico (Tipo 6/7)
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+- commodity: cafe
+  slug: cafe-arabica-mercado-fisico-tipo-6-duro
+  name: Café Arábica - Mercado Físico (Tipo 6 Duro)
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+- commodity: cafe
+  slug: cafe-cereja-descascado-mercado-fisico
+  name: Café Cereja Descascado - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+- commodity: cafe
+  slug: cafe-conillon-disponivel-vitoria-es
+  name: Café Conilon - Disponível (Espírito Santo)
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+# ── BOI GORDO (28 indicators) ────────────────────────────────────────────────
+- commodity: boi-gordo
+  slug: boi-gordo-indicador-esalq-bmf
+  name: Indicador do Boi Gordo Esalq/B3
+  page_type: indicator
+  unit: R$/@
+- commodity: boi-gordo
+  slug: boi-gordo-media-sp-a-prazo
+  name: Boi Gordo - Média SP a prazo
+  page_type: indicator
+  unit: R$/@
+- commodity: boi-gordo
+  slug: boi-gordo-b3-prego-regular
+  name: Boi Gordo - B3 (Pregão Regular)
+  page_type: b3_futures
+  unit: R$/@
+- commodity: boi-gordo
+  slug: indicador-bezerro-esalq-bmf-bovespa-ms
+  name: Bezerro Esalq/BM&F Bovespa - MS
+  page_type: indicator
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: boi-gordo-scot-consultoria
+  name: Mercado Físico - Scot Consultoria
+  page_type: cattle_scot
+  unit: R$/@
+  has_date_nav: false
+- commodity: boi-gordo
+  slug: macho-nelore-boi-magro
+  name: Macho Nelore Reposição - Boi Magro
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: macho-nelore-garrote-18-meses
+  name: Macho Nelore Reposição - Garrote
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: macho-nelore-bezerro-12-meses
+  name: Macho Nelore Reposição - Bezerro
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: macho-nelore-desmama-8-meses
+  name: Macho Nelore Reposição - Desmama
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: macho-mestico-boi-magro
+  name: Macho Mestiço Reposição - Boi Magro
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: macho-mestico-garrote-18-meses
+  name: Macho Mestiço Reposição - Garrote
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: macho-mestico-bezerro-12-meses
+  name: Macho Mestiço Reposição - Bezerro
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: macho-mestico-desmama-8-meses
+  name: Macho Mestiço Reposição - Desmama
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: femea-nelore-vaca-boiadeira
+  name: Fêmea Nelore Reposição - Vaca Boiadeira
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: femea-nelore-novilha-18-meses
+  name: Fêmea Nelore Reposição - Novilha
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: indicador-da-novilha
+  name: Indicador da Novilha
+  page_type: physical_market
+  unit: R$/@
+- commodity: boi-gordo
+  slug: indicador-da-vaca
+  name: Indicador da Vaca
+  page_type: physical_market
+  unit: R$/@
+- commodity: boi-gordo
+  slug: Média-de-Boi-Gordo-Indicador-AgroBrazil
+  name: Média de Boi Gordo - Indicador AgroBrazil
+  page_type: indicator
+  unit: R$/@
+  enabled: false
+- commodity: boi-gordo
+  slug: reposicao-nelore-femea
+  name: Reposição Nelore - Fêmea
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: reposicao-nelore-macho
+  name: Reposição Nelore - Macho
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: indicador-do-boi
+  name: Indicador do Boi
+  page_type: physical_market
+  unit: R$/@
+- commodity: boi-gordo
+  slug: bezerra-nelore-femea-12-meses
+  name: Fêmea Nelore Reposição - Bezerra
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: femea-nelore-desmama-8-meses
+  name: Fêmea Nelore Reposição - Desmama
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: femea-mestica-reposico-vaca-boiadeira-300-kg-10
+  name: Fêmea Mestiça Reposição - Vaca Boiadeira
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: femea-mestica-novilha-18-meses
+  name: Fêmea Mestiça Reposição - Novilha
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: femea-mestica-bezerra-12-meses
+  name: Fêmea Mestiça Reposição - Bezerra
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: femea-mestica-desmama-8-meses
+  name: Fêmea Mestiça Reposição - Desmama
+  page_type: physical_market
+  unit: R$/cab
+- commodity: boi-gordo
+  slug: couro
+  name: Couro à vista
+  page_type: physical_market
+  unit: R$
+- commodity: boi-gordo
+  slug: sebo
+  name: Sebo a prazo
+  page_type: physical_market
+  unit: R$
+- commodity: boi-gordo
+  slug: carcaca-atacado-sp
+  name: Carcaça - Atacado (SP)
+  page_type: physical_market
+  unit: R$/kg
+- commodity: boi-gordo
+  slug: boi-a-vista-imea
+  name: Boi à Vista - IMEA
+  page_type: physical_market
+  unit: R$/@
+# ── ALGODÃO (6 indicators) ───────────────────────────────────────────────────
+- commodity: algodao
+  slug: algodao-indicador-cepea-esalq-a-prazo
+  name: Algodão - Indicador Cepea/Esalq
+  page_type: indicator
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Reference cotton lint price calculated by Cepea/Esalq, used as
+    benchmark for Brazilian cotton market.
+- commodity: algodao
+  slug: algodao-bolsa-de-nova-iorque-nybot
+  name: Algodão - Bolsa de Nova Iorque (NYBOT)
+  page_type: cme_futures
+  unit: US cents/lb
+  source: CME Group / NYBOT
+  frequency: daily
+  description: >-
+    ICE Cotton No. 2 futures settlement prices in US cents per
+    pound. Primary global cotton futures benchmark.
+- commodity: algodao
+  slug: algodo-em-pluma-ao-produtor
+  name: Algodão em pluma
+  page_type: physical_market
+  unit: R$/@
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Cotton lint producer prices across Brazilian states, collected
+    from cooperatives and trade unions.
+- commodity: algodao
+  slug: caroco-de-algodo
+  name: Caroço de algodão
+  page_type: physical_market
+  unit: R$/ton
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Cottonseed spot prices in reais per ton from cooperatives
+    and processing industry sources.
+- commodity: algodao
+  slug: algodao-imea
+  name: Algodão - IMEA
+  page_type: physical_market
+  unit: R$/@
+  source: IMEA (Instituto Mato-Grossense de Economia Agropecuária)
+  frequency: daily
+  description: >-
+    Cotton lint prices in Mato Grosso state, surveyed by IMEA
+    across key producing regions.
+- commodity: algodao
+  slug: indice-cotlook
+  name: Índice Cotlook A
+  page_type: indicator
+  unit: US cents/lb
+  source: Cotlook Ltd
+  frequency: daily
+  description: >-
+    Cotlook A Index — international benchmark for physical cotton
+    prices, representing the cheapest five origins.
+# ── TRIGO (6 indicators) ─────────────────────────────────────────────────────
+- commodity: trigo
+  slug: preco-medio-do-trigo-cepea-esalq
+  name: Preço Médio do Trigo Cepea/Esalq
+  page_type: physical_market
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Average wheat price calculated by Cepea/Esalq from spot market
+    transactions across Paraná state.
+- commodity: trigo
+  slug: trigo-bolsa-de-chicago-cme-group
+  name: Trigo - Bolsa de Chicago
+  page_type: cme_futures
+  unit: US$ / Bushel
+  source: CME Group / CBOT
+  frequency: daily
+  description: >-
+    CBOT wheat futures settlement prices in US dollars per bushel.
+- commodity: trigo
+  slug: trigo-mercado-fisico
+  name: Trigo - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Wheat spot prices collected from cooperatives and mills across
+    multiple Brazilian states.
+- commodity: trigo
+  slug: trigo-atacado-media-pr
+  name: Trigo Atacado - Média PR
+  page_type: indicator
+  unit: R$/Sc de 60 kg
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Wholesale wheat average price in Paraná state, calculated
+    from wholesale transactions.
+- commodity: trigo
+  slug: trigo-mercado-fisico-ms
+  name: Trigo - Mercado Físico - MS
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Wheat spot prices in Mato Grosso do Sul state from local
+    cooperatives and trade unions.
+- commodity: trigo
+  slug: trigo-iea
+  name: Trigo - IEA
+  page_type: physical_market
+  unit: R$
+  source: IEA (Instituto de Economia Agrícola)
+  frequency: daily
+  description: >-
+    Wheat prices from IEA São Paulo state agricultural
+    economics institute.
+# ── ARROZ (7 indicators) ─────────────────────────────────────────────────────
+- commodity: arroz
+  slug: arroz-em-casca-esalq-bbm
+  name: Indicador Arroz em Casca - Esalq/Senar-RS
+  page_type: indicator
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Reference paddy rice price calculated by Cepea/Esalq in
+    partnership with Senar-RS.
+- commodity: arroz
+  slug: arroz-atacado-media-pr
+  name: Arroz Atacado - Média PR
+  page_type: physical_market
+  unit: R$
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Wholesale rice average price in Paraná state from
+    cooperatives and trade sources.
+- commodity: arroz
+  slug: arroz-mercado-fisico
+  name: Arroz - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 50 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Rice spot prices collected from cooperatives across
+    major producing states (RS, SC, MT).
+- commodity: arroz
+  slug: arroz-agulhinha-irrigado-mercado-fisico
+  name: Arroz (Agulhinha Irrigado) - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 50 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Irrigated long-grain (agulhinha) rice spot prices from
+    cooperatives in Rio Grande do Sul and Santa Catarina.
+- commodity: arroz
+  slug: arroz-longo-fino-mercado-fisico
+  name: Arroz (Longo Fino) - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 50 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Long-fine grain rice spot prices from cooperatives across
+    major producing regions.
+- commodity: arroz
+  slug: arroz-beneficiado-tipo-1
+  name: Arroz Beneficiado (Tipo 1)
+  page_type: physical_market
+  unit: R$/Sc de 5 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Milled rice (Type 1 grade) wholesale prices in small retail
+    packing (5 kg sacks).
+- commodity: arroz
+  slug: arroz-beneficiado-sao-paulo
+  name: Arroz Beneficiado - São Paulo
+  page_type: physical_market
+  unit: R$/Sc de 5 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Milled rice wholesale prices in São Paulo state market.
+# ── FEIJÃO (10 indicators) ───────────────────────────────────────────────────
+- commodity: feijao
+  slug: precos-do-feijao-carioca-Peneira-12-e/ou-Notas-9-ou-Superior-cepea-cna
+  name: Feijão Carioca - Peneira 12 e/ou Notas 9+ - CEPEA/CNA
+  page_type: indicator
+  unit: R$
+  enabled: false
+  source: Cepea/CNA
+  frequency: daily
+  description: >-
+    Carioca bean premium grade (sieve 12, grade 9+) price
+    from Cepea/CNA survey.
+- commodity: feijao
+  slug: precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna
+  name: Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA
+  page_type: physical_market
+  unit: R$
+  source: Cepea/CNA
+  frequency: daily
+  description: >-
+    Carioca bean grade 8 to 8.5 spot prices from Cepea/CNA
+    survey across producing regions.
+- commodity: feijao
+  slug: precos-do-feijao-preto-tipo-1-cepea-cna
+  name: Feijão Preto Tipo 1 - CEPEA/CNA
+  page_type: physical_market
+  unit: R$
+  source: Cepea/CNA
+  frequency: daily
+  description: >-
+    Black bean Type 1 spot prices from Cepea/CNA survey
+    across producing regions.
+- commodity: feijao
+  slug: preco-feijo-parana-media
+  name: Feijão Atacado - Média PR
+  page_type: physical_market
+  unit: R$
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Wholesale bean average price in Paraná state from
+    cooperatives and trade sources.
+- commodity: feijao
+  slug: feijao-carioca-nota-7
+  name: Feijão Carioca Nota 7
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Carioca bean grade 7 spot prices from cooperatives
+    across producing states.
+- commodity: feijao
+  slug: feijao-carioca-nota-8
+  name: Feijão Carioca Nota 8
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Carioca bean grade 8 spot prices from cooperatives
+    across producing states.
+- commodity: feijao
+  slug: feijao-carioca-nota-8-5
+  name: Feijão Carioca Nota 8,5
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Carioca bean grade 8.5 spot prices from cooperatives
+    across producing states.
+- commodity: feijao
+  slug: feijao-carioca-nota-9-9-5
+  name: Feijão Carioca Nota 9/9,5
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Carioca bean premium grade 9/9.5 spot prices from
+    cooperatives across producing states.
+- commodity: feijao
+  slug: feijao-caupi-nova-era
+  name: Feijão Caupi Nova Era
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Cowpea (caupi) Nova Era variety spot prices from
+    cooperatives in Northern and Northeastern Brazil.
+- commodity: feijao
+  slug: feijao-preto
+  name: Feijão Preto
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Black bean spot prices from cooperatives across
+    producing states (PR, SC, RS, MG).
+# ── FRANGO (4 indicators) ────────────────────────────────────────────────────
+- commodity: frango
+  slug: precos-do-frango-congelado-cepea-esalq
+  name: Frango Congelado Cepea/Esalq
+  page_type: indicator
+  unit: R$
+- commodity: frango
+  slug: precos-do-frango-resfriado-cepea-esalq
+  name: Frango Resfriado Cepea/Esalq
+  page_type: indicator
+  unit: R$
+- commodity: frango
+  slug: frango-vivo-estados
+  name: Frango Vivo
+  page_type: physical_market
+  unit: R$/kg
+- commodity: frango
+  slug: frango-sp
+  name: Frango (SP)
+  page_type: physical_market
+  unit: R$/kg
+# ── LARANJA (4 indicators) ───────────────────────────────────────────────────
+- commodity: laranja
+  slug: laranja-industria
+  name: Laranja Indústria
+  page_type: indicator
+  unit: R$
+- commodity: laranja
+  slug: laranja-pera-in-natura
+  name: Laranja Pera In Natura
+  page_type: indicator
+  unit: R$
+- commodity: laranja
+  slug: suco-de-laranja-bolsa-de-nova-iorque-nybot
+  name: Suco de Laranja - Bolsa de Nova Iorque (NYBOT)
+  page_type: cme_futures
+  unit: US cents/lb
+- commodity: laranja
+  slug: laranja-ceasas
+  name: Laranja - Ceasas
+  page_type: physical_market
+  unit: R$
+# ── LEITE (1 indicator) ──────────────────────────────────────────────────────
+- commodity: leite
+  slug: leite-precos-ao-produtor-cepea-rs-litro
+  name: Leite - Preços ao Produtor (R$/Litro)
+  page_type: physical_market
+  unit: R$/Litro
+# ── SUÍNOS (3 indicators) ────────────────────────────────────────────────────
+- commodity: suinos
+  slug: indicador-do-suino-vivo-cepea-esalq
+  name: Indicador do Suíno Vivo Cepea/Esalq
+  page_type: physical_market
+  unit: R$/Kg
+- commodity: suinos
+  slug: suinos-bolsas-e-associaces
+  name: Suínos - Bolsas e Associações
+  page_type: physical_market
+  unit: R$/kg
+- commodity: suinos
+  slug: suino-sp
+  name: Suíno (SP)
+  page_type: physical_market
+  unit: R$
+# ── SUCROENERGETICO — SUGAR (6 indicators) ───────────────────────────────────
+- commodity: sucroenergetico
+  slug: acucar-cristal-cepea
+  name: Indicador do Açúcar Cristal Cepea/Esalq - SP
+  page_type: physical_market
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Crystal sugar reference price for São Paulo state,
+    calculated by Cepea/Esalq.
+- commodity: sucroenergetico
+  slug: acucar-cristal-empacotado
+  name: Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP
+  page_type: indicator
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Packaged crystal sugar indicator for São Paulo state,
+    calculated by Cepea/Esalq.
+- commodity: sucroenergetico
+  slug: acucar-refinado-amorfo
+  name: Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP
+  page_type: physical_market
+  unit: R$
+  source: Cepea/Esalq (USP)
+  frequency: daily
+  description: >-
+    Amorphous refined sugar indicator for São Paulo state,
+    calculated by Cepea/Esalq.
+- commodity: sucroenergetico
+  slug: acucar-bolsa-de-nova-iorque-nybot
+  name: Açúcar - Bolsa de Nova Iorque (NYBOT)
+  page_type: cme_futures
+  unit: US cents/lb
+  source: CME Group / NYBOT
+  frequency: daily
+  description: >-
+    ICE Sugar No. 11 futures settlement prices in US cents per
+    pound. Primary global raw sugar benchmark.
+- commodity: sucroenergetico
+  slug: atr
+  name: Açúcar - Preço do ATR
+  page_type: physical_market
+  unit: R$
+  source: CONSECANA
+  frequency: daily
+  description: >-
+    Total Recoverable Sugar (ATR) price used as basis for
+    sugarcane payment to producers in São Paulo.
+- commodity: sucroenergetico
+  slug: acucar-preco-da-cana-basica-pr
+  name: Açúcar - Preço da Cana Básica - PR
+  page_type: physical_market
+  unit: R$
+  source: CONSECANA-PR
+  frequency: daily
+  description: >-
+    Basic sugarcane price for Paraná state, used for
+    producer payment calculations.
+# ── SUCROENERGETICO — BIOFUELS (5 indicators) ────────────────────────────────
+- commodity: sucroenergetico
+  slug: etanol-bolsa-de-chicago-cme-group
+  name: Etanol - Bolsa de Chicago
+  page_type: cme_futures
+  unit: US$/gal
+  category: biofuels
+  source: CME Group / CBOT
+  frequency: daily
+  description: >-
+    CME ethanol futures settlement prices in US dollars per
+    gallon.
+- commodity: sucroenergetico
+  slug: etanol-b3-prego-regular
+  name: Etanol - B3 (Pregão Regular)
+  page_type: b3_futures
+  unit: R$/m3
+  category: biofuels
+  source: B3 (Brasil Bolsa Balcão)
+  frequency: daily
+  description: >-
+    B3 ethanol futures settlement prices in reais per cubic
+    meter.
+- commodity: sucroenergetico
+  slug: indicador-semanal-etanol-hidratado-cepea-esalq
+  name: Indicador Semanal Etanol Hidratado Cepea/Esalq
+  page_type: indicator
+  unit: R$
+  category: biofuels
+  source: Cepea/Esalq (USP)
+  frequency: weekly
+  description: >-
+    Weekly hydrous ethanol reference price for São Paulo state,
+    calculated by Cepea/Esalq. Used as fuel at gas stations.
+- commodity: sucroenergetico
+  slug: indicador-semanal-etanol-hidratado-outros-fins-cepea-esalq
+  name: Indicador Semanal Etanol Hidratado Outros Fins Cepea/Esalq
+  page_type: indicator
+  unit: R$
+  category: biofuels
+  source: Cepea/Esalq (USP)
+  frequency: weekly
+  description: >-
+    Weekly hydrous ethanol for other purposes (industrial/chemical)
+    reference price, calculated by Cepea/Esalq.
+- commodity: sucroenergetico
+  slug: indicador-semanal-etanol-anidro-cepea-esalq
+  name: Indicador Semanal Etanol Anidro Cepea/Esalq
+  page_type: indicator
+  unit: R$
+  category: biofuels
+  source: Cepea/Esalq (USP)
+  frequency: weekly
+  description: >-
+    Weekly anhydrous ethanol reference price for São Paulo state,
+    calculated by Cepea/Esalq. Used as gasoline additive (27% blend).
+# ── AMENDOIM (1 indicator) ───────────────────────────────────────────────────
+- commodity: amendoim
+  slug: amendoim-ceasas
+  name: Amendoim - Ceasas
+  page_type: physical_market
+  unit: R$
+  source: Ceasas (Centrais de Abastecimento)
+  frequency: daily
+  description: >-
+    Peanut wholesale prices from Brazilian Ceasas supply
+    centers.
+# ── CACAU (3 indicators) ─────────────────────────────────────────────────────
+- commodity: cacau
+  slug: cacau-bolsa-de-nova-iorque-nybot
+  name: Cacau - Bolsa de Nova Iorque (NYBOT)
+  page_type: cme_futures
+  unit: US$/ton
+- commodity: cacau
+  slug: cacau-mercado-do-cacau
+  name: Cacau (Mercado do Cacau)
+  page_type: physical_market
+  unit: R$
+- commodity: cacau
+  slug: cacau-cnpc
+  name: Cacau
+  page_type: physical_market
+  unit: R$/@
+# ── FRUTAS (12 indicators) ───────────────────────────────────────────────────
+- commodity: frutas
+  slug: abacate-ceasas
+  name: Abacate - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: abacaxi-ceasas
+  name: Abacaxi - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: mamao-ceasas
+  name: Mamão - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: maracuja-ceasas
+  name: Maracujá - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: pera-ceasas
+  name: Pera - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: tangerina-ceasas
+  name: Tangerina - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: uva-ceasas
+  name: Uva - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: melancia-ceasas
+  name: Melancia - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: banana-nanica-prata-ceasas
+  name: Banana Nanica/Prata - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: limao-tahiti-ceasas
+  name: Limão Tahiti - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: maca-fuji-ceasas
+  name: Maçã Fuji - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: frutas
+  slug: maca-gala-ceasas
+  name: Maçã Gala - Ceasas
+  page_type: physical_market
+  unit: R$
+# ── LATEX (1 indicator) ──────────────────────────────────────────────────────
+- commodity: latex
+  slug: borracha-natural
+  name: Borracha Natural
+  page_type: indicator
+  unit: R$
+  enabled: false
+# ── LEGUMES (7 indicators) ───────────────────────────────────────────────────
+- commodity: legumes
+  slug: batata-ao-produtor-iea
+  name: Batata no Atacado - IEA
+  page_type: indicator
+  unit: R$
+  enabled: false
+- commodity: legumes
+  slug: cebola-no-atacado-iea
+  name: Cebola no Atacado - IEA
+  page_type: indicator
+  unit: R$
+  enabled: false
+- commodity: legumes
+  slug: cenoura-ceasas
+  name: Cenoura - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: legumes
+  slug: batata-ceasas
+  name: Batata - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: legumes
+  slug: cebola-no-atacado
+  name: Cebola - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: legumes
+  slug: tomate-ceasas
+  name: Tomate - Ceasas
+  page_type: physical_market
+  unit: R$
+# ── MANDIOCA (9 indicators) ──────────────────────────────────────────────────
+- commodity: mandioca
+  slug: precos-da-raiz-de-mandioca
+  name: Preços da Raiz de Mandioca
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: precos-da-fecula-de-mandioca
+  name: Preços da Fécula de Mandioca
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: precos-da-farinha-de-mandioca-seca-fina
+  name: Farinha de Mandioca Seca Fina
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: precos-da-farinha-de-mandioca-seca-grossa
+  name: Farinha de Mandioca Seca Grossa
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: mandioca-ceasas
+  name: Mandioca - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: mandioca-fecula-no-atacado
+  name: Mandioca - Fécula no Atacado
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: mandioca-raiz-ao-produtor
+  name: Mandioca - Raiz ao Produtor
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: mandioca-industria-iea
+  name: Mandioca Indústria - IEA
+  page_type: physical_market
+  unit: R$
+- commodity: mandioca
+  slug: mandioca-para-mesa-iea
+  name: Mandioca para Mesa - IEA
+  page_type: physical_market
+  unit: R$
+# ── MERCADO FINANCEIRO (10 indicators) ───────────────────────────────────────
+- commodity: mercado-financeiro
+  slug: bolsas
+  name: Bolsas
+  page_type: physical_market
+  unit: pontos
+- commodity: mercado-financeiro
+  slug: cambio-ptax
+  name: Câmbio - PTAX
+  page_type: physical_market
+  unit: R$
+- commodity: mercado-financeiro
+  slug: dolar-b3
+  name: Dólar Comercial Futuro
+  page_type: b3_futures
+  unit: R$
+- commodity: mercado-financeiro
+  slug: euro-b3
+  name: Euro Futuro
+  page_type: b3_futures
+  unit: R$
+- commodity: mercado-financeiro
+  slug: indice-dolar
+  name: Índice Dólar
+  page_type: b3_futures
+  unit: pontos
+- commodity: mercado-financeiro
+  slug: indice-bovespa
+  name: Índice Bovespa Futuro
+  page_type: b3_futures
+  unit: pontos
+- commodity: mercado-financeiro
+  slug: juros-b3
+  name: Juros Futuro
+  page_type: b3_futures
+  unit: '%'
+- commodity: mercado-financeiro
+  slug: moedas
+  name: Moedas (Forex)
+  page_type: physical_market
+  unit: R$
+- commodity: mercado-financeiro
+  slug: taxa-selic
+  name: Taxa Selic
+  page_type: physical_market
+  unit: '%'
+- commodity: mercado-financeiro
+  slug: taxa-de-juros-de-longo-prazo-tjlp
+  name: Taxa de Juros de Longo Prazo - TJLP
+  page_type: physical_market
+  unit: '%'
+# ── OVOS (3 indicators) ─────────────────────────────────────────────────────
+- commodity: ovos
+  slug: precos-de-ovos-cepea-produto-a-retirar-bastos
+  name: Ovos Cepea - Produto a Retirar em Bastos (SP)
+  page_type: physical_market
+  unit: R$
+- commodity: ovos
+  slug: ovos-extras-ceasas
+  name: Ovos Extras - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: ovos
+  slug: preco-medio-ovos-ao-produtor
+  name: Preço Médio - Ovos Branco ao Produtor
+  page_type: physical_market
+  unit: R$/30 dz
+# ── SILVICULTURA (1 indicator) ───────────────────────────────────────────────
+- commodity: silvicultura
+  slug: preco-medio-resina
+  name: Preço Médio Resina Pinus
+  page_type: physical_market
+  unit: R$
+# ── SORGO (2 indicators) ─────────────────────────────────────────────────────
+- commodity: sorgo
+  slug: sorgo-mercado-fisico-media
+  name: Sorgo - Mercado Físico
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Sorghum spot prices collected from cooperatives across
+    Brazilian producing regions.
+- commodity: sorgo
+  slug: sorgo-mercado-fisico-ms
+  name: Sorgo - Mercado Físico MS
+  page_type: physical_market
+  unit: R$/Sc de 60 kg
+  source: Regional cooperatives
+  frequency: daily
+  description: >-
+    Sorghum spot prices in Mato Grosso do Sul state from
+    local cooperatives and trade unions.
+# ── VERDURAS (4 indicators) ──────────────────────────────────────────────────
+- commodity: verduras
+  slug: alface-ceasas
+  name: Alface - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: verduras
+  slug: brocolos-ceasas
+  name: Brócolis - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: verduras
+  slug: couve-ceasas
+  name: Couve - Ceasas
+  page_type: physical_market
+  unit: R$
+- commodity: verduras
+  slug: repolho-ceasas
+  name: Repolho - Ceasas
+  page_type: physical_market
+  unit: R$
