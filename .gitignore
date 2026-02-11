@@ -1,4 +1,12 @@
-data/
+# Data — only CSVs tracked in git; Parquet persisted via GitHub Release
+data/parquet/
+data/parquet_basis/
+data/cache/
+data/charts/
+data/state/
+data/logs/
+data/*.png
+
 .venv/
 __pycache__/
 *.pyc

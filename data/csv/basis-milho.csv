@@ -1,0 +1,2 @@
+date,location,state,physical_indicator,physical_price_brl,futures_indicator,futures_contract,futures_price_raw,futures_price_brl,ptax,basis_brl,basis_usd,basis_pct
+2025-03-10,Campinas/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,58.0,milho-b3-prego-regular,2025-03,62.0,62.0,,-4.0,,-6.451612903225806

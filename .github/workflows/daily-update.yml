@@ -1,0 +1,106 @@
+name: Daily Update
+
+# Runs every weekday at 22:00 UTC (19:00 BRT / Brasilia Time)
+on:
+  schedule:
+    - cron: "0 22 * * 1-5"
+  workflow_dispatch: {} # allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      # ── 1. Setup ──────────────────────────────────────────────
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+
+      # ── 2. Restore data from previous run ─────────────────────
+      #    Parquet + state are stored as a GitHub Release artifact
+      #    so they persist indefinitely between runs.
+      - name: Download previous data
+        run: |
+          echo "Downloading data from latest release..."
+          mkdir -p /tmp/data-dl
+          gh release download data-latest \
+            --pattern "etl-data.tar.gz" \
+            --dir /tmp/data-dl 2>/dev/null || true
+
+          if [ -f /tmp/data-dl/etl-data.tar.gz ]; then
+            echo "Restoring previous data..."
+            tar xzf /tmp/data-dl/etl-data.tar.gz
+            echo "Restored."
+            du -sh data/parquet/ data/parquet_basis/ data/state/ 2>/dev/null || true
+          else
+            echo "No previous data found — starting fresh."
+            mkdir -p data/parquet data/parquet_basis data/csv data/state
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 3. Run the daily update ───────────────────────────────
+      #    Step 1: scrape latest prices (all 158 indicators)
+      #    Step 2: export CSVs from Parquet
+      #    Step 3: rebuild basis time series
+      - name: Run daily update
+        run: na-etl daily
+
+      - name: Show summary
+        run: |
+          echo "=== Data sizes after update ==="
+          du -sh data/parquet/ data/parquet_basis/ data/csv/ data/state/ 2>/dev/null || true
+          echo ""
+          echo "=== CSV row counts ==="
+          wc -l data/csv/*.csv 2>/dev/null | tail -5
+          echo ""
+          echo "=== Basis CSV row counts ==="
+          wc -l data/csv/basis-*.csv 2>/dev/null || echo "No basis CSVs yet"
+
+      # ── 4. Save Parquet + state to GitHub Release ─────────────
+      #    This persists binary data between workflow runs without
+      #    bloating git history.
+      - name: Upload data to release
+        run: |
+          echo "Packing Parquet + state..."
+          tar czf /tmp/etl-data.tar.gz \
+            data/parquet/ \
+            data/parquet_basis/ \
+            data/state/
+          ls -lh /tmp/etl-data.tar.gz
+
+          echo "Uploading to release..."
+          gh release delete data-latest --yes 2>/dev/null || true
+          gh release create data-latest /tmp/etl-data.tar.gz \
+            --title "ETL Data (auto-updated)" \
+            --notes "Last updated: $(date -u +%Y-%m-%d\ %H:%M\ UTC)" \
+            --latest=false
+          echo "Done."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 5. Commit CSVs to the repo ────────────────────────────
+      #    CSVs are text files — git diffs them efficiently.
+      #    This makes the data browsable on GitHub.
+      - name: Commit updated CSVs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/csv/
+          if git diff --cached --quiet; then
+            echo "No CSV changes to commit."
+          else
+            git commit -m "data: update CSVs $(date -u +%Y-%m-%d)"
+            git push
+            echo "CSVs committed and pushed."
+          fi
