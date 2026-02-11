@@ -218,6 +218,28 @@ def list_catalog(category, detail):
                     click.echo(f"          {e.description}")
 
 
+@cli.command()
+@click.option("-c", "--commodity", default=None, help="Filter by commodity (e.g. soja, milho)")
+@click.option("--force", is_flag=True, help="Rebuild from scratch even if output exists")
+def basis(commodity, force):
+    """Build materialized basis (physical - futures) time series."""
+    from . import basis_builder
+
+    commodities = [commodity] if commodity else None
+    click.echo("Building basis time series...")
+    summary = basis_builder.build_all(commodities=commodities, force=force)
+
+    click.echo()
+    click.echo("=== Basis Build Summary ===")
+    total = 0
+    for label, count in sorted(summary.items()):
+        status = f"{count:>10,} rows" if count > 0 else "   skipped"
+        click.echo(f"  {label:<20} {status}")
+        total += count
+    click.echo(f"  {'TOTAL':<20} {total:>10,} rows")
+    click.echo()
+
+
 @cli.command("categories")
 def list_categories():
     """List available categories with indicator counts."""

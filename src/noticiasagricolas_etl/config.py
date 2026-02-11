@@ -5,6 +5,7 @@ from pathlib import Path
 BASE_DIR = Path.home() / "noticiasagricolas_etl"
 DATA_DIR = BASE_DIR / "data"
 PARQUET_DIR = DATA_DIR / "parquet"
+PARQUET_BASIS_DIR = DATA_DIR / "parquet_basis"
 CSV_DIR = DATA_DIR / "csv"
 CACHE_DIR = DATA_DIR / "cache"
 STATE_DIR = DATA_DIR / "state"

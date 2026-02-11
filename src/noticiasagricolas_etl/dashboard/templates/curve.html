@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futures Curve - Noticias Agricolas</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/dashboard" class="nav-brand">Noticias Agricolas</a>
+        <div class="nav-links">
+            <a href="/dashboard">Overview</a>
+            <a href="/dashboard/basis">Basis</a>
+            <a href="/dashboard/curve" class="active">Futures Curve</a>
+            <a href="/dashboard/rankings">Rankings</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Futures Curve</h1>
+        <p style="color:var(--text-muted);margin-bottom:1rem;">All active contracts on a date — contango vs backwardation.</p>
+
+        <div class="card">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Indicator</label>
+                    <input type="text" id="curve-indicator" value="soja-b3-pregao-regular" style="min-width:300px;">
+                </div>
+                <div class="filter-group">
+                    <label>Date</label>
+                    <input type="date" id="curve-date">
+                </div>
+                <button class="btn btn-primary" onclick="loadCurve()">Load</button>
+            </div>
+
+            <div class="stats-row" id="curve-stats"></div>
+
+            <div class="chart-container">
+                <canvas id="curve-chart"></canvas>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr><th>Contract</th><th>Price</th><th>Unit</th><th>Currency</th></tr>
+                    </thead>
+                    <tbody id="curve-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script>
+        let curveChart = null;
+
+        async function loadCurve() {
+            const indicator = document.getElementById('curve-indicator').value;
+            const date = document.getElementById('curve-date').value;
+            const params = new URLSearchParams({ indicator });
+            if (date) params.set('date', date);
+
+            const data = await fetchAPI(`/v1/analytics/futures-curve?${params}`);
+            if (!data || !data.contracts) return;
+
+            document.getElementById('curve-stats').innerHTML = `
+                <div class="stat-card"><div class="stat-value">${data.structure}</div><div class="stat-label">Structure</div></div>
+                <div class="stat-card"><div class="stat-value">${data.contracts.length}</div><div class="stat-label">Contracts</div></div>
+                <div class="stat-card"><div class="stat-value">${data.date || '--'}</div><div class="stat-label">Date</div></div>
+            `;
+
+            const labels = data.contracts.map(c => c.contract || c.contract_month);
+            const values = data.contracts.map(c => c.value);
+
+            if (curveChart) curveChart.destroy();
+            curveChart = new Chart(document.getElementById('curve-chart'), {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [{
+                        label: 'Price',
+                        data: values,
+                        backgroundColor: '#40916c',
+                        borderColor: '#2d6a4f',
+                        borderWidth: 1,
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            document.getElementById('curve-tbody').innerHTML = data.contracts.map(c => `
+                <tr><td>${c.contract || c.contract_month}</td><td>${fmt(c.value)}</td><td>${c.unit || ''}</td><td>${c.currency || ''}</td></tr>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

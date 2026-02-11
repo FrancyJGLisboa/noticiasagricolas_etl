@@ -18,10 +18,19 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7.0", "pytest-cov"]
+dev = ["pytest>=7.0", "pytest-cov", "httpx>=0.25"]
+api = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "duckdb>=1.0",
+    "mcp>=1.0",
+    "jinja2>=3.1",
+]
 
 [project.scripts]
 na-etl = "noticiasagricolas_etl.cli:cli"
+na-api = "noticiasagricolas_etl.api.app:main"
+na-mcp = "noticiasagricolas_etl.mcp_server.server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Agricolas - Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/dashboard" class="nav-brand">Noticias Agricolas</a>
+        <div class="nav-links">
+            <a href="/dashboard" class="active">Overview</a>
+            <a href="/dashboard/basis">Basis</a>
+            <a href="/dashboard/curve">Futures Curve</a>
+            <a href="/dashboard/rankings">Rankings</a>
+            <a href="/docs" target="_blank">API Docs</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Market Overview</h1>
+
+        <div class="stats-row" id="stats-row">
+            <div class="stat-card"><div class="stat-value" id="stat-records">--</div><div class="stat-label">Records</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-commodities">--</div><div class="stat-label">Commodities</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-indicators">--</div><div class="stat-label">Indicators</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-locations">--</div><div class="stat-label">Locations</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-latest">--</div><div class="stat-label">Latest Date</div></div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Price Explorer</div>
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Commodity</label>
+                    <select id="filter-commodity"><option value="">Loading...</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>Indicator</label>
+                    <select id="filter-indicator"><option value="">Select commodity first</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>State</label>
+                    <select id="filter-state"><option value="">All</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>From</label>
+                    <input type="date" id="filter-from">
+                </div>
+                <div class="filter-group">
+                    <label>To</label>
+                    <input type="date" id="filter-to">
+                </div>
+                <button class="btn btn-primary" onclick="loadPrices()">Search</button>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="price-chart"></canvas>
+            </div>
+
+            <div class="table-container">
+                <table id="price-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Value</th>
+                            <th>Unit</th>
+                            <th>Currency</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody id="price-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Commodities</div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr><th>Commodity</th><th>Category</th><th>Indicators</th><th>Records</th><th>Date Range</th></tr>
+                    </thead>
+                    <tbody id="commodities-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/webmcp.js"></script>
+</body>
+</html>

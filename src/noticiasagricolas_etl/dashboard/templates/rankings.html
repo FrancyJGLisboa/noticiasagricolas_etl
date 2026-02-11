@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings - Noticias Agricolas</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/dashboard" class="nav-brand">Noticias Agricolas</a>
+        <div class="nav-links">
+            <a href="/dashboard">Overview</a>
+            <a href="/dashboard/basis">Basis</a>
+            <a href="/dashboard/curve">Futures Curve</a>
+            <a href="/dashboard/rankings" class="active">Rankings</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Regional Rankings</h1>
+        <p style="color:var(--text-muted);margin-bottom:1rem;">Locations ranked by price — find the cheapest/most expensive regions.</p>
+
+        <div class="card">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Indicator</label>
+                    <input type="text" id="rank-indicator" value="soja-mercado-fisico-sindicatos-e-cooperativas" style="min-width:300px;">
+                </div>
+                <div class="filter-group">
+                    <label>Date</label>
+                    <input type="date" id="rank-date">
+                </div>
+                <div class="filter-group">
+                    <label>Limit</label>
+                    <select id="rank-limit">
+                        <option value="20">Top 20</option>
+                        <option value="50" selected>Top 50</option>
+                        <option value="100">Top 100</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="loadRankings()">Load</button>
+            </div>
+
+            <div class="stats-row" id="rank-stats"></div>
+
+            <div class="chart-container" style="height:500px;">
+                <canvas id="rank-chart"></canvas>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr><th>#</th><th>Location</th><th>State</th><th>Price</th><th>Unit</th></tr>
+                    </thead>
+                    <tbody id="rank-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script>
+        let rankChart = null;
+
+        async function loadRankings() {
+            const indicator = document.getElementById('rank-indicator').value;
+            const date = document.getElementById('rank-date').value;
+            const limit = document.getElementById('rank-limit').value;
+            const params = new URLSearchParams({ indicator, limit });
+            if (date) params.set('date', date);
+
+            const data = await fetchAPI(`/v1/analytics/rankings?${params}`);
+            if (!data || !data.rankings) return;
+
+            const rankings = data.rankings;
+            const prices = rankings.map(r => r.value);
+            const mean = prices.reduce((a, b) => a + b, 0) / prices.length;
+
+            document.getElementById('rank-stats').innerHTML = `
+                <div class="stat-card"><div class="stat-value">${rankings.length}</div><div class="stat-label">Locations</div></div>
+                <div class="stat-card"><div class="stat-value">${fmt(prices[0])}</div><div class="stat-label">Cheapest</div></div>
+                <div class="stat-card"><div class="stat-value">${fmt(prices[prices.length-1])}</div><div class="stat-label">Most Expensive</div></div>
+                <div class="stat-card"><div class="stat-value">${fmt(mean)}</div><div class="stat-label">Mean</div></div>
+            `;
+
+            const labels = rankings.map(r => r.location);
+            if (rankChart) rankChart.destroy();
+            rankChart = new Chart(document.getElementById('rank-chart'), {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [{
+                        label: 'Price',
+                        data: prices,
+                        backgroundColor: prices.map(v => v <= mean ? '#198754' : '#dc3545'),
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                }
+            });
+
+            document.getElementById('rank-tbody').innerHTML = rankings.map(r => `
+                <tr>
+                    <td>${r.rank}</td>
+                    <td>${r.location}</td>
+                    <td>${r.state || ''}</td>
+                    <td>${fmt(r.value)}</td>
+                    <td>${r.unit || ''}</td>
+                </tr>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

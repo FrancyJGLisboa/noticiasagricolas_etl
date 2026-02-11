@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basis Analysis - Noticias Agricolas</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/dashboard" class="nav-brand">Noticias Agricolas</a>
+        <div class="nav-links">
+            <a href="/dashboard">Overview</a>
+            <a href="/dashboard/basis" class="active">Basis</a>
+            <a href="/dashboard/curve">Futures Curve</a>
+            <a href="/dashboard/rankings">Rankings</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Basis Analysis</h1>
+        <p style="color:var(--text-muted);margin-bottom:1rem;">Physical price minus futures price — shows local premium/discount.</p>
+
+        <div class="card">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Commodity</label>
+                    <select id="basis-commodity">
+                        <option value="soja">Soja</option>
+                        <option value="milho">Milho</option>
+                        <option value="cafe">Cafe</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Physical Indicator</label>
+                    <input type="text" id="basis-physical" value="soja-mercado-fisico-sindicatos-e-cooperativas" style="min-width:300px;">
+                </div>
+                <div class="filter-group">
+                    <label>Futures Indicator</label>
+                    <input type="text" id="basis-futures" value="soja-b3-pregao-regular" style="min-width:250px;">
+                </div>
+                <div class="filter-group">
+                    <label>Location</label>
+                    <input type="text" id="basis-location" placeholder="e.g. Paranagua/PR">
+                </div>
+                <button class="btn btn-primary" onclick="loadBasis()">Compute</button>
+            </div>
+
+            <div class="stats-row" id="basis-stats"></div>
+
+            <div class="chart-container">
+                <canvas id="basis-chart"></canvas>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr><th>Date</th><th>Physical</th><th>Futures</th><th>Basis</th><th>Basis %</th><th>Percentile</th></tr>
+                    </thead>
+                    <tbody id="basis-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script>
+        let basisChart = null;
+
+        async function loadBasis() {
+            const commodity = document.getElementById('basis-commodity').value;
+            const physical = document.getElementById('basis-physical').value;
+            const futures = document.getElementById('basis-futures').value;
+            const location = document.getElementById('basis-location').value;
+
+            const params = new URLSearchParams({
+                commodity, physical_indicator: physical, futures_indicator: futures
+            });
+            if (location) params.set('location', location);
+
+            const data = await fetchAPI(`/v1/analytics/basis?${params}`);
+            if (!data || !data.data) return;
+
+            // Stats
+            const s = data.summary || {};
+            document.getElementById('basis-stats').innerHTML = `
+                <div class="stat-card"><div class="stat-value">${fmt(s.current_basis)}</div><div class="stat-label">Current Basis</div></div>
+                <div class="stat-card"><div class="stat-value">${fmt(s.mean_basis)}</div><div class="stat-label">Mean Basis</div></div>
+                <div class="stat-card"><div class="stat-value">${s.current_percentile != null ? (s.current_percentile * 100).toFixed(0) + '%' : '--'}</div><div class="stat-label">Percentile</div></div>
+                <div class="stat-card"><div class="stat-value">${s.data_points || '--'}</div><div class="stat-label">Data Points</div></div>
+            `;
+
+            // Chart
+            const labels = data.data.map(r => r.date).reverse();
+            const values = data.data.map(r => r.basis).reverse();
+            if (basisChart) basisChart.destroy();
+            basisChart = new Chart(document.getElementById('basis-chart'), {
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [{
+                        label: 'Basis',
+                        data: values,
+                        borderColor: '#2d6a4f',
+                        backgroundColor: values.map(v => v >= 0 ? 'rgba(25,135,84,0.1)' : 'rgba(220,53,69,0.1)'),
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 0,
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+
+            // Table
+            const tbody = document.getElementById('basis-tbody');
+            tbody.innerHTML = data.data.slice(0, 100).map(r => `
+                <tr>
+                    <td>${r.date}</td>
+                    <td>${fmt(r.physical_price)}</td>
+                    <td>${fmt(r.futures_price)}</td>
+                    <td class="${r.basis >= 0 ? 'positive' : 'negative'}">${fmt(r.basis)}</td>
+                    <td class="${r.basis_pct >= 0 ? 'positive' : 'negative'}">${fmt(r.basis_pct)}%</td>
+                    <td>${(r.basis_percentile * 100).toFixed(0)}%</td>
+                </tr>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
