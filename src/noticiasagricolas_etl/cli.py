@@ -240,6 +240,78 @@ def basis(commodity, force):
     click.echo()
 
 
+@cli.command()
+@click.option("-c", "--commodity", default=None, help="Filter by commodity")
+@click.option("--category", default=None, help="Filter by category")
+@click.option("--skip-basis", is_flag=True, help="Skip basis rebuild step")
+@click.option("--skip-export", is_flag=True, help="Skip CSV export step")
+def daily(commodity, category, skip_basis, skip_export):
+    """Daily update: scrape latest prices, export CSVs, rebuild basis.
+
+    \b
+    Runs three steps in order:
+      1. Update — scrape latest ~10 days from all indicators
+      2. Export  — regenerate CSV files from Parquet
+      3. Basis   — rebuild basis (physical - futures) time series
+
+    \b
+    Examples:
+      na-etl daily              # full update, all commodities
+      na-etl daily -c soja      # just soja
+      na-etl daily --skip-basis # update + export only
+    """
+    from . import basis_builder
+
+    # Step 1: Update prices
+    click.echo("=" * 60)
+    click.echo("Step 1/3: Updating prices (scraping latest pages)...")
+    click.echo("=" * 60)
+    pipeline.update(commodity=commodity, category=category)
+
+    # Step 2: Export CSVs
+    if not skip_export:
+        click.echo()
+        click.echo("=" * 60)
+        click.echo("Step 2/3: Exporting CSVs from Parquet...")
+        click.echo("=" * 60)
+        if commodity:
+            storage.export_csv(commodity)
+        elif category:
+            entries = load_catalog()
+            commodities = {
+                e.commodity for e in entries
+                if e.category and e.category.value == category
+            }
+            for c in commodities:
+                storage.export_csv(c)
+        else:
+            storage.export_all_csv()
+        click.echo("CSV export complete.")
+    else:
+        click.echo("\nStep 2/3: Skipped CSV export.")
+
+    # Step 3: Rebuild basis
+    if not skip_basis:
+        click.echo()
+        click.echo("=" * 60)
+        click.echo("Step 3/3: Rebuilding basis time series...")
+        click.echo("=" * 60)
+        commodities_list = [commodity] if commodity else None
+        summary = basis_builder.build_all(commodities=commodities_list)
+
+        total = 0
+        for label, count in sorted(summary.items()):
+            status_str = f"{count:>10,} rows" if count > 0 else "   skipped"
+            click.echo(f"  {label:<20} {status_str}")
+            total += count
+        click.echo(f"  {'TOTAL':<20} {total:>10,} rows")
+    else:
+        click.echo("\nStep 3/3: Skipped basis rebuild.")
+
+    click.echo()
+    click.echo("Daily update complete.")
+
+
 @cli.command("categories")
 def list_categories():
     """List available categories with indicator counts."""
