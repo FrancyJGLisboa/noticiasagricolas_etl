@@ -51731,3 +51731,65 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-09,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,fechamento,1.64,"1,6400",US$/gal,price,USD,gal,futures,2026-03,,cme
 2026-02-09,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,variacao_cents,1.5,"+1,50",cents/bu,change_abs,USD,bu,futures,2026-03,,cme
 2026-02-09,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,variacao_pct,,-,%,change_pct,,pct,futures,2026-03,,cme
+2026-02-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Julho/26,fechamento_c_libra_peso,13.72,"13,72",pontos,price,,points,futures,2026-07,,nybot
+2026-02-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,-0.21,"-0,21",%,change_abs,,pct,futures,2026-07,,nybot
+2026-02-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Maio/26,fechamento_c_libra_peso,13.76,"13,76",pontos,price,,points,futures,2026-05,,nybot
+2026-02-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-0.2,"-0,20",%,change_abs,,pct,futures,2026-05,,nybot
+2026-02-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Março/26,fechamento_c_libra_peso,14.12,"14,12",pontos,price,,points,futures,2026-03,,nybot
+2026-02-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Março/26,variacao_pontos,-0.23,"-0,23",%,change_abs,,pct,futures,2026-03,,nybot
+2026-02-10,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,10/02/2026,,saca_de_50_kg,101.65,"101,65",R$,price,BRL,,spot,,,indicator
+2026-02-10,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,10/02/2026,,variacao_pct,1.55,"+1,55",%,change_pct,,pct,spot,,,indicator
+2026-02-10,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,valor_5kg,12.928,"12,9280",R$,price,BRL,,spot,,,other
+2026-02-10,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-02-10,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,10/02/2026,,valor_kg,3.0326,"3,0326",R$,price,BRL,,spot,,,other
+2026-02-10,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,10/02/2026,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-02-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Fevereiro/2026,fechamento,3080.0,"3.080,00",R$/m³,price,BRL,m3,futures,2026-02,,b3
+2026-02-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Fevereiro/2026,variacao_pct,-0.96,"-0,96",%,change_pct,,pct,futures,2026-02,,b3
+2026-02-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Junho/2026,fechamento,2300.0,"2.300,00",R$/m³,price,BRL,m3,futures,2026-06,,b3
+2026-02-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Junho/2026,variacao_pct,-2.44,"-2,44",%,change_pct,,pct,futures,2026-06,,b3
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,fechamento,1.68,"1,6800",US$/gal,price,USD,gal,futures,2026-04,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,variacao_cents,1.0,"+1,00",cents/bu,change_abs,USD,bu,futures,2026-04,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,variacao_pct,0.6,"+0,60",%,change_pct,,pct,futures,2026-04,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Fev/26,fechamento,1.625,"1,6250",US$/gal,price,USD,gal,futures,2026-02,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Fev/26,variacao_cents,0.5,"+0,50",cents/bu,change_abs,USD,bu,futures,2026-02,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Fev/26,variacao_pct,0.31,"+0,31",%,change_pct,,pct,futures,2026-02,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,fechamento,1.7,"1,7000",US$/gal,price,USD,gal,futures,2026-05,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_cents,1.0,"+1,00",cents/bu,change_abs,USD,bu,futures,2026-05,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_pct,0.59,"+0,59",%,change_pct,,pct,futures,2026-05,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,fechamento,1.675,"1,6750",US$/gal,price,USD,gal,futures,2026-03,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,variacao_cents,2.5,"+2,50",cents/bu,change_abs,USD,bu,futures,2026-03,,cme
+2026-02-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,variacao_pct,,-,%,change_pct,,pct,futures,2026-03,,cme
+2026-02-11,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Julho/26,fechamento_c_libra_peso,13.52,"13,52",pontos,price,,points,futures,2026-07,,nybot
+2026-02-11,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,-0.2,"-0,20",%,change_abs,,pct,futures,2026-07,,nybot
+2026-02-11,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Maio/26,fechamento_c_libra_peso,13.52,"13,52",pontos,price,,points,futures,2026-05,,nybot
+2026-02-11,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-0.24,"-0,24",%,change_abs,,pct,futures,2026-05,,nybot
+2026-02-11,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Março/26,fechamento_c_libra_peso,13.84,"13,84",pontos,price,,points,futures,2026-03,,nybot
+2026-02-11,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Março/26,variacao_pontos,-0.28,"-0,28",%,change_abs,,pct,futures,2026-03,,nybot
+2026-02-11,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,11/02/2026,,saca_de_50_kg,99.67,"99,67",R$,price,BRL,,spot,,,indicator
+2026-02-11,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,11/02/2026,,variacao_pct,-1.95,"-1,95",%,change_pct,,pct,spot,,,indicator
+2026-02-11,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,valor_5kg,12.8999,"12,8999",R$,price,BRL,,spot,,,other
+2026-02-11,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,variacao_pct,-0.22,"-0,22",%,change_pct,,pct,spot,,,other
+2026-02-11,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,11/02/2026,,valor_kg,3.0326,"3,0326",R$,price,BRL,,spot,,,other
+2026-02-11,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,11/02/2026,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Agosto/2026,fechamento,2360.0,"2.360,00",R$/m³,price,BRL,m3,futures,2026-08,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Agosto/2026,variacao_pct,-0.11,"-0,11",%,change_pct,,pct,futures,2026-08,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Julho/2026,fechamento,2290.0,"2.290,00",R$/m³,price,BRL,m3,futures,2026-07,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Julho/2026,variacao_pct,-3.07,"-3,07",%,change_pct,,pct,futures,2026-07,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Junho/2026,fechamento,2280.0,"2.280,00",R$/m³,price,BRL,m3,futures,2026-06,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Junho/2026,variacao_pct,-0.87,"-0,87",%,change_pct,,pct,futures,2026-06,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Março/2026,fechamento,2920.0,"2.920,00",R$/m³,price,BRL,m3,futures,2026-03,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Março/2026,variacao_pct,-1.25,"-1,25",%,change_pct,,pct,futures,2026-03,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Setembro/2026,fechamento,2360.0,"2.360,00",R$/m³,price,BRL,m3,futures,2026-09,,b3
+2026-02-11,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Setembro/2026,variacao_pct,-3.3,"-3,30",%,change_pct,,pct,futures,2026-09,,b3
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,fechamento,1.69,"1,6900",US$/gal,price,USD,gal,futures,2026-04,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,variacao_cents,1.0,"+1,00",cents/bu,change_abs,USD,bu,futures,2026-04,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,variacao_pct,0.6,"+0,60",%,change_pct,,pct,futures,2026-04,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Fev/26,fechamento,1.635,"1,6350",US$/gal,price,USD,gal,futures,2026-02,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Fev/26,variacao_cents,1.0,"+1,00",cents/bu,change_abs,USD,bu,futures,2026-02,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Fev/26,variacao_pct,0.62,"+0,62",%,change_pct,,pct,futures,2026-02,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,fechamento,1.71,"1,7100",US$/gal,price,USD,gal,futures,2026-05,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_cents,1.0,"+1,00",cents/bu,change_abs,USD,bu,futures,2026-05,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_pct,0.59,"+0,59",%,change_pct,,pct,futures,2026-05,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,fechamento,1.66,"1,6600",US$/gal,price,USD,gal,futures,2026-03,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,variacao_cents,1.0,"+1,00",cents/bu,change_abs,USD,bu,futures,2026-03,,cme
+2026-02-11,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mar/26,variacao_pct,,-,%,change_pct,,pct,futures,2026-03,,cme

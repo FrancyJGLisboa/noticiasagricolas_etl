@@ -239,3 +239,39 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-09,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,variacao_pct,-0.33,"-0,33",%,change_pct,,pct,spot,,,physical
 2026-02-09,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,preco_caixa_de_30_duzias,214.28,"214,28",R$,price,BRL,,spot,,,physical
 2026-02-09,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,variacao_pct,-2.23,"-2,23",%,change_pct,,pct,spot,,,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Amazonas,,preco,,s/ cotação,R$/30 dz,price,BRL,30dz,spot,,AM,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Amazonas,,variacao_pct,,-,%,change_pct,,pct,spot,,AM,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Distrito Federal,,preco,140.0,"140,00",R$/30 dz,price,BRL,30dz,spot,,DF,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Distrito Federal,,variacao_pct,12.0,"+12,00",%,change_pct,,pct,spot,,DF,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Goiás,,preco,,s/ cotação,R$/30 dz,price,BRL,30dz,spot,,GO,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Goiás,,variacao_pct,,-,%,change_pct,,pct,spot,,GO,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Mato Grosso do Sul,,preco,,s/ cotação,R$/30 dz,price,BRL,30dz,spot,,MS,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Mato Grosso do Sul,,variacao_pct,,-,%,change_pct,,pct,spot,,MS,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Paraná,,preco,143.41,"143,41",R$/30 dz,price,BRL,30dz,spot,,PR,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Paraná,,variacao_pct,15.78,"+15,78",%,change_pct,,pct,spot,,PR,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Rondônia,,preco,190.7,"190,70",R$/30 dz,price,BRL,30dz,spot,,RO,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Rondônia,,variacao_pct,,-,%,change_pct,,pct,spot,,RO,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Semana Referente de:,,preco,,02/02/26 a 06/02/26,R$/30 dz,price,BRL,30dz,spot,,,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Semana Referente de:,,variacao_pct,,,%,change_pct,,pct,spot,,,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,São Paulo,,preco,144.52,"144,52",R$/30 dz,price,BRL,30dz,spot,,SP,physical
+2026-02-09,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,São Paulo,,variacao_pct,13.4,"+13,40",%,change_pct,,pct,spot,,SP,physical
+2026-02-09,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,30_dz,149.2,"149,20",R$,price,BRL,,spot,,,indicator
+2026-02-09,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,variacao_pct,0.03,"+0,03",%,change_pct,,pct,spot,,,indicator
+2026-02-09,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,30_dz,168.64,"168,64",R$,price,BRL,,spot,,,indicator
+2026-02-09,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,variacao_pct,-0.28,"-0,28",%,change_pct,,pct,spot,,,indicator
+2026-02-10,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,preco_caixa_de_30_duzias,180.78,"180,78",R$,price,BRL,,spot,,,physical
+2026-02-10,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,variacao_pct,-0.54,"-0,54",%,change_pct,,pct,spot,,,physical
+2026-02-10,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,preco_caixa_de_30_duzias,217.32,"217,32",R$,price,BRL,,spot,,,physical
+2026-02-10,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,variacao_pct,1.42,"+1,42",%,change_pct,,pct,spot,,,physical
+2026-02-10,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,30_dz,149.2,"149,20",R$,price,BRL,,spot,,,indicator
+2026-02-10,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator
+2026-02-10,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,30_dz,168.22,"168,22",R$,price,BRL,,spot,,,indicator
+2026-02-10,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,variacao_pct,-0.25,"-0,25",%,change_pct,,pct,spot,,,indicator
+2026-02-11,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,preco_caixa_de_30_duzias,180.78,"180,78",R$,price,BRL,,spot,,,physical
+2026-02-11,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-02-11,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,preco_caixa_de_30_duzias,217.32,"217,32",R$,price,BRL,,spot,,,physical
+2026-02-11,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-02-11,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,30_dz,149.2,"149,20",R$,price,BRL,,spot,,,indicator
+2026-02-11,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator
+2026-02-11,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,30_dz,168.22,"168,22",R$,price,BRL,,spot,,,indicator
+2026-02-11,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator
