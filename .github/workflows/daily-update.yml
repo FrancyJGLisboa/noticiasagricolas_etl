@@ -25,6 +25,11 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[dev,api]"
 
+      # config.py expects BASE_DIR = ~/noticiasagricolas_etl
+      # On GitHub Actions the workspace is elsewhere, so symlink it.
+      - name: Link workspace to expected path
+        run: ln -s "$GITHUB_WORKSPACE" ~/noticiasagricolas_etl
+
       # ── 2. Restore data from previous run ─────────────────────
       #    Parquet + state are stored as a GitHub Release artifact
       #    so they persist indefinitely between runs.
