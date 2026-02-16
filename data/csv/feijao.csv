@@ -1787,3 +1787,35 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-13,feijao,feijao-preto,Feijão Preto,SUL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
 2026-02-13,feijao,feijao-preto,Feijão Preto,TRIÂNGULO MINEIRO,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
 2026-02-13,feijao,feijao-preto,Feijão Preto,TRIÂNGULO MINEIRO,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-13,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão Carioca tipo 1,,sc,290.23,"290,23",R$,price,BRL,,spot,,,physical
+2026-02-13,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão Carioca tipo 1,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-02-13,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão preto tipo 1,,sc,170.34,"170,34",R$,price,BRL,,spot,,,physical
+2026-02-13,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão preto tipo 1,,variacao_pct,0.45,"+0,45",%,change_pct,,pct,spot,,,physical
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Barreiras,,valor_sc,293.47,"293,47",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Barreiras,,variacao_pct,-0.25,"-0,25",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Centro/Noroeste Goiano,,valor_sc,,s/ cotação,R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Centro/Noroeste Goiano,,variacao_pct,,-,%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Curitiba,,valor_sc,286.79,"286,79",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Curitiba,,variacao_pct,-1.27,"-1,27",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Itapeva,,valor_sc,308.25,"308,25",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Itapeva,,variacao_pct,0.19,"+0,19",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Leste Goiano,,valor_sc,279.71,"279,71",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Leste Goiano,,variacao_pct,-0.45,"-0,45",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Metade Sul do Paraná,,valor_sc,282.63,"282,63",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Metade Sul do Paraná,,variacao_pct,0.58,"+0,58",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Noroeste de Minas,,valor_sc,294.2,"294,20",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Noroeste de Minas,,variacao_pct,0.7,"+0,70",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Sul Goiano,,valor_sc,302.86,"302,86",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Sul Goiano,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",São Paulo,,valor_sc,,s/ cotação,R$,price,BRL,,spot,,SP,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",São Paulo,,variacao_pct,,-,%,change_pct,,pct,spot,,SP,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Triâng.Mineiro/Alto Paranaíba,,valor_sc,280.71,"280,71",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-carioca-nota-8-a-8-5-cepea-cna,"Feijão Carioca - Nota 8 a 8,5 - CEPEA/CNA",Triâng.Mineiro/Alto Paranaíba,,variacao_pct,-0.03,"-0,03",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Curitiba,,valor_sc,190.4,"190,40",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Curitiba,,variacao_pct,-0.35,"-0,35",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Metade Sul do Paraná,,valor_sc,184.15,"184,15",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Metade Sul do Paraná,,variacao_pct,0.09,"+0,09",%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Nordeste Rio-grandense,,valor_sc,,s/ cotação,R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Nordeste Rio-grandense,,variacao_pct,,-,%,change_pct,,pct,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Oeste Catarinense,,valor_sc,175.0,"175,00",R$,price,BRL,,spot,,,indicator
+2026-02-13,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Oeste Catarinense,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator

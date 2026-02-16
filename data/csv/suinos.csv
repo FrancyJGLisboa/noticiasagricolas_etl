@@ -315,6 +315,16 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-12,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Santa Catarina,,variacao_pct,-1.47,"-1,47",%,change_pct,,pct,spot,,SC,physical
 2026-02-12,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,preco_kg,7.1,"7,10",R$,price,BRL,,spot,,SP,physical
 2026-02-12,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,MG - posto,,kg,6.76,"6,76",R$,price,BRL,,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,MG - posto,,variacao_pct,-0.29,"-0,29",%,change_pct,,pct,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,PR - a retirar,,kg,6.65,"6,65",R$,price,BRL,,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,PR - a retirar,,variacao_pct,-0.3,"-0,30",%,change_pct,,pct,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,RS - a retirar,,kg,6.8,"6,80",R$,price,BRL,,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,RS - a retirar,,variacao_pct,-0.15,"-0,15",%,change_pct,,pct,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SC - a retirar,,kg,6.59,"6,59",R$,price,BRL,,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SC - a retirar,,variacao_pct,-0.6,"-0,60",%,change_pct,,pct,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SP - posto,,kg,6.92,"6,92",R$,price,BRL,,spot,,,physical
+2026-02-13,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SP - posto,,variacao_pct,-0.57,"-0,57",%,change_pct,,pct,spot,,,physical
 2026-02-13,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,valor,130.0,"130,00",R$,price,BRL,,spot,,,physical
 2026-02-13,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-02-13,suinos,suino-sp,Suíno (SP),Suíno Carcaça Especial (kg),,valor,10.3,"10,30",R$,price,BRL,,spot,,,physical

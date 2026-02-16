@@ -69853,6 +69853,7 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-12,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.01,"+0,01",%,change_pct,,pct,spot,,,other
 2026-02-12,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.1044,"1,1044",%,price,,pct,spot,,,other
 2026-02-12,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-02-12,mercado-financeiro,taxa-selic,Taxa Selic,Selic - Meta,,taxa_ao_ano,15.0,"15,00%",%,rate,,pct,spot,,,indicator
 2026-02-13,mercado-financeiro,bolsas,Bolsas,DAX,,valor,24914.88,"24.914,88",%,price,,pct,spot,,,other
 2026-02-13,mercado-financeiro,bolsas,Bolsas,DAX,,variacao_pct,0.25,"+0,25",%,change_pct,,pct,spot,,,other
 2026-02-13,mercado-financeiro,bolsas,Bolsas,FTSE,,valor,10446.35,"10.446,35",%,price,,pct,spot,,,other
