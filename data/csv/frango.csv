@@ -127,3 +127,7 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-13,frango,precos-do-frango-congelado-cepea-esalq,Frango Congelado Cepea/Esalq,,,variacao_pct,0.69,"+0,69",%,change_pct,,pct,spot,,,indicator
 2026-02-13,frango,precos-do-frango-resfriado-cepea-esalq,Frango Resfriado Cepea/Esalq,,,kg,7.33,"7,33",R$,price,BRL,,spot,,,indicator
 2026-02-13,frango,precos-do-frango-resfriado-cepea-esalq,Frango Resfriado Cepea/Esalq,,,variacao_pct,0.55,"+0,55",%,change_pct,,pct,spot,,,indicator
+2026-02-18,frango,frango-vivo-estados,Frango Vivo,Paraná,,preco,4.74,"4,74",R$/Kg,price,BRL,kg,spot,,PR,physical
+2026-02-18,frango,frango-vivo-estados,Frango Vivo,Paraná,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
+2026-02-18,frango,frango-vivo-estados,Frango Vivo,Santa Catarina,,preco,4.7,"4,70",R$/Kg,price,BRL,kg,spot,,SC,physical
+2026-02-18,frango,frango-vivo-estados,Frango Vivo,Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
