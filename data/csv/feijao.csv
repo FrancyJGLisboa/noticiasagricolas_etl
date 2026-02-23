@@ -2199,3 +2199,103 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-20,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Nordeste Rio-grandense,,variacao_pct,,-,%,change_pct,,pct,spot,,,indicator
 2026-02-20,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Oeste Catarinense,,valor_sc,175.83,"175,83",R$,price,BRL,,spot,,,indicator
 2026-02-20,feijao,precos-do-feijao-preto-tipo-1-cepea-cna,Feijão Preto Tipo 1 - CEPEA/CNA,Oeste Catarinense,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,BR 163,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,BR 163,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,CENTRO ORIENTAL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,CENTRO ORIENTAL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,EMPACOTADORES,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,EMPACOTADORES,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,LESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,LESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,NOROESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,NOROESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,SUDOESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,SUDOESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,SUL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,SUL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,TRIÂNGULO MINEIRO,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-7,Feijão Carioca Nota 7,TRIÂNGULO MINEIRO,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,BR 163,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,BR 163,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,CENTRO ORIENTAL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,CENTRO ORIENTAL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,EMPACOTADORES,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,EMPACOTADORES,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,LESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,LESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,NOROESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,NOROESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,SUDOESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,SUDOESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,SUL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,SUL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,TRIÂNGULO MINEIRO,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8,Feijão Carioca Nota 8,TRIÂNGULO MINEIRO,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",BR 163,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",BR 163,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",CENTRO ORIENTAL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",CENTRO ORIENTAL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",EMPACOTADORES,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",EMPACOTADORES,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",LESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",LESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",NOROESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",NOROESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",SUDOESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",SUDOESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",SUL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",SUL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",TRIÂNGULO MINEIRO,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-8-5,"Feijão Carioca Nota 8,5",TRIÂNGULO MINEIRO,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",BR 163,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",BR 163,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",CENTRO ORIENTAL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",CENTRO ORIENTAL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",EMPACOTADORES,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",EMPACOTADORES,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",LESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",LESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",NOROESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",NOROESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",SUDOESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",SUDOESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",SUL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",SUL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",TRIÂNGULO MINEIRO,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-carioca-nota-9-9-5,"Feijão Carioca Nota 9/9,5",TRIÂNGULO MINEIRO,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,BR 163,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,BR 163,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,CENTRO ORIENTAL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,CENTRO ORIENTAL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,EMPACOTADORES,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,EMPACOTADORES,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,LESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,LESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,NOROESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,NOROESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,SUDOESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,SUDOESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,SUL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,SUL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,TRIÂNGULO MINEIRO,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-caupi-nova-era,Feijão Caupi Nova Era,TRIÂNGULO MINEIRO,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,BR 163,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,BR 163,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,CENTRO ORIENTAL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,CENTRO ORIENTAL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,EMPACOTADORES,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,EMPACOTADORES,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,LESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,LESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,NOROESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,NOROESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,SUDOESTE,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,SUDOESTE,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,SUL,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,SUL,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,TRIÂNGULO MINEIRO,,preco_sc,,s/ cotação,R$,price,BRL,,spot,,,other
+2026-02-23,feijao,feijao-preto,Feijão Preto,TRIÂNGULO MINEIRO,,variacao_pct,,-,%,change_pct,,pct,spot,,,other
+2026-02-23,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão Carioca tipo 1,,sc,314.58,"314,58",R$,price,BRL,,spot,,,physical
+2026-02-23,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão Carioca tipo 1,,variacao_pct,1.96,"+1,96",%,change_pct,,pct,spot,,,physical
+2026-02-23,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão preto tipo 1,,sc,182.68,"182,68",R$,price,BRL,,spot,,,physical
+2026-02-23,feijao,preco-feijo-parana-media,Feijão Atacado - Média PR,Feijão preto tipo 1,,variacao_pct,1.26,"+1,26",%,change_pct,,pct,spot,,,physical

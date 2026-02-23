@@ -60719,3 +60719,41 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-20,algodao,caroco-de-algodo,Caroço de algodão,Oeste da Bahia (AIBA),,variacao_pct,-1.37,"-1,37",%,change_pct,,pct,spot,,,physical
 2026-02-20,algodao,indice-cotlook,Índice Cotlook A,,,valor,73.7,"73,70",Pontos,price,,points,spot,,,indicator
 2026-02-20,algodao,indice-cotlook,Índice Cotlook A,,,variacao_pontos,0.15,"+0,15",%,change_abs,,pct,spot,,,indicator
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,"Dólar: 5,17",arroba,,,¢/lb,price,USD,lb,spot,,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,"Dólar: 5,17",investing,,,¢/lb,index,USD,lb,spot,,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,"Dólar: 5,17",variacao_pontos,,,%,change_abs,,pct,spot,,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Julho/26,arroba,114.24,"114,24",¢/lb,price,USD,lb,futures,2026-07,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Julho/26,investing,66.82,"66,82",¢/lb,index,USD,lb,futures,2026-07,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,-0.36,"-0,36",%,change_abs,,pct,futures,2026-07,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Maio/26,arroba,111.37,"111,37",¢/lb,price,USD,lb,futures,2026-05,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Maio/26,investing,65.14,"65,14",¢/lb,index,USD,lb,futures,2026-05,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-0.49,"-0,49",%,change_abs,,pct,futures,2026-05,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Março/26,arroba,108.67,"108,67",¢/lb,price,USD,lb,futures,2026-03,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Março/26,investing,63.56,"63,56",¢/lb,index,USD,lb,futures,2026-03,,nybot
+2026-02-23,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Março/26,variacao_pontos,0.53,"+0,53",%,change_abs,,pct,futures,2026-03,,nybot
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Alto Garças,,preco_compra,110.34,"110,34",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Alto Garças,,variacao_pct,-0.36,"-0,36",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Campo Novo do Parecis,,preco_compra,107.27,"107,27",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Campo Novo do Parecis,,variacao_pct,-0.36,"-0,36",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Campo Verde,,preco_compra,109.02,"109,02",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Campo Verde,,variacao_pct,-0.36,"-0,36",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Diamantino,,preco_compra,108.14,"108,14",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Diamantino,,variacao_pct,-0.36,"-0,36",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Itiquira,,preco_compra,109.04,"109,04",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Itiquira,,variacao_pct,-0.36,"-0,36",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Nova Mutum,,preco_compra,108.05,"108,05",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Nova Mutum,,variacao_pct,-0.37,"-0,37",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Rondonópolis,,preco_compra,109.58,"109,58",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Rondonópolis,,variacao_pct,-0.36,"-0,36",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Sorriso,,preco_compra,107.35,"107,35",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodao-imea,Algodão - IMEA,Sorriso,,variacao_pct,-0.37,"-0,37",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodo-em-pluma-ao-produtor,Algodão em pluma,Oeste da Bahia (AIBA),,preco,115.67,"115,67",R$/@,price,BRL,arroba,spot,,,physical
+2026-02-23,algodao,algodo-em-pluma-ao-produtor,Algodão em pluma,Oeste da Bahia (AIBA),,variacao_pct,0.87,"+0,87",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,algodo-em-pluma-ao-produtor,Algodão em pluma,Sorriso/MT (Sindicato),,preco,107.35,"107,35",R$/@,price,BRL,arroba,spot,,MT,physical
+2026-02-23,algodao,algodo-em-pluma-ao-produtor,Algodão em pluma,Sorriso/MT (Sindicato),,variacao_pct,-0.37,"-0,37",%,change_pct,,pct,spot,,MT,physical
+2026-02-23,algodao,caroco-de-algodo,Caroço de algodão,Mato Grosso/MT (IMEA),,preco,,s/ cotação,R$/t,price,BRL,ton,spot,,MT,physical
+2026-02-23,algodao,caroco-de-algodo,Caroço de algodão,Mato Grosso/MT (IMEA),,variacao_pct,,-,%,change_pct,,pct,spot,,MT,physical
+2026-02-23,algodao,caroco-de-algodo,Caroço de algodão,Oeste da Bahia (AIBA),,preco,1200.0,"1.200,00",R$/t,price,BRL,ton,spot,,,physical
+2026-02-23,algodao,caroco-de-algodo,Caroço de algodão,Oeste da Bahia (AIBA),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-02-23,algodao,indice-cotlook,Índice Cotlook A,,,valor,74.15,"74,15",Pontos,price,,points,spot,,,indicator
+2026-02-23,algodao,indice-cotlook,Índice Cotlook A,,,variacao_pontos,0.45,"+0,45",%,change_abs,,pct,spot,,,indicator
