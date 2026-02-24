@@ -70037,6 +70037,7 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-20,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.16,"+0,16",%,change_pct,,pct,spot,,,other
 2026-02-20,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.102,"1,1020",%,price,,pct,spot,,,other
 2026-02-20,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,0.25,"+0,25",%,change_pct,,pct,spot,,,other
+2026-02-20,mercado-financeiro,taxa-selic,Taxa Selic,Selic - Meta,,taxa_ao_ano,15.0,"15,00%",%,rate,,pct,spot,,,indicator
 2026-02-23,mercado-financeiro,bolsas,Bolsas,DAX,,valor,24991.97,"24.991,97",%,price,,pct,spot,,,other
 2026-02-23,mercado-financeiro,bolsas,Bolsas,DAX,,variacao_pct,-1.06,"-1,06",%,change_pct,,pct,spot,,,other
 2026-02-23,mercado-financeiro,bolsas,Bolsas,FTSE,,valor,10684.74,"10.684,74",%,price,,pct,spot,,,other
@@ -70082,3 +70083,16 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-02-23,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.04,"+0,04",%,change_pct,,pct,spot,,,other
 2026-02-23,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.0993,"1,0993",%,price,,pct,spot,,,other
 2026-02-23,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,-0.28,"-0,28",%,change_pct,,pct,spot,,,other
+2026-02-23,mercado-financeiro,taxa-selic,Taxa Selic,Selic - Meta,,taxa_ao_ano,15.0,"15,00%",%,rate,,pct,spot,,,indicator
+2026-02-24,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,valor,5.1682,"5,1682",R$,price,BRL,,spot,,,indicator
+2026-02-24,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,variacao_pct,0.09,"+0,09",%,change_pct,,pct,spot,,,indicator
+2026-02-24,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,valor,6.0845,"6,0845",R$,price,BRL,,spot,,,indicator
+2026-02-24,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,variacao_pct,-0.1,"-0,10",%,change_pct,,pct,spot,,,indicator
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,valor,5.158,"5,1580",%,price,,pct,spot,,,other
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,variacao_pct,-0.29,"-0,29",%,change_pct,,pct,spot,,,other
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,valor,1.1775,"1,1775",%,price,,pct,spot,,,other
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,variacao_pct,0.01,"+0,01",%,change_pct,,pct,spot,,,other
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,valor,1.3503,"1,3503",%,price,,pct,spot,,,other
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,-0.01,"-0,01",%,change_pct,,pct,spot,,,other
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.1001,"1,1001",%,price,,pct,spot,,,other
+2026-02-24,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
