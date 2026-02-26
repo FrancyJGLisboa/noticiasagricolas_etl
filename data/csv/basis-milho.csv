@@ -92918,3 +92918,49 @@ date,location,state,physical_indicator,physical_price_brl,futures_indicator,futu
 2026-02-25,São Gabriel do Oeste/MS,MS,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-bolsa-de-chicago-cme-group,2026-03,4.305,52.30836338440704,5.144,1.6916366155929623,0.3288562627513535,3.233969686953031
 2026-02-25,Tangará da Serra/MT,MT,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-bolsa-de-chicago-cme-group,2026-03,4.305,52.30836338440704,5.144,1.6916366155929623,0.3288562627513535,3.233969686953031
 2026-02-25,Ubiratã/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,51.0,milho-bolsa-de-chicago-cme-group,2026-03,4.305,52.30836338440704,5.144,-1.3083633844070377,-0.2543474697525345,-2.501250851211026
+2026-02-26,Brasília/DF,DF,milho-mercado-fisico-sindicatos-e-cooperativas,59.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-12.450000000000003,,-17.424772568229535
+2026-02-26,Campinas/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,70.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-1.4500000000000028,,-2.0293911826452105
+2026-02-26,Campo Grande/MS,MS,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-17.450000000000003,,-24.42267319804059
+2026-02-26,Campo Novo do Parecis/MT,MT,milho-mercado-fisico-sindicatos-e-cooperativas,52.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-19.450000000000003,,-27.221833449965015
+2026-02-26,Castro/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,64.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-7.450000000000003,,-10.426871938418477
+2026-02-26,Cândido Mota/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,55.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-16.450000000000003,,-23.023093072078378
+2026-02-26,Itapetininga/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,66.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-5.450000000000003,,-7.627711686494056
+2026-02-26,Jataí/GO,GO,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-15.450000000000003,,-21.62351294611617
+2026-02-26,Luís Eduardo Magalhães/BA,BA,milho-mercado-fisico-sindicatos-e-cooperativas,61.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-10.450000000000003,,-14.625612316305112
+2026-02-26,Machado/MG,MG,milho-mercado-fisico-sindicatos-e-cooperativas,63.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-8.450000000000003,,-11.826452064380689
+2026-02-26,Maracaju/MS,MS,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-17.450000000000003,,-24.42267319804059
+2026-02-26,Nonoai/RS,RS,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-15.450000000000003,,-21.62351294611617
+2026-02-26,Não-Me-Toque/RS,RS,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-15.450000000000003,,-21.62351294611617
+2026-02-26,Oeste da Bahia/BA,BA,milho-mercado-fisico-sindicatos-e-cooperativas,57.67,milho-b3-prego-regular,2026-03,71.45,71.45,,-13.780000000000001,,-19.286214135759273
+2026-02-26,Palma Sola/SC,SC,milho-mercado-fisico-sindicatos-e-cooperativas,55.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-16.450000000000003,,-23.023093072078378
+2026-02-26,Pato Branco/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-15.450000000000003,,-21.62351294611617
+2026-02-26,Porto Paranaguá/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,65.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-6.450000000000003,,-9.027291812456268
+2026-02-26,Porto Santos/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,66.5,milho-b3-prego-regular,2026-03,71.45,71.45,,-4.950000000000003,,-6.92792162351295
+2026-02-26,Rio Verde/GO,GO,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-15.450000000000003,,-21.62351294611617
+2026-02-26,Rio do Sul/SC,SC,milho-mercado-fisico-sindicatos-e-cooperativas,61.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-10.450000000000003,,-14.625612316305112
+2026-02-26,São Gabriel do Oeste/MS,MS,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-17.450000000000003,,-24.42267319804059
+2026-02-26,Tangará da Serra/MT,MT,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-17.450000000000003,,-24.42267319804059
+2026-02-26,Ubiratã/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,51.0,milho-b3-prego-regular,2026-03,71.45,71.45,,-20.450000000000003,,-28.621413575927225
+2026-02-26,Brasília/DF,DF,milho-mercado-fisico-sindicatos-e-cooperativas,59.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,6.41685077870337,1.2488518895144933,12.203245476412985
+2026-02-26,Campinas/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,70.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,17.41685077870337,3.389679416664079,33.12249463303235
+2026-02-26,Campo Grande/MS,MS,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,1.4168507787033704,0.2757484680828637,2.6944958597678164
+2026-02-26,Campo Novo do Parecis/MT,MT,milho-mercado-fisico-sindicatos-e-cooperativas,52.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,-0.5831492212966296,-0.11349290048978816,-1.109003986890251
+2026-02-26,Castro/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,64.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,11.41685077870337,2.221955310946123,21.711995093058153
+2026-02-26,Cândido Mota/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,55.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,2.4168507787033704,0.47036915236918964,4.59624578309685
+2026-02-26,Itapetininga/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,66.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,13.41685077870337,2.611196679518775,25.51549493971622
+2026-02-26,Jataí/GO,GO,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,3.4168507787033704,0.6649898366555156,6.4979957064258835
+2026-02-26,Luís Eduardo Magalhães/BA,BA,milho-mercado-fisico-sindicatos-e-cooperativas,61.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,8.41685077870337,1.6380932580871452,16.00674532307105
+2026-02-26,Machado/MG,MG,milho-mercado-fisico-sindicatos-e-cooperativas,63.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,10.41685077870337,2.027334626659797,19.810245169729118
+2026-02-26,Maracaju/MS,MS,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,1.4168507787033704,0.2757484680828637,2.6944958597678164
+2026-02-26,Nonoai/RS,RS,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,3.4168507787033704,0.6649898366555156,6.4979957064258835
+2026-02-26,Não-Me-Toque/RS,RS,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,3.4168507787033704,0.6649898366555156,6.4979957064258835
+2026-02-26,Oeste da Bahia/BA,BA,milho-mercado-fisico-sindicatos-e-cooperativas,57.67,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,5.086850778703372,0.9900063794136802,9.673918078385373
+2026-02-26,Palma Sola/SC,SC,milho-mercado-fisico-sindicatos-e-cooperativas,55.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,2.4168507787033704,0.47036915236918964,4.59624578309685
+2026-02-26,Pato Branco/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,3.4168507787033704,0.6649898366555156,6.4979957064258835
+2026-02-26,Porto Paranaguá/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,65.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,12.41685077870337,2.416575995232449,23.613745016387185
+2026-02-26,Porto Santos/SP,SP,milho-mercado-fisico-sindicatos-e-cooperativas,66.5,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,13.91685077870337,2.708507021661938,26.466369901380737
+2026-02-26,Rio Verde/GO,GO,milho-mercado-fisico-sindicatos-e-cooperativas,56.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,3.4168507787033704,0.6649898366555156,6.4979957064258835
+2026-02-26,Rio do Sul/SC,SC,milho-mercado-fisico-sindicatos-e-cooperativas,61.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,8.41685077870337,1.6380932580871452,16.00674532307105
+2026-02-26,São Gabriel do Oeste/MS,MS,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,1.4168507787033704,0.2757484680828637,2.6944958597678164
+2026-02-26,Tangará da Serra/MT,MT,milho-mercado-fisico-sindicatos-e-cooperativas,54.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,1.4168507787033704,0.2757484680828637,2.6944958597678164
+2026-02-26,Ubiratã/PR,PR,milho-mercado-fisico-sindicatos-e-cooperativas,51.0,milho-bolsa-de-chicago-cme-group,2026-03,4.3325,52.58314922129663,5.1382,-1.5831492212966296,-0.3081135847761141,-3.0107539102192846
