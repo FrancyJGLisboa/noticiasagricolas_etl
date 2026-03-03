@@ -379,3 +379,27 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-02,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,variacao_pct,3.59,"+3,59",%,change_pct,,pct,spot,,,physical
 2026-03-02,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,preco_caixa_de_30_duzias,222.08,"222,08",R$,price,BRL,,spot,,,physical
 2026-03-02,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,variacao_pct,5.08,"+5,08",%,change_pct,,pct,spot,,,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Amazonas,,preco,270.0,"270,00",R$/30 dz,price,BRL,30dz,spot,,AM,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Amazonas,,variacao_pct,-1.36,"-1,36",%,change_pct,,pct,spot,,AM,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Distrito Federal,,preco,156.0,"156,00",R$/30 dz,price,BRL,30dz,spot,,DF,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Distrito Federal,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,DF,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Goiás,,preco,,s/ cotação,R$/30 dz,price,BRL,30dz,spot,,GO,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Goiás,,variacao_pct,,-,%,change_pct,,pct,spot,,GO,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Mato Grosso do Sul,,preco,,s/ cotação,R$/30 dz,price,BRL,30dz,spot,,MS,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Mato Grosso do Sul,,variacao_pct,,-,%,change_pct,,pct,spot,,MS,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Paraná,,preco,149.23,"149,23",R$/30 dz,price,BRL,30dz,spot,,PR,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Paraná,,variacao_pct,2.43,"+2,43",%,change_pct,,pct,spot,,PR,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Rondônia,,preco,190.7,"190,70",R$/30 dz,price,BRL,30dz,spot,,RO,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Rondônia,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RO,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Semana Referente de:,,preco,,23/02/26 a 27/02/26,R$/30 dz,price,BRL,30dz,spot,,,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,Semana Referente de:,,variacao_pct,,,%,change_pct,,pct,spot,,,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,São Paulo,,preco,147.44,"147,44",R$/30 dz,price,BRL,30dz,spot,,SP,physical
+2026-03-02,ovos,preco-medio-ovos-ao-produtor,Preço Médio - Ovos Branco ao Produtor,São Paulo,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-03-02,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,30_dz,159.04,"159,04",R$,price,BRL,,spot,,,indicator
+2026-03-02,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator
+2026-03-02,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,30_dz,177.59,"177,59",R$,price,BRL,,spot,,,indicator
+2026-03-02,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,indicator
+2026-03-03,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,preco_caixa_de_30_duzias,192.38,"192,38",R$,price,BRL,,spot,,,physical
+2026-03-03,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,variacao_pct,5.19,"+5,19",%,change_pct,,pct,spot,,,physical
+2026-03-03,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,preco_caixa_de_30_duzias,226.33,"226,33",R$,price,BRL,,spot,,,physical
+2026-03-03,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,variacao_pct,1.91,"+1,91",%,change_pct,,pct,spot,,,physical
