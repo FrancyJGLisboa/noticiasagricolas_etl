@@ -385,3 +385,15 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-11,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-18.0,-18,%,change_abs,,pct,futures,2026-05,,nybot
 2026-03-11,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Março/26,preco,3337.0,3337,US$ / ton,price,USD,,futures,2026-03,,nybot
 2026-03-11,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Março/26,variacao_pontos,-19.0,-19,%,change_abs,,pct,futures,2026-03,,nybot
+2026-03-12,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,preco,3385.0,3385,US$ / ton,price,USD,,futures,2026-07,,nybot
+2026-03-12,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,-113.0,-113,%,change_abs,,pct,futures,2026-07,,nybot
+2026-03-12,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,preco,3315.0,3315,US$ / ton,price,USD,,futures,2026-05,,nybot
+2026-03-12,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-114.0,-114,%,change_abs,,pct,futures,2026-05,,nybot
+2026-03-12,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Março/26,preco,3223.0,3223,US$ / ton,price,USD,,futures,2026-03,,nybot
+2026-03-12,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Março/26,variacao_pontos,-114.0,-114,%,change_abs,,pct,futures,2026-03,,nybot
+2026-03-12,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,preco,185.0,"185,00",R$,price,BRL,,spot,,BA,physical
+2026-03-12,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,BA,physical
+2026-03-12,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,preco,740.0,"740,00",R$,price,BRL,,spot,,ES,physical
+2026-03-12,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,ES,physical
+2026-03-12,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,preco,11.3,"11,30",R$,price,BRL,,spot,,PA,physical
+2026-03-12,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PA,physical
