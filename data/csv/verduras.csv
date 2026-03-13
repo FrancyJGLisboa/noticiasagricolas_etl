@@ -1087,3 +1087,37 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-12,verduras,repolho-ceasas,Repolho - Ceasas,Roxo Primeira /Kg,,variacao_pct,-10.0,"-10,00",%,change_pct,,pct,spot,,,physical
 2026-03-12,verduras,repolho-ceasas,Repolho - Ceasas,Verde Extra / Kg,,preco,2.5,"2,50",%,price,,pct,spot,,,physical
 2026-03-12,verduras,repolho-ceasas,Repolho - Ceasas,Verde Extra / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Crespa / Eng - 18 Un,,preco,35.04,"35,04",%,price,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Crespa / Eng - 18 Un,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Crespa Extra / 18-24 UN,,preco,3.5,"3,50",%,price,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Crespa Extra / 18-24 UN,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Crespa Primeira / Dz,,preco,40.0,"40,00",%,price,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Crespa Primeira / Dz,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Lisa / Eng - 18 Un,,preco,30.18,"30,18",%,price,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Lisa / Eng - 18 Un,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Lisa Extra / 18-24 UN,,preco,3.5,"3,50",%,price,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Lisa Extra / 18-24 UN,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Lisa Primeira / Dz,,preco,40.0,"40,00",%,price,,pct,spot,,,physical
+2026-03-13,verduras,alface-ceasas,Alface - Ceasas,Lisa Primeira / Dz,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,brocolos-ceasas,Brócolis - Ceasas,Brocolos Ramoso/ Eng - 12 maços,,preco,113.12,"113,12",%,price,,pct,spot,,,physical
+2026-03-13,verduras,brocolos-ceasas,Brócolis - Ceasas,Brocolos Ramoso/ Eng - 12 maços,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,brocolos-ceasas,Brócolis - Ceasas,Mineiro / Dz c/ 10 kg,,preco,60.0,"60,00",%,price,,pct,spot,,,physical
+2026-03-13,verduras,brocolos-ceasas,Brócolis - Ceasas,Mineiro / Dz c/ 10 kg,,variacao_pct,25.0,"+25,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,brocolos-ceasas,Brócolis - Ceasas,Ninja Tipo A / Kg,,preco,6.43,"6,43",%,price,,pct,spot,,,physical
+2026-03-13,verduras,brocolos-ceasas,Brócolis - Ceasas,Ninja Tipo A / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,couve-ceasas,Couve - Ceasas,Couve Manteiga / Kg,,preco,6.25,"6,25",%,price,,pct,spot,,,physical
+2026-03-13,verduras,couve-ceasas,Couve - Ceasas,Couve Manteiga / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,couve-ceasas,Couve - Ceasas,Manteiga A / Eng - 24 maços,,preco,52.12,"52,12",%,price,,pct,spot,,,physical
+2026-03-13,verduras,couve-ceasas,Couve - Ceasas,Manteiga A / Eng - 24 maços,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,couve-ceasas,Couve - Ceasas,"Primeira / Dz c/ 1,70 kg",,preco,30.0,"30,00",%,price,,pct,spot,,,physical
+2026-03-13,verduras,couve-ceasas,Couve - Ceasas,"Primeira / Dz c/ 1,70 kg",,variacao_pct,-37.5,"-37,50",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Liso /Eng - 12/14 Cabeças,,preco,48.91,"48,91",%,price,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Liso /Eng - 12/14 Cabeças,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Roxo / Kg,,preco,2.5,"2,50",%,price,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Roxo / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Roxo /Eng - 12/14 Cabeças,,preco,54.03,"54,03",%,price,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Roxo /Eng - 12/14 Cabeças,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Roxo Primeira /Kg,,preco,2.75,"2,75",%,price,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Roxo Primeira /Kg,,variacao_pct,22.22,"+22,22",%,change_pct,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Verde Extra / Kg,,preco,2.5,"2,50",%,price,,pct,spot,,,physical
+2026-03-13,verduras,repolho-ceasas,Repolho - Ceasas,Verde Extra / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
