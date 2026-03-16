@@ -523,9 +523,25 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-13,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-03-13,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Gde (11-12 DZ),,preco,2.5,"2,50",R$/Kg,price,BRL,kg,spot,,,physical
 2026-03-13,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Gde (11-12 DZ),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-13,laranja,laranja-industria,Laranja Indústria,,,r_a_prazocaixa_408_kg_prazo,32.86,"32,86",R$,price,BRL,,spot,,,physical
+2026-03-13,laranja,laranja-industria,Laranja Indústria,,,variacao_pct,-1.41,"-1,41",%,change_pct,,pct,spot,,,physical
+2026-03-13,laranja,laranja-pera-in-natura,Laranja Pera In Natura,,,caixa_40_8_kg,43.47,"43,47",R$,price,BRL,,spot,,,other
+2026-03-13,laranja,laranja-pera-in-natura,Laranja Pera In Natura,,,variacao_pct,-0.91,"-0,91",%,change_pct,,pct,spot,,,other
 2026-03-13,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Julho/26,fechamento,195.5,"195,50",c/US$/libra peso,price,USD,lb,futures,2026-07,,nybot
 2026-03-13,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,1.7,"+1,70",%,change_abs,,pct,futures,2026-07,,nybot
 2026-03-13,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Maio/26,fechamento,199.3,"199,30",c/US$/libra peso,price,USD,lb,futures,2026-05,,nybot
 2026-03-13,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,1.5,"+1,50",%,change_abs,,pct,futures,2026-05,,nybot
 2026-03-13,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,fechamento,194.7,"194,70",c/US$/libra peso,price,USD,lb,futures,2026-09,,nybot
 2026-03-13,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,2.45,"+2,45",%,change_abs,,pct,futures,2026-09,,nybot
+2026-03-16,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera (13 a 15 DZ),,preco,2.28,"2,28",R$/Kg,price,BRL,kg,spot,,,physical
+2026-03-16,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera (13 a 15 DZ),,variacao_pct,-2.98,"-2,98",%,change_pct,,pct,spot,,,physical
+2026-03-16,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Extra,,preco,2.5,"2,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-03-16,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-16,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Gde (11-12 DZ),,preco,2.5,"2,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-03-16,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Gde (11-12 DZ),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-16,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Julho/26,fechamento,197.65,"197,65",c/US$/libra peso,price,USD,lb,futures,2026-07,,nybot
+2026-03-16,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,2.15,"+2,15",%,change_abs,,pct,futures,2026-07,,nybot
+2026-03-16,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Maio/26,fechamento,199.8,"199,80",c/US$/libra peso,price,USD,lb,futures,2026-05,,nybot
+2026-03-16,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,0.5,"+0,50",%,change_abs,,pct,futures,2026-05,,nybot
+2026-03-16,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,fechamento,197.25,"197,25",c/US$/libra peso,price,USD,lb,futures,2026-09,,nybot
+2026-03-16,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,2.55,"+2,55",%,change_abs,,pct,futures,2026-09,,nybot
