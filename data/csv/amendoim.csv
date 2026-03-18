@@ -18089,3 +18089,15 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-17,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem casca / saca 50 kg,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
 2026-03-17,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem pele / Kg,,preco,8.8,"8,80",R$,price,BRL,,spot,,,physical
 2026-03-17,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem pele / Kg,,variacao_pct,7.32,"+7,32",%,change_pct,,pct,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Com casca / kg,,preco,7.5,"7,50",R$,price,BRL,,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Com casca / kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Com casca / saca 25 kg,,preco,225.0,"225,00",R$,price,BRL,,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Com casca / saca 25 kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Com pele / Kg,,preco,7.7,"7,70",R$,price,BRL,,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Com pele / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem casca / kg,,preco,8.0,"8,00",R$,price,BRL,,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem casca / kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem casca / saca 50 kg,,preco,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem casca / saca 50 kg,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem pele / Kg,,preco,8.8,"8,80",R$,price,BRL,,spot,,,physical
+2026-03-18,amendoim,amendoim-ceasas,Amendoim - Ceasas,Sem pele / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical

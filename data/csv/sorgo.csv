@@ -623,3 +623,17 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-17,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Rio Verde/GO (Comigo),,variacao_pct,,-,%,change_pct,,pct,spot,,GO,physical
 2026-03-17,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Rio do Sul/SC (Cravil),,preco,61.0,"61,00",R$/sc,price,BRL,sc60kg,spot,,SC,physical
 2026-03-17,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Rio do Sul/SC (Cravil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Cândido Mota/SP (Coopermota),,preco,46.8,"46,80",R$/sc,price,BRL,sc60kg,spot,,SP,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Cândido Mota/SP (Coopermota),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Jataí/GO (Sindicato Rural de Jataí),,preco,47.5,"47,50",R$/sc,price,BRL,sc60kg,spot,,GO,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Jataí/GO (Sindicato Rural de Jataí),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,GO,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Luís Eduardo Magalhães/BA,,preco,42.0,"42,00",R$/sc,price,BRL,sc60kg,spot,,BA,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Luís Eduardo Magalhães/BA,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,BA,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Média RS (Clicmercado),,preco,52.0,"52,00",R$/sc,price,BRL,sc60kg,spot,,,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Média RS (Clicmercado),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Oeste da Bahia/BA (AIBA),,preco,42.33,"42,33",R$/sc,price,BRL,sc60kg,spot,,BA,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Oeste da Bahia/BA (AIBA),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,BA,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Rio Verde/GO (Comigo),,preco,47.5,"47,50",R$/sc,price,BRL,sc60kg,spot,,GO,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Rio Verde/GO (Comigo),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,GO,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Rio do Sul/SC (Cravil),,preco,61.0,"61,00",R$/sc,price,BRL,sc60kg,spot,,SC,physical
+2026-03-18,sorgo,sorgo-mercado-fisico-media,Sorgo - Mercado Físico,Rio do Sul/SC (Cravil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
