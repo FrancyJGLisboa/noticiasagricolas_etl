@@ -70863,3 +70863,16 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-18,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.05,"+0,05",%,change_pct,,pct,spot,,,other
 2026-03-18,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.0741,"1,0741",%,price,,pct,spot,,,other
 2026-03-18,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,-0.05,"-0,05",%,change_pct,,pct,spot,,,other
+2026-03-18,mercado-financeiro,taxa-selic,Taxa Selic,Selic - Meta,,taxa_ao_ano,14.75,"14,75%",%,rate,,pct,spot,,,indicator
+2026-03-19,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,valor,5.2587,"5,2587",R$,price,BRL,,spot,,,indicator
+2026-03-19,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,variacao_pct,0.91,"+0,91",%,change_pct,,pct,spot,,,indicator
+2026-03-19,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,valor,6.0554,"6,0554",R$,price,BRL,,spot,,,indicator
+2026-03-19,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,variacao_pct,0.92,"+0,92",%,change_pct,,pct,spot,,,indicator
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,valor,5.223,"5,2230",%,price,,pct,spot,,,other
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,variacao_pct,-0.86,"-0,86",%,change_pct,,pct,spot,,,other
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,valor,1.159,"1,1590",%,price,,pct,spot,,,other
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,variacao_pct,1.21,"+1,21",%,change_pct,,pct,spot,,,other
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,valor,1.3434,"1,3434",%,price,,pct,spot,,,other
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,1.32,"+1,32",%,change_pct,,pct,spot,,,other
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.0765,"1,0765",%,price,,pct,spot,,,other
+2026-03-19,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,0.19,"+0,19",%,change_pct,,pct,spot,,,other
