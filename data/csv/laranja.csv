@@ -629,3 +629,15 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-23,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,0.45,"+0,45",%,change_abs,,pct,futures,2026-05,,nybot
 2026-03-23,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,fechamento,162.85,"162,85",c/US$/libra peso,price,USD,lb,futures,2026-09,,nybot
 2026-03-23,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,-0.05,"-0,05",%,change_abs,,pct,futures,2026-09,,nybot
+2026-03-24,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera (13 a 15 DZ),,preco,2.39,"2,39",R$/Kg,price,BRL,kg,spot,,,physical
+2026-03-24,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera (13 a 15 DZ),,variacao_pct,3.91,"+3,91",%,change_pct,,pct,spot,,,physical
+2026-03-24,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Extra,,preco,2.25,"2,25",R$/Kg,price,BRL,kg,spot,,,physical
+2026-03-24,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-24,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Gde (11-12 DZ),,preco,2.5,"2,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-03-24,laranja,laranja-ceasas,Laranja - Ceasas,Laranja Pera Gde (11-12 DZ),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-24,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Julho/26,fechamento,171.3,"171,30",c/US$/libra peso,price,USD,lb,futures,2026-07,,nybot
+2026-03-24,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,10.0,"+10,00",%,change_abs,,pct,futures,2026-07,,nybot
+2026-03-24,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Maio/26,fechamento,171.95,"171,95",c/US$/libra peso,price,USD,lb,futures,2026-05,,nybot
+2026-03-24,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,10.0,"+10,00",%,change_abs,,pct,futures,2026-05,,nybot
+2026-03-24,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,fechamento,172.85,"172,85",c/US$/libra peso,price,USD,lb,futures,2026-09,,nybot
+2026-03-24,laranja,suco-de-laranja-bolsa-de-nova-iorque-nybot,Suco de Laranja - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,10.0,"+10,00",%,change_abs,,pct,futures,2026-09,,nybot
