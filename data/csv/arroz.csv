@@ -32877,8 +32877,40 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-23,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Pelotas/RS (Cereagro),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
 2026-03-23,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,preco,54.0,"54,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SC,physical
 2026-03-23,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,variacao_pct,3.85,"+3,85",%,change_pct,,pct,spot,,SC,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Alegrete/RS,,preco_sc_50_kg,55.0,"55,00",R$,price,BRL,,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Alegrete/RS,,variacao_pct,1.85,"+1,85",%,change_pct,,pct,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Cachoeira do Sul/RS,,preco_sc_50_kg,53.5,"53,50",R$,price,BRL,,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Cachoeira do Sul/RS,,variacao_pct,2.88,"+2,88",%,change_pct,,pct,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Dom Pedrito/RS,,preco_sc_50_kg,53.5,"53,50",R$,price,BRL,,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Dom Pedrito/RS,,variacao_pct,1.9,"+1,90",%,change_pct,,pct,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Jaraguá do Sul/SC,,preco_sc_50_kg,55.0,"55,00",R$,price,BRL,,spot,,SC,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Jaraguá do Sul/SC,,variacao_pct,3.77,"+3,77",%,change_pct,,pct,spot,,SC,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Santa Maria/RS,,preco_sc_50_kg,53.0,"53,00",R$,price,BRL,,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Santa Maria/RS,,variacao_pct,1.92,"+1,92",%,change_pct,,pct,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Sul Catarinense/SC,,preco_sc_50_kg,55.0,"55,00",R$,price,BRL,,spot,,SC,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Sul Catarinense/SC,,variacao_pct,3.77,"+3,77",%,change_pct,,pct,spot,,SC,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Turvo/SC,,preco_sc_50_kg,55.0,"55,00",R$,price,BRL,,spot,,SC,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Turvo/SC,,variacao_pct,3.77,"+3,77",%,change_pct,,pct,spot,,SC,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Uruguaiana/RS,,preco_sc_50_kg,54.0,"54,00",R$,price,BRL,,spot,,RS,physical
+2026-03-24,arroz,arroz-agulhinha-irrigado-mercado-fisico,Arroz (Agulhinha Irrigado) - Mercado Físico,Uruguaiana/RS,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
 2026-03-24,arroz,arroz-atacado-media-pr,Arroz Atacado - Média PR,Agulhinha em casca,,sc,69.32,"69,32",R$,price,BRL,,spot,,,physical
 2026-03-24,arroz,arroz-atacado-media-pr,Arroz Atacado - Média PR,Agulhinha em casca,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-24,arroz,arroz-beneficiado-tipo-1,Arroz Beneficiado (Tipo 1),Porto Alegre/RS,,preco,118.0,"118,00",R$/sc 60 kg,price,BRL,sc60kg,spot,,RS,physical
+2026-03-24,arroz,arroz-beneficiado-tipo-1,Arroz Beneficiado (Tipo 1),Porto Alegre/RS,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-03-24,arroz,arroz-beneficiado-tipo-1,Arroz Beneficiado (Tipo 1),Sul Catarinense/SC,,preco,118.0,"118,00",R$/sc 60 kg,price,BRL,sc60kg,spot,,SC,physical
+2026-03-24,arroz,arroz-beneficiado-tipo-1,Arroz Beneficiado (Tipo 1),Sul Catarinense/SC,,variacao_pct,1.72,"+1,72",%,change_pct,,pct,spot,,SC,physical
+2026-03-24,arroz,arroz-beneficiado-tipo-1,Arroz Beneficiado (Tipo 1),São Paulo/SP,,preco,124.0,"124,00",R$/sc 60 kg,price,BRL,sc60kg,spot,,SP,physical
+2026-03-24,arroz,arroz-beneficiado-tipo-1,Arroz Beneficiado (Tipo 1),São Paulo/SP,,variacao_pct,-0.8,"-0,80",%,change_pct,,pct,spot,,SP,physical
+2026-03-24,arroz,arroz-em-casca-esalq-bbm,Indicador Arroz em Casca - Esalq/Senar-RS,,,valor_saca_de_50_kg,61.52,"61,52",R$,price,BRL,,spot,,,indicator
+2026-03-24,arroz,arroz-em-casca-esalq-bbm,Indicador Arroz em Casca - Esalq/Senar-RS,,,variacao_pct,2.55,"+2,55",%,change_pct,,pct,spot,,,indicator
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Formoso do Araguaia/TO,,preco,70.0,"70,00",R$/sc 60 kg,price,BRL,sc60kg,spot,,TO,physical
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Formoso do Araguaia/TO,,variacao_pct,-5.41,"-5,41",%,change_pct,,pct,spot,,TO,physical
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Lagoa da Confusão/TO,,preco,70.0,"70,00",R$/sc 60 kg,price,BRL,sc60kg,spot,,TO,physical
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Lagoa da Confusão/TO,,variacao_pct,-5.41,"-5,41",%,change_pct,,pct,spot,,TO,physical
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Sinop/MT e Sorriso/MT,,preco,75.0,"75,00",R$/sc 60 kg,price,BRL,sc60kg,spot,,MT,physical
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Sinop/MT e Sorriso/MT,,variacao_pct,25.0,"+25,00",%,change_pct,,pct,spot,,MT,physical
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Várzea Grande/MT,,preco,76.0,"76,00",R$/sc 60 kg,price,BRL,sc60kg,spot,,MT,physical
+2026-03-24,arroz,arroz-longo-fino-mercado-fisico,Arroz (Longo Fino) - Mercado Físico,Várzea Grande/MT,,variacao_pct,22.58,"+22,58",%,change_pct,,pct,spot,,MT,physical
 2026-03-24,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Capivari do Sul/RS (Coripil),,preco,65.0,"65,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,RS,physical
 2026-03-24,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Capivari do Sul/RS (Coripil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
 2026-03-24,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Guaratinguetá/SP (IEA) (R$/Sc 60 kg),,preco,82.0,"82,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SP,physical
@@ -32891,3 +32923,17 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-24,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Pelotas/RS (Cereagro),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
 2026-03-24,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,preco,54.0,"54,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SC,physical
 2026-03-24,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
+2026-03-25,arroz,arroz-atacado-media-pr,Arroz Atacado - Média PR,Agulhinha em casca,,sc,69.32,"69,32",R$,price,BRL,,spot,,,physical
+2026-03-25,arroz,arroz-atacado-media-pr,Arroz Atacado - Média PR,Agulhinha em casca,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Capivari do Sul/RS (Coripil),,preco,65.0,"65,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,RS,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Capivari do Sul/RS (Coripil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Guaratinguetá/SP (IEA) (R$/Sc 60 kg),,preco,86.0,"86,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SP,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Guaratinguetá/SP (IEA) (R$/Sc 60 kg),,variacao_pct,4.88,"+4,88",%,change_pct,,pct,spot,,SP,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Média Rio Grande do Sul (Clicmercado),,preco,61.0,"61,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Média Rio Grande do Sul (Clicmercado),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Oeste da Bahia/BA (AIBA)(R$/Sc 60 kg),,preco,75.0,"75,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,BA,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Oeste da Bahia/BA (AIBA)(R$/Sc 60 kg),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,BA,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Pelotas/RS (Cereagro),,preco,64.0,"64,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,RS,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Pelotas/RS (Cereagro),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,preco,54.0,"54,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SC,physical
+2026-03-25,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical

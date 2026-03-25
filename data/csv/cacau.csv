@@ -493,3 +493,9 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-24,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,variacao_pct,-2.86,"-2,86",%,change_pct,,pct,spot,,ES,physical
 2026-03-24,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,preco,10.0,"10,00",R$,price,BRL,,spot,,PA,physical
 2026-03-24,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,variacao_pct,-4.76,"-4,76",%,change_pct,,pct,spot,,PA,physical
+2026-03-25,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,preco,3196.0,3196,US$ / ton,price,USD,,futures,2026-07,,nybot
+2026-03-25,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,-101.0,-101,%,change_abs,,pct,futures,2026-07,,nybot
+2026-03-25,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,preco,3133.0,3133,US$ / ton,price,USD,,futures,2026-05,,nybot
+2026-03-25,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-102.0,-102,%,change_abs,,pct,futures,2026-05,,nybot
+2026-03-25,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,preco,3260.0,3260,US$ / ton,price,USD,,futures,2026-09,,nybot
+2026-03-25,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,-96.0,-96,%,change_abs,,pct,futures,2026-09,,nybot
