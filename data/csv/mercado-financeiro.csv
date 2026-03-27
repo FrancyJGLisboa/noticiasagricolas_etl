@@ -71139,3 +71139,7 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-26,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.02,"+0,02",%,change_pct,,pct,spot,,,other
 2026-03-26,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.061,"1,0610",%,price,,pct,spot,,,other
 2026-03-26,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,-0.36,"-0,36",%,change_pct,,pct,spot,,,other
+2026-03-27,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,valor,5.2376,"5,2376",R$,price,BRL,,spot,,,indicator
+2026-03-27,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,variacao_pct,0.13,"+0,13",%,change_pct,,pct,spot,,,indicator
+2026-03-27,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,valor,6.0337,"6,0337",R$,price,BRL,,spot,,,indicator
+2026-03-27,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,variacao_pct,-0.06,"-0,06",%,change_pct,,pct,spot,,,indicator
