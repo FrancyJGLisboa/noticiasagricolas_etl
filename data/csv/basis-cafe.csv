@@ -19018,13 +19018,27 @@ date,location,state,physical_indicator,physical_price_brl,futures_indicator,futu
 2026-03-27,Franca/SP,SP,cafe-arabica-mercado-fisico-tipo-6-7,1960.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-150.49091999999973,-28.732801283030348,-7.1306120568384035
 2026-03-27,Guaxupé/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1910.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-200.49091999999973,-38.279158393157125,-9.499729096204772
 2026-03-27,Machado/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1860.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-250.49091999999973,-47.8255155032839,-11.868846135571138
-2026-03-27,Patrocínio/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,2040.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-70.49091999999973,-13.458629906827504,-3.3400247938522165
-2026-03-27,Poços de Caldas/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1910.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-200.49091999999973,-38.279158393157125,-9.499729096204772
+2026-03-27,Patrocínio/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,2060.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-50.49091999999973,-9.640087062776795,-2.3923779781056695
+2026-03-27,Poços de Caldas/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1900.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-210.49091999999973,-40.18842981518248,-9.973552504078045
 2026-03-27,Varginha/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1960.0,cafe-arabica-4-5-b3-prego-regular,2026-05,402.95,2110.4909199999997,5.2376,-150.49091999999973,-28.732801283030348,-7.1306120568384035
 2026-03-27,Campos Gerais/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1985.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-110.2199999999998,,-5.260545431983267
 2026-03-27,Franca/SP,SP,cafe-arabica-mercado-fisico-tipo-6-7,1960.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-135.2199999999998,,-6.453737555006148
 2026-03-27,Guaxupé/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1910.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-185.2199999999998,,-8.84012180105191
 2026-03-27,Machado/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1860.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-235.2199999999998,,-11.226506047097672
-2026-03-27,Patrocínio/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,2040.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-55.2199999999998,,-2.6355227613329295
-2026-03-27,Poços de Caldas/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1910.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-185.2199999999998,,-8.84012180105191
+2026-03-27,Patrocínio/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,2060.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-35.2199999999998,,-1.6809690629146248
+2026-03-27,Poços de Caldas/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1900.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-195.2199999999998,,-9.317398650261062
 2026-03-27,Varginha/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1960.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2095.22,2095.22,,-135.2199999999998,,-6.453737555006148
+2026-03-30,Campos Gerais/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1895.0,cafe-arabica-4-5-b3-prego-regular,2026-05,397.0,2078.4141,5.2353,-183.41409999999996,-35.034114568410594,-8.824713997080753
+2026-03-30,Franca/SP,SP,cafe-arabica-mercado-fisico-tipo-6-7,1900.0,cafe-arabica-4-5-b3-prego-regular,2026-05,397.0,2078.4141,5.2353,-178.41409999999996,-34.079059461730935,-8.584145960133736
+2026-03-30,Guaxupé/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1850.0,cafe-arabica-4-5-b3-prego-regular,2026-05,397.0,2078.4141,5.2353,-228.41409999999996,-43.62961052852749,-10.989826329603902
+2026-03-30,Machado/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1780.0,cafe-arabica-4-5-b3-prego-regular,2026-05,397.0,2078.4141,5.2353,-298.41409999999996,-57.00038202204267,-14.357778846862132
+2026-03-30,Patrocínio/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1925.0,cafe-arabica-4-5-b3-prego-regular,2026-05,397.0,2078.4141,5.2353,-153.41409999999996,-29.30378392833266,-7.381305775398654
+2026-03-30,Poços de Caldas/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1850.0,cafe-arabica-4-5-b3-prego-regular,2026-05,397.0,2078.4141,5.2353,-228.41409999999996,-43.62961052852749,-10.989826329603902
+2026-03-30,Varginha/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1900.0,cafe-arabica-4-5-b3-prego-regular,2026-05,397.0,2078.4141,5.2353,-178.41409999999996,-34.079059461730935,-8.584145960133736
+2026-03-30,Campos Gerais/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1895.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2031.67,2031.67,,-136.67000000000007,,-6.726978298641023
+2026-03-30,Franca/SP,SP,cafe-arabica-mercado-fisico-tipo-6-7,1900.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2031.67,2031.67,,-131.67000000000007,,-6.480875339006831
+2026-03-30,Guaxupé/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1850.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2031.67,2031.67,,-181.67000000000007,,-8.941904935348756
+2026-03-30,Machado/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1780.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2031.67,2031.67,,-251.67000000000007,,-12.387346370227451
+2026-03-30,Patrocínio/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1925.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2031.67,2031.67,,-106.67000000000007,,-5.250360540835867
+2026-03-30,Poços de Caldas/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1850.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2031.67,2031.67,,-181.67000000000007,,-8.941904935348756
+2026-03-30,Varginha/MG,MG,cafe-arabica-mercado-fisico-tipo-6-7,1900.0,cafe-bolsa-de-nova-iorque-nybot,2026-05,2031.67,2031.67,,-131.67000000000007,,-6.480875339006831
