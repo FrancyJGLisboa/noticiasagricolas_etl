@@ -71231,3 +71231,34 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-30,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.01,"+0,01",%,change_pct,,pct,spot,,,other
 2026-03-30,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.0599,"1,0599",%,price,,pct,spot,,,other
 2026-03-30,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,DAX,,valor,22680.04,"22.680,04",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,DAX,,variacao_pct,0.52,"+0,52",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,FTSE,,valor,10176.45,"10.176,45",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,FTSE,,variacao_pct,0.48,"+0,48",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Hong Kong,,valor,24788.14,"24.788,14",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Hong Kong,,variacao_pct,0.15,"+0,15",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Ibovespa,,valor,187462.0,"187.462,00",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Ibovespa,,variacao_pct,2.71,"+2,71",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Nasdaq,,valor,21590.63,"21.590,63",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Nasdaq,,variacao_pct,3.83,"+3,83",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Nikkei,,valor,51063.72,"51.063,72",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,bolsas,Bolsas,Nikkei,,variacao_pct,-1.58,"-1,58",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,valor,5.2194,"5,2194",R$,price,BRL,,spot,,,indicator
+2026-03-31,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,variacao_pct,-0.3,"-0,30",%,change_pct,,pct,spot,,,indicator
+2026-03-31,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,valor,6.0117,"6,0117",R$,price,BRL,,spot,,,indicator
+2026-03-31,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,variacao_pct,0.25,"+0,25",%,change_pct,,pct,spot,,,indicator
+2026-03-31,mercado-financeiro,indice-dolar,Índice Dólar,,Dezembro/26,valor,99.384,"99,384",Pontos,price,,points,futures,2026-12,,indicator
+2026-03-31,mercado-financeiro,indice-dolar,Índice Dólar,,Dezembro/26,variacao_pontos,-0.589,"-0,589",%,change_abs,,pct,futures,2026-12,,indicator
+2026-03-31,mercado-financeiro,indice-dolar,Índice Dólar,,Junho/26,valor,99.759,"99,759",Pontos,price,,points,futures,2026-06,,indicator
+2026-03-31,mercado-financeiro,indice-dolar,Índice Dólar,,Junho/26,variacao_pontos,-0.594,"-0,594",%,change_abs,,pct,futures,2026-06,,indicator
+2026-03-31,mercado-financeiro,indice-dolar,Índice Dólar,,Setembro/26,valor,99.569,"99,569",Pontos,price,,points,futures,2026-09,,indicator
+2026-03-31,mercado-financeiro,indice-dolar,Índice Dólar,,Setembro/26,variacao_pontos,-0.589,"-0,589",%,change_abs,,pct,futures,2026-09,,indicator
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,valor,5.1822,"5,1822",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,variacao_pct,-1.33,"-1,33",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,valor,1.1556,"1,1556",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,variacao_pct,0.02,"+0,02",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,valor,1.3233,"1,3233",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.0701,"1,0701",%,price,,pct,spot,,,other
+2026-03-31,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-03-31,mercado-financeiro,taxa-selic,Taxa Selic,Selic - Meta,,taxa_ao_ano,14.75,"14,75%",%,rate,,pct,spot,,,indicator
