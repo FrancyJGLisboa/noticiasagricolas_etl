@@ -43,3 +43,7 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-02,silvicultura,preco-medio-resina,Preço Médio Resina Pinus,Elliotti,,variacao_pct,-6.24,"-6,24",%,change_pct,,pct,spot,,,physical
 2026-03-02,silvicultura,preco-medio-resina,Preço Médio Resina Pinus,Tropical,,t,4710.0,"4.710,00",R$,price,BRL,,spot,,,physical
 2026-03-02,silvicultura,preco-medio-resina,Preço Médio Resina Pinus,Tropical,,variacao_pct,-6.36,"-6,36",%,change_pct,,pct,spot,,,physical
+2026-04-01,silvicultura,preco-medio-resina,Preço Médio Resina Pinus,Elliotti,,t,4570.0,"4.570,00",R$,price,BRL,,spot,,,physical
+2026-04-01,silvicultura,preco-medio-resina,Preço Médio Resina Pinus,Elliotti,,variacao_pct,-4.99,"-4,99",%,change_pct,,pct,spot,,,physical
+2026-04-01,silvicultura,preco-medio-resina,Preço Médio Resina Pinus,Tropical,,t,4470.0,"4.470,00",R$,price,BRL,,spot,,,physical
+2026-04-01,silvicultura,preco-medio-resina,Preço Médio Resina Pinus,Tropical,,variacao_pct,-5.1,"-5,10",%,change_pct,,pct,spot,,,physical

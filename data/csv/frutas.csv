@@ -5335,3 +5335,119 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-01,frutas,uva-ceasas,Uva - Ceasas,Niágara A,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-04-01,frutas,uva-ceasas,Uva - Ceasas,Niágara-Extra,,preco,9.0,"9,00",R$/Kg,price,BRL,kg,spot,,,physical
 2026-04-01,frutas,uva-ceasas,Uva - Ceasas,Niágara-Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Avocado,,preco,6.67,"6,67",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Avocado,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Avocado/ Hass/ Fuerte A,,preco,8.82,"8,82",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Avocado/ Hass/ Fuerte A,,variacao_pct,-10.27,"-10,27",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Breda,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Breda,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Breda (Boca 8 a 11),,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Breda (Boca 8 a 11),,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Comum Especial,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Comum Especial,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Comum Extra,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,abacate-ceasas,Abacate - Ceasas,Comum Extra,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacaxi-ceasas,Abacaxi - Ceasas,Pérola - (08 Frutos) / Un.,,preco,7.34,"7,34",%,price,,pct,spot,,,physical
+2026-04-02,frutas,abacaxi-ceasas,Abacaxi - Ceasas,Pérola - (08 Frutos) / Un.,,variacao_pct,0.14,"+0,14",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacaxi-ceasas,Abacaxi - Ceasas,Pérola Médio MG / Dz,,preco,50.0,"50,00",%,price,,pct,spot,,,physical
+2026-04-02,frutas,abacaxi-ceasas,Abacaxi - Ceasas,Pérola Médio MG / Dz,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,abacaxi-ceasas,Abacaxi - Ceasas,Pérola-Graúdo / Kg,,preco,4.44,"4,44",%,price,,pct,spot,,,physical
+2026-04-02,frutas,abacaxi-ceasas,Abacaxi - Ceasas,Pérola-Graúdo / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Nanica 1ª,,preco,3.9,"3,90",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Nanica 1ª,,variacao_pct,-1.27,"-1,27",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Nanica Climatizada 1ª,,preco,3.0,"3,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Nanica Climatizada 1ª,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Nanica-Extra,,preco,4.67,"4,67",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Nanica-Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Prata Climatizada 1ª,,preco,3.5,"3,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Prata Climatizada 1ª,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Prata-Extra,,preco,5.67,"5,67",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Prata-Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Prata/SP 1ª,,preco,4.47,"4,47",R$/Kg,price,BRL,kg,spot,,SP,physical
+2026-04-02,frutas,banana-nanica-prata-ceasas,Banana Nanica/Prata - Ceasas,Prata/SP 1ª,,variacao_pct,-0.89,"-0,89",%,change_pct,,pct,spot,,SP,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,15 a 18 DZ,,preco,2.56,"2,56",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,15 a 18 DZ,,variacao_pct,-1.92,"-1,92",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,21 a 27 DA,,preco,2.11,"2,11",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,21 a 27 DA,,variacao_pct,-2.31,"-2,31",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Acima de 31 DZ,,preco,1.54,"1,54",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Acima de 31 DZ,,variacao_pct,1.99,"+1,99",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Especial,,preco,1.75,"1,75",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Especial,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Extra,,preco,2.5,"2,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Primeira,,preco,1.5,"1,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,limao-tahiti-ceasas,Limão Tahiti - Ceasas,Primeira,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,maca-fuji-ceasas,Maçã Fuji - Ceasas,Ceagesp/SP (110-135 FRUTOS),,preco,7.16,"7,16",R$/Kg,price,BRL,kg,spot,,SP,physical
+2026-04-02,frutas,maca-fuji-ceasas,Maçã Fuji - Ceasas,Ceagesp/SP (110-135 FRUTOS),,variacao_pct,-6.53,"-6,53",%,change_pct,,pct,spot,,SP,physical
+2026-04-02,frutas,maca-fuji-ceasas,Maçã Fuji - Ceasas,Ceasa - Belo Horizonte/MG(T.120-150),,preco,7.77,"7,77",R$/Kg,price,BRL,kg,spot,,MG,physical
+2026-04-02,frutas,maca-fuji-ceasas,Maçã Fuji - Ceasas,Ceasa - Belo Horizonte/MG(T.120-150),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,MG,physical
+2026-04-02,frutas,maca-fuji-ceasas,Maçã Fuji - Ceasas,Ceasa - Campinas/SP (CAT 1 T 150-180),,preco,7.22,"7,22",R$/Kg,price,BRL,kg,spot,,SP,physical
+2026-04-02,frutas,maca-fuji-ceasas,Maçã Fuji - Ceasas,Ceasa - Campinas/SP (CAT 1 T 150-180),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-04-02,frutas,maca-gala-ceasas,Maçã Gala - Ceasas,Ceagesp/SP (110-135 FRUTOS),,preco,6.58,"6,58",R$/Kg,price,BRL,kg,spot,,SP,physical
+2026-04-02,frutas,maca-gala-ceasas,Maçã Gala - Ceasas,Ceagesp/SP (110-135 FRUTOS),,variacao_pct,1.7,"+1,70",%,change_pct,,pct,spot,,SP,physical
+2026-04-02,frutas,maca-gala-ceasas,Maçã Gala - Ceasas,Ceasa - Belo Horizonte/MG (T.120-150),,preco,6.38,"6,38",R$/Kg,price,BRL,kg,spot,,MG,physical
+2026-04-02,frutas,maca-gala-ceasas,Maçã Gala - Ceasas,Ceasa - Belo Horizonte/MG (T.120-150),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,MG,physical
+2026-04-02,frutas,maca-gala-ceasas,Maçã Gala - Ceasas,Ceasa - Campinas/SP (CAT 1 T 150-180),,preco,6.39,"6,39",R$/Kg,price,BRL,kg,spot,,SP,physical
+2026-04-02,frutas,maca-gala-ceasas,Maçã Gala - Ceasas,Ceasa - Campinas/SP (CAT 1 T 150-180),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Formosa (05 a 09 Frutos),,preco,5.69,"5,69",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Formosa (05 a 09 Frutos),,variacao_pct,4.02,"+4,02",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Formosa Extra,,preco,3.61,"3,61",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Formosa Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Formosa-Extra,,preco,5.5,"5,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Formosa-Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Havaiano-Golden,,preco,6.0,"6,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Havaiano-Golden,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Havaí (15 a 18 Frutos),,preco,6.07,"6,07",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Havaí (15 a 18 Frutos),,variacao_pct,8.39,"+8,39",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Haway Extra,,preco,5.0,"5,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,mamao-ceasas,Mamão - Ceasas,Haway Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Azedo 4A,,preco,5.33,"5,33",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Azedo 4A,,variacao_pct,2.3,"+2,30",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Azedo Extra AAA,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Azedo Extra AAA,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Azedo-Extra,,preco,6.36,"6,36",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Azedo-Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Doce,,preco,25.0,"25,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Doce,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Doce (10 a 15 frutos),,preco,11.78,"11,78",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Doce (10 a 15 frutos),,variacao_pct,9.48,"+9,48",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Doce (T 06-15),,preco,20.0,"20,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,maracuja-ceasas,Maracujá - Ceasas,Doce (T 06-15),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,melancia-ceasas,Melancia - Ceasas,Redonda Graúda,,preco,2.47,"2,47",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,melancia-ceasas,Melancia - Ceasas,Redonda Graúda,,variacao_pct,3.78,"+3,78",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,melancia-ceasas,Melancia - Ceasas,Redonda Miúda,,preco,1.61,"1,61",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,melancia-ceasas,Melancia - Ceasas,Redonda Miúda,,variacao_pct,4.55,"+4,55",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,melancia-ceasas,Melancia - Ceasas,Redonda Média,,preco,2.04,"2,04",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,melancia-ceasas,Melancia - Ceasas,Redonda Média,,variacao_pct,4.08,"+4,08",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Pack Triumph,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Pack Triumph,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Pack Triumph Imp. Ar. (80 A 110 FRUTOS),,preco,8.37,"8,37",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Pack Triumph Imp. Ar. (80 A 110 FRUTOS),,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Williams,,preco,7.0,"7,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Williams,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Williams Imp. Argentina (80 A 110 FRUTOS),,preco,7.3,"7,30",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,pera-ceasas,Pera - Ceasas,Williams Imp. Argentina (80 A 110 FRUTOS),,variacao_pct,0.97,"+0,97",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Murcote (03 a 04 DZ),,preco,4.57,"4,57",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Murcote (03 a 04 DZ),,variacao_pct,1.56,"+1,56",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Murcott,,preco,5.5,"5,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Murcott,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Murcott Graúda,,preco,7.66,"7,66",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Murcott Graúda,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Ponkan (T. 7-9 DZ),,preco,5.0,"5,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Ponkan (T. 7-9 DZ),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Ponkan Graúda,,preco,4.44,"4,44",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Ponkan Graúda,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Ponkã (02 a 04 DZ),,preco,5.73,"5,73",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,tangerina-ceasas,Tangerina - Ceasas,Ponkã (02 a 04 DZ),,variacao_pct,2.87,"+2,87",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Itália,,preco,13.0,"13,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Itália,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Itália A,,preco,9.51,"9,51",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Itália A,,variacao_pct,1.49,"+1,49",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Itália-Extra,,preco,10.0,"10,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Itália-Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Niágara,,preco,11.0,"11,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Niágara,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Niágara A,,preco,9.11,"9,11",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Niágara A,,variacao_pct,-11.55,"-11,55",%,change_pct,,pct,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Niágara-Extra,,preco,9.0,"9,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-02,frutas,uva-ceasas,Uva - Ceasas,Niágara-Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical

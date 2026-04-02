@@ -1117,6 +1117,16 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-03-31,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
 2026-03-31,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,preco_kg,6.88,"6,88",R$,price,BRL,,spot,,SP,physical
 2026-03-31,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,MG - posto,,kg,6.54,"6,54",R$,price,BRL,,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,MG - posto,,variacao_pct,-0.46,"-0,46",%,change_pct,,pct,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,PR - a retirar,,kg,6.1,"6,10",R$,price,BRL,,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,PR - a retirar,,variacao_pct,-0.81,"-0,81",%,change_pct,,pct,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,RS - a retirar,,kg,6.07,"6,07",R$,price,BRL,,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,RS - a retirar,,variacao_pct,-3.5,"-3,50",%,change_pct,,pct,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SC - a retirar,,kg,6.04,"6,04",R$,price,BRL,,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SC - a retirar,,variacao_pct,-1.95,"-1,95",%,change_pct,,pct,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SP - posto,,kg,6.61,"6,61",R$,price,BRL,,spot,,,physical
+2026-04-01,suinos,indicador-do-suino-vivo-cepea-esalq,Indicador do Suíno Vivo Cepea/Esalq,SP - posto,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-04-01,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,valor,124.0,"124,00",R$,price,BRL,,spot,,,physical
 2026-04-01,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-04-01,suinos,suino-sp,Suíno (SP),Suíno Carcaça Especial (kg),,valor,9.8,"9,80",R$,price,BRL,,spot,,,physical
@@ -1133,3 +1143,19 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-01,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
 2026-04-01,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,preco_kg,6.88,"6,88",R$,price,BRL,,spot,,SP,physical
 2026-04-01,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-04-02,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,valor,124.0,"124,00",R$,price,BRL,,spot,,,physical
+2026-04-02,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,suinos,suino-sp,Suíno (SP),Suíno Carcaça Especial (kg),,valor,9.8,"9,80",R$,price,BRL,,spot,,,physical
+2026-04-02,suinos,suino-sp,Suíno (SP),Suíno Carcaça Especial (kg),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Mato Grosso,,preco_kg,6.2,"6,20",R$,price,BRL,,spot,,MT,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Mato Grosso,,variacao_pct,-1.59,"-1,59",%,change_pct,,pct,spot,,MT,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Minas Gerais,,preco_kg,6.8,"6,80",R$,price,BRL,,spot,,MG,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Minas Gerais,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,MG,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Paraná,,preco_kg,6.62,"6,62",R$,price,BRL,,spot,,PR,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Paraná,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Rio Grande do Sul,,preco_kg,6.5,"6,50",R$,price,BRL,,spot,,RS,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Rio Grande do Sul,,variacao_pct,-5.52,"-5,52",%,change_pct,,pct,spot,,RS,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Santa Catarina,,preco_kg,6.77,"6,77",R$,price,BRL,,spot,,SC,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,preco_kg,6.51,"6,51",R$,price,BRL,,spot,,SP,physical
+2026-04-02,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,variacao_pct,-5.38,"-5,38",%,change_pct,,pct,spot,,SP,physical
