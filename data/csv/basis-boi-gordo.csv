@@ -2737,3 +2737,37 @@ date,location,state,physical_indicator,physical_price_brl,futures_indicator,futu
 2026-04-06,SP Barretos,,boi-gordo-scot-consultoria,348.5,boi-gordo-b3-prego-regular,2026-04,371.75,371.75,,-23.25,,-6.254203093476798
 2026-04-06,TO Norte,,boi-gordo-scot-consultoria,326.0,boi-gordo-b3-prego-regular,2026-04,371.75,371.75,,-45.75,,-12.30665770006725
 2026-04-06,TO Sul,,boi-gordo-scot-consultoria,326.6666666666667,boi-gordo-b3-prego-regular,2026-04,371.75,371.75,,-45.083333333333314,,-12.127325711723824
+2026-04-07,Acre,AC,boi-gordo-scot-consultoria,292.6666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-75.83333333333331,,-20.578923563998185
+2026-04-07,Alagoas,AL,boi-gordo-scot-consultoria,339.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-29.5,,-8.005427408412483
+2026-04-07,BA Oeste,,boi-gordo-scot-consultoria,315.8333333333333,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-52.666666666666686,,-14.292175486205341
+2026-04-07,BA Sul,,boi-gordo-scot-consultoria,311.5,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-57.0,,-15.468113975576662
+2026-04-07,ES,,boi-gordo-scot-consultoria,313.5,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-55.0,,-14.925373134328357
+2026-04-07,GO Goiânia,,boi-gordo-scot-consultoria,332.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-36.5,,-9.905020352781547
+2026-04-07,GO Reg. Sul,,boi-gordo-scot-consultoria,330.6666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-37.833333333333314,,-10.26684758028041
+2026-04-07,Indicador ESALQ/SP,SP,boi-gordo-indicador-esalq-bmf,364.25,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-4.25,,-1.1533242876526457
+2026-04-07,MA Oeste,,boi-gordo-scot-consultoria,334.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-34.5,,-9.362279511533243
+2026-04-07,MG B.Horizonte,,boi-gordo-scot-consultoria,329.6666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-38.833333333333314,,-10.538218000904562
+2026-04-07,MG Norte,,boi-gordo-scot-consultoria,327.3333333333333,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-41.166666666666686,,-11.171415649027594
+2026-04-07,MG Sul,,boi-gordo-scot-consultoria,324.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-44.5,,-12.075983717774763
+2026-04-07,MG Triângulo,,boi-gordo-scot-consultoria,334.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-34.5,,-9.362279511533243
+2026-04-07,MS C. Grande,,boi-gordo-scot-consultoria,339.1666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-29.333333333333314,,-7.960199004975118
+2026-04-07,MS Dourados,,boi-gordo-scot-consultoria,340.8333333333333,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-27.666666666666686,,-7.507914970601543
+2026-04-07,MS Três Lagoas,,boi-gordo-scot-consultoria,337.3333333333333,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-31.166666666666686,,-8.457711442786074
+2026-04-07,MT Cuiabá*,,boi-gordo-scot-consultoria,342.1666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-26.333333333333314,,-7.1460877431026635
+2026-04-07,MT Norte,,boi-gordo-scot-consultoria,341.5,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-27.0,,-7.327001356852103
+2026-04-07,MT Sudeste,,boi-gordo-scot-consultoria,342.1666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-26.333333333333314,,-7.1460877431026635
+2026-04-07,MT Sudoeste,,boi-gordo-scot-consultoria,345.1666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-23.333333333333314,,-6.331976481230208
+2026-04-07,PA Marabá,,boi-gordo-scot-consultoria,331.3333333333333,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-37.166666666666686,,-10.085933966530988
+2026-04-07,PA Paragominas,,boi-gordo-scot-consultoria,337.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-31.5,,-8.548168249660787
+2026-04-07,PA Redenção,,boi-gordo-scot-consultoria,327.6666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-40.833333333333314,,-11.080958842152867
+2026-04-07,PR Noroeste,,boi-gordo-scot-consultoria,337.5,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-31.0,,-8.412483039348711
+2026-04-07,RJ,,boi-gordo-scot-consultoria,333.6666666666667,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-34.833333333333314,,-9.452736318407954
+2026-04-07,RO Sudeste,,boi-gordo-scot-consultoria,313.8333333333333,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-54.666666666666686,,-14.834916327453646
+2026-04-07,RS Oeste,,boi-gordo-scot-consultoria,172.75,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-195.75,,-53.120759837177744
+2026-04-07,RS Pelotas,,boi-gordo-scot-consultoria,170.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-198.5,,-53.86702849389417
+2026-04-07,Roraima,RR,boi-gordo-scot-consultoria,285.3333333333333,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-83.16666666666669,,-22.568973315241976
+2026-04-07,SC,,boi-gordo-scot-consultoria,339.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-29.5,,-8.005427408412483
+2026-04-07,SP Araçatuba,,boi-gordo-scot-consultoria,348.5,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-20.0,,-5.4274084124830395
+2026-04-07,SP Barretos,,boi-gordo-scot-consultoria,348.5,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-20.0,,-5.4274084124830395
+2026-04-07,TO Norte,,boi-gordo-scot-consultoria,328.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-40.5,,-10.990502035278155
+2026-04-07,TO Sul,,boi-gordo-scot-consultoria,331.0,boi-gordo-b3-prego-regular,2026-04,368.5,368.5,,-37.5,,-10.176390773405698

@@ -1211,3 +1211,7 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-07,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
 2026-04-07,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,preco_kg,6.51,"6,51",R$,price,BRL,,spot,,SP,physical
 2026-04-07,suinos,suinos-bolsas-e-associaces,Suínos - Bolsas e Associações,São Paulo,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SP,physical
+2026-04-08,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,valor,118.0,"118,00",R$,price,BRL,,spot,,,physical
+2026-04-08,suinos,suino-sp,Suíno (SP),Suíno CIF (@),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-08,suinos,suino-sp,Suíno (SP),Suíno Carcaça Especial (kg),,valor,9.6,"9,60",R$,price,BRL,,spot,,,physical
+2026-04-08,suinos,suino-sp,Suíno (SP),Suíno Carcaça Especial (kg),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
