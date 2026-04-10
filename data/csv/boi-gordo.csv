@@ -117093,6 +117093,109 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Outubro/2026,variacao_pct,0.74,"0,74",%,change_pct,,pct,futures,2026-10,,b3
 2026-04-09,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Setembro/2026,fechamento,346.5,"346,50",R$/@,price,BRL,arroba,futures,2026-09,,b3
 2026-04-09,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Setembro/2026,variacao_pct,0.2,"0,20",%,change_pct,,pct,futures,2026-09,,b3
+2026-04-09,boi-gordo,boi-gordo-indicador-esalq-bmf,Indicador do Boi Gordo Esalq/B3,,,a_vista_r_vista,365.45,"365,45",R$,price,BRL,,spot,,,indicator
+2026-04-09,boi-gordo,boi-gordo-indicador-esalq-bmf,Indicador do Boi Gordo Esalq/B3,,,variacao_pct,0.12,"+0,12",%,change_pct,,pct,spot,,,indicator
+2026-04-09,boi-gordo,boi-gordo-media-sp-a-prazo,Boi Gordo - Média SP a prazo,,,a_prazo_r_prazo,369.84,"369,84",R$,price,BRL,,spot,,,other
+2026-04-09,boi-gordo,boi-gordo-media-sp-a-prazo,Boi Gordo - Média SP a prazo,,,variacao_pct,0.12,"+0,12",%,change_pct,,pct,spot,,,other
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Acre,,boi_gordo_prazo,300.0,"300,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,AC,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Acre,,boi_gordo_vista,296.5,"296,50",R$/@ - à vista,price,BRL,arroba,spot,,AC,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Acre,,vaca_gorda_vista,283.5,"283,50",R$/@ - à vista,price,BRL,arroba,spot,,AC,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Alagoas,,boi_gordo_prazo,350.0,"350,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,AL,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Alagoas,,boi_gordo_vista,346.0,"346,00",R$/@ - à vista,price,BRL,arroba,spot,,AL,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Alagoas,,vaca_gorda_vista,323.0,"323,00",R$/@ - à vista,price,BRL,arroba,spot,,AL,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,BA Oeste,,boi_gordo_prazo,330.0,"330,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,BA Oeste,,boi_gordo_vista,326.0,"326,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,BA Oeste,,vaca_gorda_vista,291.5,"291,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,BA Sul,,boi_gordo_prazo,325.0,"325,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,BA Sul,,boi_gordo_vista,321.0,"321,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,BA Sul,,vaca_gorda_vista,288.5,"288,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,ES,,boi_gordo_prazo,323.0,"323,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,ES,,boi_gordo_vista,319.0,"319,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,ES,,vaca_gorda_vista,298.5,"298,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,GO Goiânia,,boi_gordo_prazo,347.0,"347,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,GO Goiânia,,boi_gordo_vista,343.0,"343,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,GO Goiânia,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,GO Reg. Sul,,boi_gordo_prazo,342.0,"342,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,GO Reg. Sul,,boi_gordo_vista,338.0,"338,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,GO Reg. Sul,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MA Oeste,,boi_gordo_prazo,345.0,"345,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MA Oeste,,boi_gordo_vista,341.0,"341,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MA Oeste,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG B.Horizonte,,boi_gordo_prazo,340.0,"340,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG B.Horizonte,,boi_gordo_vista,336.0,"336,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG B.Horizonte,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Norte,,boi_gordo_prazo,340.0,"340,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Norte,,boi_gordo_vista,336.0,"336,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Norte,,vaca_gorda_vista,306.0,"306,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Sul,,boi_gordo_prazo,335.0,"335,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Sul,,boi_gordo_vista,331.0,"331,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Sul,,vaca_gorda_vista,306.0,"306,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Triângulo,,boi_gordo_prazo,345.0,"345,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Triângulo,,boi_gordo_vista,341.0,"341,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MG Triângulo,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS C. Grande,,boi_gordo_prazo,355.0,"355,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS C. Grande,,boi_gordo_vista,350.5,"350,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS C. Grande,,vaca_gorda_vista,318.0,"318,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS Dourados,,boi_gordo_prazo,353.0,"353,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS Dourados,,boi_gordo_vista,348.5,"348,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS Dourados,,vaca_gorda_vista,323.0,"323,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS Três Lagoas,,boi_gordo_prazo,352.0,"352,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS Três Lagoas,,boi_gordo_vista,347.5,"347,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MS Três Lagoas,,vaca_gorda_vista,318.0,"318,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Cuiabá*,,boi_gordo_prazo,360.0,"360,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Cuiabá*,,boi_gordo_vista,355.5,"355,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Cuiabá*,,vaca_gorda_vista,323.0,"323,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Norte,,boi_gordo_prazo,357.0,"357,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Norte,,boi_gordo_vista,352.5,"352,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Norte,,vaca_gorda_vista,326.0,"326,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Sudeste,,boi_gordo_prazo,357.0,"357,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Sudeste,,boi_gordo_vista,352.5,"352,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Sudeste,,vaca_gorda_vista,323.0,"323,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Sudoeste,,boi_gordo_prazo,360.0,"360,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Sudoeste,,boi_gordo_vista,355.5,"355,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,MT Sudoeste,,vaca_gorda_vista,326.0,"326,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Marabá,,boi_gordo_prazo,345.0,"345,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Marabá,,boi_gordo_vista,341.0,"341,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Marabá,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Paragominas,,boi_gordo_prazo,348.0,"348,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Paragominas,,boi_gordo_vista,344.0,"344,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Paragominas,,vaca_gorda_vista,321.0,"321,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Redenção,,boi_gordo_prazo,345.0,"345,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Redenção,,boi_gordo_vista,341.0,"341,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PA Redenção,,vaca_gorda_vista,313.0,"313,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PR Noroeste,,boi_gordo_prazo,352.0,"352,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PR Noroeste,,boi_gordo_vista,347.5,"347,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,PR Noroeste,,vaca_gorda_vista,313.0,"313,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RJ,,boi_gordo_prazo,345.0,"345,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RJ,,boi_gordo_vista,341.0,"341,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RJ,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RO Sudeste,,boi_gordo_prazo,325.0,"325,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RO Sudeste,,boi_gordo_vista,321.0,"321,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RO Sudeste,,vaca_gorda_vista,301.5,"301,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RS Oeste (kg),,boi_gordo_prazo,11.8,"11,80",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RS Oeste (kg),,boi_gordo_vista,11.65,"11,65",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RS Oeste (kg),,vaca_gorda_vista,11.1,"11,10",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RS Pelotas (kg),,boi_gordo_prazo,11.75,"11,75",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RS Pelotas (kg),,boi_gordo_vista,11.6,"11,60",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,RS Pelotas (kg),,vaca_gorda_vista,10.65,"10,65",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Roraima,,boi_gordo_prazo,294.0,"294,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,RR,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Roraima,,boi_gordo_vista,290.5,"290,50",R$/@ - à vista,price,BRL,arroba,spot,,RR,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,Roraima,,vaca_gorda_vista,271.5,"271,50",R$/@ - à vista,price,BRL,arroba,spot,,RR,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SC,,boi_gordo_prazo,355.0,"355,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SC,,boi_gordo_vista,350.5,"350,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SC,,vaca_gorda_vista,321.0,"321,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SP Araçatuba,,boi_gordo_prazo,365.0,"365,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SP Araçatuba,,boi_gordo_vista,360.5,"360,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SP Araçatuba,,vaca_gorda_vista,328.0,"328,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SP Barretos,,boi_gordo_prazo,365.0,"365,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SP Barretos,,boi_gordo_vista,360.5,"360,50",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,SP Barretos,,vaca_gorda_vista,328.0,"328,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,TO Norte,,boi_gordo_prazo,340.0,"340,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,TO Norte,,boi_gordo_vista,336.0,"336,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,TO Norte,,vaca_gorda_vista,316.0,"316,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,TO Sul,,boi_gordo_prazo,344.0,"344,00",R$/@ - prazo 30 dias,price,BRL,arroba,forward,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,TO Sul,,boi_gordo_vista,340.0,"340,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
+2026-04-09,boi-gordo,boi-gordo-scot-consultoria,Mercado Físico - Scot Consultoria,TO Sul,,vaca_gorda_vista,318.0,"318,00",R$/@ - à vista,price,BRL,arroba,spot,,,physical
 2026-04-09,boi-gordo,carcaca-atacado-sp,Carcaça - Atacado (SP),Boi capão,,precos_em_kg,24.25,"24,25",R$,price,BRL,,spot,,,physical
 2026-04-09,boi-gordo,carcaca-atacado-sp,Carcaça - Atacado (SP),Boi casado inteiro,,precos_em_kg,23.3,"23,30",R$,price,BRL,,spot,,,physical
 2026-04-09,boi-gordo,carcaca-atacado-sp,Carcaça - Atacado (SP),Vaca casada,,precos_em_kg,22.15,"22,15",R$,price,BRL,,spot,,,physical
@@ -117397,6 +117500,8 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,TO,,cabeca,3407.79,"3.407,79",R$,price,BRL,,spot,,,physical
 2026-04-09,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,TO,,kg,10.33,"10,33",R$,price,BRL,,spot,,,physical
 2026-04-09,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,TO,,troca,9.96,"9,96",R$,price,BRL,,spot,,,physical
+2026-04-09,boi-gordo,indicador-bezerro-esalq-bmf-bovespa-ms,Bezerro Esalq/BM&F Bovespa - MS,,,valor,3310.49,"3.310,49",R$,price,BRL,,spot,,,indicator
+2026-04-09,boi-gordo,indicador-bezerro-esalq-bmf-bovespa-ms,Bezerro Esalq/BM&F Bovespa - MS,,,variacao_pct,0.14,"+0,14",%,change_pct,,pct,spot,,,indicator
 2026-04-09,boi-gordo,indicador-da-novilha,Indicador da Novilha,Bahia,,arroba,59.53,"59,53",R$,price,BRL,,spot,,BA,physical
 2026-04-09,boi-gordo,indicador-da-novilha,Indicador da Novilha,Bahia,,variacao_pct,1.02,"+1,02",%,change_pct,,pct,spot,,BA,physical
 2026-04-09,boi-gordo,indicador-da-novilha,Indicador da Novilha,Goiás,,arroba,65.52,"65,52",R$,price,BRL,,spot,,GO,physical
@@ -117880,3 +117985,854 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,boi-gordo,sebo,Sebo a prazo,Brasil Central,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-04-09,boi-gordo,sebo,Sebo a prazo,Rio Grande do Sul,,preco,5.75,"5,75",R$/Kg,price,BRL,kg,spot,,RS,physical
 2026-04-09,boi-gordo,sebo,Sebo a prazo,Rio Grande do Sul,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,AC,,cabeca,2000.0,"2.000,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,AC,,kg,9.52,"9,52",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,AC,,troca,6.62,"6,62",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,BA,,cabeca,2310.0,"2.310,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,BA,,kg,11.0,"11,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,BA,,troca,7.03,"7,03",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,GO,,cabeca,2464.63,"2.464,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,GO,,kg,11.74,"11,74",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,GO,,troca,7.15,"7,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MA,,cabeca,2270.0,"2.270,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MA,,kg,10.81,"10,81",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MA,,troca,6.54,"6,54",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MG,,cabeca,2456.71,"2.456,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MG,,kg,11.7,"11,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MG,,troca,7.2,"7,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MS,,cabeca,2879.65,"2.879,65",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MS,,kg,13.71,"13,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MS,,troca,8.15,"8,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MT,,cabeca,2684.35,"2.684,35",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MT,,kg,12.78,"12,78",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,MT,,troca,7.47,"7,47",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,PA,,cabeca,2445.0,"2.445,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,PA,,kg,11.64,"11,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,PA,,troca,7.04,"7,04",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,PR,,cabeca,2865.45,"2.865,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,PR,,kg,13.65,"13,65",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,PR,,troca,8.07,"8,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,RJ,,cabeca,2266.0,"2.266,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,RJ,,kg,10.79,"10,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,RJ,,troca,6.57,"6,57",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,RO,,cabeca,2369.3,"2.369,30",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,RO,,kg,11.28,"11,28",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,RO,,troca,7.29,"7,29",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,SP,,cabeca,2776.17,"2.776,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,SP,,kg,13.22,"13,22",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,SP,,troca,7.61,"7,61",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,TO,,cabeca,2505.09,"2.505,09",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,TO,,kg,11.93,"11,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,bezerra-nelore-femea-12-meses,Fêmea Nelore Reposição - Bezerra,TO,,troca,7.27,"7,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Araputanga,,media_arroba,351.8,"351,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Araputanga,,variacao_pct,0.23,"+0,23",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Barra do Garças,,media_arroba,341.93,"341,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Barra do Garças,,variacao_pct,0.08,"+0,08",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Cuiabá,,media_arroba,351.8,"351,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Cuiabá,,variacao_pct,0.23,"+0,23",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Juara,,media_arroba,342.33,"342,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Juara,,variacao_pct,0.1,"+0,10",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Matupá,,media_arroba,351.7,"351,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Matupá,,variacao_pct,0.2,"+0,20",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Rondonópolis,,media_arroba,351.8,"351,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Rondonópolis,,variacao_pct,0.23,"+0,23",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Sinop,,media_arroba,350.25,"350,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Sinop,,variacao_pct,0.21,"+0,21",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Vila Rica,,media_arroba,340.83,"340,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,boi-a-vista-imea,Boi à Vista - IMEA,Vila Rica,,variacao_pct,0.24,"+0,24",%,change_pct,,pct,spot,,,physical
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Abril/2026,fechamento,364.25,"364,25",R$/@,price,BRL,arroba,futures,2026-04,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Abril/2026,variacao_pct,-0.11,"-0,11",%,change_pct,,pct,futures,2026-04,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Agosto/2026,fechamento,342.05,"342,05",R$/@,price,BRL,arroba,futures,2026-08,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Agosto/2026,variacao_pct,-1.33,"-1,33",%,change_pct,,pct,futures,2026-08,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Julho/2026,fechamento,342.5,"342,50",R$/@,price,BRL,arroba,futures,2026-07,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Julho/2026,variacao_pct,-0.78,"-0,78",%,change_pct,,pct,futures,2026-07,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Junho/2026,fechamento,348.15,"348,15",R$/@,price,BRL,arroba,futures,2026-06,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Junho/2026,variacao_pct,-0.78,"-0,78",%,change_pct,,pct,futures,2026-06,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Maio/2026,fechamento,358.1,"358,10",R$/@,price,BRL,arroba,futures,2026-05,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Maio/2026,variacao_pct,-0.67,"-0,67",%,change_pct,,pct,futures,2026-05,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Outubro/2026,fechamento,352.6,"352,60",R$/@,price,BRL,arroba,futures,2026-10,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Outubro/2026,variacao_pct,-0.1,"-0,10",%,change_pct,,pct,futures,2026-10,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Setembro/2026,fechamento,345.15,"345,15",R$/@,price,BRL,arroba,futures,2026-09,,b3
+2026-04-10,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Setembro/2026,variacao_pct,-0.39,"-0,39",%,change_pct,,pct,futures,2026-09,,b3
+2026-04-10,boi-gordo,boi-gordo-indicador-esalq-bmf,Indicador do Boi Gordo Esalq/B3,,,a_vista_r_vista,365.6,"365,60",R$,price,BRL,,spot,,,indicator
+2026-04-10,boi-gordo,boi-gordo-indicador-esalq-bmf,Indicador do Boi Gordo Esalq/B3,,,variacao_pct,0.04,"+0,04",%,change_pct,,pct,spot,,,indicator
+2026-04-10,boi-gordo,boi-gordo-media-sp-a-prazo,Boi Gordo - Média SP a prazo,,,a_prazo_r_prazo,370.01,"370,01",R$,price,BRL,,spot,,,other
+2026-04-10,boi-gordo,boi-gordo-media-sp-a-prazo,Boi Gordo - Média SP a prazo,,,variacao_pct,0.05,"+0,05",%,change_pct,,pct,spot,,,other
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,AC,,cabeca,1700.0,"1.700,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,AC,,kg,8.72,"8,72",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,AC,,troca,5.63,"5,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,BA,,cabeca,1963.5,"1.963,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,BA,,kg,10.07,"10,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,BA,,troca,5.98,"5,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,GO,,cabeca,2094.94,"2.094,94",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,GO,,kg,10.74,"10,74",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,GO,,troca,6.08,"6,08",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MA,,cabeca,1929.5,"1.929,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MA,,kg,9.89,"9,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MA,,troca,5.56,"5,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MG,,cabeca,2088.2,"2.088,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MG,,kg,10.71,"10,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MG,,troca,6.12,"6,12",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MS,,cabeca,2447.7,"2.447,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MS,,kg,12.55,"12,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MS,,troca,6.93,"6,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MT,,cabeca,2281.7,"2.281,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MT,,kg,11.7,"11,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,MT,,troca,6.35,"6,35",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,PA,,cabeca,2078.25,"2.078,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,PA,,kg,10.66,"10,66",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,PA,,troca,5.98,"5,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,PR,,cabeca,2435.63,"2.435,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,PR,,kg,12.49,"12,49",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,PR,,troca,6.86,"6,86",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RJ,,cabeca,1926.1,"1.926,10",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RJ,,kg,9.88,"9,88",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RJ,,troca,5.58,"5,58",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RO,,cabeca,2013.91,"2.013,91",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RO,,kg,10.33,"10,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RO,,troca,6.2,"6,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RS*,,cabeca,2868.3,"2.868,30",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RS*,,kg,14.71,"14,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,RS*,,troca,8.12,"8,12",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,SC*,,cabeca,2902.55,"2.902,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,SC*,,kg,14.88,"14,88",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,SC*,,troca,8.18,"8,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,SP,,cabeca,2359.75,"2.359,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,SP,,kg,12.1,"12,10",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,SP,,troca,6.47,"6,47",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,TO,,cabeca,2129.32,"2.129,32",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,TO,,kg,10.92,"10,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-bezerra-12-meses,Fêmea Mestiça Reposição - Bezerra,TO,,troca,6.18,"6,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,AC,,cabeca,1555.5,"1.555,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,AC,,kg,9.43,"9,43",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,AC,,troca,5.15,"5,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,BA,,cabeca,1695.75,"1.695,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,BA,,kg,10.28,"10,28",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,BA,,troca,5.16,"5,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,GO,,cabeca,1857.79,"1.857,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,GO,,kg,11.26,"11,26",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,GO,,troca,5.39,"5,39",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MA,,cabeca,1776.5,"1.776,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MA,,kg,10.77,"10,77",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MA,,troca,5.12,"5,12",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MG,,cabeca,1883.47,"1.883,47",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MG,,kg,11.41,"11,41",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MG,,troca,5.52,"5,52",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MS,,cabeca,2247.74,"2.247,74",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MS,,kg,13.62,"13,62",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MS,,troca,6.36,"6,36",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MT,,cabeca,2046.25,"2.046,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MT,,kg,12.4,"12,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,MT,,troca,5.7,"5,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,PA,,cabeca,1854.36,"1.854,36",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,PA,,kg,11.24,"11,24",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,PA,,troca,5.34,"5,34",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,PR,,cabeca,2188.75,"2.188,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,PR,,kg,13.27,"13,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,PR,,troca,6.17,"6,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RJ,,cabeca,1720.4,"1.720,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RJ,,kg,10.43,"10,43",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RJ,,troca,4.99,"4,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RO,,cabeca,1877.14,"1.877,14",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RO,,kg,11.38,"11,38",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RO,,troca,5.78,"5,78",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RS*,,cabeca,2500.09,"2.500,09",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RS*,,kg,15.15,"15,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,RS*,,troca,7.08,"7,08",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,SC*,,cabeca,2500.6,"2.500,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,SC*,,kg,15.16,"15,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,SC*,,troca,7.04,"7,04",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,SP,,cabeca,2057.78,"2.057,78",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,SP,,kg,12.47,"12,47",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,SP,,troca,5.64,"5,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,TO,,cabeca,1916.67,"1.916,67",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,TO,,kg,11.62,"11,62",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-desmama-8-meses,Fêmea Mestiça Reposição - Desmama,TO,,troca,5.56,"5,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,AC,,cabeca,2040.0,"2.040,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,AC,,kg,8.0,"8,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,AC,,troca,6.75,"6,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,BA,,cabeca,2400.19,"2.400,19",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,BA,,kg,9.41,"9,41",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,BA,,troca,7.31,"7,31",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,GO,,cabeca,2502.61,"2.502,61",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,GO,,kg,9.81,"9,81",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,GO,,troca,7.26,"7,26",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MA,,cabeca,2303.5,"2.303,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MA,,kg,9.03,"9,03",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MA,,troca,6.64,"6,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MG,,cabeca,2605.21,"2.605,21",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MG,,kg,10.22,"10,22",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MG,,troca,7.64,"7,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MS,,cabeca,2857.19,"2.857,19",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MS,,kg,11.2,"11,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MS,,troca,8.09,"8,09",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MT,,cabeca,2714.16,"2.714,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MT,,kg,10.64,"10,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,MT,,troca,7.56,"7,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,PA,,cabeca,2430.92,"2.430,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,PA,,kg,9.53,"9,53",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,PA,,troca,7.0,"7,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,PR,,cabeca,3052.35,"3.052,35",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,PR,,kg,11.97,"11,97",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,PR,,troca,8.6,"8,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RJ,,cabeca,2292.45,"2.292,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RJ,,kg,8.99,"8,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RJ,,troca,6.64,"6,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RO,,cabeca,2444.09,"2.444,09",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RO,,kg,9.58,"9,58",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RO,,troca,7.52,"7,52",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RS*,,cabeca,3375.14,"3.375,14",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RS*,,kg,13.24,"13,24",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,RS*,,troca,9.55,"9,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,SC*,,cabeca,3362.5,"3.362,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,SC*,,kg,13.19,"13,19",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,SC*,,troca,9.47,"9,47",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,SP,,cabeca,2675.59,"2.675,59",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,SP,,kg,10.49,"10,49",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,SP,,troca,7.33,"7,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,TO,,cabeca,2629.0,"2.629,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,TO,,kg,10.31,"10,31",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-novilha-18-meses,Fêmea Mestiça Reposição - Novilha,TO,,troca,7.63,"7,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,AC,,cabeca,2380.0,"2.380,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,AC,,kg,7.56,"7,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,AC,,troca,7.88,"7,88",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,BA,,cabeca,2633.58,"2.633,58",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,BA,,kg,8.36,"8,36",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,BA,,troca,8.02,"8,02",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,GO,,cabeca,2958.86,"2.958,86",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,GO,,kg,9.39,"9,39",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,GO,,troca,8.59,"8,59",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MA,,cabeca,2660.5,"2.660,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MA,,kg,8.45,"8,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MA,,troca,7.67,"7,67",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MG,,cabeca,2764.86,"2.764,86",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MG,,kg,8.78,"8,78",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MG,,troca,8.11,"8,11",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MS,,cabeca,3083.49,"3.083,49",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MS,,kg,9.79,"9,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MS,,troca,8.73,"8,73",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MT,,cabeca,3139.65,"3.139,65",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MT,,kg,9.97,"9,97",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,MT,,troca,8.74,"8,74",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,PA,,cabeca,2798.37,"2.798,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,PA,,kg,8.88,"8,88",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,PA,,troca,8.06,"8,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,PR,,cabeca,3222.18,"3.222,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,PR,,kg,10.23,"10,23",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,PR,,troca,9.08,"9,08",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RJ,,cabeca,2690.25,"2.690,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RJ,,kg,8.54,"8,54",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RJ,,troca,7.8,"7,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RO,,cabeca,2805.82,"2.805,82",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RO,,kg,8.91,"8,91",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RO,,troca,8.63,"8,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RS*,,cabeca,3765.23,"3.765,23",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RS*,,kg,11.95,"11,95",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,RS*,,troca,10.66,"10,66",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,SC*,,cabeca,3780.4,"3.780,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,SC*,,kg,12.0,"12,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,SC*,,troca,10.65,"10,65",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,SP,,cabeca,2959.23,"2.959,23",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,SP,,kg,9.39,"9,39",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,SP,,troca,8.11,"8,11",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,TO,,cabeca,2896.62,"2.896,62",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,TO,,kg,9.2,"9,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-mestica-reposico-vaca-boiadeira-300-kg-10,Fêmea Mestiça Reposição - Vaca Boiadeira,TO,,troca,8.41,"8,41",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,AC,,cabeca,1830.0,"1.830,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,AC,,kg,10.17,"10,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,AC,,troca,6.06,"6,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,BA,,cabeca,1995.0,"1.995,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,BA,,kg,11.08,"11,08",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,BA,,troca,6.07,"6,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,GO,,cabeca,2185.64,"2.185,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,GO,,kg,12.14,"12,14",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,GO,,troca,6.34,"6,34",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MA,,cabeca,2090.0,"2.090,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MA,,kg,11.61,"11,61",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MA,,troca,6.02,"6,02",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MG,,cabeca,2215.85,"2.215,85",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MG,,kg,12.31,"12,31",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MG,,troca,6.5,"6,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MS,,cabeca,2644.4,"2.644,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MS,,kg,14.69,"14,69",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MS,,troca,7.48,"7,48",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MT,,cabeca,2407.35,"2.407,35",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MT,,kg,13.37,"13,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,MT,,troca,6.7,"6,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,PA,,cabeca,2181.6,"2.181,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,PA,,kg,12.12,"12,12",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,PA,,troca,6.28,"6,28",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,PR,,cabeca,2575.0,"2.575,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,PR,,kg,14.31,"14,31",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,PR,,troca,7.25,"7,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,RJ,,cabeca,2024.0,"2.024,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,RJ,,kg,11.24,"11,24",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,RJ,,troca,5.87,"5,87",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,RO,,cabeca,2208.4,"2.208,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,RO,,kg,12.27,"12,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,RO,,troca,6.8,"6,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,SP,,cabeca,2420.92,"2.420,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,SP,,kg,13.45,"13,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,SP,,troca,6.63,"6,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,TO,,cabeca,2254.9,"2.254,90",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,TO,,kg,12.53,"12,53",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-desmama-8-meses,Fêmea Nelore Reposição - Desmama,TO,,troca,6.55,"6,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,AC,,cabeca,2400.0,"2.400,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,AC,,kg,8.89,"8,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,AC,,troca,7.95,"7,95",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,BA,,cabeca,2823.75,"2.823,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,BA,,kg,10.46,"10,46",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,BA,,troca,8.6,"8,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,GO,,cabeca,2944.25,"2.944,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,GO,,kg,10.9,"10,90",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,GO,,troca,8.55,"8,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MA,,cabeca,2710.0,"2.710,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MA,,kg,10.04,"10,04",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MA,,troca,7.81,"7,81",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MG,,cabeca,3064.95,"3.064,95",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MG,,kg,11.35,"11,35",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MG,,troca,8.99,"8,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MS,,cabeca,3361.4,"3.361,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MS,,kg,12.45,"12,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MS,,troca,9.51,"9,51",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MT,,cabeca,3193.13,"3.193,13",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MT,,kg,11.83,"11,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,MT,,troca,8.89,"8,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,PA,,cabeca,2859.9,"2.859,90",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,PA,,kg,10.59,"10,59",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,PA,,troca,8.23,"8,23",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,PR,,cabeca,3591.0,"3.591,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,PR,,kg,13.3,"13,30",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,PR,,troca,10.12,"10,12",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,RJ,,cabeca,2697.0,"2.697,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,RJ,,kg,9.99,"9,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,RJ,,troca,7.82,"7,82",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,RO,,cabeca,2875.4,"2.875,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,RO,,kg,10.65,"10,65",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,RO,,troca,8.85,"8,85",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,SP,,cabeca,3147.75,"3.147,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,SP,,kg,11.66,"11,66",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,SP,,troca,8.62,"8,62",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,TO,,cabeca,3092.94,"3.092,94",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,TO,,kg,11.46,"11,46",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-novilha-18-meses,Fêmea Nelore Reposição - Novilha,TO,,troca,8.98,"8,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,AC,,cabeca,2800.0,"2.800,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,AC,,kg,8.48,"8,48",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,AC,,troca,9.27,"9,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,BA,,cabeca,3098.33,"3.098,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,BA,,kg,9.39,"9,39",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,BA,,troca,9.43,"9,43",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,GO,,cabeca,3481.01,"3.481,01",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,GO,,kg,10.55,"10,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,GO,,troca,10.1,"10,10",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MA,,cabeca,3130.0,"3.130,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MA,,kg,9.48,"9,48",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MA,,troca,9.02,"9,02",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MG,,cabeca,3252.78,"3.252,78",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MG,,kg,9.86,"9,86",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MG,,troca,9.54,"9,54",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MS,,cabeca,3627.64,"3.627,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MS,,kg,10.99,"10,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MS,,troca,10.27,"10,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MT,,cabeca,3693.7,"3.693,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MT,,kg,11.19,"11,19",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,MT,,troca,10.28,"10,28",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,PA,,cabeca,3292.2,"3.292,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,PA,,kg,9.98,"9,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,PA,,troca,9.48,"9,48",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,PR,,cabeca,3790.8,"3.790,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,PR,,kg,11.49,"11,49",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,PR,,troca,10.68,"10,68",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,RJ,,cabeca,3165.0,"3.165,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,RJ,,kg,9.59,"9,59",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,RJ,,troca,9.17,"9,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,RO,,cabeca,3300.96,"3.300,96",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,RO,,kg,10.0,"10,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,RO,,troca,10.16,"10,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,SP,,cabeca,3481.45,"3.481,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,SP,,kg,10.55,"10,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,SP,,troca,9.54,"9,54",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,TO,,cabeca,3407.79,"3.407,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,TO,,kg,10.33,"10,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,femea-nelore-vaca-boiadeira,Fêmea Nelore Reposição - Vaca Boiadeira,TO,,troca,9.89,"9,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,indicador-bezerro-esalq-bmf-bovespa-ms,Bezerro Esalq/BM&F Bovespa - MS,,,valor,3328.66,"3.328,66",R$,price,BRL,,spot,,,indicator
+2026-04-10,boi-gordo,indicador-bezerro-esalq-bmf-bovespa-ms,Bezerro Esalq/BM&F Bovespa - MS,,,variacao_pct,0.55,"+0,55",%,change_pct,,pct,spot,,,indicator
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Bahia,,arroba,60.58,"60,58",R$,price,BRL,,spot,,BA,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Bahia,,variacao_pct,0.7,"+0,70",%,change_pct,,pct,spot,,BA,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Goiás,,arroba,66.81,"66,81",R$,price,BRL,,spot,,GO,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Goiás,,variacao_pct,0.9,"+0,90",%,change_pct,,pct,spot,,GO,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Mato Grosso,,arroba,70.19,"70,19",R$,price,BRL,,spot,,MT,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Mato Grosso,,variacao_pct,0.31,"+0,31",%,change_pct,,pct,spot,,MT,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Mato Grosso do Sul,,arroba,68.12,"68,12",R$,price,BRL,,spot,,MS,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Mato Grosso do Sul,,variacao_pct,0.09,"+0,09",%,change_pct,,pct,spot,,MS,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Minas Gerais,,arroba,66.28,"66,28",R$,price,BRL,,spot,,MG,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Minas Gerais,,variacao_pct,0.2,"+0,20",%,change_pct,,pct,spot,,MG,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Pará,,arroba,66.38,"66,38",R$,price,BRL,,spot,,PA,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Pará,,variacao_pct,1.14,"+1,14",%,change_pct,,pct,spot,,PA,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Rondônia,,arroba,63.74,"63,74",R$,price,BRL,,spot,,RO,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Rondônia,,variacao_pct,0.43,"+0,43",%,change_pct,,pct,spot,,RO,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,São Paulo,,arroba,67.97,"67,97",R$,price,BRL,,spot,,SP,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,São Paulo,,variacao_pct,0.01,"+0,01",%,change_pct,,pct,spot,,SP,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Tocantins,,arroba,65.64,"65,64",R$,price,BRL,,spot,,TO,physical
+2026-04-10,boi-gordo,indicador-da-novilha,Indicador da Novilha,Tocantins,,variacao_pct,-0.14,"-0,14",%,change_pct,,pct,spot,,TO,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Bahia,,arroba,59.21,"59,21",R$,price,BRL,,spot,,BA,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Bahia,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,BA,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Goiás,,arroba,63.2,"63,20",R$,price,BRL,,spot,,GO,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Goiás,,variacao_pct,-0.03,"-0,03",%,change_pct,,pct,spot,,GO,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Mato Grosso,,arroba,65.6,"65,60",R$,price,BRL,,spot,,MT,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Mato Grosso,,variacao_pct,0.38,"+0,38",%,change_pct,,pct,spot,,MT,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Mato Grosso do Sul,,arroba,64.37,"64,37",R$,price,BRL,,spot,,MS,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Mato Grosso do Sul,,variacao_pct,0.35,"+0,35",%,change_pct,,pct,spot,,MS,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Minas Gerais,,arroba,62.96,"62,96",R$,price,BRL,,spot,,MG,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Minas Gerais,,variacao_pct,0.04,"+0,04",%,change_pct,,pct,spot,,MG,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Para,,arroba,65.33,"65,33",R$,price,BRL,,spot,,PA,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Para,,variacao_pct,0.27,"+0,27",%,change_pct,,pct,spot,,PA,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Rondônia,,arroba,62.25,"62,25",R$,price,BRL,,spot,,RO,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Rondônia,,variacao_pct,2.06,"+2,06",%,change_pct,,pct,spot,,RO,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,São Paulo,,arroba,65.45,"65,45",R$,price,BRL,,spot,,SP,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,São Paulo,,variacao_pct,-0.25,"-0,25",%,change_pct,,pct,spot,,SP,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Tocantins,,arroba,65.33,"65,33",R$,price,BRL,,spot,,TO,physical
+2026-04-10,boi-gordo,indicador-da-vaca,Indicador da Vaca,Tocantins,,variacao_pct,0.18,"+0,18",%,change_pct,,pct,spot,,TO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Bahia,,arroba,65.51,"65,51",R$/@,price,BRL,arroba,spot,,BA,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Bahia,,preco,328.15,"328,15",R$/@,price,BRL,arroba,spot,,BA,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Bahia,,variacao_pct,0.28,"+0,28",%,change_pct,,pct,spot,,BA,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Goiás,,arroba,69.92,"69,92",R$/@,price,BRL,arroba,spot,,GO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Goiás,,preco,350.23,"350,23",R$/@,price,BRL,arroba,spot,,GO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Goiás,,variacao_pct,0.07,"+0,07",%,change_pct,,pct,spot,,GO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Mato Grosso,,arroba,72.93,"72,93",R$/@,price,BRL,arroba,spot,,MT,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Mato Grosso,,preco,365.33,"365,33",R$/@,price,BRL,arroba,spot,,MT,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Mato Grosso,,variacao_pct,-0.09,"-0,09",%,change_pct,,pct,spot,,MT,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Mato Grosso do Sul,,arroba,71.4,"71,40",R$/@,price,BRL,arroba,spot,,MS,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Mato Grosso do Sul,,preco,357.63,"357,63",R$/@,price,BRL,arroba,spot,,MS,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Mato Grosso do Sul,,variacao_pct,0.1,"+0,10",%,change_pct,,pct,spot,,MS,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Minas Gerais,,arroba,70.27,"70,27",R$/@,price,BRL,arroba,spot,,MG,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Minas Gerais,,preco,351.97,"351,97",R$/@,price,BRL,arroba,spot,,MG,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Minas Gerais,,variacao_pct,0.25,"+0,25",%,change_pct,,pct,spot,,MG,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Pará,,arroba,69.48,"69,48",R$/@,price,BRL,arroba,spot,,PA,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Pará,,preco,348.03,"348,03",R$/@,price,BRL,arroba,spot,,PA,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Pará,,variacao_pct,0.51,"+0,51",%,change_pct,,pct,spot,,PA,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Rondônia,,arroba,67.04,"67,04",R$/@,price,BRL,arroba,spot,,RO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Rondônia,,preco,335.82,"335,82",R$/@,price,BRL,arroba,spot,,RO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Rondônia,,variacao_pct,0.92,"+0,92",%,change_pct,,pct,spot,,RO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,São Paulo,,arroba,72.79,"72,79",R$/@,price,BRL,arroba,spot,,SP,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,São Paulo,,preco,364.6,"364,60",R$/@,price,BRL,arroba,spot,,SP,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,São Paulo,,variacao_pct,0.05,"+0,05",%,change_pct,,pct,spot,,SP,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Tocantins,,arroba,69.37,"69,37",R$/@,price,BRL,arroba,spot,,TO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Tocantins,,preco,347.46,"347,46",R$/@,price,BRL,arroba,spot,,TO,physical
+2026-04-10,boi-gordo,indicador-do-boi,Indicador do Boi,Tocantins,,variacao_pct,0.35,"+0,35",%,change_pct,,pct,spot,,TO,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,AC,,cabeca,2295.0,"2.295,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,AC,,kg,11.2,"11,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,AC,,troca,7.6,"7,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,BA,,cabeca,2677.5,"2.677,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,BA,,kg,13.06,"13,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,BA,,troca,8.15,"8,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,GO,,cabeca,2859.04,"2.859,04",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,GO,,kg,13.95,"13,95",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,GO,,troca,8.3,"8,30",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MA,,cabeca,2792.53,"2.792,53",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MA,,kg,13.62,"13,62",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MA,,troca,8.05,"8,05",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MG,,cabeca,2855.18,"2.855,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MG,,kg,13.93,"13,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MG,,troca,8.37,"8,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MS,,cabeca,3245.15,"3.245,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MS,,kg,15.83,"15,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MS,,troca,9.18,"9,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MT,,cabeca,3101.82,"3.101,82",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MT,,kg,15.13,"15,13",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,MT,,troca,8.63,"8,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,PA,,cabeca,2822.72,"2.822,72",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,PA,,kg,13.77,"13,77",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,PA,,troca,8.13,"8,13",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,PR,,cabeca,3037.73,"3.037,73",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,PR,,kg,14.82,"14,82",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,PR,,troca,8.56,"8,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RJ,,cabeca,2568.0,"2.568,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RJ,,kg,12.53,"12,53",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RJ,,troca,7.44,"7,44",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RO,,cabeca,2846.26,"2.846,26",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RO,,kg,13.88,"13,88",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RO,,troca,8.76,"8,76",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RS*,,cabeca,3517.26,"3.517,26",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RS*,,kg,17.16,"17,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,RS*,,troca,9.96,"9,96",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,SC*,,cabeca,3645.6,"3.645,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,SC*,,kg,17.78,"17,78",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,SC*,,troca,10.27,"10,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,SP,,cabeca,3084.07,"3.084,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,SP,,kg,15.04,"15,04",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,SP,,troca,8.45,"8,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,TO,,cabeca,2945.14,"2.945,14",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,TO,,kg,14.37,"14,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-bezerro-12-meses,Macho Mestiço Reposição - Bezerro,TO,,troca,8.55,"8,55",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,AC,,cabeca,3060.0,"3.060,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,AC,,kg,8.87,"8,87",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,AC,,troca,10.13,"10,13",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,BA,,cabeca,3669.17,"3.669,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,BA,,kg,10.64,"10,64",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,BA,,troca,11.17,"11,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,GO,,cabeca,3940.53,"3.940,53",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,GO,,kg,11.42,"11,42",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,GO,,troca,11.44,"11,44",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MA,,cabeca,3561.5,"3.561,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MA,,kg,10.32,"10,32",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MA,,troca,10.26,"10,26",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MG,,cabeca,3811.19,"3.811,19",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MG,,kg,11.05,"11,05",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MG,,troca,11.18,"11,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MS,,cabeca,4225.14,"4.225,14",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MS,,kg,12.25,"12,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MS,,troca,11.96,"11,96",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MT,,cabeca,4177.72,"4.177,72",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MT,,kg,12.11,"12,11",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,MT,,troca,11.63,"11,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,PA,,cabeca,3816.63,"3.816,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,PA,,kg,11.06,"11,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,PA,,troca,10.99,"10,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,PR,,cabeca,4077.88,"4.077,88",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,PR,,kg,11.82,"11,82",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,PR,,troca,11.49,"11,49",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RJ,,cabeca,3470.83,"3.470,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RJ,,kg,10.06,"10,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RJ,,troca,10.06,"10,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RO,,cabeca,3723.0,"3.723,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RO,,kg,10.79,"10,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RO,,troca,11.46,"11,46",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RS*,,cabeca,4579.0,"4.579,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RS*,,kg,13.27,"13,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,RS*,,troca,12.96,"12,96",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,SC*,,cabeca,4794.69,"4.794,69",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,SC*,,kg,13.9,"13,90",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,SC*,,troca,13.51,"13,51",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,SP,,cabeca,4011.92,"4.011,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,SP,,kg,11.63,"11,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,SP,,troca,10.99,"10,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,TO,,cabeca,3872.35,"3.872,35",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,TO,,kg,11.22,"11,22",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-boi-magro,Macho Mestiço Reposição - Boi Magro,TO,,troca,11.24,"11,24",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,AC,,cabeca,2167.5,"2.167,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,AC,,kg,12.04,"12,04",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,AC,,troca,7.18,"7,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,BA,,cabeca,2395.13,"2.395,13",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,BA,,kg,13.31,"13,31",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,BA,,troca,7.29,"7,29",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,GO,,cabeca,2549.57,"2.549,57",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,GO,,kg,14.16,"14,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,GO,,troca,7.4,"7,40",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MA,,cabeca,2467.83,"2.467,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MA,,kg,13.71,"13,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MA,,troca,7.11,"7,11",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MG,,cabeca,2550.15,"2.550,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MG,,kg,14.17,"14,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MG,,troca,7.48,"7,48",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MS,,cabeca,2871.87,"2.871,87",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MS,,kg,15.95,"15,95",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MS,,troca,8.13,"8,13",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MT,,cabeca,2722.3,"2.722,30",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MT,,kg,15.12,"15,12",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,MT,,troca,7.58,"7,58",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,PA,,cabeca,2482.98,"2.482,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,PA,,kg,13.79,"13,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,PA,,troca,7.15,"7,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,PR,,cabeca,2685.86,"2.685,86",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,PR,,kg,14.92,"14,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,PR,,troca,7.57,"7,57",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RJ,,cabeca,2295.0,"2.295,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RJ,,kg,12.75,"12,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RJ,,troca,6.65,"6,65",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RO,,cabeca,2515.89,"2.515,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RO,,kg,13.98,"13,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RO,,troca,7.74,"7,74",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RS*,,cabeca,2910.39,"2.910,39",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RS*,,kg,16.17,"16,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,RS*,,troca,8.24,"8,24",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,SC*,,cabeca,3033.16,"3.033,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,SC*,,kg,16.85,"16,85",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,SC*,,troca,8.54,"8,54",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,SP,,cabeca,2716.91,"2.716,91",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,SP,,kg,15.09,"15,09",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,SP,,troca,7.44,"7,44",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,TO,,cabeca,2629.07,"2.629,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,TO,,kg,14.61,"14,61",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-desmama-8-meses,Macho Mestiço Reposição - Desmama,TO,,troca,7.63,"7,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,AC,,cabeca,2532.0,"2.532,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,AC,,kg,9.93,"9,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,AC,,troca,8.38,"8,38",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,BA,,cabeca,3048.5,"3.048,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,BA,,kg,11.95,"11,95",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,BA,,troca,9.28,"9,28",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,GO,,cabeca,3275.37,"3.275,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,GO,,kg,12.84,"12,84",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,GO,,troca,9.51,"9,51",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MA,,cabeca,3191.67,"3.191,67",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MA,,kg,12.52,"12,52",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MA,,troca,9.2,"9,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MG,,cabeca,3221.84,"3.221,84",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MG,,kg,12.63,"12,63",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MG,,troca,9.45,"9,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MS,,cabeca,3765.23,"3.765,23",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MS,,kg,14.77,"14,77",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MS,,troca,10.66,"10,66",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MT,,cabeca,3585.28,"3.585,28",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MT,,kg,14.06,"14,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,MT,,troca,9.98,"9,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,PA,,cabeca,3369.6,"3.369,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,PA,,kg,13.21,"13,21",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,PA,,troca,9.7,"9,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,PR,,cabeca,3550.2,"3.550,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,PR,,kg,13.92,"13,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,PR,,troca,10.0,"10,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RJ,,cabeca,2888.5,"2.888,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RJ,,kg,11.33,"11,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RJ,,troca,8.37,"8,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RO,,cabeca,3242.2,"3.242,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RO,,kg,12.71,"12,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RO,,troca,9.98,"9,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RS*,,cabeca,3795.86,"3.795,86",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RS*,,kg,14.89,"14,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,RS*,,troca,10.75,"10,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,SC*,,cabeca,4000.0,"4.000,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,SC*,,kg,15.69,"15,69",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,SC*,,troca,11.27,"11,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,SP,,cabeca,3575.17,"3.575,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,SP,,kg,14.02,"14,02",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,SP,,troca,9.79,"9,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,TO,,cabeca,3310.11,"3.310,11",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,TO,,kg,12.98,"12,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-mestico-garrote-18-meses,Macho Mestiço Reposição - Garrote,TO,,troca,9.61,"9,61",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,AC,,cabeca,2700.0,"2.700,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,AC,,kg,11.25,"11,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,AC,,troca,8.94,"8,94",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,BA,,cabeca,3150.0,"3.150,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,BA,,kg,13.13,"13,13",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,BA,,troca,9.59,"9,59",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,GO,,cabeca,3363.58,"3.363,58",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,GO,,kg,14.01,"14,01",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,GO,,troca,9.76,"9,76",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MA,,cabeca,3285.33,"3.285,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MA,,kg,13.69,"13,69",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MA,,troca,9.47,"9,47",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MG,,cabeca,3410.27,"3.410,27",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MG,,kg,14.21,"14,21",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MG,,troca,10.0,"10,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MS,,cabeca,3900.83,"3.900,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MS,,kg,16.25,"16,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MS,,troca,11.04,"11,04",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MT,,cabeca,3649.2,"3.649,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MT,,kg,15.21,"15,21",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,MT,,troca,10.16,"10,16",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,PA,,cabeca,3403.2,"3.403,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,PA,,kg,14.18,"14,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,PA,,troca,9.8,"9,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,PR,,cabeca,3573.8,"3.573,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,PR,,kg,14.89,"14,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,PR,,troca,10.07,"10,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,RJ,,cabeca,3173.33,"3.173,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,RJ,,kg,13.22,"13,22",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,RJ,,troca,9.2,"9,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,RO,,cabeca,3395.6,"3.395,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,RO,,kg,14.15,"14,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,RO,,troca,10.45,"10,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,SP,,cabeca,3628.32,"3.628,32",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,SP,,kg,15.12,"15,12",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,SP,,troca,9.94,"9,94",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,TO,,cabeca,3464.87,"3.464,87",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,TO,,kg,14.44,"14,44",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-bezerro-12-meses,Macho Nelore Reposição - Bezerro,TO,,troca,10.06,"10,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,AC,,cabeca,3600.0,"3.600,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,AC,,kg,9.6,"9,60",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,AC,,troca,11.92,"11,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,BA,,cabeca,4316.67,"4.316,67",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,BA,,kg,11.51,"11,51",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,BA,,troca,13.14,"13,14",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,GO,,cabeca,4635.92,"4.635,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,GO,,kg,12.36,"12,36",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,GO,,troca,13.46,"13,46",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MA,,cabeca,4190.0,"4.190,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MA,,kg,11.17,"11,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MA,,troca,12.07,"12,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MG,,cabeca,4483.75,"4.483,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MG,,kg,11.96,"11,96",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MG,,troca,13.15,"13,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MS,,cabeca,4970.75,"4.970,75",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MS,,kg,13.26,"13,26",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MS,,troca,14.07,"14,07",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MT,,cabeca,4914.97,"4.914,97",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MT,,kg,13.11,"13,11",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,MT,,troca,13.68,"13,68",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,PA,,cabeca,4490.15,"4.490,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,PA,,kg,11.97,"11,97",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,PA,,troca,12.93,"12,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,PR,,cabeca,4797.5,"4.797,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,PR,,kg,12.79,"12,79",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,PR,,troca,13.51,"13,51",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,RJ,,cabeca,4083.33,"4.083,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,RJ,,kg,10.89,"10,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,RJ,,troca,11.84,"11,84",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,RO,,cabeca,4380.0,"4.380,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,RO,,kg,11.68,"11,68",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,RO,,troca,13.48,"13,48",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,SP,,cabeca,4719.9,"4.719,90",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,SP,,kg,12.59,"12,59",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,SP,,troca,12.93,"12,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,TO,,cabeca,4555.71,"4.555,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,TO,,kg,12.15,"12,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-boi-magro,Macho Nelore Reposição - Boi Magro,TO,,troca,13.22,"13,22",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,AC,,cabeca,2550.0,"2.550,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,AC,,kg,13.08,"13,08",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,AC,,troca,8.44,"8,44",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,BA,,cabeca,2762.5,"2.762,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,BA,,kg,14.17,"14,17",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,BA,,troca,8.41,"8,41",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,GO,,cabeca,2999.49,"2.999,49",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,GO,,kg,15.38,"15,38",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,GO,,troca,8.71,"8,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MA,,cabeca,2903.33,"2.903,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MA,,kg,14.89,"14,89",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MA,,troca,8.37,"8,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MG,,cabeca,2960.18,"2.960,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MG,,kg,15.18,"15,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MG,,troca,8.68,"8,68",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MS,,cabeca,3378.67,"3.378,67",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MS,,kg,17.33,"17,33",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MS,,troca,9.56,"9,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MT,,cabeca,3202.7,"3.202,70",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MT,,kg,16.42,"16,42",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,MT,,troca,8.91,"8,91",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,PA,,cabeca,2921.15,"2.921,15",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,PA,,kg,14.98,"14,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,PA,,troca,8.41,"8,41",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,PR,,cabeca,3159.83,"3.159,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,PR,,kg,16.2,"16,20",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,PR,,troca,8.9,"8,90",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,RJ,,cabeca,2700.0,"2.700,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,RJ,,kg,13.85,"13,85",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,RJ,,troca,7.83,"7,83",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,RO,,cabeca,2930.42,"2.930,42",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,RO,,kg,15.03,"15,03",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,RO,,troca,9.02,"9,02",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,SP,,cabeca,3196.36,"3.196,36",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,SP,,kg,16.39,"16,39",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,SP,,troca,8.76,"8,76",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,TO,,cabeca,3093.03,"3.093,03",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,TO,,kg,15.86,"15,86",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-desmama-8-meses,Macho Nelore Reposição - Desmama,TO,,troca,8.98,"8,98",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,AC,,cabeca,3000.0,"3.000,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,AC,,kg,10.0,"10,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,AC,,troca,9.93,"9,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,BA,,cabeca,3610.0,"3.610,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,BA,,kg,12.03,"12,03",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,BA,,troca,10.99,"10,99",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,GO,,cabeca,3873.38,"3.873,38",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,GO,,kg,12.91,"12,91",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,GO,,troca,11.24,"11,24",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MA,,cabeca,3766.67,"3.766,67",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MA,,kg,12.56,"12,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MA,,troca,10.85,"10,85",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MG,,cabeca,3813.93,"3.813,93",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MG,,kg,12.71,"12,71",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MG,,troca,11.18,"11,18",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MS,,cabeca,4475.57,"4.475,57",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MS,,kg,14.92,"14,92",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MS,,troca,12.67,"12,67",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MT,,cabeca,4241.5,"4.241,50",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MT,,kg,14.14,"14,14",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,MT,,troca,11.81,"11,81",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,PA,,cabeca,3976.0,"3.976,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,PA,,kg,13.25,"13,25",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,PA,,troca,11.45,"11,45",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,PR,,cabeca,4192.0,"4.192,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,PR,,kg,13.97,"13,97",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,PR,,troca,11.81,"11,81",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,RJ,,cabeca,3410.0,"3.410,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,RJ,,kg,11.37,"11,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,RJ,,troca,9.88,"9,88",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,RO,,cabeca,3932.0,"3.932,00",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,RO,,kg,13.11,"13,11",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,RO,,troca,12.1,"12,10",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,SP,,cabeca,4217.8,"4.217,80",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,SP,,kg,14.06,"14,06",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,SP,,troca,11.56,"11,56",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,TO,,cabeca,3915.43,"3.915,43",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,TO,,kg,13.05,"13,05",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,macho-nelore-garrote-18-meses,Macho Nelore Reposição - Garrote,TO,,troca,11.37,"11,37",R$,price,BRL,,spot,,,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Goiás,,bezerra,13.6,"13,60",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Goiás,,desmama,13.98,"13,98",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Goiás,,novilha,12.78,"12,78",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Goiás,,vaca_magra,11.82,"11,82",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso,,bezerra,14.7,"14,70",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso,,desmama,15.0,"15,00",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso,,novilha,14.41,"14,41",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso,,vaca_magra,12.54,"12,54",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso do Sul,,bezerra,14.11,"14,11",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso do Sul,,desmama,14.78,"14,78",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso do Sul,,novilha,13.62,"13,62",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Mato Grosso do Sul,,vaca_magra,11.93,"11,93",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Minas Gerais,,bezerra,13.82,"13,82",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Minas Gerais,,desmama,14.0,"14,00",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Minas Gerais,,novilha,12.44,"12,44",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Minas Gerais,,vaca_magra,10.87,"10,87",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Paraná,,bezerra,13.87,"13,87",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Paraná,,desmama,14.92,"14,92",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Paraná,,novilha,13.47,"13,47",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Paraná,,vaca_magra,11.77,"11,77",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Pará,,bezerra,14.18,"14,18",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Pará,,desmama,14.89,"14,89",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Pará,,novilha,13.67,"13,67",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Pará,,vaca_magra,11.94,"11,94",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rio Grande do Sul,,bezerra,16.42,"16,42",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rio Grande do Sul,,desmama,16.87,"16,87",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rio Grande do Sul,,novilha,15.74,"15,74",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rio Grande do Sul,,vaca_magra,13.75,"13,75",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rondônia,,bezerra,14.13,"14,13",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rondônia,,desmama,14.55,"14,55",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rondônia,,novilha,12.72,"12,72",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Rondônia,,vaca_magra,11.11,"11,11",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,São Paulo,,bezerra,13.77,"13,77",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,São Paulo,,desmama,14.12,"14,12",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,São Paulo,,novilha,12.29,"12,29",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,São Paulo,,vaca_magra,11.61,"11,61",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Tocantins,,bezerra,15.67,"15,67",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Tocantins,,desmama,16.21,"16,21",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Tocantins,,novilha,14.77,"14,77",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-04-10,boi-gordo,reposicao-nelore-femea,Reposição Nelore - Fêmea,Tocantins,,vaca_magra,12.9,"12,90",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Goiás,,bezerro,15.11,"15,11",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Goiás,,boi_magro,14.26,"14,26",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Goiás,,desmama,15.5,"15,50",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Goiás,,garrote,14.98,"14,98",R$/cab,price,BRL,cab,spot,,GO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso,,bezerro,17.62,"17,62",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso,,boi_magro,15.51,"15,51",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso,,desmama,19.3,"19,30",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso,,garrote,16.83,"16,83",R$/cab,price,BRL,cab,spot,,MT,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso do Sul,,bezerro,18.04,"18,04",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso do Sul,,boi_magro,15.1,"15,10",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso do Sul,,desmama,19.5,"19,50",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Mato Grosso do Sul,,garrote,16.62,"16,62",R$/cab,price,BRL,cab,spot,,MS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Minas Gerais,,bezerro,15.68,"15,68",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Minas Gerais,,boi_magro,14.68,"14,68",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Minas Gerais,,desmama,16.65,"16,65",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Minas Gerais,,garrote,15.13,"15,13",R$/cab,price,BRL,cab,spot,,MG,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Paraná,,bezerro,17.78,"17,78",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Paraná,,boi_magro,15.41,"15,41",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Paraná,,desmama,18.03,"18,03",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Paraná,,garrote,16.87,"16,87",R$/cab,price,BRL,cab,spot,,PR,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Pará,,bezerro,17.23,"17,23",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Pará,,boi_magro,15.42,"15,42",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Pará,,desmama,18.3,"18,30",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Pará,,garrote,16.42,"16,42",R$/cab,price,BRL,cab,spot,,PA,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rio Grande do Sul,,bezerro,19.84,"19,84",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rio Grande do Sul,,boi_magro,17.2,"17,20",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rio Grande do Sul,,desmama,21.07,"21,07",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rio Grande do Sul,,garrote,18.87,"18,87",R$/cab,price,BRL,cab,spot,,RS,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rondônia,,bezerro,16.03,"16,03",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rondônia,,boi_magro,15.04,"15,04",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rondônia,,desmama,17.03,"17,03",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Rondônia,,garrote,15.56,"15,56",R$/cab,price,BRL,cab,spot,,RO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,São Paulo,,bezerro,16.51,"16,51",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,São Paulo,,boi_magro,14.76,"14,76",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,São Paulo,,desmama,17.8,"17,80",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,São Paulo,,garrote,15.62,"15,62",R$/cab,price,BRL,cab,spot,,SP,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Tocantins,,bezerro,18.62,"18,62",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Tocantins,,boi_magro,16.89,"16,89",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Tocantins,,desmama,19.77,"19,77",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-04-10,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Tocantins,,garrote,17.5,"17,50",R$/cab,price,BRL,cab,spot,,TO,physical

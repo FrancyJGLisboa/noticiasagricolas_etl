@@ -547,3 +547,15 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,frango,frango-vivo-estados,Frango Vivo,Paraná,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
 2026-04-09,frango,frango-vivo-estados,Frango Vivo,Santa Catarina,,preco,4.76,"4,76",R$/Kg,price,BRL,kg,spot,,SC,physical
 2026-04-09,frango,frango-vivo-estados,Frango Vivo,Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
+2026-04-09,frango,precos-do-frango-congelado-cepea-esalq,Frango Congelado Cepea/Esalq,,,kg,7.32,"7,32",R$,price,BRL,,spot,,,indicator
+2026-04-09,frango,precos-do-frango-congelado-cepea-esalq,Frango Congelado Cepea/Esalq,,,variacao_pct,0.41,"+0,41",%,change_pct,,pct,spot,,,indicator
+2026-04-09,frango,precos-do-frango-resfriado-cepea-esalq,Frango Resfriado Cepea/Esalq,,,kg,7.33,"7,33",R$,price,BRL,,spot,,,indicator
+2026-04-09,frango,precos-do-frango-resfriado-cepea-esalq,Frango Resfriado Cepea/Esalq,,,variacao_pct,0.41,"+0,41",%,change_pct,,pct,spot,,,indicator
+2026-04-10,frango,frango-vivo-estados,Frango Vivo,Paraná,,preco,4.64,"4,64",R$/Kg,price,BRL,kg,spot,,PR,physical
+2026-04-10,frango,frango-vivo-estados,Frango Vivo,Paraná,,variacao_pct,0.65,"+0,65",%,change_pct,,pct,spot,,PR,physical
+2026-04-10,frango,frango-vivo-estados,Frango Vivo,Santa Catarina,,preco,4.76,"4,76",R$/Kg,price,BRL,kg,spot,,SC,physical
+2026-04-10,frango,frango-vivo-estados,Frango Vivo,Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
+2026-04-10,frango,precos-do-frango-congelado-cepea-esalq,Frango Congelado Cepea/Esalq,,,kg,7.27,"7,27",R$,price,BRL,,spot,,,indicator
+2026-04-10,frango,precos-do-frango-congelado-cepea-esalq,Frango Congelado Cepea/Esalq,,,variacao_pct,-0.68,"-0,68",%,change_pct,,pct,spot,,,indicator
+2026-04-10,frango,precos-do-frango-resfriado-cepea-esalq,Frango Resfriado Cepea/Esalq,,,kg,7.29,"7,29",R$,price,BRL,,spot,,,indicator
+2026-04-10,frango,precos-do-frango-resfriado-cepea-esalq,Frango Resfriado Cepea/Esalq,,,variacao_pct,-0.55,"-0,55",%,change_pct,,pct,spot,,,indicator

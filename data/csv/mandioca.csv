@@ -2591,3 +2591,69 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Pindamonhangaba,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
 2026-04-09,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Sorocaba,,preco,,s/ cotação,R$/Cx 23 kg,price,BRL,cx23kg,spot,,,physical
 2026-04-09,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Sorocaba,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Desc. e Emb.,,preco,5.5,"5,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Desc. e Emb.,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Extra,,preco,1.96,"1,96",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Graúda,,preco,1.83,"1,83",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Graúda,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Mandioca Amarela Extra,,preco,1.5,"1,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Mandioca Amarela Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Miuda,,preco,1.62,"1,62",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-10,mandioca,mandioca-ceasas,Mandioca - Ceasas,Miuda,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Assis,,preco,528.0,"528,00",R$/tonelada,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Assis,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Mogi Mirim,,preco,,s/ cotação,R$/tonelada,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Mogi Mirim,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Ourinhos,,preco,,s/ cotação,R$/tonelada,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Ourinhos,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Presidente Prudente,,preco,,s/ cotação,R$/tonelada,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Presidente Prudente,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Tupã,,preco,,s/ cotação,R$/tonelada,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,mandioca-industria-iea,Mandioca Indústria - IEA,Tupã,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Mogi Mirim,,preco,24.15,"24,15",R$/Cx 23 kg,price,BRL,cx23kg,spot,,,physical
+2026-04-10,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Mogi Mirim,,variacao_pct,-4.55,"-4,55",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Pindamonhangaba,,preco,,s/ cotação,R$/Cx 23 kg,price,BRL,cx23kg,spot,,,physical
+2026-04-10,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Pindamonhangaba,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Sorocaba,,preco,,s/ cotação,R$/Cx 23 kg,price,BRL,cx23kg,spot,,,physical
+2026-04-10,mandioca,mandioca-para-mesa-iea,Mandioca para Mesa - IEA,Sorocaba,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,ASS-SP,,valor,119.35,"119,35",R$/Sc 50 kg,price,BRL,sc50kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,ASS-SP,,variacao_pct,3.8,"+3,80",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,COP-PR,,valor,123.38,"123,38",R$/Sc 50 kg,price,BRL,sc50kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,COP-PR,,variacao_pct,3.07,"+3,07",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,LSC-SC,,valor,114.98,"114,98",R$/Sc 50 kg,price,BRL,sc50kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,LSC-SC,,variacao_pct,0.46,"+0,46",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,NOP-PR,,valor,120.46,"120,46",R$/Sc 50 kg,price,BRL,sc50kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-fina,Farinha de Mandioca Seca Fina,NOP-PR,,variacao_pct,0.12,"+0,12",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,ASS-SP,,valor,96.25,"96,25",R$/Sc 40 kg,price,BRL,sc40kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,ASS-SP,,variacao_pct,4.64,"+4,64",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,COP-PR,,valor,98.7,"98,70",R$/Sc 40 kg,price,BRL,sc40kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,COP-PR,,variacao_pct,3.06,"+3,06",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,LSC-SC,,valor,91.99,"91,99",R$/Sc 40 kg,price,BRL,sc40kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,LSC-SC,,variacao_pct,0.47,"+0,47",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,NOP-PR,,valor,96.81,"96,81",R$/Sc 40 kg,price,BRL,sc40kg,spot,,,physical
+2026-04-10,mandioca,precos-da-farinha-de-mandioca-seca-grossa,Farinha de Mandioca Seca Grossa,NOP-PR,,variacao_pct,-0.09,"-0,09",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,ASS-SP,,valor,3116.69,"3.116,69",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,ASS-SP,,variacao_pct,4.08,"+4,08",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,COP-PR,,valor,3263.37,"3.263,37",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,COP-PR,,variacao_pct,0.08,"+0,08",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,EOP-PR,,valor,3074.44,"3.074,44",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,EOP-PR,,variacao_pct,2.67,"+2,67",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,ESM-MS,,valor,2951.17,"2.951,17",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,ESM-MS,,variacao_pct,0.48,"+0,48",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,NOP-PR,,valor,3010.73,"3.010,73",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,NOP-PR,,variacao_pct,1.95,"+1,95",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,SOM-MS,,valor,3031.22,"3.031,22",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-fecula-de-mandioca,Preços da Fécula de Mandioca,SOM-MS,,variacao_pct,1.74,"+1,74",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,ASS-SP,,valor,484.33,"484,33",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,ASS-SP,,variacao_pct,0.12,"+0,12",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,COP-PR,,valor,545.96,"545,96",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,COP-PR,,variacao_pct,1.38,"+1,38",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,EOP-PR,,valor,560.28,"560,28",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,EOP-PR,,variacao_pct,1.18,"+1,18",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,ESM-MS,,valor,546.96,"546,96",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,ESM-MS,,variacao_pct,0.16,"+0,16",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,NOP-PR,,valor,526.14,"526,14",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,NOP-PR,,variacao_pct,0.4,"+0,40",%,change_pct,,pct,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,SOM -MS,,valor,484.79,"484,79",R$/T,price,BRL,ton,spot,,,physical
+2026-04-10,mandioca,precos-da-raiz-de-mandioca,Preços da Raiz de Mandioca,SOM -MS,,variacao_pct,2.45,"+2,45",%,change_pct,,pct,spot,,,physical

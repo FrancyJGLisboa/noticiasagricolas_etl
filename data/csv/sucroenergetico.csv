@@ -53117,6 +53117,12 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-0.31,"-0,31",%,change_abs,,pct,futures,2026-05,,nybot
 2026-04-09,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Outubro/26,fechamento_c_libra_peso,14.53,"14,53",pontos,price,,points,futures,2026-10,,nybot
 2026-04-09,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Outubro/26,variacao_pontos,-0.37,"-0,37",%,change_abs,,pct,futures,2026-10,,nybot
+2026-04-09,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,09/04/2026,,saca_de_50_kg,104.16,"104,16",R$,price,BRL,,spot,,,indicator
+2026-04-09,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,09/04/2026,,variacao_pct,0.33,"+0,33",%,change_pct,,pct,spot,,,indicator
+2026-04-09,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,valor_5kg,13.1246,"13,1246",R$,price,BRL,,spot,,,other
+2026-04-09,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-04-09,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,09/04/2026,,valor_kg,2.9509,"2,9509",R$,price,BRL,,spot,,,other
+2026-04-09,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,09/04/2026,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
 2026-04-09,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Abril/2026,fechamento,2780.0,"2.780,00",R$/m³,price,BRL,m3,futures,2026-04,,b3
 2026-04-09,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Abril/2026,variacao_pct,2.83,"2,83",%,change_pct,,pct,futures,2026-04,,b3
 2026-04-09,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Agosto/2026,fechamento,2560.0,"2.560,00",R$/m³,price,BRL,m3,futures,2026-08,,b3
@@ -53147,3 +53153,37 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,fechamento,1.95,"1,9500",US$/gal,price,USD,gal,futures,2026-05,,cme
 2026-04-09,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_cents,-3.5,"-3,50",cents/bu,change_abs,USD,bu,futures,2026-05,,cme
 2026-04-09,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_pct,-1.76,"-1,76",%,change_pct,,pct,futures,2026-05,,cme
+2026-04-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Julho/26,fechamento_c_libra_peso,13.89,"13,89",pontos,price,,points,futures,2026-07,,nybot
+2026-04-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,-0.22,"-0,22",%,change_abs,,pct,futures,2026-07,,nybot
+2026-04-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Maio/26,fechamento_c_libra_peso,13.75,"13,75",pontos,price,,points,futures,2026-05,,nybot
+2026-04-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-0.17,"-0,17",%,change_abs,,pct,futures,2026-05,,nybot
+2026-04-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Outubro/26,fechamento_c_libra_peso,14.29,"14,29",pontos,price,,points,futures,2026-10,,nybot
+2026-04-10,sucroenergetico,acucar-bolsa-de-nova-iorque-nybot,Açúcar - Bolsa de Nova Iorque (NYBOT),,Outubro/26,variacao_pontos,-0.24,"-0,24",%,change_abs,,pct,futures,2026-10,,nybot
+2026-04-10,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,10/04/2026,,saca_de_50_kg,105.78,"105,78",R$,price,BRL,,spot,,,indicator
+2026-04-10,sucroenergetico,acucar-cristal-cepea,Indicador do Açúcar Cristal Cepea/Esalq - SP,10/04/2026,,variacao_pct,1.56,"+1,56",%,change_pct,,pct,spot,,,indicator
+2026-04-10,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,valor_5kg,13.0785,"13,0785",R$,price,BRL,,spot,,,other
+2026-04-10,sucroenergetico,acucar-cristal-empacotado,Indicador do Açúcar Cristal Empacotado Cepea/Esalq - SP,,,variacao_pct,-0.35,"-0,35",%,change_pct,,pct,spot,,,other
+2026-04-10,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,10/04/2026,,valor_kg,2.9509,"2,9509",R$,price,BRL,,spot,,,other
+2026-04-10,sucroenergetico,acucar-refinado-amorfo,Indicador do Açúcar Refinado Amorfo Cepea/Esalq - SP,10/04/2026,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,other
+2026-04-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Abril/2026,fechamento,2730.0,"2.730,00",R$/m³,price,BRL,m3,futures,2026-04,,b3
+2026-04-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Abril/2026,variacao_pct,-1.8,"-1,80",%,change_pct,,pct,futures,2026-04,,b3
+2026-04-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Maio/2026,fechamento,2550.0,"2.550,00",R$/m³,price,BRL,m3,futures,2026-05,,b3
+2026-04-10,sucroenergetico,etanol-b3-prego-regular,Etanol - B3 (Pregão Regular),,Maio/2026,variacao_pct,-2.67,"-2,67",%,change_pct,,pct,futures,2026-05,,b3
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,fechamento,1.935,"1,9350",US$/gal,price,USD,gal,futures,2026-04,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,variacao_cents,-1.5,"-1,50",cents/bu,change_abs,USD,bu,futures,2026-04,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Abr/26,variacao_pct,-0.77,"-0,77",%,change_pct,,pct,futures,2026-04,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Jul/26,fechamento,1.905,"1,9050",US$/gal,price,USD,gal,futures,2026-07,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Jul/26,variacao_cents,-1.25,"-1,25",cents/bu,change_abs,USD,bu,futures,2026-07,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Jul/26,variacao_pct,-0.65,"-0,65",%,change_pct,,pct,futures,2026-07,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Jun/26,fechamento,1.92,"1,9200",US$/gal,price,USD,gal,futures,2026-06,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Jun/26,variacao_cents,-2.0,"-2,00",cents/bu,change_abs,USD,bu,futures,2026-06,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Jun/26,variacao_pct,-1.03,"-1,03",%,change_pct,,pct,futures,2026-06,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,fechamento,1.925,"1,9250",US$/gal,price,USD,gal,futures,2026-05,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_cents,-2.5,"-2,50",cents/bu,change_abs,USD,bu,futures,2026-05,,cme
+2026-04-10,sucroenergetico,etanol-bolsa-de-chicago-cme-group,Etanol - Bolsa de Chicago,,Mai/26,variacao_pct,-1.28,"-1,28",%,change_pct,,pct,futures,2026-05,,cme
+2026-04-10,sucroenergetico,indicador-semanal-etanol-anidro-cepea-esalq,Indicador Semanal Etanol Anidro Cepea/Esalq,,,litro,3.1948,"3,1948",R$,price,BRL,,spot,,,indicator
+2026-04-10,sucroenergetico,indicador-semanal-etanol-anidro-cepea-esalq,Indicador Semanal Etanol Anidro Cepea/Esalq,,,variacao_pct,-3.47,"-3,47",%,change_pct,,pct,spot,,,indicator
+2026-04-10,sucroenergetico,indicador-semanal-etanol-hidratado-cepea-esalq,Indicador Semanal Etanol Hidratado Cepea/Esalq,,,litro,2.7873,"2,7873",R$,price,BRL,,spot,,,indicator
+2026-04-10,sucroenergetico,indicador-semanal-etanol-hidratado-cepea-esalq,Indicador Semanal Etanol Hidratado Cepea/Esalq,,,variacao_pct,-3.47,"-3,47",%,change_pct,,pct,spot,,,indicator
+2026-04-10,sucroenergetico,indicador-semanal-etanol-hidratado-outros-fins-cepea-esalq,Indicador Semanal Etanol Hidratado Outros Fins Cepea/Esalq,,,litro,2.9022,"2,9022",R$,price,BRL,,spot,,,indicator
+2026-04-10,sucroenergetico,indicador-semanal-etanol-hidratado-outros-fins-cepea-esalq,Indicador Semanal Etanol Hidratado Outros Fins Cepea/Esalq,,,variacao_pct,-4.62,"-4,62",%,change_pct,,pct,spot,,,indicator

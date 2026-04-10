@@ -76897,6 +76897,10 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-08,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Pato Branco/PR (Coopertradição),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
 2026-04-08,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Ubiratã/PR (Coagru),,preco,66.0,"66,00",R$/sc,price,BRL,sc60kg,spot,,PR,physical
 2026-04-08,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Ubiratã/PR (Coagru),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
+2026-04-09,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Paraná,,t,1292.2,"1.292,20",R$,price,BRL,,spot,,PR,physical
+2026-04-09,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Paraná,,variacao_pct,0.08,"+0,08",%,change_pct,,pct,spot,,PR,physical
+2026-04-09,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Rio Grande do Sul,,t,1167.76,"1.167,76",R$,price,BRL,,spot,,RS,physical
+2026-04-09,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Rio Grande do Sul,,variacao_pct,0.94,"+0,94",%,change_pct,,pct,spot,,RS,physical
 2026-04-09,trigo,trigo-atacado-media-pr,Trigo Atacado - Média PR,,,sc,65.82,"65,82",R$,price,BRL,,spot,,,physical
 2026-04-09,trigo,trigo-atacado-media-pr,Trigo Atacado - Média PR,,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-04-09,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Dezembro/26,fechamento,6.1575,"6,1575",US$ / Bushel,price,USD,bu,futures,2026-12,,cme
@@ -76933,3 +76937,43 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-09,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Pato Branco/PR (Coopertradição),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
 2026-04-09,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Ubiratã/PR (Coagru),,preco,66.0,"66,00",R$/sc,price,BRL,sc60kg,spot,,PR,physical
 2026-04-09,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Ubiratã/PR (Coagru),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
+2026-04-10,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Paraná,,t,1296.92,"1.296,92",R$,price,BRL,,spot,,PR,physical
+2026-04-10,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Paraná,,variacao_pct,0.37,"+0,37",%,change_pct,,pct,spot,,PR,physical
+2026-04-10,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Rio Grande do Sul,,t,1167.8,"1.167,80",R$,price,BRL,,spot,,RS,physical
+2026-04-10,trigo,preco-medio-do-trigo-cepea-esalq,Preço Médio do Trigo Cepea/Esalq,Rio Grande do Sul,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-04-10,trigo,trigo-atacado-media-pr,Trigo Atacado - Média PR,,,sc,65.82,"65,82",R$,price,BRL,,spot,,,physical
+2026-04-10,trigo,trigo-atacado-media-pr,Trigo Atacado - Média PR,,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Dezembro/26,fechamento,6.115,"6,1150",US$ / Bushel,price,USD,bu,futures,2026-12,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Dezembro/26,variacao_cents,-4.25,"-4,25",cents/bu,change_abs,USD,bu,futures,2026-12,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Dezembro/26,variacao_pct,-0.69,"-0,69",%,change_pct,,pct,futures,2026-12,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Julho/26,fechamento,5.8075,"5,8075",US$ / Bushel,price,USD,bu,futures,2026-07,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Julho/26,variacao_cents,-4.25,"-4,25",cents/bu,change_abs,USD,bu,futures,2026-07,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Julho/26,variacao_pct,-0.73,"-0,73",%,change_pct,,pct,futures,2026-07,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Maio/26,fechamento,5.71,"5,7100",US$ / Bushel,price,USD,bu,futures,2026-05,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Maio/26,variacao_cents,-3.5,"-3,50",cents/bu,change_abs,USD,bu,futures,2026-05,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Maio/26,variacao_pct,-0.61,"-0,61",%,change_pct,,pct,futures,2026-05,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Setembro/26,fechamento,5.93,"5,9300",US$ / Bushel,price,USD,bu,futures,2026-09,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Setembro/26,variacao_cents,-4.5,"-4,50",cents/bu,change_abs,USD,bu,futures,2026-09,,cme
+2026-04-10,trigo,trigo-bolsa-de-chicago-cme-group,Trigo - Bolsa de Chicago,,Setembro/26,variacao_pct,-0.75,"-0,75",%,change_pct,,pct,futures,2026-09,,cme
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Assis,,preco_medio,,s/ cotação,R$/saca 60kg,price,BRL,sc60kg,spot,,,physical
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Assis,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Itapetininga,,preco_medio,,s/ cotação,R$/saca 60kg,price,BRL,sc60kg,spot,,,physical
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Itapetininga,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Itapeva,,preco_medio,,s/ cotação,R$/saca 60kg,price,BRL,sc60kg,spot,,,physical
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Itapeva,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Ourinhos,,preco_medio,,s/ cotação,R$/saca 60kg,price,BRL,sc60kg,spot,,,physical
+2026-04-10,trigo,trigo-iea,Trigo - IEA,Ourinhos,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Castro/PR,,preco,66.0,"66,00",R$/sc,price,BRL,sc60kg,spot,,PR,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Castro/PR,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Marechal Cândido Rondon/PR (Copagril),,preco,66.0,"66,00",R$/sc,price,BRL,sc60kg,spot,,PR,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Marechal Cândido Rondon/PR (Copagril),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Nonoai/RS (Coopertradição),,preco,61.0,"61,00",R$/sc,price,BRL,sc60kg,spot,,RS,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Nonoai/RS (Coopertradição),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Não-Me-Toque/RS (Cotrijal),,preco,60.0,"60,00",R$/sc,price,BRL,sc60kg,spot,,RS,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Não-Me-Toque/RS (Cotrijal),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Palma Sola/SC (Coopertradição),,preco,66.0,"66,00",R$/sc,price,BRL,sc60kg,spot,,SC,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Palma Sola/SC (Coopertradição),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Pato Branco/PR (Coopertradição),,preco,66.0,"66,00",R$/sc,price,BRL,sc60kg,spot,,PR,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Pato Branco/PR (Coopertradição),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Ubiratã/PR (Coagru),,preco,66.0,"66,00",R$/sc,price,BRL,sc60kg,spot,,PR,physical
+2026-04-10,trigo,trigo-mercado-fisico,Trigo - Mercado Físico,Ubiratã/PR (Coagru),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PR,physical
