@@ -33157,3 +33157,15 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-10,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Pelotas/RS (Cereagro),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
 2026-04-10,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,preco,54.0,"54,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SC,physical
 2026-04-10,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Capivari do Sul/RS (Coripil),,preco,65.0,"65,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,RS,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Capivari do Sul/RS (Coripil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Guaratinguetá/SP (IEA) (R$/Sc 60 kg),,preco,80.0,"80,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SP,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Guaratinguetá/SP (IEA) (R$/Sc 60 kg),,variacao_pct,,-,%,change_pct,,pct,spot,,SP,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Média Rio Grande do Sul (Clicmercado),,preco,63.0,"63,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Média Rio Grande do Sul (Clicmercado),,variacao_pct,1.61,"+1,61",%,change_pct,,pct,spot,,,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Oeste da Bahia/BA (AIBA)(R$/Sc 60 kg),,preco,77.75,"77,75",R$/sc 50 kg,price,BRL,sc50kg,spot,,BA,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Oeste da Bahia/BA (AIBA)(R$/Sc 60 kg),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,BA,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Pelotas/RS (Cereagro),,preco,67.0,"67,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,RS,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Pelotas/RS (Cereagro),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,preco,54.0,"54,00",R$/sc 50 kg,price,BRL,sc50kg,spot,,SC,physical
+2026-04-13,arroz,arroz-mercado-fisico,Arroz - Mercado Físico,Rio do Sul/SC (Cravil),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,SC,physical

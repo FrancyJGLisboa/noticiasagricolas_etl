@@ -699,3 +699,7 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-10,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Branco,,variacao_pct,0.06,"+0,06",%,change_pct,,pct,spot,,,indicator
 2026-04-10,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,30_dz,187.44,"187,44",R$,price,BRL,,spot,,,indicator
 2026-04-10,ovos,precos-de-ovos-cepea-produto-a-retirar-bastos,Ovos Cepea - Produto a Retirar em Bastos (SP),Vermelho,,variacao_pct,-0.14,"-0,14",%,change_pct,,pct,spot,,,indicator
+2026-04-13,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,preco_caixa_de_30_duzias,197.76,"197,76",R$,price,BRL,,spot,,,physical
+2026-04-13,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Branco - Grande,,variacao_pct,-2.09,"-2,09",%,change_pct,,pct,spot,,,physical
+2026-04-13,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,preco_caixa_de_30_duzias,226.65,"226,65",R$,price,BRL,,spot,,,physical
+2026-04-13,ovos,ovos-extras-ceasas,Ovos Extras - Ceasas,Vermelho - Extra,,variacao_pct,-1.36,"-1,36",%,change_pct,,pct,spot,,,physical
