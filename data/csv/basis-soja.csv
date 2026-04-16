@@ -100683,22 +100683,27 @@ date,location,state,physical_indicator,physical_price_brl,futures_indicator,futu
 2026-04-14,Ubiratã/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-bolsa-de-chicago-cme-group,2026-05,11.58,127.1525740846209,4.9806,-17.152574084620895,-3.4438770599166557,-13.489757645964556
 2026-04-15,Alto Garças/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-22.162295999999998,-4.4388511456497355,-17.026663389527176
 2026-04-15,Brasília/DF,DF,soja-mercado-fisico-sindicatos-e-cooperativas,104.5,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-25.662295999999998,-5.1398605992629385,-19.715614113014723
-2026-04-15,Campo Grande/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-24.162295999999998,-4.839427976285851,-18.56320666009149
+2026-04-15,Campo Grande/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.5,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-22.662295999999998,-4.538995353308764,-17.410799207168257
 2026-04-15,Campo Novo do Parecis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,99.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-31.162295999999998,-6.241446883512257,-23.94110810706658
 2026-04-15,Castro/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-11.162295999999998,-2.235678577151097,-8.575675401423464
+2026-04-15,Chapadão do Sul/MS,MS,soja-mercado-fisico-ms,109.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-21.162295999999998,-4.238562730331677,-16.25839175424502
 2026-04-15,Cândido Mota/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-19.162295999999998,-3.8379858996955614,-14.721848483680711
+2026-04-15,Dourados/MS,MS,soja-mercado-fisico-ms,111.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-19.162295999999998,-3.8379858996955614,-14.721848483680711
 2026-04-15,Eldorado/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-21.162295999999998,-4.238562730331677,-16.25839175424502
 2026-04-15,Itiquira/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,105.5,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-24.662295999999998,-4.93957218394488,-18.94734247773257
 2026-04-15,Jataí/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-22.162295999999998,-4.4388511456497355,-17.026663389527176
 2026-04-15,Luís Eduardo Magalhães/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-20.162295999999998,-4.038274315013619,-15.490120118962865
 2026-04-15,Machado/MG,MG,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-17.162295999999998,-3.4374090690594454,-13.185305213116399
-2026-04-15,Maracaju/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-23.162295999999998,-4.639139560967793,-17.794935024809334
+2026-04-15,Maracaju/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-21.162295999999998,-4.238562730331677,-16.25839175424502
 2026-04-15,Marechal Cândido Rondon/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-19.162295999999998,-3.8379858996955614,-14.721848483680711
+2026-04-15,Maringá/PR,PR,soja-mercado-fisico-ms,122.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-8.162295999999998,-1.634813331196923,-6.270860495576998
 2026-04-15,Nonoai/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-13.162295999999998,-2.636255407787213,-10.112218671987776
 2026-04-15,Não-Me-Toque/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-13.162295999999998,-2.636255407787213,-10.112218671987776
-2026-04-15,Oeste da Bahia/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,112.25,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-17.912295999999998,-3.5876253805479887,-13.761508939578015
+2026-04-15,Oeste da Bahia/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-17.162295999999998,-3.4374090690594454,-13.185305213116399
 2026-04-15,Palma Sola/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,114.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-16.162295999999998,-3.2371206537413872,-12.417033577834244
+2026-04-15,Paranaguá/PR,PR,soja-mercado-fisico-ms,128.5,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-1.6622959999999978,-0.3329386316295461,-1.2770948662429846
 2026-04-15,Pato Branco/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,114.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-16.162295999999998,-3.2371206537413872,-12.417033577834244
+2026-04-15,Ponta Porã/MS,MS,soja-mercado-fisico-ms,110.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-20.162295999999998,-4.038274315013619,-15.490120118962865
 2026-04-15,Porto Paranaguá/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,129.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-1.1622959999999978,-0.2327944239705171,-0.8929590486019068
 2026-04-15,Porto Rio Grande/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,130.5,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,0.3377040000000022,0.06763819900656991,0.2594484043213268
 2026-04-15,Porto Santos/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,126.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-4.162295999999998,-0.8336596699246911,-3.1977739544483743
@@ -100706,28 +100711,35 @@ date,location,state,physical_indicator,physical_price_brl,futures_indicator,futu
 2026-04-15,Rio Verde/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-22.162295999999998,-4.4388511456497355,-17.026663389527176
 2026-04-15,Rio do Sul/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-11.162295999999998,-2.235678577151097,-8.575675401423464
 2026-04-15,Rondonópolis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-21.162295999999998,-4.238562730331677,-16.25839175424502
+2026-04-15,Sidrolândia/MS,MS,soja-mercado-fisico-ms,109.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-21.162295999999998,-4.238562730331677,-16.25839175424502
+2026-04-15,Sonora/MS,MS,soja-mercado-fisico-ms,107.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-23.162295999999998,-4.639139560967793,-17.794935024809334
 2026-04-15,Sorriso/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,102.8,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-27.362296,-5.480350905303638,-21.02167589299439
-2026-04-15,São Gabriel do Oeste/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-24.162295999999998,-4.839427976285851,-18.56320666009149
+2026-04-15,São Gabriel do Oeste/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.5,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-22.662295999999998,-4.538995353308764,-17.410799207168257
 2026-04-15,Tangará da Serra/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,101.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-29.162295999999998,-5.8408700528761415,-22.40456483650227
 2026-04-15,Ubiratã/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-b3-pregao-regular,2026-07,26.07,130.162296,4.9928,-19.162295999999998,-3.8379858996955614,-14.721848483680711
 2026-04-15,Alto Garças/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-20.45468795355586,-4.096837036043074,-15.923660147733548
 2026-04-15,Brasília/DF,DF,soja-mercado-fisico-sindicatos-e-cooperativas,104.5,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-23.95468795355586,-4.797846489656277,-18.648356346649592
-2026-04-15,Campo Grande/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-22.45468795355586,-4.4974138666791905,-17.480629404257
+2026-04-15,Campo Grande/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.5,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-20.95468795355586,-4.196981243702103,-16.31290246186441
 2026-04-15,Campo Novo do Parecis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,99.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-29.45468795355586,-5.8994327739055965,-22.930021802089083
 2026-04-15,Castro/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-9.454687953555862,-1.8936644675444363,-7.360329236854558
+2026-04-15,Chapadão do Sul/MS,MS,soja-mercado-fisico-ms,109.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-19.45468795355586,-3.8965486207250164,-15.14517551947182
 2026-04-15,Cândido Mota/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-17.45468795355586,-3.4959717900889005,-13.588206262948368
+2026-04-15,Dourados/MS,MS,soja-mercado-fisico-ms,111.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-17.45468795355586,-3.4959717900889005,-13.588206262948368
 2026-04-15,Eldorado/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-19.45468795355586,-3.8965486207250164,-15.14517551947182
 2026-04-15,Itiquira/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,105.5,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-22.95468795355586,-4.597558074338219,-17.869871718387863
 2026-04-15,Jataí/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-20.45468795355586,-4.096837036043074,-15.923660147733548
 2026-04-15,Luís Eduardo Magalhães/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-18.45468795355586,-3.696260205406958,-14.366690891210096
 2026-04-15,Machado/MG,MG,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-15.454687953555862,-3.0953949594527845,-12.031237006424917
-2026-04-15,Maracaju/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-21.45468795355586,-4.297125451361133,-16.702144775995276
+2026-04-15,Maracaju/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-19.45468795355586,-3.8965486207250164,-15.14517551947182
 2026-04-15,Marechal Cândido Rondon/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-17.45468795355586,-3.4959717900889005,-13.588206262948368
+2026-04-15,Maringá/PR,PR,soja-mercado-fisico-ms,122.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-6.454687953555862,-1.2927992215902624,-5.024875352069379
 2026-04-15,Nonoai/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-11.454687953555862,-2.2942412981805522,-8.917298493378011
 2026-04-15,Não-Me-Toque/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-11.454687953555862,-2.2942412981805522,-8.917298493378011
-2026-04-15,Oeste da Bahia/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,112.25,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-16.20468795355586,-3.245611270941328,-12.61510047762121
+2026-04-15,Oeste da Bahia/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-15.454687953555862,-3.0953949594527845,-12.031237006424917
 2026-04-15,Palma Sola/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,114.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-14.454687953555862,-2.8951065441347263,-11.25275237816319
+2026-04-15,Paranaguá/PR,PR,soja-mercado-fisico-ms,128.5,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,0.04531204644413833,0.009075477977114712,0.03527473163184311
 2026-04-15,Pato Branco/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,114.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-14.454687953555862,-2.8951065441347263,-11.25275237816319
+2026-04-15,Ponta Porã/MS,MS,soja-mercado-fisico-ms,110.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-18.45468795355586,-3.696260205406958,-14.366690891210096
 2026-04-15,Porto Paranaguá/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,129.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,0.5453120464441383,0.10921968563614372,0.4245170457627063
 2026-04-15,Porto Rio Grande/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,130.5,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,2.0453120464441383,0.4096523086132307,1.5922439881552959
 2026-04-15,Porto Santos/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,126.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-2.4546879535558617,-0.4916455603180303,-1.9109368390224728
@@ -100735,7 +100747,67 @@ date,location,state,physical_indicator,physical_price_brl,futures_indicator,futu
 2026-04-15,Rio Verde/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-20.45468795355586,-4.096837036043074,-15.923660147733548
 2026-04-15,Rio do Sul/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-9.454687953555862,-1.8936644675444363,-7.360329236854558
 2026-04-15,Rondonópolis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-19.45468795355586,-3.8965486207250164,-15.14517551947182
+2026-04-15,Sidrolândia/MS,MS,soja-mercado-fisico-ms,109.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-19.45468795355586,-3.8965486207250164,-15.14517551947182
+2026-04-15,Sonora/MS,MS,soja-mercado-fisico-ms,107.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-21.45468795355586,-4.297125451361133,-16.702144775995276
 2026-04-15,Sorriso/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,102.8,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-25.654687953555865,-5.1383367956969765,-19.97178021469453
-2026-04-15,São Gabriel do Oeste/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-22.45468795355586,-4.4974138666791905,-17.480629404257
+2026-04-15,São Gabriel do Oeste/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.5,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-20.95468795355586,-4.196981243702103,-16.31290246186441
 2026-04-15,Tangará da Serra/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,101.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-27.45468795355586,-5.49885594326948,-21.37305254556563
 2026-04-15,Ubiratã/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-bolsa-de-chicago-cme-group,2026-05,11.67,128.45468795355586,4.9928,-17.45468795355586,-3.4959717900889005,-13.588206262948368
+2026-04-16,Alto Garças/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-21.068207,-4.213051572779811,-16.197814582006192
+2026-04-16,Brasília/DF,DF,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-24.068207,-4.812967584538165,-18.504296749473916
+2026-04-16,Campo Grande/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-24.068207,-4.812967584538165,-18.504296749473916
+2026-04-16,Campo Novo do Parecis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,100.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-30.068207,-6.0127996080548725,-23.117261084409353
+2026-04-16,Castro/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-11.068207000000001,-2.2133315335852983,-8.509540690447128
+2026-04-16,Cândido Mota/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-19.068207,-3.8131075649409083,-14.66015980369438
+2026-04-16,Eldorado/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-22.068207,-4.4130235766992625,-16.9666419711621
+2026-04-16,Itiquira/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,106.3,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-23.768207000000004,-4.7529759833623295,-18.273648532727144
+2026-04-16,Jataí/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-22.068207,-4.4130235766992625,-16.9666419711621
+2026-04-16,Luís Eduardo Magalhães/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-20.068207,-4.01307956886036,-15.428987192850288
+2026-04-16,Machado/MG,MG,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-17.068207,-3.413163557102006,-13.122505025382566
+2026-04-16,Maracaju/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-23.068207,-4.612995580618714,-17.735469360318007
+2026-04-16,Marechal Cândido Rondon/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-20.068207,-4.01307956886036,-15.428987192850288
+2026-04-16,Nonoai/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-13.068207000000001,-2.613275541424201,-10.047195468758941
+2026-04-16,Não-Me-Toque/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-13.068207000000001,-2.613275541424201,-10.047195468758941
+2026-04-16,Oeste da Bahia/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-17.068207,-3.413163557102006,-13.122505025382566
+2026-04-16,Palma Sola/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-17.068207,-3.413163557102006,-13.122505025382566
+2026-04-16,Pato Branco/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-17.068207,-3.413163557102006,-13.122505025382566
+2026-04-16,Porto Paranaguá/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,129.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-1.068207000000001,-0.2136114943907855,-0.8212667988880642
+2026-04-16,Porto Rio Grande/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,130.5,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,0.431792999999999,0.08634651148839143,0.33197428484579555
+2026-04-16,Porto Santos/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,126.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-4.068207000000001,-0.8135275061491393,-3.127748966355784
+2026-04-16,Primavera do Leste/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,107.2,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-22.868206999999998,-4.573001179834822,-17.581703882486824
+2026-04-16,Rio Verde/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-22.068207,-4.4130235766992625,-16.9666419711621
+2026-04-16,Rio do Sul/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-11.068207000000001,-2.2133315335852983,-8.509540690447128
+2026-04-16,Rondonópolis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-20.068207,-4.01307956886036,-15.428987192850288
+2026-04-16,Sorriso/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,102.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-28.068207,-5.61285560021597,-21.57960630609754
+2026-04-16,São Gabriel do Oeste/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-24.068207,-4.812967584538165,-18.504296749473916
+2026-04-16,Tangará da Serra/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,102.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-28.068207,-5.61285560021597,-21.57960630609754
+2026-04-16,Ubiratã/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-b3-pregao-regular,2026-07,26.01,130.068207,5.0007,-20.068207,-4.01307956886036,-15.428987192850288
+2026-04-16,Alto Garças/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,109.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-19.299637155297518,-3.8593871168631426,-15.042628009880254
+2026-04-16,Brasília/DF,DF,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-22.299637155297518,-4.459303128621497,-17.380904303186302
+2026-04-16,Campo Grande/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-22.299637155297518,-4.459303128621497,-17.380904303186302
+2026-04-16,Campo Novo do Parecis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,100.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-28.299637155297518,-5.659135152138204,-22.0574568897984
+2026-04-16,Castro/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-9.299637155297518,-1.85966707766863,-7.248373698860093
+2026-04-16,Cândido Mota/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,111.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-17.299637155297518,-3.45944310902424,-13.483777147676221
+2026-04-16,Eldorado/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-20.299637155297518,-4.059359120782593,-15.82205344098227
+2026-04-16,Itiquira/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,106.3,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-21.99963715529752,-4.399311527445661,-17.1470766738557
+2026-04-16,Jataí/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-20.299637155297518,-4.059359120782593,-15.82205344098227
+2026-04-16,Luís Eduardo Magalhães/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-18.299637155297518,-3.6594151129436914,-14.26320257877824
+2026-04-16,Machado/MG,MG,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-15.299637155297518,-3.0594991011853376,-11.92492628547219
+2026-04-16,Maracaju/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,107.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-21.299637155297518,-4.259331124702046,-16.601478872084286
+2026-04-16,Marechal Cândido Rondon/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-18.299637155297518,-3.6594151129436914,-14.26320257877824
+2026-04-16,Nonoai/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-11.299637155297518,-2.259611085507532,-8.807224561064125
+2026-04-16,Não-Me-Toque/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,117.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-11.299637155297518,-2.259611085507532,-8.807224561064125
+2026-04-16,Oeste da Bahia/BA,BA,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-15.299637155297518,-3.0594991011853376,-11.92492628547219
+2026-04-16,Palma Sola/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-15.299637155297518,-3.0594991011853376,-11.92492628547219
+2026-04-16,Pato Branco/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,113.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-15.299637155297518,-3.0594991011853376,-11.92492628547219
+2026-04-16,Porto Paranaguá/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,129.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,0.7003628447024823,0.14005296152588284,0.5458806121600667
+2026-04-16,Porto Rio Grande/RS,RS,soja-mercado-fisico-sindicatos-e-cooperativas,130.5,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,2.2003628447024823,0.44001096740505974,1.7150187588130905
+2026-04-16,Porto Santos/SP,SP,soja-mercado-fisico-sindicatos-e-cooperativas,126.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-2.2996371552975177,-0.459863050232471,-1.7923956811459814
+2026-04-16,Primavera do Leste/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,107.2,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-21.099637155297515,-4.219336723918154,-16.44559378586388
+2026-04-16,Rio Verde/GO,GO,soja-mercado-fisico-sindicatos-e-cooperativas,108.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-20.299637155297518,-4.059359120782593,-15.82205344098227
+2026-04-16,Rio do Sul/SC,SC,soja-mercado-fisico-sindicatos-e-cooperativas,119.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-9.299637155297518,-1.85966707766863,-7.248373698860093
+2026-04-16,Rondonópolis/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-18.299637155297518,-3.6594151129436914,-14.26320257877824
+2026-04-16,Sorriso/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,102.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-26.299637155297518,-5.259191144299302,-20.498606027594366
+2026-04-16,São Gabriel do Oeste/MS,MS,soja-mercado-fisico-sindicatos-e-cooperativas,106.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-22.299637155297518,-4.459303128621497,-17.380904303186302
+2026-04-16,Tangará da Serra/MT,MT,soja-mercado-fisico-sindicatos-e-cooperativas,102.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-26.299637155297518,-5.259191144299302,-20.498606027594366
+2026-04-16,Ubiratã/PR,PR,soja-mercado-fisico-sindicatos-e-cooperativas,110.0,soja-bolsa-de-chicago-cme-group,2026-05,11.6375,128.29963715529752,5.0007,-18.299637155297518,-3.6594151129436914,-14.26320257877824
