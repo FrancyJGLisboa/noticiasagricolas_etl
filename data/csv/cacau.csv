@@ -679,3 +679,15 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-16,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,ES,physical
 2026-04-16,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,preco,12.0,"12,00",R$,price,BRL,,spot,,PA,physical
 2026-04-16,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PA,physical
+2026-04-17,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,preco,3280.0,3280,US$ / ton,price,USD,,futures,2026-07,,nybot
+2026-04-17,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,-175.0,-175,%,change_abs,,pct,futures,2026-07,,nybot
+2026-04-17,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,preco,3186.0,3186,US$ / ton,price,USD,,futures,2026-05,,nybot
+2026-04-17,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-181.0,-181,%,change_abs,,pct,futures,2026-05,,nybot
+2026-04-17,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,preco,3353.0,3353,US$ / ton,price,USD,,futures,2026-09,,nybot
+2026-04-17,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,-174.0,-174,%,change_abs,,pct,futures,2026-09,,nybot
+2026-04-17,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,preco,193.0,"193,00",R$,price,BRL,,spot,,BA,physical
+2026-04-17,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,variacao_pct,-3.5,"-3,50",%,change_pct,,pct,spot,,BA,physical
+2026-04-17,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,preco,772.0,"772,00",R$,price,BRL,,spot,,ES,physical
+2026-04-17,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,variacao_pct,-3.5,"-3,50",%,change_pct,,pct,spot,,ES,physical
+2026-04-17,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,preco,11.5,"11,50",R$,price,BRL,,spot,,PA,physical
+2026-04-17,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,variacao_pct,-4.17,"-4,17",%,change_pct,,pct,spot,,PA,physical
