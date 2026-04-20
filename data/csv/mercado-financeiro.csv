@@ -71829,3 +71829,49 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-17,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,-0.04,"-0,04",%,change_pct,,pct,spot,,,other
 2026-04-17,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.0801,"1,0801",%,price,,pct,spot,,,other
 2026-04-17,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,0.46,"+0,46",%,change_pct,,pct,spot,,,other
+2026-04-17,mercado-financeiro,taxa-selic,Taxa Selic,Selic - Meta,,taxa_ao_ano,14.75,"14,75%",%,rate,,pct,spot,,,indicator
+2026-04-20,mercado-financeiro,bolsas,Bolsas,DAX,,valor,24417.8,"24.417,80",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,DAX,,variacao_pct,-1.15,"-1,15",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,FTSE,,valor,10609.08,"10.609,08",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,FTSE,,variacao_pct,-0.55,"-0,55",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Hong Kong,,valor,26361.07,"26.361,07",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Hong Kong,,variacao_pct,0.77,"+0,77",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Ibovespa,,valor,196132.0,"196.132,00",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Ibovespa,,variacao_pct,0.2,"+0,20",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Nasdaq,,valor,24404.39,"24.404,39",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Nasdaq,,variacao_pct,-0.26,"-0,26",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Nikkei,,valor,58824.89,"58.824,89",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,bolsas,Bolsas,Nikkei,,variacao_pct,0.6,"+0,60",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,valor,4.9844,"4,9844",R$,price,BRL,,spot,,,indicator
+2026-04-20,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Dólar,,variacao_pct,0.3,"+0,30",%,change_pct,,pct,spot,,,indicator
+2026-04-20,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,valor,5.8741,"5,8741",R$,price,BRL,,spot,,,indicator
+2026-04-20,mercado-financeiro,cambio-ptax,Câmbio - PTAX,Euro,,variacao_pct,0.16,"+0,16",%,change_pct,,pct,spot,,,indicator
+2026-04-20,mercado-financeiro,dolar-b3,Dólar Comercial Futuro,,Junho/26,fechamento,5009.0,"5.009,00",R$/US$,price,BRL,usd,futures,2026-06,,b3
+2026-04-20,mercado-financeiro,dolar-b3,Dólar Comercial Futuro,,Junho/26,variacao_pct,-0.54,"-0,54",%,change_pct,,pct,futures,2026-06,,b3
+2026-04-20,mercado-financeiro,dolar-b3,Dólar Comercial Futuro,,Maio/26,fechamento,4967.0,"4.967,00",R$/US$,price,BRL,usd,futures,2026-05,,b3
+2026-04-20,mercado-financeiro,dolar-b3,Dólar Comercial Futuro,,Maio/26,variacao_pct,-0.69,"-0,69",%,change_pct,,pct,futures,2026-05,,b3
+2026-04-20,mercado-financeiro,euro-b3,Euro Futuro,,Junho/26,fechamento,5968.4,"5.968,40",R$/€,price,BRL,eur,futures,2026-06,,b3
+2026-04-20,mercado-financeiro,euro-b3,Euro Futuro,,Junho/26,variacao_pct,-0.13,"-0,13",%,change_pct,,pct,futures,2026-06,,b3
+2026-04-20,mercado-financeiro,euro-b3,Euro Futuro,,Maio/26,fechamento,5921.8,"5.921,80",R$/€,price,BRL,eur,futures,2026-05,,b3
+2026-04-20,mercado-financeiro,euro-b3,Euro Futuro,,Maio/26,variacao_pct,-0.12,"-0,12",%,change_pct,,pct,futures,2026-05,,b3
+2026-04-20,mercado-financeiro,indice-bovespa,Índice Bovespa Futuro,,Agosto/26,pontos,203935.0,203.935,%,index,,pct,futures,2026-08,,indicator
+2026-04-20,mercado-financeiro,indice-bovespa,Índice Bovespa Futuro,,Agosto/26,variacao_pct,-0.53,"-0,53",%,change_pct,,pct,futures,2026-08,,indicator
+2026-04-20,mercado-financeiro,indice-bovespa,Índice Bovespa Futuro,,Junho/26,pontos,200170.0,200.170,%,index,,pct,futures,2026-06,,indicator
+2026-04-20,mercado-financeiro,indice-bovespa,Índice Bovespa Futuro,,Junho/26,variacao_pct,0.1,"+0,10",%,change_pct,,pct,futures,2026-06,,indicator
+2026-04-20,mercado-financeiro,indice-dolar,Índice Dólar,,Dezembro/26,valor,97.487,"97,487",Pontos,price,,points,futures,2026-12,,indicator
+2026-04-20,mercado-financeiro,indice-dolar,Índice Dólar,,Dezembro/26,variacao_pontos,-0.001,"-0,001",%,change_abs,,pct,futures,2026-12,,indicator
+2026-04-20,mercado-financeiro,indice-dolar,Índice Dólar,,Junho/26,valor,97.907,"97,907",Pontos,price,,points,futures,2026-06,,indicator
+2026-04-20,mercado-financeiro,indice-dolar,Índice Dólar,,Junho/26,variacao_pontos,0.009,"+0,009",%,change_abs,,pct,futures,2026-06,,indicator
+2026-04-20,mercado-financeiro,indice-dolar,Índice Dólar,,Setembro/26,valor,97.672,"97,672",Pontos,price,,points,futures,2026-09,,indicator
+2026-04-20,mercado-financeiro,indice-dolar,Índice Dólar,,Setembro/26,variacao_pontos,-0.001,"-0,001",%,change_abs,,pct,futures,2026-09,,indicator
+2026-04-20,mercado-financeiro,juros-b3,Juros Futuro,,Julho/26,taxa_efetiva,14.38,"14,380",%,rate,,pct,futures,2026-07,,b3
+2026-04-20,mercado-financeiro,juros-b3,Juros Futuro,,Junho/26,taxa_efetiva,14.463,"14,463",%,rate,,pct,futures,2026-06,,b3
+2026-04-20,mercado-financeiro,juros-b3,Juros Futuro,,Maio/26,taxa_efetiva,14.632,"14,632",%,rate,,pct,futures,2026-05,,b3
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,valor,4.9751,"4,9751",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Dólar (USD/R$),,variacao_pct,-0.07,"-0,07",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,valor,1.1787,"1,1787",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Euro (EUR/USD),,variacao_pct,0.19,"+0,19",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,valor,1.3535,"1,3535",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Libra Esterlina (GBP/USD),,variacao_pct,0.13,"+0,13",%,change_pct,,pct,spot,,,other
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,valor,1.076,"1,0760",%,price,,pct,spot,,,other
+2026-04-20,mercado-financeiro,moedas,Moedas (Forex),Rúpia da Índia (INR/USD),,variacao_pct,-0.41,"-0,41",%,change_pct,,pct,spot,,,other
