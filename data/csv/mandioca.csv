@@ -2911,3 +2911,33 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-20,mandioca,mandioca-ceasas,Mandioca - Ceasas,Mandioca Amarela Extra,,variacao_pct,16.67,"+16,67",%,change_pct,,pct,spot,,,physical
 2026-04-20,mandioca,mandioca-ceasas,Mandioca - Ceasas,Miuda,,preco,1.56,"1,56",R$/Kg,price,BRL,kg,spot,,,physical
 2026-04-20,mandioca,mandioca-ceasas,Mandioca - Ceasas,Miuda,,variacao_pct,-2.5,"-2,50",%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,BA,,valor_t,530.0,"530,00",R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,BA,,variacao,-1.85,"-1,85",%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,GO,,valor_t,1175.0,"1.175,00",R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,GO,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MA,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MA,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MG,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MG,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MS,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MS,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MT,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,MT,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PA,,valor_t,828.89,"828,89",R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PA,,variacao,-0.6,"-0,60",%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PE,,valor_t,575.0,"575,00",R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PE,,variacao,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PI,,valor_t,776.67,"776,67",R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PI,,variacao,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PR,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,PR,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,RO,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,RO,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,SC,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,SC,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,SE,,valor_t,700.0,"700,00",R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,SE,,variacao,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,SP,,valor_t,,s/ cotação,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,SP,,variacao,,-,%,change_pct,,pct,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,Semana Referente de:,,valor_t,,13/04/26 a 17/04/26,R$,price,BRL,,spot,,,physical
+2026-04-20,mandioca,mandioca-raiz-ao-produtor,Mandioca - Raiz ao Produtor,Semana Referente de:,,variacao,,,%,change_pct,,pct,spot,,,physical

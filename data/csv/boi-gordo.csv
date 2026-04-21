@@ -124465,3 +124465,11 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-20,boi-gordo,sebo,Sebo a prazo,Brasil Central,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-04-20,boi-gordo,sebo,Sebo a prazo,Rio Grande do Sul,,preco,6.0,"6,00",R$/Kg,price,BRL,kg,spot,,RS,physical
 2026-04-20,boi-gordo,sebo,Sebo a prazo,Rio Grande do Sul,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,RS,physical
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Abril/2026,fechamento,359.95,"359,95",R$/@,price,BRL,arroba,futures,2026-04,,b3
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Abril/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-04,,b3
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Agosto/2026,fechamento,337.0,"337,00",R$/@,price,BRL,arroba,futures,2026-08,,b3
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Agosto/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-08,,b3
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Junho/2026,fechamento,334.8,"334,80",R$/@,price,BRL,arroba,futures,2026-06,,b3
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Junho/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-06,,b3
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Maio/2026,fechamento,345.9,"345,90",R$/@,price,BRL,arroba,futures,2026-05,,b3
+2026-04-21,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Maio/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-05,,b3

@@ -62301,3 +62301,15 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-20,algodao,caroco-de-algodo,Caroço de algodão,Oeste da Bahia (AIBA),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
 2026-04-20,algodao,indice-cotlook,Índice Cotlook A,,,valor,87.35,"87,35",Pontos,price,,points,spot,,,indicator
 2026-04-20,algodao,indice-cotlook,Índice Cotlook A,,,variacao_pontos,0.75,"+0,75",%,change_abs,,pct,spot,,,indicator
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,"Dólar: 4,97",arroba,,,¢/lb,price,USD,lb,spot,,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,"Dólar: 4,97",investing,,,¢/lb,index,USD,lb,spot,,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,"Dólar: 4,97",variacao_pontos,,,%,change_abs,,pct,spot,,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Julho/26,arroba,132.9,"132,90",¢/lb,price,USD,lb,futures,2026-07,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Julho/26,investing,80.86,"80,86",¢/lb,index,USD,lb,futures,2026-07,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,0.82,"+0,82",%,change_abs,,pct,futures,2026-07,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Maio/26,arroba,128.62,"128,62",¢/lb,price,USD,lb,futures,2026-05,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Maio/26,investing,78.26,"78,26",¢/lb,index,USD,lb,futures,2026-05,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,0.66,"+0,66",%,change_abs,,pct,futures,2026-05,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Outubro/26,arroba,135.51,"135,51",¢/lb,price,USD,lb,futures,2026-10,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Outubro/26,investing,82.45,"82,45",¢/lb,index,USD,lb,futures,2026-10,,nybot
+2026-04-21,algodao,algodao-bolsa-de-nova-iorque-nybot,Algodão - Bolsa de Nova Iorque (NYBOT),,Outubro/26,variacao_pontos,1.13,"+1,13",%,change_abs,,pct,futures,2026-10,,nybot
