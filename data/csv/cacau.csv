@@ -751,3 +751,21 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-27,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,-131.0,-131,%,change_abs,,pct,futures,2026-05,,nybot
 2026-04-27,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,preco,3366.0,3366,US$ / ton,price,USD,,futures,2026-09,,nybot
 2026-04-27,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,-132.0,-132,%,change_abs,,pct,futures,2026-09,,nybot
+2026-04-27,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,preco,177.0,"177,00",R$,price,BRL,,spot,,BA,physical
+2026-04-27,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,variacao_pct,-6.84,"-6,84",%,change_pct,,pct,spot,,BA,physical
+2026-04-27,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,preco,708.0,"708,00",R$,price,BRL,,spot,,ES,physical
+2026-04-27,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,variacao_pct,-6.84,"-6,84",%,change_pct,,pct,spot,,ES,physical
+2026-04-27,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,preco,10.8,"10,80",R$,price,BRL,,spot,,PA,physical
+2026-04-27,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,variacao_pct,-3.57,"-3,57",%,change_pct,,pct,spot,,PA,physical
+2026-04-28,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,preco,3380.0,3380,US$ / ton,price,USD,,futures,2026-07,,nybot
+2026-04-28,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Julho/26,variacao_pontos,84.0,+84,%,change_abs,,pct,futures,2026-07,,nybot
+2026-04-28,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,preco,3305.0,3305,US$ / ton,price,USD,,futures,2026-05,,nybot
+2026-04-28,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Maio/26,variacao_pontos,87.0,+87,%,change_abs,,pct,futures,2026-05,,nybot
+2026-04-28,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,preco,3447.0,3447,US$ / ton,price,USD,,futures,2026-09,,nybot
+2026-04-28,cacau,cacau-bolsa-de-nova-iorque-nybot,Cacau - Bolsa de Nova Iorque (NYBOT),,Setembro/26,variacao_pontos,81.0,+81,%,change_abs,,pct,futures,2026-09,,nybot
+2026-04-28,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,preco,177.0,"177,00",R$,price,BRL,,spot,,BA,physical
+2026-04-28,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Bahia /@,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,BA,physical
+2026-04-28,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,preco,708.0,"708,00",R$,price,BRL,,spot,,ES,physical
+2026-04-28,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Espírito Santo / saca,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,ES,physical
+2026-04-28,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,preco,10.8,"10,80",R$,price,BRL,,spot,,PA,physical
+2026-04-28,cacau,cacau-mercado-do-cacau,Cacau (Mercado do Cacau),Pará / Kg,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,PA,physical
