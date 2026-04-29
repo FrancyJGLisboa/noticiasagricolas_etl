@@ -3023,3 +3023,51 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-28,legumes,tomate-ceasas,Tomate - Ceasas,Longa Vida/Extra A,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
 2026-04-28,legumes,tomate-ceasas,Tomate - Ceasas,Santa Cruz/Extra A,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
 2026-04-28,legumes,tomate-ceasas,Tomate - Ceasas,Santa Cruz/Extra A,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Agatha Primeira,,preco,2.4,"2,40",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Agatha Primeira,,variacao_pct,-14.29,"-14,29",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Aster Primeira,,preco,1.0,"1,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Aster Primeira,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Asterix,,preco,4.33,"4,33",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Asterix,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Escovada Especial,,preco,2.77,"2,77",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Escovada Especial,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Lavada Especial,,preco,4.91,"4,91",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Lavada Especial,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Yacon,,preco,7.0,"7,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,batata-ceasas,Batata - Ceasas,Yacon,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Mineira,,preco,3.5,"3,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Mineira,,variacao_pct,7.69,"+7,69",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Paulista,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Paulista,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Pernambucana,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Pernambucana,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Santa Catarina,,preco,3.5,"3,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Amarela Santa Catarina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Importada Argentina,,preco,3.75,"3,75",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Importada Argentina,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Nacional (Caixa 4),,preco,3.31,"3,31",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Nacional (Caixa 4),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Roxa (Caixa 4),,preco,3.89,"3,89",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cebola-no-atacado,Cebola - Ceasas,Roxa (Caixa 4),,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Cenoura 2A,,preco,5.59,"5,59",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Cenoura 2A,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Cenoura G,,preco,4.93,"4,93",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Cenoura G,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Especial,,preco,4.5,"4,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Especial,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Extra,,preco,3.75,"3,75",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Extra,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Extra A,,preco,5.5,"5,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,cenoura-ceasas,Cenoura - Ceasas,Extra A,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Carmem 3A,,preco,7.27,"7,27",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Carmem 3A,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Débora 3A,,preco,5.28,"5,28",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Débora 3A,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Longa Vida/Carmem Extra,,preco,7.0,"7,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Longa Vida/Carmem Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Longa Vida/Débora Extra,,preco,6.5,"6,50",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Longa Vida/Débora Extra,,variacao_pct,0.0,"0,00",%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Longa Vida/Extra A,,preco,5.0,"5,00",R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Longa Vida/Extra A,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Santa Cruz/Extra A,,preco,,s/ cotação,R$/Kg,price,BRL,kg,spot,,,physical
+2026-04-29,legumes,tomate-ceasas,Tomate - Ceasas,Santa Cruz/Extra A,,variacao_pct,,-,%,change_pct,,pct,spot,,,physical
