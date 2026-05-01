@@ -131035,3 +131035,17 @@ date,commodity,indicator,indicator_name,location,contract_month,column_name,valu
 2026-04-30,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Tocantins,,boi_magro,15.9,"15,90",R$/cab,price,BRL,cab,spot,,TO,physical
 2026-04-30,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Tocantins,,desmama,18.73,"18,73",R$/cab,price,BRL,cab,spot,,TO,physical
 2026-04-30,boi-gordo,reposicao-nelore-macho,Reposição Nelore - Macho,Tocantins,,garrote,16.29,"16,29",R$/cab,price,BRL,cab,spot,,TO,physical
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Agosto/2026,fechamento,334.45,"334,45",R$/@,price,BRL,arroba,futures,2026-08,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Agosto/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-08,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Julho/2026,fechamento,334.15,"334,15",R$/@,price,BRL,arroba,futures,2026-07,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Julho/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-07,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Junho/2026,fechamento,333.0,"333,00",R$/@,price,BRL,arroba,futures,2026-06,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Junho/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-06,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Maio/2026,fechamento,341.0,"341,00",R$/@,price,BRL,arroba,futures,2026-05,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Maio/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-05,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Novembro/2026,fechamento,352.7,"352,70",R$/@,price,BRL,arroba,futures,2026-11,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Novembro/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-11,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Outubro/2026,fechamento,352.0,"352,00",R$/@,price,BRL,arroba,futures,2026-10,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Outubro/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-10,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Setembro/2026,fechamento,343.9,"343,90",R$/@,price,BRL,arroba,futures,2026-09,,b3
+2026-05-01,boi-gordo,boi-gordo-b3-prego-regular,Boi Gordo - B3 (Pregão Regular),,Setembro/2026,variacao_pct,0.0,"0,00",%,change_pct,,pct,futures,2026-09,,b3
