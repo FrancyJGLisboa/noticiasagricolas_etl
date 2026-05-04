@@ -72,9 +72,8 @@ jobs:
           wc -l data/csv/basis-*.csv 2>/dev/null || echo "No basis CSVs yet"
 
       # ── 4. Save Parquet + CSV + state to GitHub Release ───────
-      #    Single source of truth for bulk data; nothing committed to git.
-      #    Consumers fetch via:
-      #      gh release download data-latest --pattern "etl-data.tar.gz"
+      #    Tarball includes everything (parquet for fast Python loading,
+      #    CSVs for archival, state for next run's resume).
       - name: Upload data to release
         run: |
           echo "Packing Parquet + CSV + state..."
@@ -94,3 +93,71 @@ jobs:
           echo "Done."
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 5. Publish CSVs to 'data' branch (force-pushed daily) ─
+      #    Single-commit orphan branch: repo on main never grows from CSVs,
+      #    but raw URLs stay accessible for browser preview / pandas / curl:
+      #
+      #      https://raw.githubusercontent.com/<owner>/<repo>/data/csv/basis-soja.csv
+      #
+      #    The branch is force-pushed each run so it has exactly one commit.
+      - name: Publish CSVs to data branch
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Use a worktree so we don't disturb main's checkout.
+          # --orphan creates a new branch with no parent commits.
+          git worktree add --orphan -b data-publish /tmp/data-publish
+
+          # Place CSVs at csv/ (root of the data branch) so the URL stays clean:
+          #   raw.githubusercontent.com/<owner>/<repo>/data/csv/<file>.csv
+          mkdir -p /tmp/data-publish/csv
+          cp data/csv/*.csv /tmp/data-publish/csv/
+
+          # README explaining what this branch is and how to use it
+          cat > /tmp/data-publish/README.md <<EOF
+          # data branch — auto-published daily
+
+          This branch is **force-pushed daily** by \`.github/workflows/daily-update.yml\`.
+          It always contains exactly one commit — never commit here, your changes will be wiped.
+
+          Code lives on \`main\`. Bulk binary data (parquet) lives in the \`data-latest\`
+          GitHub Release. This branch exposes the CSV slice via raw URLs.
+
+          ## Raw URLs (consumable directly)
+
+          \`\`\`
+          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-soja.csv
+          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-milho.csv
+          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-cafe.csv
+          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/soja.csv
+          ...
+          \`\`\`
+
+          ## Use with pandas
+
+          \`\`\`python
+          import pandas as pd
+          BASE = "https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv"
+          df = pd.read_csv(f"{BASE}/basis-soja.csv", parse_dates=["date"])
+          \`\`\`
+
+          ## Use with curl
+
+          \`\`\`bash
+          curl -sL https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-soja.csv | head
+          \`\`\`
+
+          ---
+          Last updated: $(date -u +%Y-%m-%dT%H:%M:%SZ)
+          EOF
+
+          cd /tmp/data-publish
+          git add csv/ README.md
+          git commit -m "data: $(date -u +%Y-%m-%d)"
+
+          # Force-push so the branch always has exactly one commit
+          git push origin data-publish:data --force
+          echo "Published $(ls csv/ | wc -l) CSVs to 'data' branch."
