@@ -12,10 +12,11 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 cd "$PROJECT_DIR"
 
-echo "Packing data/parquet + data/parquet_basis + data/state..."
+echo "Packing data/parquet + data/parquet_basis + data/csv + data/state..."
 tar czf /tmp/etl-data.tar.gz \
   data/parquet/ \
   data/parquet_basis/ \
+  data/csv/ \
   data/state/
 ls -lh /tmp/etl-data.tar.gz
 
@@ -24,7 +25,7 @@ echo "Uploading to GitHub Release 'data-latest'..."
 gh release delete data-latest --yes 2>/dev/null || true
 gh release create data-latest /tmp/etl-data.tar.gz \
   --title "ETL Data (auto-updated)" \
-  --notes "Initial seed: $(date -u +%Y-%m-%d %H:%M UTC)" \
+  --notes "Initial seed: $(date -u '+%Y-%m-%d %H:%M UTC')" \
   --latest=false
 
 echo ""

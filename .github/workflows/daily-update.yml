@@ -71,15 +71,17 @@ jobs:
           echo "=== Basis CSV row counts ==="
           wc -l data/csv/basis-*.csv 2>/dev/null || echo "No basis CSVs yet"
 
-      # ── 4. Save Parquet + state to GitHub Release ─────────────
-      #    This persists binary data between workflow runs without
-      #    bloating git history.
+      # ── 4. Save Parquet + CSV + state to GitHub Release ───────
+      #    Single source of truth for bulk data; nothing committed to git.
+      #    Consumers fetch via:
+      #      gh release download data-latest --pattern "etl-data.tar.gz"
       - name: Upload data to release
         run: |
-          echo "Packing Parquet + state..."
+          echo "Packing Parquet + CSV + state..."
           tar czf /tmp/etl-data.tar.gz \
             data/parquet/ \
             data/parquet_basis/ \
+            data/csv/ \
             data/state/
           ls -lh /tmp/etl-data.tar.gz
 
@@ -92,20 +94,3 @@ jobs:
           echo "Done."
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # ── 5. Commit CSVs to the repo ────────────────────────────
-      #    CSVs are text files — git diffs them efficiently.
-      #    This makes the data browsable on GitHub.
-      - name: Commit updated CSVs
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add data/csv/
-          if git diff --cached --quiet; then
-            echo "No CSV changes to commit."
-          else
-            git commit -m "data: update CSVs $(date -u +%Y-%m-%d)"
-            git push
-            echo "CSVs committed and pushed."
-          fi
