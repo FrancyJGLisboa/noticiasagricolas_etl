@@ -1,6 +1,11 @@
-# Data — only CSVs tracked in git; Parquet persisted via GitHub Release
+# Data — all bulk outputs persisted via GitHub Release "data-latest" tarball
+# (parquet + csv + state). Daily workflow no longer commits CSVs to git to
+# keep history small. To get fresh data:
+#   gh release download data-latest --pattern "etl-data.tar.gz" --dir /tmp
+#   tar xzf /tmp/etl-data.tar.gz
 data/parquet/
 data/parquet_basis/
+data/csv/
 data/cache/
 data/charts/
 data/state/
