@@ -33,6 +33,10 @@ class BasisPairConfig:
     convert_futures: Callable[[float, float], float]
     # (futures_price, ptax) -> price in BRL per same unit as physical
     # ptax arg is ignored when needs_ptax=False
+    bu_per_sc: float | None = None
+    # Bushels per saca (60 kg). Set for grains (soja=2.2046, milho=2.3621,
+    # trigo=2.2046). Used to derive `basis_cents_bu` (CBOT-style ¢/bu quote).
+    # None for non-grain commodities (algodão, café, boi gordo).
 
 
 # ── 9 pair definitions ────────────────────────────────────────────────────────
@@ -51,6 +55,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         futures_unit="US$/sc60kg",
         needs_ptax=True,
         convert_futures=lambda fut, ptax: fut * ptax,
+        bu_per_sc=BU_PER_SC_SOJA,
     ),
     # 2. Soja CBOT: US$/bu -> BRL/sc60kg (unit + currency)
     BasisPairConfig(
@@ -65,6 +70,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         futures_unit="US$/bu",
         needs_ptax=True,
         convert_futures=lambda fut, ptax: fut * BU_PER_SC_SOJA * ptax,
+        bu_per_sc=BU_PER_SC_SOJA,
     ),
     # 3. Milho B3: R$/sc60kg -> R$/sc60kg (direct, no conversion)
     BasisPairConfig(
@@ -87,6 +93,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         futures_unit="US$/bu",
         needs_ptax=True,
         convert_futures=lambda fut, ptax: fut * BU_PER_SC_CORN * ptax,
+        bu_per_sc=BU_PER_SC_CORN,
     ),
     # 5. Trigo CBOT: US$/bu -> BRL/sc60kg (unit + currency)
     BasisPairConfig(
@@ -98,6 +105,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         futures_unit="US$/bu",
         needs_ptax=True,
         convert_futures=lambda fut, ptax: fut * BU_PER_SC_WHEAT * ptax,
+        bu_per_sc=BU_PER_SC_WHEAT,
     ),
     # 6. Algodao NYBOT: US¢/lb -> BRL/@ (unit + cents + currency)
     BasisPairConfig(

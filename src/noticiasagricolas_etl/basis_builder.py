@@ -34,6 +34,8 @@ BASIS_SCHEMA = pa.schema([
     ("basis_brl", pa.float64()),
     ("basis_usd", pa.float64()),
     ("basis_pct", pa.float64()),
+    ("basis_centavos_sc", pa.float64()),
+    ("basis_cents_bu", pa.float64()),
 ])
 
 
@@ -381,6 +383,23 @@ def build_pair(
         np.nan,
     )
 
+    # Trade-desk quote columns:
+    # - basis_centavos_sc: BR convention, only for sc60kg-denominated physicals.
+    # - basis_cents_bu: CBOT global convention, only for grains with bu_per_sc
+    #   set AND with PTAX available (needs USD conversion).
+    if config.physical_unit.endswith("/sc60kg"):
+        merged["basis_centavos_sc"] = merged["basis_brl"] * 100.0
+    else:
+        merged["basis_centavos_sc"] = np.nan
+    if config.bu_per_sc is not None:
+        merged["basis_cents_bu"] = np.where(
+            merged["ptax"].notna() & (merged["ptax"] != 0),
+            merged["basis_brl"] / merged["ptax"] / config.bu_per_sc * 100.0,
+            np.nan,
+        )
+    else:
+        merged["basis_cents_bu"] = np.nan
+
     # Build output
     merged["futures_indicator"] = config.futures_indicator
 
@@ -389,6 +408,7 @@ def build_pair(
         "physical_price_brl", "futures_indicator", "futures_contract",
         "futures_price_raw", "futures_price_brl", "ptax",
         "basis_brl", "basis_usd", "basis_pct",
+        "basis_centavos_sc", "basis_cents_bu",
     ]].copy()
 
     result = result.sort_values(["date", "location"]).reset_index(drop=True)
