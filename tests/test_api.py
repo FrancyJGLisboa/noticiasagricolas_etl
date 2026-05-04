@@ -98,10 +98,15 @@ def _create_test_parquet(parquet_dir, commodity, rows):
 
 
 def _create_basis_parquet(basis_dir, commodity, rows):
+    import numpy as np
     path = basis_dir / f"commodity={commodity}"
     path.mkdir(parents=True, exist_ok=True)
     df = pd.DataFrame(rows)
     df["date"] = pd.to_datetime(df["date"])
+    for field in BASIS_SCHEMA:
+        if field.name not in df.columns:
+            df[field.name] = np.nan
+    df = df[[f.name for f in BASIS_SCHEMA]]
     table = pa.Table.from_pandas(df, schema=BASIS_SCHEMA, preserve_index=False)
     pq.write_table(table, path / "data.parquet")
 
