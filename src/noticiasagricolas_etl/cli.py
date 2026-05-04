@@ -143,11 +143,17 @@ def status(commodity, category, gaps, summary):
 @cli.command("test-parse")
 @click.argument("slug")
 @click.argument("target_date", default=None, required=False)
-def test_parse(slug, target_date):
-    """Debug: parse a single page and print results."""
+@click.option("--use-cache", is_flag=True,
+              help="Read from data/cache/ instead of fetching live (for reproducing a past parse).")
+def test_parse(slug, target_date, use_cache):
+    """Debug: parse a single page and print results.
+
+    By default fetches live so output reflects the current upstream page.
+    Use --use-cache to read from local cache (warns: cache never expires).
+    """
     td = date.fromisoformat(target_date) if target_date else None
     try:
-        records = pipeline.test_parse(slug, td)
+        records = pipeline.test_parse(slug, td, use_cache=use_cache)
     except ValueError as e:
         click.echo(f"Error: {e}", err=True)
         sys.exit(1)

@@ -260,12 +260,22 @@ def update(
     )
 
 
-def test_parse(slug: str, target_date: Optional[date] = None) -> list[PriceRecord]:
-    """Parse a single page for debugging."""
+def test_parse(
+    slug: str,
+    target_date: Optional[date] = None,
+    use_cache: bool = False,
+) -> list[PriceRecord]:
+    """Parse a single page for debugging.
+
+    Defaults to ``use_cache=False`` so the user always sees fresh upstream data.
+    Cached HTMLs in ``data/cache/`` never expire — using them by default would
+    show stale results when the cache was warmed weeks/months earlier.
+    Pass ``use_cache=True`` to reproduce an exact past parse.
+    """
     entries = load_catalog()
     entry = get_entry_by_slug(entries, slug)
     if not entry:
         raise ValueError(f"Slug not found in catalog: {slug}")
 
-    scraper = Scraper(use_cache=True)
+    scraper = Scraper(use_cache=use_cache)
     return _process_entry(scraper, entry, target_date)
