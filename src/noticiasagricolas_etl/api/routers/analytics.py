@@ -5,9 +5,12 @@ import logging
 from fastapi import APIRouter, HTTPException, Query
 
 from ..services import (
+    anomaly_service,
+    attribution_service,
     basis_panel_service,
     basis_percentile_service,
     basis_service,
+    crush_percentile_service,
     crush_service,
     curve_service,
     fx_service,
@@ -220,4 +223,67 @@ def get_term_structure(
         term_structure_service.get_term_structure,
         futures_indicator=futures_indicator,
         target_date=target_date,
+    )
+
+
+@router.get("/crush-percentile")
+def get_crush_percentile(
+    target_date: str | None = Query(None),
+    window_years: int = Query(5, ge=1, le=20),
+    contract: str | None = Query(None),
+    soja_indicator: str = Query("soja-b3-pregao-regular"),
+    farelo_indicator: str = Query("farelo-de-soja-b3"),
+    oleo_indicator: str = Query("oleo-de-soja-b3"),
+):
+    """Today's crush margin percentile vs N-year history.
+
+    Drives industrial decision (esmagar vs ficar parado) — high decile means
+    strong incentive to crush, low decile means crusher operates at a loss.
+    """
+    return _handle_query(
+        crush_percentile_service.get_crush_percentile,
+        target_date=target_date, window_years=window_years, contract=contract,
+        soja_indicator=soja_indicator, farelo_indicator=farelo_indicator,
+        oleo_indicator=oleo_indicator,
+    )
+
+
+@router.get("/price-attribution")
+def get_price_attribution(
+    commodity: str = Query(...),
+    location: str = Query(...),
+    futures_indicator: str = Query(..., description="CBOT pair (must have bu_per_sc)"),
+    date_from: str = Query(..., description="ISO YYYY-MM-DD start"),
+    date_to: str | None = Query(None, description="ISO end; None = latest"),
+):
+    """Decompose ΔP_local into FX vs CBOT vs basis contributions.
+
+    Tells you 'preço caiu por câmbio, por CBOT, ou porque o basis afundou?'
+    Quantifies each in R$/sc and as % of the total move.
+    """
+    return _handle_query(
+        attribution_service.attribute_change,
+        commodity=commodity, location=location,
+        futures_indicator=futures_indicator,
+        date_from=date_from, date_to=date_to,
+    )
+
+
+@router.get("/anomaly")
+def get_anomaly(
+    indicator: str = Query(...),
+    location: str | None = Query(None),
+    target_date: str | None = Query(None),
+    window_days: int = Query(60, ge=10, le=365),
+    z_threshold: float = Query(3.0, ge=1.0, le=10.0),
+):
+    """Z-score anomaly detection vs trailing rolling window.
+
+    Flags potential typos in scraped data OR genuinely large market moves.
+    """
+    return _handle_query(
+        anomaly_service.detect_anomaly,
+        indicator=indicator, location=location,
+        target_date=target_date, window_days=window_days,
+        z_threshold=z_threshold,
     )

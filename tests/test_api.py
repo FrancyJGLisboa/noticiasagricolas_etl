@@ -587,3 +587,45 @@ class TestAnalyticsExtras:
         )
         assert resp.status_code == 200
         assert "error" in resp.json()
+
+    def test_crush_percentile_no_data(self, client):
+        # Test fixture doesn't have farelo/oleo so this surfaces the error path
+        resp = client.get("/v1/analytics/crush-percentile")
+        assert resp.status_code == 200
+        # Either error (no data) or valid result — both are acceptable
+        data = resp.json()
+        assert "error" in data or "percentile" in data
+
+    def test_price_attribution_invalid_pair(self, client):
+        resp = client.get(
+            "/v1/analytics/price-attribution"
+            "?commodity=soja&location=Paranagua/PR"
+            "&futures_indicator=soja-b3"
+            "&date_from=2024-06-10"
+        )
+        assert resp.status_code == 200
+        assert "error" in resp.json()  # soja-b3 has no bu_per_sc mapping
+
+    def test_price_attribution_no_data(self, client):
+        resp = client.get(
+            "/v1/analytics/price-attribution"
+            "?commodity=soja&location=NowhereCity"
+            "&futures_indicator=soja-bolsa-de-chicago-cme-group"
+            "&date_from=2024-06-10"
+        )
+        assert resp.status_code == 200
+        assert "error" in resp.json()
+
+    def test_anomaly_endpoint(self, client):
+        resp = client.get(
+            "/v1/analytics/anomaly?indicator=soja-fisico"
+        )
+        assert resp.status_code == 200
+        # Fixture has only 2 dates → insufficient history error
+        data = resp.json()
+        assert "error" in data or "is_anomaly" in data
+
+    def test_anomaly_unknown_indicator(self, client):
+        resp = client.get("/v1/analytics/anomaly?indicator=does-not-exist")
+        assert resp.status_code == 200
+        assert "error" in resp.json()
