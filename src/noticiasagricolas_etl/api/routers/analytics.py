@@ -6,12 +6,15 @@ from fastapi import APIRouter, HTTPException, Query
 
 from ..services import (
     basis_panel_service,
+    basis_percentile_service,
     basis_service,
     crush_service,
     curve_service,
     fx_service,
+    ratio_service,
     seasonal_service,
     spread_service,
+    term_structure_service,
 )
 
 logger = logging.getLogger(__name__)
@@ -154,4 +157,67 @@ def get_rankings(
     return _handle_query(
         spread_service.get_rankings,
         indicator=indicator, date=date, measure=measure, limit=limit,
+    )
+
+
+@router.get("/basis-percentile")
+def get_basis_percentile(
+    commodity: str = Query(..., description="Commodity name (e.g. soja, milho)"),
+    location: str = Query(..., description="Praça (e.g. 'Sorriso/MT')"),
+    futures_indicator: str | None = Query(None, description="Optional futures slug"),
+    target_date: str | None = Query(None, description="ISO date; None = latest"),
+    window_years: int = Query(5, ge=1, le=20),
+    column: str = Query("basis_brl",
+        description="basis_brl | basis_cents_bu | basis_centavos_sc | basis_pct"),
+):
+    """Today's basis percentile in the N-year history for one praça.
+
+    Tells the trader 'is the current basis cheap or expensive vs typical?' as a
+    0-100 number with a plain-Portuguese interpretation string.
+    """
+    return _handle_query(
+        basis_percentile_service.get_basis_percentile,
+        commodity=commodity, location=location,
+        futures_indicator=futures_indicator,
+        target_date=target_date, window_years=window_years,
+        column=column,
+    )
+
+
+@router.get("/ratio")
+def get_ratio(
+    numerator_indicator: str = Query(..., description="e.g. soja-mercado-fisico-sindicatos-e-cooperativas"),
+    denominator_indicator: str = Query(..., description="e.g. milho-mercado-fisico-sindicatos-e-cooperativas"),
+    location: str | None = Query(None),
+    measure: str = Query("price"),
+    target_date: str | None = Query(None),
+    window_years: int = Query(5, ge=1, le=20),
+):
+    """Time-series ratio of two indicators (e.g., soja:milho).
+
+    Returns current ratio, percentile vs N-year history, recent series.
+    Useful for crop allocation decisions (planting intent).
+    """
+    return _handle_query(
+        ratio_service.get_ratio,
+        numerator_indicator=numerator_indicator,
+        denominator_indicator=denominator_indicator,
+        location=location, measure=measure,
+        target_date=target_date, window_years=window_years,
+    )
+
+
+@router.get("/term-structure")
+def get_term_structure(
+    futures_indicator: str = Query(..., description="e.g. soja-bolsa-de-chicago-cme-group"),
+    target_date: str | None = Query(None, description="ISO date; None = latest"),
+):
+    """Futures curve shape: contango / backwardation classification + slope.
+
+    Signals storage incentive (contango) or supply tightness (backwardation).
+    """
+    return _handle_query(
+        term_structure_service.get_term_structure,
+        futures_indicator=futures_indicator,
+        target_date=target_date,
     )

@@ -12,13 +12,16 @@ from mcp.server.fastmcp import FastMCP
 from ..api import database as db
 from ..api.services import (
     basis_panel_service,
+    basis_percentile_service,
     basis_service,
     crush_service,
     curve_service,
     fx_service,
     price_service,
+    ratio_service,
     seasonal_service,
     spread_service,
+    term_structure_service,
 )
 from ..catalog import load_catalog, list_commodities as _list_commodities
 
@@ -315,6 +318,98 @@ async def get_rankings(
     """
     db.get_connection()
     result = spread_service.get_rankings(indicator=indicator, date=date, limit=limit)
+    return _json(result)
+
+
+@mcp.tool()
+async def get_basis_percentile(
+    commodity: str,
+    location: str,
+    futures_indicator: str | None = None,
+    target_date: str | None = None,
+    window_years: int = 5,
+    column: str = "basis_brl",
+) -> str:
+    """Where today's basis sits in the N-year history for a praça.
+
+    Tells you 'is the basis cheap or expensive vs typical?' as a 0-100
+    percentile, with mean/min/max/p25/p50/p75 reference and a
+    plain-Portuguese interpretation string.
+
+    Args:
+        commodity: e.g. 'soja', 'milho', 'cafe'
+        location: praça e.g. 'Sorriso/MT', 'Rio Verde/GO'
+        futures_indicator: optional futures slug (e.g. 'soja-bolsa-de-chicago-cme-group')
+        target_date: ISO YYYY-MM-DD; None = latest available
+        window_years: history window (default 5)
+        column: 'basis_brl' | 'basis_cents_bu' | 'basis_centavos_sc' | 'basis_pct'
+    """
+    db.get_connection()
+    result = basis_percentile_service.get_basis_percentile(
+        commodity=commodity, location=location,
+        futures_indicator=futures_indicator,
+        target_date=target_date, window_years=window_years,
+        column=column,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_ratio(
+    numerator_indicator: str,
+    denominator_indicator: str,
+    location: str | None = None,
+    target_date: str | None = None,
+    window_years: int = 5,
+) -> str:
+    """Time-series ratio of two indicators (e.g. soja:milho).
+
+    Returns current ratio + percentile vs N-year history + recent values.
+    Useful for crop allocation decisions: high soja:milho favors planting
+    soja next safra; low favors milho.
+
+    Args:
+        numerator_indicator: e.g. 'soja-mercado-fisico-sindicatos-e-cooperativas'
+        denominator_indicator: e.g. 'milho-mercado-fisico-sindicatos-e-cooperativas'
+        location: optional praça filter (must exist for both)
+        target_date: ISO YYYY-MM-DD; None = latest
+        window_years: history window for percentile (default 5)
+    """
+    db.get_connection()
+    result = ratio_service.get_ratio(
+        numerator_indicator=numerator_indicator,
+        denominator_indicator=denominator_indicator,
+        location=location,
+        target_date=target_date,
+        window_years=window_years,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_term_structure(
+    futures_indicator: str,
+    target_date: str | None = None,
+) -> str:
+    """Futures curve shape: contango / backwardation classification + slope.
+
+    For one futures indicator on one date, returns the contracts in order,
+    the slope per month, and a regime label (contango forte/leve, flat,
+    backwardation leve/forte) with interpretation.
+
+    - Contango: future > spot — market wants storage, supply OK
+    - Backwardation: future < spot — supply tight, market wants disponível
+
+    Args:
+        futures_indicator: e.g. 'soja-bolsa-de-chicago-cme-group',
+            'milho-b3-prego-regular', 'cafe-bolsa-de-nova-iorque-nybot'
+        target_date: ISO YYYY-MM-DD; None = latest
+    """
+    db.get_connection()
+    result = term_structure_service.get_term_structure(
+        futures_indicator=futures_indicator,
+        target_date=target_date,
+    )
     return _json(result)
 
 

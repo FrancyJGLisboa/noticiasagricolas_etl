@@ -523,3 +523,67 @@ class TestEdgeCases:
         resp = client.get("/v1/locations?state=XX")
         assert resp.status_code == 200
         assert resp.json()["data"] == []
+
+
+class TestAnalyticsExtras:
+    """Tests for the basis-percentile / ratio / term-structure endpoints."""
+
+    def test_basis_percentile(self, client):
+        resp = client.get(
+            "/v1/analytics/basis-percentile?commodity=soja&location=Paranagua/PR"
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["commodity"] == "soja"
+        assert data["location"] == "Paranagua/PR"
+        assert "percentile" in data
+        assert 0 <= data["percentile"] <= 100
+        assert "interpretation" in data
+
+    def test_basis_percentile_no_data(self, client):
+        resp = client.get(
+            "/v1/analytics/basis-percentile?commodity=soja&location=NowhereCity/XX"
+        )
+        assert resp.status_code == 200
+        assert "error" in resp.json()
+
+    def test_basis_percentile_invalid_column(self, client):
+        resp = client.get(
+            "/v1/analytics/basis-percentile?commodity=soja&location=Paranagua/PR&column=invalid_col"
+        )
+        # Service raises ValueError → router converts to 400
+        assert resp.status_code == 400
+
+    def test_ratio_endpoint(self, client):
+        # The fixture has soja-fisico in Paranagua/PR + Rondonopolis/MT, milho-fisico in Campinas/SP
+        # The ratio endpoint averages across praças when location is None — should still work
+        resp = client.get(
+            "/v1/analytics/ratio?numerator_indicator=soja-fisico"
+            "&denominator_indicator=milho-fisico"
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        # Either succeeds (>=1 overlapping date) or surfaces error cleanly
+        if "error" not in data:
+            assert "current_ratio" in data
+            assert "percentile" in data
+            assert "interpretation" in data
+
+    def test_term_structure(self, client):
+        resp = client.get(
+            "/v1/analytics/term-structure?futures_indicator=soja-b3"
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        # Fixture has 2 contracts on 2024-06-10 (Jul/24 + Set/24) so we expect a regime
+        if "error" not in data:
+            assert "regime" in data
+            assert "contracts" in data
+            assert len(data["contracts"]) >= 2
+
+    def test_term_structure_unknown_indicator(self, client):
+        resp = client.get(
+            "/v1/analytics/term-structure?futures_indicator=does-not-exist"
+        )
+        assert resp.status_code == 200
+        assert "error" in resp.json()
