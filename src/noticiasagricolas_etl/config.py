@@ -9,6 +9,7 @@ PARQUET_BASIS_DIR = DATA_DIR / "parquet_basis"
 CSV_DIR = DATA_DIR / "csv"
 CACHE_DIR = DATA_DIR / "cache"
 STATE_DIR = DATA_DIR / "state"
+CHARTS_DIR = DATA_DIR / "charts"
 CATALOG_PATH = BASE_DIR / "catalog.yaml"
 
 BASE_URL = "https://www.noticiasagricolas.com.br"

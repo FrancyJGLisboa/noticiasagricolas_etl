@@ -94,14 +94,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── 5. Publish CSVs to 'data' branch (force-pushed daily) ─
-      #    Single-commit orphan branch: repo on main never grows from CSVs,
+      # ── 5. Publish CSVs + Plotly charts to 'data' branch ──────
+      #    Single-commit orphan branch: repo on main never grows,
       #    but raw URLs stay accessible for browser preview / pandas / curl:
       #
       #      https://raw.githubusercontent.com/<owner>/<repo>/data/csv/basis-soja.csv
+      #      https://raw.githubusercontent.com/<owner>/<repo>/data/charts/seasonality.html
       #
       #    The branch is force-pushed each run so it has exactly one commit.
-      - name: Publish CSVs to data branch
+      - name: Publish CSVs and charts to data branch
         run: |
           set -e
           git config user.name "github-actions[bot]"
@@ -111,12 +112,17 @@ jobs:
           # --orphan creates a new branch with no parent commits.
           git worktree add --orphan -b data-publish /tmp/data-publish
 
-          # Place CSVs at csv/ (root of the data branch) so the URL stays clean:
-          #   raw.githubusercontent.com/<owner>/<repo>/data/csv/<file>.csv
+          # Place CSVs at csv/ (root of the data branch) so the URL stays clean
           mkdir -p /tmp/data-publish/csv
           cp data/csv/*.csv /tmp/data-publish/csv/
 
-          # README explaining what this branch is and how to use it
+          # Place charts at charts/ if any were generated (na-etl daily step 4)
+          if compgen -G "data/charts/*.html" > /dev/null; then
+            mkdir -p /tmp/data-publish/charts
+            cp data/charts/*.html /tmp/data-publish/charts/
+          fi
+
+          # README + Pages-friendly index.html linking to charts and CSVs
           cat > /tmp/data-publish/README.md <<EOF
           # data branch — auto-published daily
 
@@ -124,19 +130,16 @@ jobs:
           It always contains exactly one commit — never commit here, your changes will be wiped.
 
           Code lives on \`main\`. Bulk binary data (parquet) lives in the \`data-latest\`
-          GitHub Release. This branch exposes the CSV slice via raw URLs.
+          GitHub Release. This branch exposes CSVs and charts via raw URLs.
 
-          ## Raw URLs (consumable directly)
+          ## Charts (interactive Plotly HTMLs)
 
-          \`\`\`
-          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-soja.csv
-          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-milho.csv
-          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-cafe.csv
-          https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/soja.csv
-          ...
-          \`\`\`
+          Open in browser via GitHub Pages (if enabled on this branch) or via
+          \`htmlpreview.github.io\`:
 
-          ## Use with pandas
+            https://htmlpreview.github.io/?https://github.com/FrancyJGLisboa/noticiasagricolas_etl/blob/data/charts/seasonality.html
+
+          ## CSVs (raw URLs, consumable directly)
 
           \`\`\`python
           import pandas as pd
@@ -144,20 +147,62 @@ jobs:
           df = pd.read_csv(f"{BASE}/basis-soja.csv", parse_dates=["date"])
           \`\`\`
 
-          ## Use with curl
-
-          \`\`\`bash
-          curl -sL https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv/basis-soja.csv | head
-          \`\`\`
-
           ---
           Last updated: $(date -u +%Y-%m-%dT%H:%M:%SZ)
           EOF
 
+          # Pages-friendly index.html (works when GitHub Pages is enabled on data branch)
+          cat > /tmp/data-publish/index.html <<'IDX_EOF'
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          <head>
+            <meta charset="utf-8" />
+            <title>NoticiasAgricolas ETL — data</title>
+            <style>
+              body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #333; }
+              h1 { color: #1f3a5c; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+              h2 { color: #1f3a5c; margin-top: 32px; }
+              a { color: #1565c0; text-decoration: none; }
+              a:hover { text-decoration: underline; }
+              ul { list-style: none; padding: 0; }
+              li { padding: 6px 0; }
+              code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-size: 90%; }
+              .note { background: #fff8e1; padding: 12px; border-radius: 4px; font-size: 90%; }
+            </style>
+          </head>
+          <body>
+          <h1>📊 NoticiasAgricolas ETL — branch <code>data</code></h1>
+          <p class="note">Branch publicada automaticamente todo dia útil às 19h BRT pelo workflow GitHub Actions. Sempre fresca.</p>
+          <h2>Charts (Plotly)</h2>
+          <ul>
+            <li>📈 <a href="charts/seasonality.html">seasonality.html</a> — climate-normal por praça (Commodity → Vs → Praça)</li>
+          </ul>
+          <h2>CSVs (raw URLs)</h2>
+          <ul>
+            <li><code>basis-soja.csv</code> — <a href="csv/basis-soja.csv">view</a></li>
+            <li><code>basis-milho.csv</code> — <a href="csv/basis-milho.csv">view</a></li>
+            <li><code>basis-cafe.csv</code> — <a href="csv/basis-cafe.csv">view</a></li>
+            <li><code>basis-trigo.csv</code> — <a href="csv/basis-trigo.csv">view</a></li>
+            <li><code>basis-algodao.csv</code> — <a href="csv/basis-algodao.csv">view</a></li>
+            <li><code>basis-boi-gordo.csv</code> — <a href="csv/basis-boi-gordo.csv">view</a></li>
+            <li>… plus all individual commodity prices (soja, milho, cafe, etc.)</li>
+          </ul>
+          <h2>Use with pandas</h2>
+          <pre><code>import pandas as pd
+          BASE = "https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv"
+          df = pd.read_csv(f"{BASE}/basis-soja.csv", parse_dates=["date"])</code></pre>
+          </body>
+          </html>
+          IDX_EOF
+
           cd /tmp/data-publish
-          git add csv/ README.md
+          git add csv/ README.md index.html
+          [ -d charts ] && git add charts/ || true
           git commit -m "data: $(date -u +%Y-%m-%d)"
 
           # Force-push so the branch always has exactly one commit
           git push origin data-publish:data --force
-          echo "Published $(ls csv/ | wc -l) CSVs to 'data' branch."
+          n_csv=$(ls csv/ | wc -l)
+          n_html=0
+          [ -d charts ] && n_html=$(ls charts/ 2>/dev/null | wc -l)
+          echo "Published $n_csv CSVs and $n_html HTMLs to 'data' branch."
