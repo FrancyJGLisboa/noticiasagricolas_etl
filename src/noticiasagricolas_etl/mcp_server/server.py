@@ -11,9 +11,12 @@ from mcp.server.fastmcp import FastMCP
 
 from ..api import database as db
 from ..api.services import (
+    anomaly_service,
+    attribution_service,
     basis_panel_service,
     basis_percentile_service,
     basis_service,
+    crush_percentile_service,
     crush_service,
     curve_service,
     fx_service,
@@ -409,6 +412,89 @@ async def get_term_structure(
     result = term_structure_service.get_term_structure(
         futures_indicator=futures_indicator,
         target_date=target_date,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_crush_percentile(
+    target_date: str | None = None,
+    window_years: int = 5,
+    contract: str | None = None,
+) -> str:
+    """Today's soybean crush margin + percentile vs N-year history.
+
+    Returns the absolute margin and where it ranks in the historical
+    distribution. High decile (P90+) = strong incentive to crush;
+    low decile = industry under pressure.
+
+    Args:
+        target_date: ISO YYYY-MM-DD; None = latest
+        window_years: history window for percentile (default 5)
+        contract: optional contract filter YYYY-MM
+    """
+    db.get_connection()
+    result = crush_percentile_service.get_crush_percentile(
+        target_date=target_date, window_years=window_years, contract=contract,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_price_attribution(
+    commodity: str,
+    location: str,
+    futures_indicator: str,
+    date_from: str,
+    date_to: str | None = None,
+) -> str:
+    """Decompose price change into FX, CBOT, and basis contributions.
+
+    Tells you 'how much of the price move came from câmbio, CBOT, or local
+    basis dynamics' between two dates. Quantifies each in R$/sc and % of total.
+    Only works for CBOT pairs (soja-cbot, milho-cbot, trigo-cbot).
+
+    Args:
+        commodity: 'soja' | 'milho' | 'trigo'
+        location: e.g. 'Sorriso/MT'
+        futures_indicator: e.g. 'soja-bolsa-de-chicago-cme-group'
+        date_from: ISO start date
+        date_to: ISO end; None = latest
+    """
+    db.get_connection()
+    result = attribution_service.attribute_change(
+        commodity=commodity, location=location,
+        futures_indicator=futures_indicator,
+        date_from=date_from, date_to=date_to,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def detect_anomaly(
+    indicator: str,
+    location: str | None = None,
+    target_date: str | None = None,
+    window_days: int = 60,
+    z_threshold: float = 3.0,
+) -> str:
+    """Detect if today's value is an outlier vs the trailing rolling window.
+
+    Useful for (a) data-quality validation and (b) flagging genuine market
+    events. Returns z-score, is_anomaly bool, severity, and interpretation.
+
+    Args:
+        indicator: e.g. 'soja-mercado-fisico-sindicatos-e-cooperativas'
+        location: optional praça filter
+        target_date: ISO YYYY-MM-DD; None = latest
+        window_days: trailing window (default 60)
+        z_threshold: |z| flag threshold (default 3.0)
+    """
+    db.get_connection()
+    result = anomaly_service.detect_anomaly(
+        indicator=indicator, location=location,
+        target_date=target_date, window_days=window_days,
+        z_threshold=z_threshold,
     )
     return _json(result)
 
