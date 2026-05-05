@@ -251,20 +251,22 @@ def basis(commodity, force):
 @click.option("--category", default=None, help="Filter by category")
 @click.option("--skip-basis", is_flag=True, help="Skip basis rebuild step")
 @click.option("--skip-export", is_flag=True, help="Skip CSV export step")
-def daily(commodity, category, skip_basis, skip_export):
-    """Daily update: scrape latest prices, export CSVs, rebuild basis.
+@click.option("--skip-charts", is_flag=True, help="Skip chart generation step")
+def daily(commodity, category, skip_basis, skip_export, skip_charts):
+    """Daily update: scrape latest prices, export CSVs, rebuild basis, regenerate charts.
 
     \b
-    Runs three steps in order:
+    Runs four steps in order:
       1. Update — scrape latest ~10 days from all indicators
       2. Export  — regenerate CSV files from Parquet
       3. Basis   — rebuild basis (physical - futures) time series
+      4. Charts  — regenerate Plotly visualizations
 
     \b
     Examples:
-      na-etl daily              # full update, all commodities
-      na-etl daily -c soja      # just soja
-      na-etl daily --skip-basis # update + export only
+      na-etl daily               # full update, all commodities
+      na-etl daily -c soja       # just soja
+      na-etl daily --skip-basis  # update + export only
     """
     from . import basis_builder
 
@@ -314,8 +316,79 @@ def daily(commodity, category, skip_basis, skip_export):
     else:
         click.echo("\nStep 3/3: Skipped basis rebuild.")
 
+    # Step 4: Regenerate charts
+    if not skip_charts:
+        from .viz import orchestrator
+
+        click.echo()
+        click.echo("=" * 60)
+        click.echo("Step 4/4: Regenerating Plotly charts...")
+        click.echo("=" * 60)
+        commodities_list = [commodity] if commodity else None
+        chart_summary = orchestrator.generate(commodities=commodities_list, viz="all")
+        if isinstance(chart_summary, dict):
+            for k, v in sorted(chart_summary.items()):
+                if hasattr(v, "values"):
+                    produced = sum(1 for p in v.values() if p is not None)
+                    click.echo(f"  {k:<20} {produced}/{len(v)} viz produced")
+                else:
+                    click.echo(f"  {k:<14} {'OK' if v else 'skipped'}  {v or ''}")
+    else:
+        click.echo("\nStep 4/4: Skipped chart regeneration.")
+
     click.echo()
     click.echo("Daily update complete.")
+
+
+@cli.command()
+@click.option("-c", "--commodity", default=None, help="Filter by commodity (e.g. soja, milho)")
+@click.option(
+    "--viz",
+    default="all",
+    type=click.Choice(["seasonality", "multi", "companion", "map", "heatmap", "all"]),
+    help="Which viz to generate (default: all)",
+)
+@click.option("--years", default=5, type=int, help="Window in years (default: 5)")
+@click.option(
+    "--mode",
+    default="combined",
+    type=click.Choice(["combined", "per-pair"]),
+    help="combined: one HTML per viz with pair+praça dropdowns. per-pair: legacy 1 HTML per pair.",
+)
+def charts(commodity, viz, years, mode):
+    """Generate basis visualizations (Plotly HTML + companion CSV).
+
+    \b
+    Combined mode (default) outputs to data/charts/:
+      seasonality.html              — pair + praça dropdowns
+      multi-location-{label}.html   — per-pair (still legacy structure)
+      deviation-map-{label}.html    — per-pair
+      heatmap-{label}.html          — per-pair
+      basis-stats.csv               — combined companion KPIs across pairs
+
+    Per-pair mode (legacy) outputs one HTML per (pair, viz).
+    """
+    from .viz import orchestrator
+
+    commodities = [commodity] if commodity else None
+    click.echo(
+        f"Generating viz={viz}, commodities={commodities or 'all'}, "
+        f"years={years}, mode={mode}..."
+    )
+    summary = orchestrator.generate(
+        commodities=commodities, viz=viz, window_years=years, mode=mode,
+    )
+
+    click.echo()
+    click.echo("=== Charts Summary ===")
+    if mode == "combined":
+        for viz_name, path in sorted(summary.items()):
+            click.echo(f"  {viz_name:<14} {'OK' if path else 'skipped'}  {path or ''}")
+    else:
+        for label, paths in sorted(summary.items()):
+            produced = sum(1 for p in paths.values() if p is not None)
+            click.echo(f"  {label:<20} {produced}/{len(paths)} viz produced")
+    click.echo()
 
 
 @cli.command("categories")
