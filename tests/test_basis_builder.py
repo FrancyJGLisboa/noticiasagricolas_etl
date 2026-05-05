@@ -8,15 +8,18 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 import pytest
 
-from noticiasagricolas_etl.basis_builder import (
-    _load_futures_prices,
-    _load_physical_prices,
-    _load_ptax,
-    _normalize_location,
-    _select_front_month,
-    build_all,
-    build_pair,
+from noticiasagricolas_etl.basis.calculator import (
+    select_front_month as _select_front_month,
 )
+from noticiasagricolas_etl.basis.locations import (
+    normalize_location as _normalize_location,
+)
+from noticiasagricolas_etl.basis.sources import (
+    load_futures_prices as _load_futures_prices,
+    load_physical_prices as _load_physical_prices,
+    load_ptax as _load_ptax,
+)
+from noticiasagricolas_etl.basis_builder import build_all, build_pair
 from noticiasagricolas_etl.basis_config import (
     BASIS_PAIRS,
     BU_PER_SC_CORN,
@@ -64,8 +67,9 @@ def setup_dirs(tmp_path, monkeypatch):
     basis_dir.mkdir()
     monkeypatch.setattr("noticiasagricolas_etl.config.PARQUET_DIR", parquet_dir)
     monkeypatch.setattr("noticiasagricolas_etl.config.PARQUET_BASIS_DIR", basis_dir)
-    monkeypatch.setattr("noticiasagricolas_etl.basis_builder.PARQUET_DIR", parquet_dir)
-    monkeypatch.setattr("noticiasagricolas_etl.basis_builder.PARQUET_BASIS_DIR", basis_dir)
+    # Patch the names where they're actually looked up at call-time
+    monkeypatch.setattr("noticiasagricolas_etl.basis.sources.PARQUET_DIR", parquet_dir)
+    monkeypatch.setattr("noticiasagricolas_etl.basis.output.PARQUET_BASIS_DIR", basis_dir)
     return parquet_dir, basis_dir
 
 

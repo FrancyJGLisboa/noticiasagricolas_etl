@@ -25,6 +25,7 @@ from typing import Any
 
 from .. import basis_builder, pipeline, storage
 from ..catalog import load_catalog
+from ..pipeline import UpdateSummary
 
 logger = logging.getLogger(__name__)
 
@@ -61,6 +62,7 @@ class DailySummary:
     started_at: datetime
     finished_at: datetime | None = None
     steps_run: list[str] = field(default_factory=list)
+    update_summary: UpdateSummary | None = None
     basis_summary: dict[str, int] = field(default_factory=dict)
     chart_summary: Any = None
     csvs_exported: list[str] = field(default_factory=list)
@@ -85,7 +87,7 @@ class DailyPipeline:
         summary = DailySummary(started_at=datetime.now())
 
         try:
-            self._run_update()
+            summary.update_summary = self._run_update()
             summary.steps_run.append("update")
 
             if not cfg.skip_export:
@@ -108,8 +110,8 @@ class DailyPipeline:
 
         return summary
 
-    def _run_update(self) -> None:
-        pipeline.update(commodity=self.config.commodity, category=self.config.category)
+    def _run_update(self) -> UpdateSummary:
+        return pipeline.update(commodity=self.config.commodity, category=self.config.category)
 
     def _run_export(self) -> list[str]:
         cfg = self.config

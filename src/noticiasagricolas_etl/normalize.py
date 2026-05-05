@@ -99,12 +99,24 @@ def normalize_measure(column_name: str) -> str:
 
 # ── currency: BRL or USD ────────────────────────────────────────────────────
 
+# Units that legitimately have no currency (pure quantity / index / ratio).
+_NO_CURRENCY_UNITS: set[str] = {"", "%", "Pontos", "pontos", "8 dias"}
+
+_currency_unknown_warned: set[str] = set()
+
+
 def extract_currency(unit: str) -> Optional[str]:
-    """Extract currency from unit string."""
+    """Extract currency (BRL/USD) from a unit string.
+
+    Returns None for currency-less units (percent, points, durations) or for
+    inputs that don't match any known prefix. The latter case emits a one-time
+    warning so a new parser-produced unit string doesn't quietly classify as
+    "no currency".
+    """
     if not unit:
         return None
     u = unit.strip()
-    if u in ("%", "Pontos", "pontos", "8 dias"):
+    if u in _NO_CURRENCY_UNITS:
         return None
     if u.startswith("R$") or u.startswith("R$/"):
         return "BRL"
@@ -112,8 +124,14 @@ def extract_currency(unit: str) -> Optional[str]:
         return "USD"
     if u.startswith("¢") or u.startswith("c/") or u.startswith("cents"):
         return "USD"
-    if u == "%":
-        return None
+
+    if u not in _currency_unknown_warned:
+        logger.warning(
+            "extract_currency: unrecognized unit %r — returning None. "
+            "Add a prefix branch or extend _NO_CURRENCY_UNITS if intentional.",
+            unit,
+        )
+        _currency_unknown_warned.add(u)
     return None
 
 
@@ -151,8 +169,16 @@ _UNIT_PATTERNS = [
 ]
 
 
+_unit_std_unknown_warned: set[str] = set()
+
+
 def normalize_unit_std(unit: str) -> str:
-    """Extract physical unit (without currency) in canonical form."""
+    """Extract physical unit (without currency) in canonical form.
+
+    Returns empty string for inputs that don't match any pattern. A first
+    sighting of an unrecognized non-empty unit emits a warning so new parser
+    outputs can't silently lose their unit classification.
+    """
     if not unit:
         return ""
     u = unit.strip()
@@ -167,6 +193,14 @@ def normalize_unit_std(unit: str) -> str:
     # For "sc" alone (R$/sc without kg qualifier), assume sc60kg (most common)
     if re.search(r"/sc\b", u) and "50" not in u and "40" not in u:
         return "sc60kg"
+
+    if u not in _unit_std_unknown_warned:
+        logger.warning(
+            "normalize_unit_std: unrecognized unit %r — returning empty. "
+            "Add a regex to _UNIT_PATTERNS if this represents a real physical unit.",
+            unit,
+        )
+        _unit_std_unknown_warned.add(u)
     return ""
 
 
@@ -307,12 +341,28 @@ _MARKET_TYPE_PATTERNS = [
 ]
 
 
+_market_type_unknown_warned: set[str] = set()
+
+
 def classify_market_type(indicator_slug: str) -> str:
-    """Classify indicator into market type from its slug."""
+    """Classify an indicator slug into a market type.
+
+    Returns 'other' as the catch-all. A first sighting of any slug that lands
+    in 'other' emits a warning — usually a sign that a new indicator needs a
+    matching pattern in _MARKET_TYPE_PATTERNS, not a legitimate "other".
+    """
     slug = indicator_slug.lower()
     for pattern, mtype in _MARKET_TYPE_PATTERNS:
         if re.search(pattern, slug):
             return mtype
+
+    if slug and slug not in _market_type_unknown_warned:
+        logger.warning(
+            "classify_market_type: slug %r matched no pattern — classified as 'other'. "
+            "Add a regex to _MARKET_TYPE_PATTERNS if this is a real market type.",
+            indicator_slug,
+        )
+        _market_type_unknown_warned.add(slug)
     return "other"
 
 

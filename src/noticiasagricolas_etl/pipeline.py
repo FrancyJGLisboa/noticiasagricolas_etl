@@ -2,6 +2,7 @@
 
 import logging
 import time
+from dataclasses import dataclass, field
 from datetime import date, datetime
 from typing import Optional
 
@@ -19,6 +20,21 @@ from .parsers.registry import get_parser
 from .scraper import Scraper
 from .state import load_state, save_state
 from .storage import upsert
+
+
+@dataclass(frozen=True)
+class UpdateSummary:
+    """Outcome of a single `update()` run.
+
+    `per_indicator` maps `commodity/slug` → row count for indicators that
+    succeeded with at least one record. Empty when nothing scraped.
+    """
+
+    success_count: int = 0
+    error_count: int = 0
+    total_records: int = 0
+    indicators_attempted: int = 0
+    per_indicator: dict[str, int] = field(default_factory=dict)
 
 logger = logging.getLogger(__name__)
 
@@ -207,15 +223,19 @@ def backfill(
 def update(
     commodity: Optional[str] = None,
     category: Optional[str] = None,
-):
-    """Incremental update: fetch default page (latest ~10 dates) for all entries."""
+) -> UpdateSummary:
+    """Incremental update: fetch default page (latest ~10 dates) for all entries.
+
+    Returns an `UpdateSummary` that callers (e.g. `DailyPipeline`) can surface
+    instead of relying on log scraping for counts.
+    """
     entries = load_catalog()
 
     target_entries = _resolve_entries(entries, commodity=commodity, category=category)
 
     if not target_entries:
         logger.error("No entries to process")
-        return
+        return UpdateSummary()
 
     scraper = Scraper()
     state = load_state()
@@ -224,6 +244,7 @@ def update(
     success_count = 0
     error_count = 0
     total_records = 0
+    per_indicator: dict[str, int] = {}
 
     for i, entry in enumerate(target_entries, 1):
         logger.info(f"[{i}/{total}] Updating {entry.commodity}/{entry.slug}")
@@ -236,6 +257,7 @@ def update(
                 upsert(entry.commodity, records)
                 total_records += len(records)
                 success_count += 1
+                per_indicator[entry_key] = len(records)
             else:
                 logger.warning(f"  No records from {entry_key}")
 
@@ -257,6 +279,14 @@ def update(
     logger.info(
         f"Update complete: {success_count} ok, {error_count} errors, "
         f"{total_records} total records across {total} indicators"
+    )
+
+    return UpdateSummary(
+        success_count=success_count,
+        error_count=error_count,
+        total_records=total_records,
+        indicators_attempted=total,
+        per_indicator=per_indicator,
     )
 
 

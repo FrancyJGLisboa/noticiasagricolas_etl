@@ -82,19 +82,22 @@ def generate(
     viz: str | None = None,
     window_years: int = 5,
     mode: str = "combined",
-) -> dict:
+) -> dict[str, dict[str, Path | None]]:
     """Generate the requested visualizations across all (or filtered) pairs.
 
     Args:
         commodities: filter (e.g. ["soja", "milho"]); None = all.
         viz: one of VIZ_NAMES or "all" (default: all).
         window_years: window for multi/companion/map/heatmap (default 5).
-        mode: "combined" (one HTML per viz with cascading dropdowns; default)
-              or "per-pair" (legacy: one HTML per pair × viz).
+        mode: "combined" (cascading dropdown HTMLs spanning all pairs; default)
+              or "per-pair" (one HTML per pair × viz).
 
     Returns:
-        For mode="combined": {viz_name: output_path | None}
-        For mode="per-pair":  {pair_label: {viz_name: output_path | None}}
+        Always `{pair_label: {viz_name: output_path | None}}`. In "combined"
+        mode, the chart for cascading-dropdown viz (seasonality, companion)
+        is shared — every pair_label entry points to the same Path. The
+        per-pair viz (multi, map, heatmap) point to per-pair files. Single
+        consistent shape lets callers avoid hasattr/isinstance branching.
     """
     if viz is None or viz == "all":
         selected: set[str] = set(VIZ_NAMES)
@@ -124,9 +127,14 @@ def _generate_combined(
     pairs: list[BasisPairConfig],
     selected: set[str],
     window_years: int,
-) -> dict[str, Path | None]:
-    """Generate ONE HTML per viz type spanning all pairs (cascading dropdowns)."""
-    # Pre-load all pair data once
+) -> dict[str, dict[str, Path | None]]:
+    """Generate cascading-dropdown HTMLs spanning all pairs.
+
+    Returns the same `{pair_label: {viz: Path|None}}` shape as per-pair mode.
+    For viz that produce ONE shared HTML (seasonality, companion), every
+    pair_label entry points to the same Path; for viz that stay per-pair
+    (multi, map, heatmap), each pair_label points to its own file.
+    """
     pair_data: list[tuple[BasisPairConfig, pd.DataFrame]] = []
     for pair in pairs:
         df = load_pair_data(pair)
@@ -135,19 +143,25 @@ def _generate_combined(
             continue
         pair_data.append((pair, df))
 
-    out: dict[str, Path | None] = {v: None for v in selected}
+    # Initialize output with one entry per pair (whether or not it produced data),
+    # so callers can iterate uniformly.
+    out: dict[str, dict[str, Path | None]] = {
+        p.label: {v: None for v in selected} for p in pairs
+    }
     if not pair_data:
         return out
 
+    # Shared chart 1 — seasonality (one HTML with cascading commodity/pair/praça dropdowns)
+    seasonality_path: Path | None = None
     if "seasonality" in selected:
         fig = seasonality.build_combined(pair_data)
-        path = CHARTS_DIR / "seasonality.html"
-        write_chart(fig, path)
-        out["seasonality"] = path
-        logger.info("Wrote %s (%d pairs)", path.name, len(pair_data))
+        seasonality_path = CHARTS_DIR / "seasonality.html"
+        write_chart(fig, seasonality_path)
+        logger.info("Wrote %s (%d pairs)", seasonality_path.name, len(pair_data))
 
+    # Shared chart 2 — companion stats CSV
+    companion_path: Path | None = None
     if "companion" in selected:
-        # Combined CSV with extra "pair" column
         from ..config import CSV_DIR
         frames = []
         for pair, df in pair_data:
@@ -159,28 +173,41 @@ def _generate_combined(
         if frames:
             combined = pd.concat(frames, ignore_index=True)
             CSV_DIR.mkdir(parents=True, exist_ok=True)
-            path = CSV_DIR / "basis-stats.csv"
-            combined.to_csv(path, index=False, float_format="%.2f")
-            out["companion"] = path
-            logger.info("Wrote %s (%d rows across %d pairs)", path.name, len(combined), len(frames))
+            companion_path = CSV_DIR / "basis-stats.csv"
+            combined.to_csv(companion_path, index=False, float_format="%.2f")
+            logger.info(
+                "Wrote %s (%d rows across %d pairs)",
+                companion_path.name, len(combined), len(frames),
+            )
 
-    # Other viz still per-pair until refactored to combined dropdowns
-    for viz_name in ("multi", "map", "heatmap"):
-        if viz_name not in selected:
-            continue
-        for pair, df in pair_data:
-            if viz_name == "multi":
-                fig = multi_location.build(df, pair, window_years=window_years)
-                path = chart_path("multi-location", pair.label)
-            elif viz_name == "map":
-                fig = deviation_map.build(df, pair, window_years=window_years)
-                path = chart_path("deviation-map", pair.label)
-            else:
-                fig = heatmap.build(df, pair, window_years=window_years)
-                path = chart_path("heatmap", pair.label)
+    # Per-pair charts
+    pair_labels_with_data = {p.label for p, _ in pair_data}
+    for pair, df in pair_data:
+        slot = out[pair.label]
+        if "seasonality" in selected and seasonality_path is not None:
+            slot["seasonality"] = seasonality_path
+        if "companion" in selected and companion_path is not None:
+            slot["companion"] = companion_path
+
+        if "multi" in selected:
+            fig = multi_location.build(df, pair, window_years=window_years)
+            path = chart_path("multi-location", pair.label)
             write_chart(fig, path)
+            slot["multi"] = path
             logger.info("Wrote %s", path.name)
-        # Mark produced (any pair counts)
-        out[viz_name] = CHARTS_DIR
+        if "map" in selected:
+            fig = deviation_map.build(df, pair, window_years=window_years)
+            path = chart_path("deviation-map", pair.label)
+            write_chart(fig, path)
+            slot["map"] = path
+            logger.info("Wrote %s", path.name)
+        if "heatmap" in selected:
+            fig = heatmap.build(df, pair, window_years=window_years)
+            path = chart_path("heatmap", pair.label)
+            write_chart(fig, path)
+            slot["heatmap"] = path
+            logger.info("Wrote %s", path.name)
 
+    # Pairs without data already have all-None slots from the initialization above
+    _ = pair_labels_with_data
     return out

@@ -20,6 +20,8 @@ def mocked_steps():
     Yields a tuple of (update_mock, export_csv_mock, export_all_mock,
     build_all_mock, generate_mock).
     """
+    from noticiasagricolas_etl.pipeline import UpdateSummary
+
     with (
         patch("noticiasagricolas_etl.pipelines.daily.pipeline.update") as update_mock,
         patch("noticiasagricolas_etl.pipelines.daily.storage.export_csv") as export_csv_mock,
@@ -27,6 +29,10 @@ def mocked_steps():
         patch("noticiasagricolas_etl.pipelines.daily.basis_builder.build_all") as build_all_mock,
         patch("noticiasagricolas_etl.viz.orchestrator.generate") as generate_mock,
     ):
+        update_mock.return_value = UpdateSummary(
+            success_count=2, error_count=0, total_records=42,
+            indicators_attempted=2, per_indicator={"soja/x": 30, "milho/y": 12},
+        )
         build_all_mock.return_value = {"soja-b3": 100, "milho-b3": 50}
         generate_mock.return_value = {"soja-b3": {"seasonality": "ok"}}
         yield update_mock, export_csv_mock, export_all_mock, build_all_mock, generate_mock
@@ -44,6 +50,9 @@ class TestDailyPipeline:
         assert summary.basis_total_rows == 150
         assert summary.error is None
         assert summary.finished_at is not None
+        # Update summary captured from pipeline.update return value
+        assert summary.update_summary is not None
+        assert summary.update_summary.total_records == 42
 
     def test_skip_basis_omits_basis_step(self, mocked_steps) -> None:
         _, _, _, build_all_mock, _ = mocked_steps

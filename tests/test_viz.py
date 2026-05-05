@@ -278,14 +278,16 @@ def test_orchestrator_combined_writes_files(synthetic_basis):
     summary = orchestrator.generate(
         commodities=["soja"], viz="all", window_years=5, mode="combined",
     )
-    # Combined: keys are viz names, values are paths or None
-    assert set(summary.keys()) == set(orchestrator.VIZ_NAMES)
-    # seasonality is a single combined HTML
-    assert summary["seasonality"] is not None
-    assert summary["seasonality"].exists()
-    assert summary["seasonality"].name == "seasonality.html"
-    # companion is a single combined CSV
-    assert summary["companion"].name == "basis-stats.csv"
+    # Combined and per-pair both return {pair_label: {viz: Path|None}}.
+    assert "soja-cbot" in summary
+    paths = summary["soja-cbot"]
+    assert set(paths.keys()) == set(orchestrator.VIZ_NAMES)
+    # Seasonality is the shared combined HTML — every pair points to it.
+    assert paths["seasonality"] is not None
+    assert paths["seasonality"].name == "seasonality.html"
+    assert paths["seasonality"].exists()
+    # Companion is the shared combined CSV.
+    assert paths["companion"].name == "basis-stats.csv"
 
 
 def test_orchestrator_per_pair_writes_files(synthetic_basis):

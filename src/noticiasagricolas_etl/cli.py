@@ -52,7 +52,11 @@ def backfill(commodity, category, start_date, end_date, slug, delay, no_resume):
 @click.option("--category", default=None, help="Filter by category (e.g. grains, oilseeds)")
 def update(commodity, category):
     """Incremental update with latest data."""
-    pipeline.update(commodity=commodity, category=category)
+    summary = pipeline.update(commodity=commodity, category=category)
+    click.echo(
+        f"Update: {summary.success_count}/{summary.indicators_attempted} indicators ok, "
+        f"{summary.error_count} errors, {summary.total_records:,} records."
+    )
 
 
 @cli.command()
@@ -284,6 +288,13 @@ def daily(commodity, category, skip_basis, skip_export, skip_charts):
 
     summary = DailyPipeline(cfg).run()
 
+    if summary.update_summary is not None:
+        u = summary.update_summary
+        click.echo(
+            f"  {u.success_count}/{u.indicators_attempted} indicators ok, "
+            f"{u.error_count} errors, {u.total_records:,} records scraped."
+        )
+
     if "export" in summary.steps_run:
         click.echo("\n" + "=" * 60)
         click.echo("Step 2/4: Exporting CSVs from Parquet...")
@@ -307,14 +318,10 @@ def daily(commodity, category, skip_basis, skip_export, skip_charts):
         click.echo("\n" + "=" * 60)
         click.echo("Step 4/4: Regenerating Plotly charts...")
         click.echo("=" * 60)
-        chart_summary = summary.chart_summary
-        if isinstance(chart_summary, dict):
-            for k, v in sorted(chart_summary.items()):
-                if hasattr(v, "values"):
-                    produced = sum(1 for p in v.values() if p is not None)
-                    click.echo(f"  {k:<20} {produced}/{len(v)} viz produced")
-                else:
-                    click.echo(f"  {k:<14} {'OK' if v else 'skipped'}  {v or ''}")
+        chart_summary = summary.chart_summary or {}
+        for pair_label, viz_paths in sorted(chart_summary.items()):
+            produced = sum(1 for p in viz_paths.values() if p is not None)
+            click.echo(f"  {pair_label:<20} {produced}/{len(viz_paths)} viz produced")
     else:
         click.echo("\nStep 4/4: Skipped chart regeneration.")
 
@@ -363,13 +370,9 @@ def charts(commodity, viz, years, mode):
 
     click.echo()
     click.echo("=== Charts Summary ===")
-    if mode == "combined":
-        for viz_name, path in sorted(summary.items()):
-            click.echo(f"  {viz_name:<14} {'OK' if path else 'skipped'}  {path or ''}")
-    else:
-        for label, paths in sorted(summary.items()):
-            produced = sum(1 for p in paths.values() if p is not None)
-            click.echo(f"  {label:<20} {produced}/{len(paths)} viz produced")
+    for label, paths in sorted(summary.items()):
+        produced = sum(1 for p in paths.values() if p is not None)
+        click.echo(f"  {label:<20} {produced}/{len(paths)} viz produced")
     click.echo()
 
 
