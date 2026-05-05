@@ -13,7 +13,14 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+from ...analytics.diagnostic import Bucket
 from .. import database as db
+
+
+_SEVERITY = Bucket(
+    thresholds=(2.0, 3.0, 4.0),
+    labels=("normal", "mild", "moderate", "severe"),
+)
 
 
 def _load_series(
@@ -99,14 +106,7 @@ def detect_anomaly(
     z = (target_v - mean) / std
     is_anomaly = abs(z) >= z_threshold
 
-    if abs(z) >= 4:
-        severity = "severe"
-    elif abs(z) >= 3:
-        severity = "moderate"
-    elif abs(z) >= 2:
-        severity = "mild"
-    else:
-        severity = "normal"
+    severity = _SEVERITY.classify(abs(z))
 
     direction = "acima" if z > 0 else "abaixo"
 

@@ -12,7 +12,26 @@ from typing import Any
 
 import pandas as pd
 
+from ...analytics.diagnostic import Bucket
 from .. import database as db
+
+
+# Slope (% per month) thresholds, ordered ascending.
+# < -0.3   → backwardation forte
+# < -0.05  → backwardation leve
+# ≤  0.05  → flat
+# ≤  0.3   → contango leve
+# >  0.3   → contango forte
+_REGIME = Bucket(
+    thresholds=(-0.3, -0.05, 0.05, 0.3),
+    labels=(
+        "backwardation forte",
+        "backwardation leve",
+        "flat",
+        "contango leve",
+        "contango forte",
+    ),
+)
 
 
 def get_term_structure(
@@ -109,16 +128,7 @@ def get_term_structure(
 
     # Regime classification (relative to front absolute price for scale-free interp)
     relative_slope_pct = slope_per_month / front["value"] * 100 if front["value"] else 0
-    if relative_slope_pct > 0.3:
-        regime = "contango forte"
-    elif relative_slope_pct > 0.05:
-        regime = "contango leve"
-    elif relative_slope_pct < -0.3:
-        regime = "backwardation forte"
-    elif relative_slope_pct < -0.05:
-        regime = "backwardation leve"
-    else:
-        regime = "flat"
+    regime = _REGIME.classify(relative_slope_pct)
 
     interp_map = {
         "contango forte": (

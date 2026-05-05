@@ -4,9 +4,14 @@ Adds 7 derived columns alongside originals for queryability:
   measure, currency, unit_std, price_basis, contract, state, market_type
 """
 
+import logging
 import math
 import re
 from typing import Optional
+
+from .models import Measure
+
+logger = logging.getLogger(__name__)
 
 
 def _is_nan(val) -> bool:
@@ -18,6 +23,10 @@ def _is_nan(val) -> bool:
 
 # ── measure: what was measured ───────────────────────────────────────────────
 
+# column_name → Measure mapping. The lookup is exhaustive over column_name
+# slugs the current parsers produce. Anything not in these sets is treated as
+# `Measure.PRICE`, but we WARN on first sighting of an unknown one — silent
+# fallback used to mean a new parser variant could mis-classify forever.
 _CHANGE_PCT = {
     "variacao_pct", "variacao", "variacao_diaria", "variacao_semana",
 }
@@ -34,19 +43,58 @@ _INDEX = {
     "pontos", "investing", "fech_investing",
 }
 
+# All known column_names that map to PRICE. Enumerated from current parquet
+# so silent fallback warnings only fire on truly novel slugs from new parsers.
+_KNOWN_PRICE_COLUMNS: set[str] = {
+    "30_dz", "a_prazo_r_prazo", "a_vista_r_vista", "acumulado_kg_ton", "arroba",
+    "bezerra", "bezerro", "boi_gordo_prazo", "boi_gordo_vista", "boi_magro",
+    "bu", "cabeca", "caixa_40_8_kg", "cents_lb", "cotacao_atual", "desmama",
+    "fechamento", "fechamento_c_libra_peso", "garrote", "kg", "litro",
+    "media_arroba", "mensal_kg_ton", "novilha", "preco",
+    "preco_caixa_de_30_duzias", "preco_compra", "preco_kg", "preco_medio",
+    "preco_medio_arroba", "preco_sc", "preco_sc_50_kg", "precos_em_kg",
+    "r_a_prazocaixa_408_kg_prazo", "saca_de_50_kg", "sc", "t", "ton",
+    "tonelada_curta", "troca", "vaca_gorda_vista", "vaca_magra", "valor",
+    "valor_25kg", "valor_5kg", "valor_cent_lb", "valor_kg",
+    "valor_saca_de_50_kg", "valor_saca_de_60_kg", "valor_sc", "valor_t",
+}
+_unknown_warned: set[str] = set()
+
+
+def register_price_columns(*columns: str) -> None:
+    """Mark these column_name slugs as legitimate `Measure.PRICE`. Idempotent."""
+    _KNOWN_PRICE_COLUMNS.update(c.lower().strip() for c in columns)
+
 
 def normalize_measure(column_name: str) -> str:
-    """Map 60+ column_name values to canonical measure types."""
+    """Map a parser-produced column_name to a canonical Measure value.
+
+    Returns the string value of the `Measure` enum (kept as `str` for backward
+    compatibility with stored Parquet columns).
+
+    Logs a one-time warning if the column_name doesn't match any known set,
+    so silently-misclassified parser output is observable.
+    """
     cn = column_name.lower().strip()
     if cn in _CHANGE_PCT:
-        return "change_pct"
+        return Measure.CHANGE_PCT.value
     if cn in _CHANGE_ABS:
-        return "change_abs"
+        return Measure.CHANGE_ABS.value
     if cn in _RATE:
-        return "rate"
+        return Measure.RATE.value
     if cn in _INDEX:
-        return "index"
-    return "price"
+        return Measure.INDEX.value
+
+    if cn and cn not in _KNOWN_PRICE_COLUMNS and cn not in _unknown_warned:
+        logger.warning(
+            "normalize_measure: unknown column_name %r — defaulting to PRICE. "
+            "If this is a new measure type, register the slug; if it really "
+            "is a price, call register_price_columns(%r) at import time.",
+            column_name, column_name,
+        )
+        _unknown_warned.add(cn)
+
+    return Measure.PRICE.value
 
 
 # ── currency: BRL or USD ────────────────────────────────────────────────────

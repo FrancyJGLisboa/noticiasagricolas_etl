@@ -9,25 +9,14 @@ from __future__ import annotations
 
 import logging
 
-import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
 from ..basis_config import BasisPairConfig
 from .common import PAIR_DISPLAY
+from .shaper import weekly_zscore
 
 logger = logging.getLogger(__name__)
-
-
-def _weekly_median(df: pd.DataFrame) -> pd.DataFrame:
-    """Resample to weekly median per location. Returns long-format df."""
-    df = df.copy()
-    df["week"] = df["date"].dt.to_period("W").apply(lambda p: p.start_time)
-    weekly = (
-        df.groupby(["location", "week"], as_index=False)["value"]
-        .median()
-    )
-    return weekly
 
 
 def build(df: pd.DataFrame, pair: BasisPairConfig, window_years: int = 5) -> go.Figure:
@@ -39,26 +28,18 @@ def build(df: pd.DataFrame, pair: BasisPairConfig, window_years: int = 5) -> go.
         fig.update_layout(title=f"{info.title} — sem dados", template="plotly_white")
         return fig
 
-    today = df["date"].max()
-    cutoff = today - pd.DateOffset(years=window_years)
-    windowed = df[df["date"] >= cutoff].copy()
-    if windowed.empty:
+    weekly = weekly_zscore(df, window_years=window_years)
+    if weekly.empty:
         fig.update_layout(title=f"{info.title} — janela vazia", template="plotly_white")
         return fig
 
-    weekly = _weekly_median(windowed)
-
-    # Compute per-location mean/std for z-score
-    stats = weekly.groupby("location")["value"].agg(["mean", "std", "count"]).reset_index()
-    weekly = weekly.merge(stats, on="location", how="left")
-    weekly["zscore"] = np.where(
-        (weekly["std"].notna()) & (weekly["std"] > 0),
-        (weekly["value"] - weekly["mean"]) / weekly["std"],
-        np.nan,
-    )
-
     # Order locations by observation count (densest at top)
-    loc_order = stats.sort_values("count", ascending=True)["location"].tolist()
+    loc_order = (
+        weekly.groupby("location")["value"]
+        .count()
+        .sort_values(ascending=True)
+        .index.tolist()
+    )
 
     pivot = weekly.pivot(index="location", columns="week", values="zscore")
     pivot = pivot.reindex(loc_order)

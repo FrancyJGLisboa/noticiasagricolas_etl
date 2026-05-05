@@ -14,7 +14,23 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+from ...analytics.diagnostic import Bucket, compute_window_stats
 from .. import database as db
+
+
+_INTERP: dict[str, str] = {
+    "low": (
+        "vol BAIXA — P{pct:.0f}, regime calmo. "
+        "Posições maiores aceitáveis; opções baratas (favorece comprar vol)."
+    ),
+    "med-low": "vol MÉDIA-BAIXA — P{pct:.0f}, condições estáveis.",
+    "med-high": "vol MÉDIA-ALTA — P{pct:.0f}, atenção redobrada.",
+    "high": (
+        "vol ALTA — P{pct:.0f}, regime estressado. "
+        "Reduzir tamanho de posição; opções caras (favorece vender vol). "
+        "Stop-losses largos para evitar saídas em ruído."
+    ),
+}
 
 
 def get_vol_regime(
@@ -68,85 +84,47 @@ def get_vol_regime(
     if df.empty:
         return {"error": "no rolling vol values computable"}
 
-    # Pick target row
-    if target_date:
-        td = pd.Timestamp(target_date)
-        sub = df[df["date"] <= td]
-        if sub.empty:
-            return {"error": f"no data on or before {target_date}"}
-        target_row = sub.iloc[-1]
-        target_idx = sub.index[-1]
-    else:
-        target_row = df.iloc[-1]
-        target_idx = df.index[-1]
-
-    target_d = target_row["date"].strftime("%Y-%m-%d")
-    target_vol = float(target_row["vol"])
-
-    cutoff = target_row["date"] - pd.DateOffset(years=history_years)
-    window = df[(df["date"] >= cutoff) & (df["date"] <= target_row["date"])]["vol"]
-    if window.empty:
-        return {"error": "empty history window"}
-
-    p25, p50, p75 = (
-        float(window.quantile(0.25)),
-        float(window.quantile(0.50)),
-        float(window.quantile(0.75)),
+    stats = compute_window_stats(
+        df,
+        value_col="vol",
+        target_date=target_date,
+        window_years=history_years,
     )
+    if isinstance(stats, dict):
+        return stats
 
-    if target_vol <= p25:
-        regime = "low"
-    elif target_vol <= p50:
-        regime = "med-low"
-    elif target_vol <= p75:
-        regime = "med-high"
-    else:
-        regime = "high"
+    # Classify against the window's own p25/p50/p75 — regime is per-window-relative.
+    quartile_bucket = Bucket(
+        thresholds=(stats.p25, stats.p50, stats.p75),
+        labels=("low", "med-low", "med-high", "high"),
+    )
+    regime = quartile_bucket.classify(stats.value)
 
-    # Count days in current regime — walk back while same bucket
-    def _classify(v: float) -> str:
-        if v <= p25: return "low"
-        if v <= p50: return "med-low"
-        if v <= p75: return "med-high"
-        return "high"
-
+    # Count days in current regime — walk back while same bucket.
+    target_idx = int(df.index[df["date"] == pd.Timestamp(stats.target_date)][-1])
     days_in_regime = 0
     for idx in range(target_idx, -1, -1):
-        if _classify(float(df.iloc[idx]["vol"])) == regime:
+        if quartile_bucket.classify(float(df.iloc[idx]["vol"])) == regime:
             days_in_regime += 1
         else:
             break
 
-    pct = float((window <= target_vol).mean() * 100.0)
-
-    interp_map = {
-        "low": (
-            f"vol BAIXA — P{pct:.0f}, regime calmo. "
-            "Posições maiores aceitáveis; opções baratas (favorece comprar vol)."
-        ),
-        "med-low": f"vol MÉDIA-BAIXA — P{pct:.0f}, condições estáveis.",
-        "med-high": f"vol MÉDIA-ALTA — P{pct:.0f}, atenção redobrada.",
-        "high": (
-            f"vol ALTA — P{pct:.0f}, regime estressado. "
-            "Reduzir tamanho de posição; opções caras (favorece vender vol). "
-            "Stop-losses largos para evitar saídas em ruído."
-        ),
-    }
+    interp = _INTERP[regime].format(pct=stats.percentile)
 
     return {
         "indicator": indicator,
         "location": location,
-        "target_date": target_d,
-        "current_vol_annualized": round(target_vol, 4),
+        "target_date": stats.target_date,
+        "current_vol_annualized": stats.value,
         "regime": regime,
         "days_in_regime": days_in_regime,
-        "percentile": round(pct, 2),
+        "percentile": stats.percentile,
         "window_days": window_days,
         "history_years": history_years,
         "quartile_boundaries": {
-            "p25": round(p25, 4),
-            "p50_median": round(p50, 4),
-            "p75": round(p75, 4),
+            "p25": stats.p25,
+            "p50_median": stats.p50,
+            "p75": stats.p75,
         },
-        "interpretation": interp_map[regime],
+        "interpretation": interp,
     }

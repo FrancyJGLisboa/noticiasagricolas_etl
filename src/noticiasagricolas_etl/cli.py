@@ -268,64 +268,46 @@ def daily(commodity, category, skip_basis, skip_export, skip_charts):
       na-etl daily -c soja       # just soja
       na-etl daily --skip-basis  # update + export only
     """
-    from . import basis_builder
+    from .pipelines import DailyConfig, DailyPipeline
 
-    # Step 1: Update prices
-    click.echo("=" * 60)
-    click.echo("Step 1/3: Updating prices (scraping latest pages)...")
-    click.echo("=" * 60)
-    pipeline.update(commodity=commodity, category=category)
+    cfg = DailyConfig(
+        commodity=commodity,
+        category=category,
+        skip_export=skip_export,
+        skip_basis=skip_basis,
+        skip_charts=skip_charts,
+    )
 
-    # Step 2: Export CSVs
-    if not skip_export:
-        click.echo()
+    click.echo("=" * 60)
+    click.echo("Step 1/4: Updating prices (scraping latest pages)...")
+    click.echo("=" * 60)
+
+    summary = DailyPipeline(cfg).run()
+
+    if "export" in summary.steps_run:
+        click.echo("\n" + "=" * 60)
+        click.echo("Step 2/4: Exporting CSVs from Parquet...")
         click.echo("=" * 60)
-        click.echo("Step 2/3: Exporting CSVs from Parquet...")
-        click.echo("=" * 60)
-        if commodity:
-            storage.export_csv(commodity)
-        elif category:
-            entries = load_catalog()
-            commodities = {
-                e.commodity for e in entries
-                if e.category and e.category.value == category
-            }
-            for c in commodities:
-                storage.export_csv(c)
-        else:
-            storage.export_all_csv()
-        click.echo("CSV export complete.")
+        click.echo(f"CSV export complete ({', '.join(summary.csvs_exported)}).")
     else:
-        click.echo("\nStep 2/3: Skipped CSV export.")
+        click.echo("\nStep 2/4: Skipped CSV export.")
 
-    # Step 3: Rebuild basis
-    if not skip_basis:
-        click.echo()
+    if "basis" in summary.steps_run:
+        click.echo("\n" + "=" * 60)
+        click.echo("Step 3/4: Rebuilding basis time series...")
         click.echo("=" * 60)
-        click.echo("Step 3/3: Rebuilding basis time series...")
-        click.echo("=" * 60)
-        commodities_list = [commodity] if commodity else None
-        summary = basis_builder.build_all(commodities=commodities_list)
-
-        total = 0
-        for label, count in sorted(summary.items()):
+        for label, count in sorted(summary.basis_summary.items()):
             status_str = f"{count:>10,} rows" if count > 0 else "   skipped"
             click.echo(f"  {label:<20} {status_str}")
-            total += count
-        click.echo(f"  {'TOTAL':<20} {total:>10,} rows")
+        click.echo(f"  {'TOTAL':<20} {summary.basis_total_rows:>10,} rows")
     else:
-        click.echo("\nStep 3/3: Skipped basis rebuild.")
+        click.echo("\nStep 3/4: Skipped basis rebuild.")
 
-    # Step 4: Regenerate charts
-    if not skip_charts:
-        from .viz import orchestrator
-
-        click.echo()
-        click.echo("=" * 60)
+    if "charts" in summary.steps_run:
+        click.echo("\n" + "=" * 60)
         click.echo("Step 4/4: Regenerating Plotly charts...")
         click.echo("=" * 60)
-        commodities_list = [commodity] if commodity else None
-        chart_summary = orchestrator.generate(commodities=commodities_list, viz="all")
+        chart_summary = summary.chart_summary
         if isinstance(chart_summary, dict):
             for k, v in sorted(chart_summary.items()):
                 if hasattr(v, "values"):

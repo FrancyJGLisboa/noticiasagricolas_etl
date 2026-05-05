@@ -15,7 +15,36 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+from ...analytics.diagnostic import Bucket
 from .. import database as db
+
+
+# R²-based hedge quality. Caller passes raw R² (0..1).
+_QUALITY = Bucket(
+    thresholds=(0.3, 0.5, 0.7),
+    labels=("POBRE", "MARGINAL", "BOM", "EXCELENTE"),
+)
+
+_INTERP: dict[str, str] = {
+    "EXCELENTE": (
+        "Hedge EXCELENTE (R²={r2:.2f}). β={beta:.3f}: para cada R$1 de "
+        "variação no físico, hedgear com {beta:.2f} de futuro replica o move. "
+        "Risco de basis pequeno — hedge funciona quase como contraposição perfeita."
+    ),
+    "BOM": (
+        "Hedge BOM (R²={r2:.2f}, β={beta:.3f}). "
+        "Hedge razoável; ainda há basis risk significativo a considerar."
+    ),
+    "MARGINAL": (
+        "Hedge MARGINAL (R²={r2:.2f}, β={beta:.3f}). "
+        "Cobertura parcial — esperar volatilidade do basis afetando P&L."
+    ),
+    "POBRE": (
+        "Hedge POBRE (R²={r2:.2f}, β={beta:.3f}). "
+        "Esse contrato futuro NÃO hedgea bem essa praça. "
+        "Considerar contrato alternativo (ex: B3 vs CBOT vs NYBOT) ou cross-hedge."
+    ),
+}
 
 
 def get_hedge_fit(
@@ -98,32 +127,8 @@ def get_hedge_fit(
 
     correl = float(np.corrcoef(x, y)[0, 1])
 
-    if r2 >= 0.7:
-        quality = "EXCELENTE"
-        interp = (
-            f"Hedge {quality} (R²={r2:.2f}). β={beta:.3f}: para cada R$1 de "
-            f"variação no físico, hedgear com {beta:.2f} de futuro replica o move. "
-            "Risco de basis pequeno — hedge funciona quase como contraposição perfeita."
-        )
-    elif r2 >= 0.5:
-        quality = "BOM"
-        interp = (
-            f"Hedge {quality} (R²={r2:.2f}, β={beta:.3f}). "
-            "Hedge razoável; ainda há basis risk significativo a considerar."
-        )
-    elif r2 >= 0.3:
-        quality = "MARGINAL"
-        interp = (
-            f"Hedge {quality} (R²={r2:.2f}, β={beta:.3f}). "
-            "Cobertura parcial — esperar volatilidade do basis afetando P&L."
-        )
-    else:
-        quality = "POBRE"
-        interp = (
-            f"Hedge {quality} (R²={r2:.2f}, β={beta:.3f}). "
-            "Esse contrato futuro NÃO hedgea bem essa praça. "
-            "Considerar contrato alternativo (ex: B3 vs CBOT vs NYBOT) ou cross-hedge."
-        )
+    quality = _QUALITY.classify(r2)
+    interp = _INTERP[quality].format(r2=r2, beta=beta)
 
     return {
         "commodity": commodity,

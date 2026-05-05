@@ -15,6 +15,20 @@ class PageType(str, Enum):
     CME_FUTURES = "cme_futures"
 
 
+class Measure(str, Enum):
+    """What a parsed value represents.
+
+    Parsers produce one of these per cell. Used to filter queries (e.g. only
+    pull `price` rows for a chart, exclude `change_pct` rows from a basis calc).
+    """
+
+    PRICE = "price"
+    CHANGE_PCT = "change_pct"
+    CHANGE_ABS = "change_abs"
+    RATE = "rate"
+    INDEX = "index"
+
+
 class Category(str, Enum):
     GRAINS = "grains"
     OILSEEDS = "oilseeds"

@@ -21,6 +21,7 @@ import plotly.graph_objects as go
 
 from ..basis_config import BasisPairConfig
 from .common import PAIR_DISPLAY
+from .shaper import doy_envelope
 
 logger = logging.getLogger(__name__)
 
@@ -89,39 +90,29 @@ def _climate_normal_traces(
     if loc_df.empty:
         return []
 
-    cutoff = today - pd.DateOffset(years=window_years)
-    df = loc_df[(loc_df["date"] >= cutoff) & loc_df["value"].notna()].copy()
-    if df.empty:
+    bands = doy_envelope(loc_df, window_years=window_years, today=today)
+    if bands.empty:
         return []
 
-    df["year"] = df["date"].dt.year
-    df["doy"] = df["date"].dt.dayofyear  # 1-366
+    p_min_s = bands["min"]
+    p25_s = bands["p25"]
+    p_med_s = bands["p50"]
+    p75_s = bands["p75"]
+    p_max_s = bands["max"]
 
+    # Past-year traces still need the year×doy pivot for the legend-toggle layer;
+    # rebuild it locally (cheap on top of the shaper's filtered window).
+    cutoff = today - pd.DateOffset(years=window_years)
+    df = loc_df[(loc_df["date"] >= cutoff) & loc_df["value"].notna()].copy()
+    df["year"] = df["date"].dt.year
+    df["doy"] = df["date"].dt.dayofyear
     daily = df.groupby(["year", "doy"], as_index=False)["value"].mean()
     current_year = int(today.year)
     past_years = sorted(int(y) for y in daily.loc[daily["year"] < current_year, "year"].unique())
-
     pivot = daily.pivot(index="doy", columns="year", values="value").reindex(range(1, 367))
 
     if not past_years:
         return []
-
-    past_only = pivot[past_years]
-    p_min = past_only.min(axis=1)
-    p25 = past_only.quantile(0.25, axis=1)
-    p_med = past_only.median(axis=1)
-    p75 = past_only.quantile(0.75, axis=1)
-    p_max = past_only.max(axis=1)
-
-    # Smooth daily stats with 7-day centered rolling window (handles missing days)
-    def _smooth(s: pd.Series) -> pd.Series:
-        return s.rolling(window=7, center=True, min_periods=3).mean()
-
-    p_min_s = _smooth(p_min)
-    p25_s = _smooth(p25)
-    p_med_s = _smooth(p_med)
-    p75_s = _smooth(p75)
-    p_max_s = _smooth(p_max)
 
     days = list(range(1, 367))
     days_x = [_doy_to_date_str(d) for d in days]

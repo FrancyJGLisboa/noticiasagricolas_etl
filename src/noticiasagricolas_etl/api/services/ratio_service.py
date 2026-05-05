@@ -9,7 +9,24 @@ from typing import Any
 
 import pandas as pd
 
+from ...analytics.diagnostic import PERCENTILE_3, compute_window_stats
 from .. import database as db
+
+
+def _interp(bucket: str, pct: float, num: str, den: str) -> str:
+    head = num.split("-")[0]
+    tail = den.split("-")[0]
+    if bucket == "high":
+        return (
+            f"ratio ALTO — P{pct:.0f}. {head} caro vs {tail}. "
+            f"Favorece plantio de {head} na próxima safra."
+        )
+    if bucket == "low":
+        return (
+            f"ratio BAIXO — P{pct:.0f}. {head} barato vs {tail}. "
+            f"Favorece plantio de {tail} na próxima safra."
+        )
+    return f"ratio NORMAL — P{pct:.0f}, dentro da faixa típica."
 
 
 def get_ratio(
@@ -37,6 +54,7 @@ def get_ratio(
         Dict with current ratio, percentile, recent series sample,
         and historical descriptive stats.
     """
+
     def _load(ind: str) -> pd.DataFrame:
         params: list[object] = [ind, measure]
         loc_clause = ""
@@ -70,60 +88,31 @@ def get_ratio(
     merged["ratio"] = merged["num"] / merged["den"]
     merged = merged.sort_values("date").reset_index(drop=True)
 
-    if target_date:
-        td = pd.Timestamp(target_date)
-        sub = merged[merged["date"] <= td]
-        if sub.empty:
-            return {"error": f"no data on or before {target_date}"}
-        target_row = sub.iloc[-1]
-    else:
-        target_row = merged.iloc[-1]
+    stats = compute_window_stats(
+        merged,
+        value_col="ratio",
+        target_date=target_date,
+        window_years=window_years,
+    )
+    if isinstance(stats, dict):
+        return stats
 
-    target_d = target_row["date"].strftime("%Y-%m-%d")
-    target_ratio = float(target_row["ratio"])
-
-    cutoff = target_row["date"] - pd.DateOffset(years=window_years)
-    window = merged[(merged["date"] >= cutoff) & (merged["date"] <= target_row["date"])]["ratio"]
-    if window.empty:
-        return {"error": "empty window"}
-
-    pct = float((window <= target_ratio).mean() * 100.0)
-
-    # Soja/Milho-specific interpretation hints (works for any 2 grain ratio)
-    if pct >= 75:
-        interp = (
-            f"ratio ALTO — P{pct:.0f}. {numerator_indicator.split('-')[0]} "
-            f"caro vs {denominator_indicator.split('-')[0]}. "
-            f"Favorece plantio de {numerator_indicator.split('-')[0]} na próxima safra."
-        )
-    elif pct <= 25:
-        interp = (
-            f"ratio BAIXO — P{pct:.0f}. {numerator_indicator.split('-')[0]} "
-            f"barato vs {denominator_indicator.split('-')[0]}. "
-            f"Favorece plantio de {denominator_indicator.split('-')[0]} na próxima safra."
-        )
-    else:
-        interp = f"ratio NORMAL — P{pct:.0f}, dentro da faixa típica."
+    bucket = PERCENTILE_3.classify(stats.percentile)
+    interp = _interp(bucket, stats.percentile, numerator_indicator, denominator_indicator)
 
     # Sample of last 30 daily values for trend visibility
     tail = merged.tail(30)[["date", "num", "den", "ratio"]].copy()
     tail["date"] = tail["date"].dt.strftime("%Y-%m-%d")
 
+    base = stats.as_dict()
+    base["current_ratio"] = base.pop("value")
+
     return {
         "numerator_indicator": numerator_indicator,
         "denominator_indicator": denominator_indicator,
         "location": location or "ALL (mean across praças)",
-        "target_date": target_d,
-        "current_ratio": round(target_ratio, 4),
-        "percentile": round(pct, 2),
+        **base,
         "window_years": window_years,
-        "mean": round(float(window.mean()), 4),
-        "p25": round(float(window.quantile(0.25)), 4),
-        "p50": round(float(window.quantile(0.50)), 4),
-        "p75": round(float(window.quantile(0.75)), 4),
-        "min": round(float(window.min()), 4),
-        "max": round(float(window.max()), 4),
-        "n_obs": int(window.count()),
         "interpretation": interp,
         "recent_30d": tail.to_dict(orient="records"),
     }
