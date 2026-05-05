@@ -1,0 +1,34 @@
+# Build/test artifacts
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+htmlcov/
+.coverage
+.mypy_cache/
+.ruff_cache/
+
+# Source control
+.git/
+.gitignore
+
+# Data — must be a volume mount, never baked into image
+data/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Docs / examples (not needed at runtime; keep README for /docs reference)
+docs/
+examples/
+
+# Local secrets
+.env
+.env.local
+*.local
