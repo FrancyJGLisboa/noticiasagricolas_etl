@@ -208,8 +208,18 @@ def safra_year(date: pd.Timestamp, commodity: str) -> int:
     return date.year - 1
 
 
-def write_chart(fig: go.Figure, output_path: Path, *, include_plotlyjs: bool = True) -> None:
-    """Write a Plotly figure as self-contained HTML."""
+def write_chart(
+    fig: go.Figure,
+    output_path: Path,
+    *,
+    include_plotlyjs: str | bool = "cdn",
+) -> None:
+    """Write a Plotly figure as HTML.
+
+    Default ``include_plotlyjs="cdn"`` produces a small file (~50 KB) that loads
+    plotly.js from the CDN — ideal for hosted/shared charts (GitHub Pages, etc.).
+    Pass ``True`` to inline plotly (~25 MB) for offline/airgapped use.
+    """
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fig.write_html(str(output_path), include_plotlyjs=include_plotlyjs)
 
