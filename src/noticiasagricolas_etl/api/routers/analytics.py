@@ -14,10 +14,13 @@ from ..services import (
     crush_service,
     curve_service,
     fx_service,
+    hedge_fit_service,
+    port_spread_service,
     ratio_service,
     seasonal_service,
     spread_service,
     term_structure_service,
+    vol_regime_service,
 )
 
 logger = logging.getLogger(__name__)
@@ -286,4 +289,65 @@ def get_anomaly(
         indicator=indicator, location=location,
         target_date=target_date, window_days=window_days,
         z_threshold=z_threshold,
+    )
+
+
+@router.get("/port-spread")
+def get_port_spread(
+    commodity: str = Query(...),
+    interior_location: str = Query(...),
+    futures_indicator: str | None = Query(None),
+    target_date: str | None = Query(None),
+    window_years: int = Query(5, ge=1, le=20),
+):
+    """Spread (port − interior) for a commodity, with percentile vs N-year history.
+
+    Wide = export window open; tight = escoamento parado.
+    """
+    return _handle_query(
+        port_spread_service.get_port_spread,
+        commodity=commodity, interior_location=interior_location,
+        futures_indicator=futures_indicator,
+        target_date=target_date, window_years=window_years,
+    )
+
+
+@router.get("/vol-regime")
+def get_vol_regime(
+    indicator: str = Query(...),
+    location: str | None = Query(None),
+    target_date: str | None = Query(None),
+    window_days: int = Query(20, ge=5, le=120),
+    history_years: int = Query(5, ge=1, le=20),
+):
+    """Volatility regime: low / med-low / med-high / high vs N-year quartiles.
+
+    Drives position-sizing and option pricing decisions.
+    """
+    return _handle_query(
+        vol_regime_service.get_vol_regime,
+        indicator=indicator, location=location,
+        target_date=target_date, window_days=window_days,
+        history_years=history_years,
+    )
+
+
+@router.get("/hedge-fit")
+def get_hedge_fit(
+    commodity: str = Query(...),
+    location: str = Query(...),
+    futures_indicator: str = Query(...),
+    window_years: int = Query(5, ge=1, le=20),
+    frequency: str = Query("weekly", description="'daily' or 'weekly'"),
+):
+    """OLS regression of Δphysical on Δfutures — hedge effectiveness for a praça.
+
+    Returns β (optimal hedge ratio), R² (explained variance), variance
+    reduction %, and a quality label (EXCELENTE / BOM / MARGINAL / POBRE).
+    """
+    return _handle_query(
+        hedge_fit_service.get_hedge_fit,
+        commodity=commodity, location=location,
+        futures_indicator=futures_indicator,
+        window_years=window_years, frequency=frequency,
     )

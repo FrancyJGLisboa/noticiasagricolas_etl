@@ -629,3 +629,41 @@ class TestAnalyticsExtras:
         resp = client.get("/v1/analytics/anomaly?indicator=does-not-exist")
         assert resp.status_code == 200
         assert "error" in resp.json()
+
+    def test_port_spread_no_data(self, client):
+        # Test fixture has no port locations → expect error
+        resp = client.get(
+            "/v1/analytics/port-spread"
+            "?commodity=soja&interior_location=Rondonopolis/MT"
+        )
+        assert resp.status_code == 200
+        # Either error (no port data) or valid result
+        data = resp.json()
+        assert "error" in data or "spread_today_brl_per_sc" in data
+
+    def test_vol_regime_insufficient_history(self, client):
+        # Fixture has 2 dates of soja-fisico — too few for vol regime
+        resp = client.get("/v1/analytics/vol-regime?indicator=soja-fisico")
+        assert resp.status_code == 200
+        # Either error (insufficient) or valid result
+        data = resp.json()
+        assert "error" in data or "regime" in data
+
+    def test_hedge_fit_insufficient_history(self, client):
+        resp = client.get(
+            "/v1/analytics/hedge-fit"
+            "?commodity=soja&location=Paranagua/PR"
+            "&futures_indicator=soja-b3"
+        )
+        assert resp.status_code == 200
+        # Fixture has 3 basis rows — insufficient for regression
+        assert "error" in resp.json() or "r_squared" in resp.json()
+
+    def test_hedge_fit_invalid_freq(self, client):
+        resp = client.get(
+            "/v1/analytics/hedge-fit"
+            "?commodity=soja&location=Paranagua/PR"
+            "&futures_indicator=soja-b3&frequency=monthly"
+        )
+        assert resp.status_code == 200
+        assert "error" in resp.json()

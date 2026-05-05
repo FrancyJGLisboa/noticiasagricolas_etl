@@ -20,11 +20,14 @@ from ..api.services import (
     crush_service,
     curve_service,
     fx_service,
+    hedge_fit_service,
+    port_spread_service,
     price_service,
     ratio_service,
     seasonal_service,
     spread_service,
     term_structure_service,
+    vol_regime_service,
 )
 from ..catalog import load_catalog, list_commodities as _list_commodities
 
@@ -495,6 +498,95 @@ async def detect_anomaly(
         indicator=indicator, location=location,
         target_date=target_date, window_days=window_days,
         z_threshold=z_threshold,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_port_spread(
+    commodity: str,
+    interior_location: str,
+    futures_indicator: str | None = None,
+    target_date: str | None = None,
+    window_years: int = 5,
+) -> str:
+    """Spread (port avg − interior) physical price + percentile vs N-year history.
+
+    Wide spread = porto pagando prêmio = janela de exportação aberta.
+    Tight spread = escoamento parado, produtor segura grão.
+
+    Args:
+        commodity: 'soja' or 'milho'
+        interior_location: e.g. 'Sorriso/MT', 'Rio Verde/GO'
+        futures_indicator: optional pair filter
+        target_date: ISO; None = latest
+        window_years: history window (default 5)
+    """
+    db.get_connection()
+    result = port_spread_service.get_port_spread(
+        commodity=commodity, interior_location=interior_location,
+        futures_indicator=futures_indicator,
+        target_date=target_date, window_years=window_years,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_vol_regime(
+    indicator: str,
+    location: str | None = None,
+    target_date: str | None = None,
+    window_days: int = 20,
+    history_years: int = 5,
+) -> str:
+    """Volatility regime classification: low / med-low / med-high / high.
+
+    Computes rolling N-day stdev of log returns, classifies vs N-year
+    quartiles. Drives position sizing — high-vol regimes warrant smaller
+    positions and wider stops.
+
+    Args:
+        indicator: e.g. 'soja-bolsa-de-chicago-cme-group'
+        location: optional filter
+        target_date: ISO; None = latest
+        window_days: rolling window (default 20)
+        history_years: window for quartile boundaries (default 5)
+    """
+    db.get_connection()
+    result = vol_regime_service.get_vol_regime(
+        indicator=indicator, location=location,
+        target_date=target_date, window_days=window_days,
+        history_years=history_years,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_hedge_fit(
+    commodity: str,
+    location: str,
+    futures_indicator: str,
+    window_years: int = 5,
+    frequency: str = "weekly",
+) -> str:
+    """OLS regression: how well does this futures contract hedge this praça?
+
+    Returns β (optimal hedge ratio), R² (variance explained), variance
+    reduction %, and a quality label (EXCELENTE / BOM / MARGINAL / POBRE).
+    Use to compare B3 vs CBOT vs NYBOT for the same physical praça.
+
+    Args:
+        commodity: e.g. 'soja', 'milho'
+        location: e.g. 'Sorriso/MT'
+        futures_indicator: e.g. 'soja-bolsa-de-chicago-cme-group'
+        window_years: history window (default 5)
+        frequency: 'daily' or 'weekly' (default 'weekly')
+    """
+    db.get_connection()
+    result = hedge_fit_service.get_hedge_fit(
+        commodity=commodity, location=location,
+        futures_indicator=futures_indicator,
+        window_years=window_years, frequency=frequency,
     )
     return _json(result)
 
