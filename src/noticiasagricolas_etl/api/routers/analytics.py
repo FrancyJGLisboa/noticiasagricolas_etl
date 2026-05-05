@@ -12,9 +12,11 @@ from ..services import (
     basis_service,
     crush_percentile_service,
     crush_service,
+    curve_seasonal_service,
     curve_service,
     fx_service,
     hedge_fit_service,
+    port_basis_tracker_service,
     port_spread_service,
     ratio_service,
     seasonal_service,
@@ -329,6 +331,51 @@ def get_vol_regime(
         indicator=indicator, location=location,
         target_date=target_date, window_days=window_days,
         history_years=history_years,
+    )
+
+
+@router.get("/curve-seasonal")
+def get_curve_seasonal(
+    futures_indicator: str = Query(..., description="e.g. soja-bolsa-de-chicago-cme-group"),
+    target_date: str | None = Query(None, description="ISO YYYY-MM-DD; None = latest"),
+    window_days: int = Query(14, ge=3, le=60),
+    min_obs: int = Query(20, ge=5, le=200),
+):
+    """Today's forward-curve slope vs typical for this time of year.
+
+    Returns z-score of current relative slope (%/month, front→back) against the
+    distribution of slopes in a ±window_days window across all past years.
+    Tells the trader whether the curve is in the seasonally-normal regime or
+    fora do padrão. Insufficient seasonal history surfaces as a clean error
+    rather than a noisy z-score.
+    """
+    return _handle_query(
+        curve_seasonal_service.get_curve_seasonal,
+        futures_indicator=futures_indicator,
+        target_date=target_date,
+        window_days=window_days,
+        min_obs=min_obs,
+    )
+
+
+@router.get("/port-basis-tracker")
+def get_port_basis_tracker(
+    commodity: str = Query(..., description="Commodity (e.g. soja, milho)"),
+    futures_indicator: str | None = Query(None),
+    target_date: str | None = Query(None),
+    window_years: int = Query(5, ge=1, le=20),
+    column: str = Query("basis_brl",
+        description="basis_brl | basis_usd | basis_pct | basis_centavos_sc | basis_cents_bu"),
+):
+    """Basis percentile across all Brazilian export ports, ranked cheapest to most expensive.
+
+    Buy-signal screen: low percentile = basis below typical = good time to lock
+    physical / accumulate inventory. High percentile = sell-pressure window.
+    """
+    return _handle_query(
+        port_basis_tracker_service.get_port_basis_tracker,
+        commodity=commodity, futures_indicator=futures_indicator,
+        target_date=target_date, window_years=window_years, column=column,
     )
 
 

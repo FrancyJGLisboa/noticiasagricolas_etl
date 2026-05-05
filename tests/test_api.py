@@ -667,3 +667,24 @@ class TestAnalyticsExtras:
         )
         assert resp.status_code == 200
         assert "error" in resp.json()
+
+    def test_port_basis_tracker_returns_expected_shape(self, client):
+        # Test fixture has Paranagua/PR (no diacritic) which isn't in PORT_LOCATIONS,
+        # so we expect ports_with_data == 0 but a clean response.
+        resp = client.get(
+            "/v1/analytics/port-basis-tracker?commodity=soja"
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["commodity"] == "soja"
+        assert "ports" in data
+        assert isinstance(data["ports"], list)
+        assert "ports_with_data" in data
+        assert "errors" in data
+
+    def test_port_basis_tracker_invalid_column(self, client):
+        resp = client.get(
+            "/v1/analytics/port-basis-tracker?commodity=soja&column=garbage"
+        )
+        # Underlying service raises ValueError on bad column → 400 via _handle_query
+        assert resp.status_code == 400

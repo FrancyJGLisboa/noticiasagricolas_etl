@@ -79,7 +79,7 @@ python examples/daily_briefing.py
 
 ---
 
-## The 16 services
+## The 18 services
 
 All return JSON with a Portuguese **`interpretation`** field already written —
 your agent quotes the string instead of composing prose.
@@ -100,6 +100,7 @@ your agent quotes the string instead of composing prose.
 | `get_basis` | Basis time series for a commodity-pair-praça |
 | `get_basis_panel` | Query the materialized basis panel (BRL, USD, ¢/bu, %) |
 | `get_basis_percentile` | "Is today's basis cheap or expensive vs typical?" (P0-100 + interp) |
+| `get_port_basis_tracker` | Basis percentile across ALL Brazilian export ports, ranked cheapest first (buy-signal screen) |
 | `get_price_attribution` | Decompose ΔP_local into FX vs CBOT vs basis buckets |
 | `get_fx_adjusted` | Convert prices BRL ↔ USD via PTAX |
 
@@ -108,7 +109,8 @@ your agent quotes the string instead of composing prose.
 | Service | What it answers |
 |---|---|
 | `get_futures_curve` | All active contracts on a date with contango/backwardation label |
-| `get_term_structure` | Slope of the curve + regime (contango forte / leve / flat / back. leve / forte) |
+| `get_term_structure` | Slope of the curve + regime (contango forte / leve / flat / back. leve / forte) — **snapshot today** |
+| `get_curve_seasonal` | Today's slope vs ±2-week seasonal window across all past years (z-score + regime: muito_abaixo / abaixo / tipico / acima / muito_acima) — **fora do padrão?** |
 
 ### Crush margin (esmagamento de soja)
 

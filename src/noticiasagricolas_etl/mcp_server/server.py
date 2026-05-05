@@ -18,9 +18,11 @@ from ..api.services import (
     basis_service,
     crush_percentile_service,
     crush_service,
+    curve_seasonal_service,
     curve_service,
     fx_service,
     hedge_fit_service,
+    port_basis_tracker_service,
     port_spread_service,
     price_service,
     ratio_service,
@@ -557,6 +559,81 @@ async def get_vol_regime(
         indicator=indicator, location=location,
         target_date=target_date, window_days=window_days,
         history_years=history_years,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_curve_seasonal(
+    futures_indicator: str,
+    target_date: str | None = None,
+    window_days: int = 14,
+    min_obs: int = 20,
+) -> str:
+    """Forward-curve slope vs typical seasonal pattern — fora do padrão?
+
+    For the futures indicator, computes today's relative slope (%/month,
+    front→back) and compares against the distribution of slopes in a ±N-day
+    window across ALL past years. Returns a z-score and bucket label
+    (muito_abaixo / abaixo / tipico / acima / muito_acima) with a Portuguese
+    interpretation that names the calendar month for context.
+
+    Use this when you've already seen the snapshot regime via
+    get_term_structure and want to know: "is this contango/backwardation
+    sazonal e esperado, ou fora do padrão histórico do mês?"
+
+    Baseline is exclusive of target_date (no contamination). Min 20 obs in the
+    seasonal window or service surfaces an 'insufficient seasonal history'
+    error rather than a noisy z-score.
+
+    Args:
+        futures_indicator: e.g. 'soja-bolsa-de-chicago-cme-group'.
+        target_date: ISO YYYY-MM-DD; None = latest.
+        window_days: ±days around target's day-of-year (default 14 = ~150 obs/6y).
+        min_obs: minimum baseline observations required (default 20).
+    """
+    db.get_connection()
+    result = curve_seasonal_service.get_curve_seasonal(
+        futures_indicator=futures_indicator,
+        target_date=target_date,
+        window_days=window_days,
+        min_obs=min_obs,
+    )
+    return _json(result)
+
+
+@mcp.tool()
+async def get_port_basis_tracker(
+    commodity: str,
+    futures_indicator: str | None = None,
+    target_date: str | None = None,
+    window_years: int = 5,
+    column: str = "basis_brl",
+) -> str:
+    """Basis percentile across all Brazilian export ports, ranked cheapest first.
+
+    Use to spot when one port is at extreme territory vs its own 5y history.
+    Low percentile (<P25) = basis abaixo do típico, sinal de compra/acumulação;
+    high percentile (>P75) = basis caro, janela de venda física. Returns one
+    row per port with value, percentile (0-100), bucket-based PT interpretation,
+    and reference stats (mean / p25 / p50 / p75 / min / max / n_obs).
+
+    Args:
+        commodity: 'soja' | 'milho' | etc.
+        futures_indicator: e.g. 'soja-bolsa-de-chicago-cme-group'. None = service
+            picks whatever exists per port.
+        target_date: ISO YYYY-MM-DD; None = latest.
+        window_years: history window for percentile (default 5).
+        column: 'basis_brl' (default), 'basis_usd', 'basis_pct',
+            'basis_centavos_sc', 'basis_cents_bu'.
+    """
+    db.get_connection()
+    result = port_basis_tracker_service.get_port_basis_tracker(
+        commodity=commodity,
+        futures_indicator=futures_indicator,
+        target_date=target_date,
+        window_years=window_years,
+        column=column,
     )
     return _json(result)
 
