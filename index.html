@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>NoticiasAgricolas ETL — data</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { color: #1f3a5c; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+    h2 { color: #1f3a5c; margin-top: 32px; }
+    a { color: #1565c0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 6px 0; }
+    code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-size: 90%; }
+    .note { background: #fff8e1; padding: 12px; border-radius: 4px; font-size: 90%; }
+  </style>
+</head>
+<body>
+<h1>📊 NoticiasAgricolas ETL — branch <code>data</code></h1>
+<p class="note">Branch publicada automaticamente todo dia útil às 19h BRT pelo workflow GitHub Actions. Sempre fresca.</p>
+<h2>Charts (Plotly)</h2>
+<ul>
+  <li>📈 <a href="charts/seasonality.html">seasonality.html</a> — climate-normal por praça (Commodity → Vs → Praça)</li>
+</ul>
+<h2>CSVs (raw URLs)</h2>
+<ul>
+  <li><code>basis-soja.csv</code> — <a href="csv/basis-soja.csv">view</a></li>
+  <li><code>basis-milho.csv</code> — <a href="csv/basis-milho.csv">view</a></li>
+  <li><code>basis-cafe.csv</code> — <a href="csv/basis-cafe.csv">view</a></li>
+  <li><code>basis-trigo.csv</code> — <a href="csv/basis-trigo.csv">view</a></li>
+  <li><code>basis-algodao.csv</code> — <a href="csv/basis-algodao.csv">view</a></li>
+  <li><code>basis-boi-gordo.csv</code> — <a href="csv/basis-boi-gordo.csv">view</a></li>
+  <li>… plus all individual commodity prices (soja, milho, cafe, etc.)</li>
+</ul>
+<h2>Use with pandas</h2>
+<pre><code>import pandas as pd
+BASE = "https://raw.githubusercontent.com/FrancyJGLisboa/noticiasagricolas_etl/data/csv"
+df = pd.read_csv(f"{BASE}/basis-soja.csv", parse_dates=["date"])</code></pre>
+</body>
+</html>
