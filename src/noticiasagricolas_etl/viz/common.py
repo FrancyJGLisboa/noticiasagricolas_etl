@@ -98,6 +98,25 @@ SAFRA_START_MONTH: dict[str, int] = {
     "boi-gordo": 1,   # ano calendário (sem safra)
 }
 
+ADJUSTED_COMMODITIES = frozenset({"soja", "milho"})
+
+
+def adjusted_column(pair: BasisPairConfig) -> str:
+    """Return the adjusted counterpart of the pair's raw basis column."""
+    return f"{pick_value_column(pair)}_adj"
+
+
+def historical_value_column(pair: BasisPairConfig, df: pd.DataFrame) -> tuple[str, bool]:
+    """Choose adjusted history for soja/milho, with raw-file compatibility."""
+    raw = pick_value_column(pair)
+    adj = adjusted_column(pair)
+    usable = (
+        pair.commodity in ADJUSTED_COMMODITIES
+        and adj in df.columns
+        and df[adj].notna().any()
+    )
+    return (adj if usable else raw), usable
+
 
 PRACA_COORDS: dict[str, tuple[float, float]] = {
     "Alto Garças/MT": (-16.9408, -53.5269),
@@ -183,12 +202,15 @@ def load_pair_data(pair: BasisPairConfig) -> pd.DataFrame:
     if df.empty:
         return df
 
-    col = pick_value_column(pair)
-    if col not in df.columns:
-        logger.warning("Column %s missing for %s — skipping", col, pair.label)
+    raw_col = pick_value_column(pair)
+    if raw_col not in df.columns:
+        logger.warning("Column %s missing for %s — skipping", raw_col, pair.label)
         return pd.DataFrame()
 
+    col, adjusted = historical_value_column(pair, df)
+    df["value_raw"] = df[raw_col]
     df["value"] = df[col]
+    df["value_source"] = "adjusted" if adjusted else "raw"
     df = df[df["value"].notna()]
     df["date"] = pd.to_datetime(df["date"])
     df = df.sort_values(["location", "date"]).reset_index(drop=True)

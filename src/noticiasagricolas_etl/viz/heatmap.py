@@ -22,6 +22,7 @@ logger = logging.getLogger(__name__)
 def build(df: pd.DataFrame, pair: BasisPairConfig, window_years: int = 5) -> go.Figure:
     """Build the z-score heatmap for one pair."""
     info = PAIR_DISPLAY[pair.label]
+    adjusted = pair.commodity in {"soja", "milho"} and "value_source" in df and (df["value_source"] == "adjusted").any()
     fig = go.Figure()
 
     if df.empty:
@@ -72,7 +73,7 @@ def build(df: pd.DataFrame, pair: BasisPairConfig, window_years: int = 5) -> go.
     ))
 
     fig.update_layout(
-        title=f"{info.title} — heatmap z-score (mediana semanal, janela {window_years}y)",
+        title=f"{info.title} — heatmap z-score (mediana semanal, janela {window_years}y){' — histórico ajustado' if adjusted else ''}",
         xaxis=dict(title="Semana"),
         yaxis=dict(title="Praça", autorange="reversed"),
         template="plotly_white",

@@ -153,6 +153,26 @@ def test_load_pair_data_returns_value_column(synthetic_basis):
     assert df["value"].notna().all()
 
 
+def test_adjusted_history_default_and_raw_fallback():
+    raw = pd.DataFrame({"basis_cents_bu": [10.0, 11.0], "basis_cents_bu_adj": [20.0, 21.0]})
+    col, used = common.historical_value_column(SOJA_CBOT, raw)
+    assert (col, used) == ("basis_cents_bu_adj", True)
+    old = raw.drop(columns="basis_cents_bu_adj")
+    assert common.historical_value_column(SOJA_CBOT, old) == ("basis_cents_bu", False)
+    assert common.historical_value_column(MILHO_B3, raw)[1] is False
+
+
+def test_current_level_stats_use_raw_value():
+    df = pd.DataFrame({
+        "date": pd.to_datetime(["2024-01-01", "2024-01-02"]),
+        "location": ["Sorriso/MT", "Sorriso/MT"], "state": ["MT", "MT"],
+        "value": [20.0, 21.0], "value_raw": [10.0, 11.0],
+    })
+    stats = companion.compute_stats(df)
+    assert stats.iloc[0]["basis_today"] == 11.0
+    assert stats.iloc[0]["mean_5y"] == 10.5
+
+
 # ── companion.py ─────────────────────────────────────────────────────────────
 
 def test_compute_stats_columns(synthetic_basis):
@@ -221,6 +241,16 @@ def test_seasonality_build_combined(synthetic_basis):
     assert "updatemenus[2].buttons" in relayout
 
 
+def test_combined_banner_labels_adjusted_only_for_soja_milho(synthetic_basis):
+    soja = common.load_pair_data(SOJA_CBOT).copy()
+    soja["value_source"] = "adjusted"
+    milho = common.load_pair_data(MILHO_B3).copy()
+    fig = seasonality.build_combined([(SOJA_CBOT, soja), (MILHO_B3, milho)])
+    assert "histórico ajustado" in str(fig.layout.annotations[0].text)
+    milho_btn = next(b for b in fig.layout.updatemenus[0].buttons if b.label == "Milho")
+    assert "histórico ajustado" not in str(milho_btn.args[1]["annotations[0].text"])
+
+
 # ── multi_location.py ────────────────────────────────────────────────────────
 
 def test_multi_location_returns_figure(synthetic_basis):
@@ -231,6 +261,14 @@ def test_multi_location_returns_figure(synthetic_basis):
     types = [type(t).__name__ for t in fig.data]
     assert "Scatter" in types
     assert "Table" in types
+
+
+def test_multi_location_marks_missing_roll_gap():
+    df = common.load_pair_data(SOJA_CBOT).iloc[:4].copy()
+    df["value_source"] = "adjusted"
+    df["roll_gap_missing"] = [False, True, False, False]
+    fig = multi_location.build(df, SOJA_CBOT, window_years=5)
+    assert any("troca sem gap comum" in str(t.name).lower() for t in fig.data)
 
 
 # ── deviation_map.py ─────────────────────────────────────────────────────────

@@ -35,12 +35,12 @@ STATS_COLUMNS = [
 ]
 
 
-def _nearest_value(loc_df: pd.DataFrame, target_date: pd.Timestamp) -> float:
+def _nearest_value(loc_df: pd.DataFrame, target_date: pd.Timestamp, column: str = "value") -> float:
     """Return the basis value at-or-before target_date; NaN if none."""
     sub = loc_df[loc_df["date"] <= target_date]
     if sub.empty:
         return np.nan
-    return float(sub.iloc[-1]["value"])
+    return float(sub.iloc[-1][column])
 
 
 def _percentile(values: pd.Series, x: float) -> float:
@@ -60,6 +60,9 @@ def compute_stats(df: pd.DataFrame, window_years: int = 5) -> pd.DataFrame:
     if df.empty:
         return pd.DataFrame(columns=STATS_COLUMNS)
 
+    # Current levels, distributions, and percentiles always use the traded raw basis.
+    # Historical chart traces may use ``value`` from the roll-adjusted column.
+    stats_value = "value_raw" if "value_raw" in df.columns else "value"
     today = df["date"].max()
     cutoff_5y = today - pd.DateOffset(years=window_years)
     cutoff_3y = today - pd.DateOffset(years=3)
@@ -72,18 +75,18 @@ def compute_stats(df: pd.DataFrame, window_years: int = 5) -> pd.DataFrame:
         loc_df = loc_df.sort_values("date")
         state = loc_df["state"].dropna().iloc[0] if loc_df["state"].notna().any() else None
 
-        window_5y = loc_df[loc_df["date"] >= cutoff_5y]["value"]
-        window_3y = loc_df[loc_df["date"] >= cutoff_3y]["value"]
+        window_5y = loc_df[loc_df["date"] >= cutoff_5y][stats_value]
+        window_3y = loc_df[loc_df["date"] >= cutoff_3y][stats_value]
 
-        basis_today = _nearest_value(loc_df, today)
+        basis_today = _nearest_value(loc_df, today, stats_value)
 
         rows.append({
             "location": loc,
             "state": state,
             "basis_today": basis_today,
-            "basis_d1": _nearest_value(loc_df, d1),
-            "basis_w1": _nearest_value(loc_df, w1),
-            "basis_m1": _nearest_value(loc_df, m1),
+            "basis_d1": _nearest_value(loc_df, d1, stats_value),
+            "basis_w1": _nearest_value(loc_df, w1, stats_value),
+            "basis_m1": _nearest_value(loc_df, m1, stats_value),
             "mean_3y": float(window_3y.mean()) if not window_3y.empty else np.nan,
             "mean_5y": float(window_5y.mean()) if not window_5y.empty else np.nan,
             "min_5y": float(window_5y.min()) if not window_5y.empty else np.nan,

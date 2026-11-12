@@ -192,6 +192,20 @@ def _climate_normal_traces(
                 ),
                 customdata=cy_dates,
             ))
+            missing = loc_df.get("roll_gap_missing", pd.Series(False, index=loc_df.index)).fillna(False).astype(bool)
+            missing_current = loc_df[missing & (loc_df["date"].dt.year == current_year)]
+            if not missing_current.empty:
+                traces.append(go.Scatter(
+                    x=missing_current["date"].dt.dayofyear.tolist(),
+                    y=missing_current["value"].tolist(),
+                    mode="markers",
+                    marker=dict(symbol="x", size=9, color="#d62728"),
+                    name="Troca sem gap comum",
+                    hovertemplate=(
+                        "<b>Troca sem gap comum</b><br>"
+                        "O passo do contrato permanece bruto<extra></extra>"
+                    ),
+                ))
 
             # 6. Last-observation marker — honestly labeled based on staleness
             today_doy = int(today.dayofyear)
@@ -257,6 +271,7 @@ def _trace_visibility_helpers(traces_per_loc, total):
 def build(df: pd.DataFrame, pair: BasisPairConfig) -> go.Figure:
     """Build per-pair figure with single praça dropdown (legacy mode + tests)."""
     info = PAIR_DISPLAY[pair.label]
+    adjusted = pair.commodity in {"soja", "milho"} and "value_source" in df and (df["value_source"] == "adjusted").any()
     if df.empty:
         return _empty_fig(f"{info.title} — sem dados")
 
@@ -297,13 +312,13 @@ def build(df: pd.DataFrame, pair: BasisPairConfig) -> go.Figure:
         dict(
             label=loc,
             method="update",
-            args=[{"visible": _vis(loc)}, {"title": f"{info.title} — {loc}"}],
+            args=[{"visible": _vis(loc)}, {"title": f"{info.title} — {loc}{' (histórico ajustado)' if adjusted else ''}"}],
         )
         for loc in traces_per_loc
     ]
 
     fig.update_layout(
-        title=f"{info.title} — {first_loc}",
+        title=f"{info.title} — {first_loc}{' (histórico ajustado)' if adjusted else ''}",
         xaxis=dict(
             title="Dia do ano (calendário)",
             tickmode="array",
@@ -362,6 +377,11 @@ def build_combined(pair_data: list[tuple[BasisPairConfig, pd.DataFrame]]) -> go.
             "futures_label": FUTURES_LABELS.get(_futures_slug(pair.label), _futures_slug(pair.label).upper()),
             "last_data_str": today.strftime("%Y-%m-%d"),
             "stale_days": stale_days,
+            "adjusted": (
+                pair.commodity in {"soja", "milho"}
+                and "value_source" in df
+                and (df["value_source"] == "adjusted").any()
+            ),
         }
         commodity_to_pairs.setdefault(pair.commodity, []).append(pair)
 
@@ -466,6 +486,7 @@ def build_combined(pair_data: list[tuple[BasisPairConfig, pd.DataFrame]]) -> go.
             f"  ·  últ. obs: {last_str}"
             f"  {fresh_html}"
             f"  ·  hoje: {real_today.strftime('%Y-%m-%d')}"
+            f"  ·  {'histórico ajustado' if m['adjusted'] else ''}"
             f"</span>"
         )
 

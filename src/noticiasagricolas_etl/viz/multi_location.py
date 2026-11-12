@@ -37,13 +37,17 @@ def build(df: pd.DataFrame, pair: BasisPairConfig, window_years: int = 5) -> go.
     df must have columns: date, location, state, value.
     """
     info = PAIR_DISPLAY[pair.label]
+    adjusted = pair.commodity in {"soja", "milho"} and "value_source" in df and (df["value_source"] == "adjusted").any()
 
     fig = make_subplots(
         rows=2, cols=1,
         row_heights=[0.65, 0.35],
         specs=[[{"type": "scatter"}], [{"type": "table"}]],
         vertical_spacing=0.08,
-        subplot_titles=(info.title, "Companion stats — basis hoje, médias, percentil"),
+        subplot_titles=(
+            f"{info.title}{' — histórico ajustado' if adjusted else ''}",
+            "Companion stats — níveis e percentil bruto",
+        ),
     )
 
     if df.empty:
@@ -83,6 +87,23 @@ def build(df: pd.DataFrame, pair: BasisPairConfig, window_years: int = 5) -> go.
             ),
             row=1, col=1,
         )
+        missing = loc_df.get("roll_gap_missing", pd.Series(False, index=loc_df.index)).fillna(False).astype(bool)
+        if missing.any():
+            marked = loc_df[missing]
+            fig.add_trace(
+                go.Scatter(
+                    x=marked["date"], y=marked["value"], mode="markers",
+                    name=f"{loc} — troca sem gap comum",
+                    legendgroup=f"missing-{loc}",
+                    marker=dict(symbol="x", size=8, color="#d62728", line=dict(width=1)),
+                    customdata=marked.get("futures_contract"),
+                    hovertemplate=(
+                        f"<b>{loc}</b><br>Data: %{{x|%Y-%m-%d}}<br>"
+                        "Gap de roll ausente: passo do contrato permanece bruto<extra></extra>"
+                    ),
+                ),
+                row=1, col=1,
+            )
 
     # Companion table from full df (window 5y inside compute_stats)
     stats = compute_stats(df, window_years=window_years)
