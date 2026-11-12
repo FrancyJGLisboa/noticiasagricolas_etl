@@ -377,6 +377,11 @@ def build_combined(pair_data: list[tuple[BasisPairConfig, pd.DataFrame]]) -> go.
             "futures_label": FUTURES_LABELS.get(_futures_slug(pair.label), _futures_slug(pair.label).upper()),
             "last_data_str": today.strftime("%Y-%m-%d"),
             "stale_days": stale_days,
+            "adjusted": (
+                pair.commodity in {"soja", "milho"}
+                and "value_source" in df
+                and (df["value_source"] == "adjusted").any()
+            ),
         }
         commodity_to_pairs.setdefault(pair.commodity, []).append(pair)
 
@@ -481,6 +486,7 @@ def build_combined(pair_data: list[tuple[BasisPairConfig, pd.DataFrame]]) -> go.
             f"  ·  últ. obs: {last_str}"
             f"  {fresh_html}"
             f"  ·  hoje: {real_today.strftime('%Y-%m-%d')}"
+            f"  ·  {'histórico ajustado' if m['adjusted'] else ''}"
             f"</span>"
         )
 

@@ -241,6 +241,16 @@ def test_seasonality_build_combined(synthetic_basis):
     assert "updatemenus[2].buttons" in relayout
 
 
+def test_combined_banner_labels_adjusted_only_for_soja_milho(synthetic_basis):
+    soja = common.load_pair_data(SOJA_CBOT).copy()
+    soja["value_source"] = "adjusted"
+    milho = common.load_pair_data(MILHO_B3).copy()
+    fig = seasonality.build_combined([(SOJA_CBOT, soja), (MILHO_B3, milho)])
+    assert "histórico ajustado" in str(fig.layout.annotations[0].text)
+    milho_btn = next(b for b in fig.layout.updatemenus[0].buttons if b.label == "Milho")
+    assert "histórico ajustado" not in str(milho_btn.args[1]["annotations[0].text"])
+
+
 # ── multi_location.py ────────────────────────────────────────────────────────
 
 def test_multi_location_returns_figure(synthetic_basis):
