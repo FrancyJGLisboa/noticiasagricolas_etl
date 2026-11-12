@@ -1,7 +1,6 @@
 """DuckDB connection and Parquet view registration."""
 
 import logging
-from pathlib import Path
 
 import duckdb
 
@@ -97,7 +96,15 @@ def _register_basis_view(conn: duckdb.DuckDBPyConnection) -> None:
                 NULL::DOUBLE AS basis_usd,
                 NULL::DOUBLE AS basis_pct,
                 NULL::DOUBLE AS basis_centavos_sc,
-                NULL::DOUBLE AS basis_cents_bu
+                NULL::DOUBLE AS basis_cents_bu,
+                NULL::BOOLEAN AS roll,
+                NULL::DOUBLE AS roll_gap_brl,
+                NULL::DOUBLE AS roll_gap_cents_bu,
+                NULL::BOOLEAN AS roll_gap_missing,
+                NULL::DOUBLE AS basis_brl_adj,
+                NULL::DOUBLE AS basis_usd_adj,
+                NULL::DOUBLE AS basis_centavos_sc_adj,
+                NULL::DOUBLE AS basis_cents_bu_adj
             WHERE false
         """)
         logger.warning("No basis Parquet files found in %s — created empty view", PARQUET_BASIS_DIR)
