@@ -540,6 +540,24 @@ class TestAnalyticsExtras:
         assert 0 <= data["percentile"] <= 100
         assert "interpretation" in data
 
+    def test_basis_opportunities_route(self, client):
+        resp = client.get(
+            "/v1/analytics/basis-opportunities"
+            "?commodity=soja&futures_indicator=soja-b3&target_date=2024-06-11"
+        )
+        assert resp.status_code == 200
+        payload = resp.json()
+        assert payload["commodity"] == "soja"
+        assert payload["target_date"] == "2024-06-11"
+        assert payload["count"] == 2
+        assert payload["excluded"] == []
+        row = next(item for item in payload["data"] if item["location"] == "Paranagua/PR")
+        assert row["basis_column"] == "basis_brl"
+        assert row["last_date"] == "2024-06-11"
+        assert "percentile_all" in row
+        assert "percentile_season" in row
+        assert "hedge" in row
+
     def test_basis_percentile_no_data(self, client):
         resp = client.get(
             "/v1/analytics/basis-percentile?commodity=soja&location=NowhereCity/XX"

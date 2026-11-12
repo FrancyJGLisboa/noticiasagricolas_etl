@@ -7,6 +7,7 @@ from fastapi import APIRouter, HTTPException, Query
 from ..services import (
     anomaly_service,
     attribution_service,
+    basis_opportunities_service,
     basis_panel_service,
     basis_percentile_service,
     basis_service,
@@ -178,17 +179,36 @@ def get_basis_percentile(
     column: str = Query("basis_brl",
         description="basis_brl | basis_cents_bu | basis_centavos_sc | basis_pct"),
 ):
-    """Today's basis percentile in the N-year history for one praça.
-
-    Tells the trader 'is the current basis cheap or expensive vs typical?' as a
-    0-100 number with a plain-Portuguese interpretation string.
-    """
+    """Basis percentile against all history and the same calendar month."""
     return _handle_query(
         basis_percentile_service.get_basis_percentile,
         commodity=commodity, location=location,
         futures_indicator=futures_indicator,
         target_date=target_date, window_years=window_years,
         column=column,
+    )
+
+
+@router.get("/basis-opportunities")
+def get_basis_opportunities(
+    commodity: str = Query(..., description="Commodity name, such as soja or milho"),
+    futures_indicator: str | None = Query(None, description="Optional futures reference slug"),
+    target_date: str | None = Query(None, description="ISO date; defaults to latest dataset date"),
+    window_years: int = Query(5, ge=1, le=20),
+    stale_after_business_days: int = Query(10, ge=0, le=60),
+    anomaly_window: int = Query(60, ge=10, le=365),
+    z_threshold: float = Query(3.0, ge=1.0, le=10.0),
+):
+    """Rank current basis conditions with seasonal, anomaly, hedge, and coverage context."""
+    return _handle_query(
+        basis_opportunities_service.get_basis_opportunities,
+        commodity=commodity,
+        futures_indicator=futures_indicator,
+        target_date=target_date,
+        window_years=window_years,
+        stale_after_business_days=stale_after_business_days,
+        anomaly_window=anomaly_window,
+        z_threshold=z_threshold,
     )
 
 
@@ -367,11 +387,7 @@ def get_port_basis_tracker(
     column: str = Query("basis_brl",
         description="basis_brl | basis_usd | basis_pct | basis_centavos_sc | basis_cents_bu"),
 ):
-    """Basis percentile across all Brazilian export ports, ranked cheapest to most expensive.
-
-    Buy-signal screen: low percentile = basis below typical = good time to lock
-    physical / accumulate inventory. High percentile = sell-pressure window.
-    """
+    """Basis percentile across Brazilian export ports, ranked from low to high."""
     return _handle_query(
         port_basis_tracker_service.get_port_basis_tracker,
         commodity=commodity, futures_indicator=futures_indicator,

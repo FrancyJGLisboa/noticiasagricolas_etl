@@ -69,6 +69,7 @@ Restart Claude Desktop, then ask: *"Onde está o basis da soja em Sorriso/MT vs 
 na-api &                 # serves on http://localhost:8000
 open http://localhost:8000/docs   # OpenAPI playground
 curl "http://localhost:8000/v1/analytics/basis-percentile?commodity=soja&location=Sorriso/MT"
+curl "http://localhost:8000/v1/analytics/basis-opportunities?commodity=soja"
 ```
 
 **Try direct import** (fastest, no HTTP):
@@ -100,7 +101,8 @@ your agent quotes the string instead of composing prose.
 | `get_basis` | Basis time series for a commodity-pair-praça |
 | `get_basis_panel` | Query the materialized basis panel (BRL, USD, ¢/bu, %) |
 | `get_basis_percentile` | "Is today's basis cheap or expensive vs typical?" (P0-100 + interp) |
-| `get_port_basis_tracker` | Basis percentile across ALL Brazilian export ports, ranked cheapest first (buy-signal screen) |
+| `basis-opportunities` REST endpoint | Seasonal ranking with change, anomaly, hedge, coverage, and freshness |
+| `get_port_basis_tracker` | Basis percentile across all Brazilian export ports, ranked from low to high |
 | `get_price_attribution` | Decompose ΔP_local into FX vs CBOT vs basis buckets |
 | `get_fx_adjusted` | Convert prices BRL ↔ USD via PTAX |
 
@@ -139,7 +141,7 @@ your agent quotes the string instead of composing prose.
 
 Every percentile-based service returns a **plain-Portuguese interpretation** like:
 
-> `"basis EXTREMAMENTE CARO — está em P92, acima de 92% da história 5y. Sinal forte para venda física."`
+> `"Basis no percentil 92, acima da faixa histórica usual dos últimos 5 anos."`
 
 The agent quotes it; no prompt-engineering needed for narrative output.
 
