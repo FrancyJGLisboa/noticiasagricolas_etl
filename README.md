@@ -170,7 +170,8 @@ The adjusted value equals the raw value on the latest date of each series.
 Earlier segments subtract the gaps from all later rolls.
 
 If the ETL cannot measure a roll gap, `roll_gap_missing` is true.
-Adjusted columns remain null before that roll because the series cannot cross it safely.
+The adjusted series keeps that contract step unchanged.
+Valid rolls on both sides remain adjusted, and the missing gap creates no null rows.
 
 Adjusted levels are analytical series for changes, swings, and anomaly detection.
 They are not prices that a market participant traded.

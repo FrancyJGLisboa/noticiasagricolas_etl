@@ -144,7 +144,8 @@ def add_roll_adjustments(
 
     The latest observation in each location and futures-reference series stays
     equal to the raw basis. Each earlier segment subtracts all later roll gaps.
-    A missing roll gap makes adjusted values before that roll null.
+    A missing roll gap leaves that contract step unchanged. Valid gaps on both
+    sides still adjust their respective changes.
     """
     result = basis_df.copy(deep=True)
     result["roll"] = False
@@ -211,12 +212,11 @@ def add_roll_adjustments(
             "basis_cents_bu": gap_cents_bu,
         }
         cumulative = {metric: 0.0 for metric in metric_gaps}
-        blocked = False
         for row_index in reversed(ordered.index.tolist()):
             for metric, gaps in metric_gaps.items():
                 output_column = f"{metric}_adj"
                 raw_value = result.at[row_index, metric]
-                if blocked or pd.isna(raw_value):
+                if pd.isna(raw_value):
                     result.at[row_index, output_column] = np.nan
                 else:
                     result.at[row_index, output_column] = (
@@ -225,7 +225,6 @@ def add_roll_adjustments(
 
             if bool(result.at[row_index, "roll"]):
                 if bool(result.at[row_index, "roll_gap_missing"]):
-                    blocked = True
                     continue
                 for metric, gaps in metric_gaps.items():
                     gap_value = gaps.at[row_index]

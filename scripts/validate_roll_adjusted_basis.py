@@ -8,7 +8,11 @@ import hashlib
 import math
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
+
+from noticiasagricolas_etl.basis.calculator import select_front_month
+from noticiasagricolas_etl.basis_config import BASIS_PAIRS
 
 NEW_COLUMNS = [
     "roll",
@@ -83,35 +87,138 @@ def _latest_failures(frame: pd.DataFrame) -> int:
     return failures
 
 
-def _median_changes(
+def _adjusted_null_mask_failures(frame: pd.DataFrame) -> int:
+    return sum(
+        int((frame[raw_column].notna() != frame[adjusted_column].notna()).sum())
+        for raw_column, adjusted_column in LATEST_PAIRS
+    )
+
+
+def _weighted_median(values: pd.Series, weights: pd.Series) -> float:
+    if values.empty:
+        return float("nan")
+    order = np.argsort(values.to_numpy(dtype=float), kind="stable")
+    sorted_values = values.to_numpy(dtype=float)[order]
+    sorted_weights = weights.to_numpy(dtype=float)[order]
+    cutoff = sorted_weights.sum() / 2.0
+    position = int(np.searchsorted(np.cumsum(sorted_weights), cutoff, side="left"))
+    return float(sorted_values[position])
+
+
+def _matched_change_metrics(
     frame: pd.DataFrame,
-    *,
-    location: str,
     futures_indicator: str,
-) -> tuple[float, float, float, float]:
-    series = frame[
-        (frame["location"] == location)
-        & (frame["futures_indicator"] == futures_indicator)
-    ].copy()
+) -> dict[str, object]:
+    """Compare roll changes with non-roll changes matched by calendar-day span."""
+    series = frame[frame["futures_indicator"] == futures_indicator].copy()
     series["date"] = pd.to_datetime(series["date"])
-    series = series.sort_values("date")
-    series["raw_change"] = series["basis_brl"].diff().abs()
-    series["adjusted_change"] = series["basis_brl_adj"].diff().abs()
-    series["valid_gap_adjusted_change"] = (
-        series["basis_brl"].diff() + series["roll_gap_brl"]
-    ).abs()
-    raw_roll = float(series.loc[series["roll"], "raw_change"].median())
-    adjusted_roll = float(series.loc[series["roll"], "adjusted_change"].median())
-    valid_gap_adjusted_roll = float(
-        series.loc[
-            series["roll"] & ~series["roll_gap_missing"],
-            "valid_gap_adjusted_change",
-        ].median()
+    series = series.sort_values(["location", "date"], kind="stable")
+    groups = series.groupby("location", dropna=False, sort=False)
+    series["previous_date"] = groups["date"].shift()
+    series["calendar_days"] = (series["date"] - series["previous_date"]).dt.days
+    series["adjusted_change"] = groups["basis_brl_adj"].diff().abs()
+    series = series.dropna(subset=["calendar_days", "adjusted_change"])
+    series = series[series["calendar_days"] > 0].copy()
+
+    roll = series[series["roll"]].copy()
+    non_roll = series[~series["roll"]].copy()
+    roll_counts = roll.groupby("calendar_days").size()
+    non_roll_counts = non_roll.groupby("calendar_days").size()
+    matched_days = roll_counts.index.intersection(non_roll_counts.index)
+    matched_roll = roll[roll["calendar_days"].isin(matched_days)]
+    matched_non_roll = non_roll[non_roll["calendar_days"].isin(matched_days)].copy()
+    weights_by_day = {
+        day: float(roll_counts.loc[day]) / float(non_roll_counts.loc[day])
+        for day in matched_days
+    }
+    matched_non_roll["match_weight"] = matched_non_roll["calendar_days"].map(
+        weights_by_day
     )
-    adjusted_non_roll = float(
-        series.loc[~series["roll"], "adjusted_change"].median()
+    gap_mix = ",".join(
+        f"{int(day)}d:{int(roll_counts.loc[day])}"
+        for day in sorted(roll_counts.index)
     )
-    return raw_roll, adjusted_roll, valid_gap_adjusted_roll, adjusted_non_roll
+
+    return {
+        "roll_median": (
+            float(matched_roll["adjusted_change"].median())
+            if not matched_roll.empty
+            else float("nan")
+        ),
+        "matched_non_roll_median": _weighted_median(
+            matched_non_roll["adjusted_change"],
+            matched_non_roll["match_weight"],
+        ),
+        "roll_n": len(roll),
+        "matched_roll_n": len(matched_roll),
+        "unmatched_roll_n": len(roll) - len(matched_roll),
+        "gap_mix": gap_mix,
+    }
+
+
+def _classify_missing_rolls(
+    basis_path: Path,
+    frame: pd.DataFrame,
+    raw_csv_dir: Path,
+) -> dict[str, int]:
+    """Classify missing gaps by evidence of B3 selector-removed source dates."""
+    commodity = basis_path.stem.removeprefix("basis-")
+    raw_path = raw_csv_dir / f"{commodity}.csv"
+    if not raw_path.exists():
+        raise FileNotFoundError(f"missing raw source file: {raw_path}")
+
+    work = frame.copy()
+    work["date"] = pd.to_datetime(work["date"])
+    work = work.sort_values(
+        ["location", "futures_indicator", "date"],
+        kind="stable",
+    )
+    groups = work.groupby(
+        ["location", "futures_indicator"],
+        dropna=False,
+        sort=False,
+    )
+    work["previous_date"] = groups["date"].shift()
+    missing = work[work["roll"] & work["roll_gap_missing"]].copy()
+    raw = pd.read_csv(raw_path, low_memory=False)
+    raw["date"] = pd.to_datetime(raw["date"])
+
+    removed_by_b3_fix = 0
+    for indicator, rows in missing.groupby("futures_indicator", sort=False):
+        config = next(
+            (pair for pair in BASIS_PAIRS if pair.futures_indicator == indicator),
+            None,
+        )
+        if config is None or config.contract_roll_policy == "nearest_available":
+            continue
+        futures = raw[
+            (raw["indicator"] == indicator)
+            & (raw["measure"] == "price")
+            & raw["contract"].notna()
+            & raw["value"].notna()
+        ][["date", "contract", "value"]].rename(
+            columns={"value": "futures_price_raw"}
+        )
+        front = select_front_month(
+            futures,
+            contract_roll_policy=config.contract_roll_policy,
+        )
+        raw_dates = set(pd.to_datetime(futures["date"].unique()))
+        selected_dates = set(pd.to_datetime(front["date"].unique()))
+        for row in rows.itertuples(index=False):
+            has_removed_surrounding_date = any(
+                row.previous_date < source_date < row.date
+                and source_date not in selected_dates
+                for source_date in raw_dates
+            )
+            removed_by_b3_fix += int(has_removed_surrounding_date)
+
+    total = len(missing)
+    return {
+        "missing": total,
+        "b3_removed_days": removed_by_b3_fix,
+        "other_reason": total - removed_by_b3_fix,
+    }
 
 
 def validate(old_dir: Path, new_dir: Path) -> int:
@@ -154,48 +261,41 @@ def validate(old_dir: Path, new_dir: Path) -> int:
         print(f"{path.name} failures={latest_failures}")
         failures += int(latest_failures > 0)
 
+    print("ADJUSTED_NULL_MASK")
+    for path, frame in validated_files:
+        null_mask_failures = _adjusted_null_mask_failures(frame)
+        print(f"{path.name} failures={null_mask_failures}")
+        failures += int(null_mask_failures > 0)
+
     print("MISSING_ROLL_GAPS")
     for path, frame in validated_files:
         missing = int((frame["roll"] & frame["roll_gap_missing"]).sum())
         rolls = int(frame["roll"].sum())
-        print(f"{path.name} missing={missing} rolls={rolls}")
+        rate = missing / rolls * 100.0 if rolls else 0.0
+        print(f"{path.name} missing={missing} rolls={rolls} rate={rate:.2f}%")
 
-    print("NAMED_SERIES_MEDIAN_ABS_DAILY_CHANGE_BRL")
-    named_series = [
-        (
-            "basis-milho.csv",
-            "Rio Verde/GO",
-            "milho-b3-prego-regular",
-        ),
-        (
-            "basis-soja.csv",
-            "Sorriso/MT",
-            "soja-bolsa-de-chicago-cme-group",
-        ),
-    ]
-    frames = {path.name: frame for path, frame in validated_files}
-    for file_name, location, indicator in named_series:
-        frame = frames.get(file_name)
-        if frame is None:
-            print(f"{file_name} {location} missing_file")
-            failures += 1
-            continue
-        (
-            raw_roll,
-            adjusted_roll,
-            valid_gap_adjusted_roll,
-            adjusted_non_roll,
-        ) = _median_changes(
-            frame,
-            location=location,
-            futures_indicator=indicator,
-        )
+    print("MISSING_ROLL_GAP_CLASSIFICATION")
+    for path, frame in validated_files:
+        classification = _classify_missing_rolls(path, frame, old_dir)
         print(
-            f"{file_name} {location} {indicator} "
-            f"raw_roll={raw_roll:.4f} adjusted_roll={adjusted_roll:.4f} "
-            f"valid_gap_adjusted_roll={valid_gap_adjusted_roll:.4f} "
-            f"adjusted_non_roll={adjusted_non_roll:.4f}"
+            f"{path.name} missing={classification['missing']} "
+            f"b3_removed_days={classification['b3_removed_days']} "
+            f"other_reason={classification['other_reason']}"
         )
+
+    print("CALENDAR_DAY_MATCHED_MEDIAN_ABS_CHANGE_BRL")
+    for path, frame in validated_files:
+        for indicator in sorted(frame["futures_indicator"].dropna().unique()):
+            metrics = _matched_change_metrics(frame, str(indicator))
+            print(
+                f"{path.name} {indicator} "
+                f"roll={metrics['roll_median']:.4f} "
+                f"matched_non_roll={metrics['matched_non_roll_median']:.4f} "
+                f"roll_n={metrics['roll_n']} "
+                f"matched_roll_n={metrics['matched_roll_n']} "
+                f"unmatched_roll_n={metrics['unmatched_roll_n']} "
+                f"roll_gap_days={metrics['gap_mix']}"
+            )
 
     print(f"RESULT failures={failures}")
     return 1 if failures else 0

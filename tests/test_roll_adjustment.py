@@ -116,7 +116,7 @@ def test_two_rolls_subtract_all_later_gaps():
     )
 
 
-def test_missing_common_quote_stops_adjustment_before_roll():
+def test_missing_common_quote_leaves_step_unadjusted_without_nulls():
     basis = _basis_frame(
         ["2025-01", "2025-01", "2025-03", "2025-03"],
         [10.0, 11.0, 7.0, 8.0],
@@ -138,8 +138,68 @@ def test_missing_common_quote_stops_adjustment_before_roll():
     )
 
     assert result["roll_gap_missing"].tolist() == [False, False, True, False]
-    assert result.loc[:1, "basis_brl_adj"].isna().all()
-    assert result.loc[2:, "basis_brl_adj"].tolist() == pytest.approx([7.0, 8.0])
+    assert result["basis_brl_adj"].tolist() == pytest.approx([10.0, 11.0, 7.0, 8.0])
+
+
+def test_missing_gap_preserves_boundary_step_between_adjusted_segments():
+    basis = _basis_frame(
+        [
+            "2025-01",
+            "2025-01",
+            "2025-03",
+            "2025-03",
+            "2025-05",
+            "2025-05",
+            "2025-07",
+            "2025-07",
+        ],
+        [20.0, 21.0, 17.0, 18.0, 8.0, 9.0, 6.0, 7.0],
+    )
+    futures = _futures(
+        [
+            (0, "2025-01", 100.0),
+            (0, "2025-03", 105.0),
+            (1, "2025-01", 101.0),
+            (1, "2025-03", 106.0),
+            (2, "2025-03", 107.0),
+            (3, "2025-03", 108.0),
+            (4, "2025-05", 110.0),
+            (4, "2025-07", 112.0),
+            (5, "2025-05", 111.0),
+            (5, "2025-07", 113.0),
+            (6, "2025-07", 114.0),
+            (7, "2025-07", 115.0),
+        ]
+    )
+
+    result = add_roll_adjustments(
+        basis,
+        futures,
+        pd.DataFrame(columns=["date", "ptax"]),
+        _pair("milho-b3"),
+    )
+
+    assert result.loc[result["roll"], "roll_gap_missing"].tolist() == [
+        False,
+        True,
+        False,
+    ]
+    assert result["basis_brl_adj"].tolist() == pytest.approx(
+        [13.0, 14.0, 15.0, 16.0, 6.0, 7.0, 6.0, 7.0]
+    )
+    raw_missing_step = result.loc[4, "basis_brl"] - result.loc[3, "basis_brl"]
+    adjusted_missing_step = (
+        result.loc[4, "basis_brl_adj"] - result.loc[3, "basis_brl_adj"]
+    )
+    assert adjusted_missing_step == pytest.approx(raw_missing_step)
+    for raw_column in (
+        "basis_brl",
+        "basis_usd",
+        "basis_centavos_sc",
+        "basis_cents_bu",
+    ):
+        adjusted_column = f"{raw_column}_adj"
+        assert result[raw_column].notna().equals(result[adjusted_column].notna())
 
 
 def test_no_roll_keeps_adjusted_columns_equal_to_raw_columns():
