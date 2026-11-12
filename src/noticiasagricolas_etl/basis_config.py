@@ -1,7 +1,15 @@
 """Basis pair configuration: physical × futures definitions with conversion logic."""
 
-from dataclasses import dataclass, field
-from typing import Callable
+from dataclasses import dataclass
+from typing import Callable, Literal
+
+ContractRollPolicy = Literal[
+    "nearest_available",
+    "b3_sjc",
+    "b3_ccm",
+    "b3_icf",
+    "b3_bgi",
+]
 
 # Conversion constants (USDA/CME official)
 LB_PER_KG = 2.20462
@@ -37,6 +45,7 @@ class BasisPairConfig:
     # Bushels per saca (60 kg). Set for grains (soja=2.2046, milho=2.3621,
     # trigo=2.2046). Used to derive `basis_cents_bu` (CBOT-style ¢/bu quote).
     # None for non-grain commodities (algodão, café, boi gordo).
+    contract_roll_policy: ContractRollPolicy = "nearest_available"
 
 
 # ── 9 pair definitions ────────────────────────────────────────────────────────
@@ -56,6 +65,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         needs_ptax=True,
         convert_futures=lambda fut, ptax: fut * ptax,
         bu_per_sc=BU_PER_SC_SOJA,
+        contract_roll_policy="b3_sjc",
     ),
     # 2. Soja CBOT: US$/bu -> BRL/sc60kg (unit + currency)
     BasisPairConfig(
@@ -82,6 +92,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         futures_unit="R$/sc60kg",
         needs_ptax=False,
         convert_futures=lambda fut, ptax: fut,
+        contract_roll_policy="b3_ccm",
     ),
     # 4. Milho CBOT: US$/bu -> BRL/sc60kg (unit + currency)
     BasisPairConfig(
@@ -128,6 +139,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         futures_unit="US$/sc60kg",
         needs_ptax=True,
         convert_futures=lambda fut, ptax: fut * ptax,
+        contract_roll_policy="b3_icf",
     ),
     # 8. Cafe NYBOT: website pre-converts to R$/sc60kg (no conversion needed)
     #    Source labels as ¢/lb but values are already R$/sc60kg (~2000-2500).
@@ -157,6 +169,7 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         futures_unit="R$/@",
         needs_ptax=False,
         convert_futures=lambda fut, ptax: fut,
+        contract_roll_policy="b3_bgi",
     ),
 ]
 

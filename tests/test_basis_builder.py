@@ -127,6 +127,90 @@ class TestFrontMonthDetection:
         result = _select_front_month(df)
         assert result.empty
 
+    def test_b3_policy_rejects_non_normalized_contract(self):
+        df = pd.DataFrame([
+            {"date": date(2025, 1, 2), "contract": "Jan/25", "futures_price_raw": 74.0},
+        ])
+
+        with pytest.raises(ValueError, match="expected YYYY-MM"):
+            _select_front_month(df, contract_roll_policy="b3_ccm")
+
+    def test_sjc_does_not_substitute_or_return_to_temporarily_missing_contract(self):
+        """A missing SJC quote must create a gap, not a temporary contract switch."""
+        df = pd.DataFrame([
+            {"date": date(2025, 9, 29), "contract": "2025-11", "futures_price_raw": 22.26},
+            {"date": date(2025, 9, 29), "contract": "2026-01", "futures_price_raw": 22.71},
+            {"date": date(2025, 9, 30), "contract": "2026-01", "futures_price_raw": 22.49},
+            {"date": date(2025, 10, 1), "contract": "2026-01", "futures_price_raw": 22.72},
+            {"date": date(2025, 10, 3), "contract": "2025-11", "futures_price_raw": 22.41},
+            {"date": date(2025, 10, 3), "contract": "2026-01", "futures_price_raw": 22.95},
+        ])
+
+        result = _select_front_month(df, contract_roll_policy="b3_sjc")
+
+        assert result["date"].tolist() == [date(2025, 9, 29), date(2025, 10, 3)]
+        assert result["futures_contract"].tolist() == ["2025-11", "2025-11"]
+
+    def test_sjc_rolls_after_last_trading_day(self):
+        """SJC advances after the second business day before the contract month."""
+        df = pd.DataFrame([
+            {"date": date(2025, 10, 30), "contract": "2025-11", "futures_price_raw": 22.40},
+            {"date": date(2025, 10, 30), "contract": "2026-01", "futures_price_raw": 22.90},
+            {"date": date(2025, 10, 31), "contract": "2026-01", "futures_price_raw": 22.92},
+        ])
+
+        result = _select_front_month(df, contract_roll_policy="b3_sjc")
+
+        assert result["futures_contract"].tolist() == ["2025-11", "2026-01"]
+
+    def test_ccm_does_not_roll_before_day_15_when_quote_is_missing(self):
+        """A missing CCM quote before expiry must not select a later contract."""
+        df = pd.DataFrame([
+            {"date": date(2024, 12, 17), "contract": "2025-01", "futures_price_raw": 74.60},
+            {"date": date(2024, 12, 17), "contract": "2025-03", "futures_price_raw": 73.70},
+            {"date": date(2024, 12, 18), "contract": "2025-03", "futures_price_raw": 73.66},
+            {"date": date(2024, 12, 19), "contract": "2025-01", "futures_price_raw": 73.95},
+            {"date": date(2024, 12, 19), "contract": "2025-03", "futures_price_raw": 73.28},
+        ])
+
+        result = _select_front_month(df, contract_roll_policy="b3_ccm")
+
+        assert result["date"].tolist() == [date(2024, 12, 17), date(2024, 12, 19)]
+        assert result["futures_contract"].tolist() == ["2025-01", "2025-01"]
+
+    def test_ccm_rolls_after_expiry_session(self):
+        """CCM keeps the expiring contract through day 15 and advances afterward."""
+        df = pd.DataFrame([
+            {"date": date(2025, 1, 15), "contract": "2025-01", "futures_price_raw": 74.00},
+            {"date": date(2025, 1, 15), "contract": "2025-03", "futures_price_raw": 73.10},
+            {"date": date(2025, 1, 16), "contract": "2025-03", "futures_price_raw": 73.20},
+        ])
+
+        result = _select_front_month(df, contract_roll_policy="b3_ccm")
+
+        assert result["futures_contract"].tolist() == ["2025-01", "2025-03"]
+
+    @pytest.mark.parametrize(
+        ("policy", "current_contract", "next_contract", "last_date", "next_date"),
+        [
+            ("b3_icf", "2025-03", "2025-05", date(2025, 3, 21), date(2025, 3, 24)),
+            ("b3_bgi", "2025-03", "2025-04", date(2025, 3, 31), date(2025, 4, 1)),
+        ],
+    )
+    def test_other_b3_contracts_follow_their_expiry_rules(
+        self, policy, current_contract, next_contract, last_date, next_date
+    ):
+        """ICF and BGI advance only after their respective expiry sessions."""
+        df = pd.DataFrame([
+            {"date": last_date, "contract": current_contract, "futures_price_raw": 100.0},
+            {"date": last_date, "contract": next_contract, "futures_price_raw": 101.0},
+            {"date": next_date, "contract": next_contract, "futures_price_raw": 102.0},
+        ])
+
+        result = _select_front_month(df, contract_roll_policy=policy)
+
+        assert result["futures_contract"].tolist() == [current_contract, next_contract]
+
 
 # ── PTAX forward-fill ────────────────────────────────────────────────────────
 
@@ -626,6 +710,19 @@ class TestBasisConfig:
             assert len(p.physical_indicators) == 2
             assert "soja-mercado-fisico-sindicatos-e-cooperativas" in p.physical_indicators
             assert "soja-mercado-fisico-ms" in p.physical_indicators
+
+    def test_b3_pairs_declare_contract_roll_policies(self):
+        policies = {
+            pair.label: pair.contract_roll_policy
+            for pair in BASIS_PAIRS
+            if pair.label.endswith("-b3")
+        }
+        assert policies == {
+            "soja-b3": "b3_sjc",
+            "milho-b3": "b3_ccm",
+            "cafe-b3": "b3_icf",
+            "boi-gordo-b3": "b3_bgi",
+        }
 
 
 # ── Port location normalization ──────────────────────────────────────────────

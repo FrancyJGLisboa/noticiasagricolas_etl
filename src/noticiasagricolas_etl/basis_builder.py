@@ -42,7 +42,10 @@ def build_pair(
     """
     physical = load_physical_prices(conn, config.physical_indicators, config.commodity)
     futures_raw = load_futures_prices(conn, config.futures_indicator, config.commodity)
-    front_month = select_front_month(futures_raw)
+    front_month = select_front_month(
+        futures_raw,
+        contract_roll_policy=config.contract_roll_policy,
+    )
     return compute_basis_columns(physical, front_month, ptax_df, config)
 
 
