@@ -14,6 +14,7 @@ import pandas as pd
 
 from .basis import (
     BASIS_SCHEMA,
+    add_roll_adjustments,
     compute_basis_columns,
     export_basis_csv,
     load_futures_prices,
@@ -46,7 +47,8 @@ def build_pair(
         futures_raw,
         contract_roll_policy=config.contract_roll_policy,
     )
-    return compute_basis_columns(physical, front_month, ptax_df, config)
+    basis = compute_basis_columns(physical, front_month, ptax_df, config)
+    return add_roll_adjustments(basis, futures_raw, ptax_df, config)
 
 
 def build_all(

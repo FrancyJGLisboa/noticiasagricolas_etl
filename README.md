@@ -157,6 +157,26 @@ The agent quotes it; no prompt-engineering needed for narrative output.
 
 Daily refresh: `na-etl daily` runs scrape → CSV export → basis rebuild → chart regen as one transactional sequence.
 
+### Roll-adjusted basis columns
+
+Every `basis-*.csv` appends roll metadata and four adjusted basis columns.
+The ETL detects a contract change inside each `(location, futures_indicator)` series.
+It measures the futures gap on the last prior source date when both contracts have quotes.
+The search uses at most five source trading dates.
+
+`basis_brl_adj`, `basis_usd_adj`, `basis_centavos_sc_adj`, and
+`basis_cents_bu_adj` use the current contract as their anchor.
+The adjusted value equals the raw value on the latest date of each series.
+Earlier segments subtract the gaps from all later rolls.
+
+If the ETL cannot measure a roll gap, `roll_gap_missing` is true.
+The adjusted series keeps that contract step unchanged.
+Valid rolls on both sides remain adjusted, and the missing gap creates no null rows.
+
+Adjusted levels are analytical series for changes, swings, and anomaly detection.
+They are not prices that a market participant traded.
+Current-level percentiles must continue to use the unadjusted basis columns.
+
 ---
 
 ## Auth (REST API only)

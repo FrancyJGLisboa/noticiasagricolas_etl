@@ -30,6 +30,14 @@ BASIS_SCHEMA = pa.schema([
     ("basis_pct", pa.float64()),
     ("basis_centavos_sc", pa.float64()),
     ("basis_cents_bu", pa.float64()),
+    ("roll", pa.bool_()),
+    ("roll_gap_brl", pa.float64()),
+    ("roll_gap_cents_bu", pa.float64()),
+    ("roll_gap_missing", pa.bool_()),
+    ("basis_brl_adj", pa.float64()),
+    ("basis_usd_adj", pa.float64()),
+    ("basis_centavos_sc_adj", pa.float64()),
+    ("basis_cents_bu_adj", pa.float64()),
 ])
 
 
