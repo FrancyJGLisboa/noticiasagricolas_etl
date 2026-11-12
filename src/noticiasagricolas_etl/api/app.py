@@ -72,6 +72,7 @@ def create_app() -> FastAPI:
                 "prices": ["/v1/prices", "/v1/prices/latest", "/v1/prices/timeseries"],
                 "analytics": [
                     "/v1/analytics/basis", "/v1/analytics/basis-panel",
+                    "/v1/analytics/basis-opportunities",
                     "/v1/analytics/crush-margin",
                     "/v1/analytics/futures-curve", "/v1/analytics/regional-spread",
                     "/v1/analytics/fx-adjusted", "/v1/analytics/seasonal",

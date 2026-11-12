@@ -9,26 +9,32 @@ from typing import Any
 
 import pandas as pd
 
+from ...analytics.basis_signals import MIN_SEASONAL_OBS, percentile_metrics
 from ...analytics.diagnostic import PERCENTILE_5, compute_window_stats
 from .. import database as db
 
-
-_VALID_COLUMNS = {"basis_brl", "basis_usd", "basis_pct", "basis_centavos_sc", "basis_cents_bu"}
+_VALID_COLUMNS = {
+    "basis_brl",
+    "basis_usd",
+    "basis_pct",
+    "basis_centavos_sc",
+    "basis_cents_bu",
+}
 
 # Domain-specific copy: bucket label → interpretation string.
 # {pct} placeholder is filled with the integer percentile; {below} = 100 - pct;
 # {window_years} = the history-window width.
 _INTERP: dict[str, str] = {
     "extreme_high": (
-        "basis EXTREMAMENTE CARO — está em P{pct:.0f}, acima de {pct:.0f}% "
-        "da história {window_years}y. Sinal forte para venda física."
+        "Basis no percentil {pct:.0f}, acima da faixa histórica usual dos últimos "
+        "{window_years} anos."
     ),
-    "high": "basis CARO — P{pct:.0f}, decil superior. Considere fechar venda.",
-    "normal": "basis NORMAL — P{pct:.0f}, dentro da faixa típica.",
-    "low": "basis BARATO — P{pct:.0f}, decil inferior. Considere segurar.",
+    "high": "Basis no percentil {pct:.0f}, dentro do decil superior histórico.",
+    "normal": "Basis no percentil {pct:.0f}, dentro da faixa histórica central.",
+    "low": "Basis no percentil {pct:.0f}, dentro do decil inferior histórico.",
     "extreme_low": (
-        "basis EXTREMAMENTE BARATO — P{pct:.0f}, abaixo de {below:.0f}% "
-        "da história. Sinal forte para segurar/recomprar."
+        "Basis no percentil {pct:.0f}, abaixo da faixa histórica usual dos últimos "
+        "{window_years} anos."
     ),
 }
 
@@ -84,6 +90,22 @@ def get_basis_percentile(
         }
 
     df = pd.DataFrame(rows)
+    df["date"] = pd.to_datetime(df["date"])
+
+    # A percentile must not combine different futures references. When the
+    # caller omits the reference, use the reference on the target observation.
+    if not futures_indicator:
+        requested = pd.Timestamp(target_date) if target_date else df["date"].max()
+        candidates = df[df["date"] <= requested]
+        if candidates.empty:
+            return {
+                "commodity": commodity,
+                "location": location,
+                "error": f"no data on or before {target_date}",
+            }
+        futures_indicator = str(candidates.iloc[-1]["futures_indicator"])
+        df = df[df["futures_indicator"] == futures_indicator].copy()
+
     stats = compute_window_stats(df, target_date=target_date, window_years=window_years)
     if isinstance(stats, dict):
         return {"commodity": commodity, "location": location, **stats}
@@ -95,6 +117,13 @@ def get_basis_percentile(
         below=100 - stats.percentile,
         window_years=window_years,
     )
+    seasonal = percentile_metrics(
+        df,
+        value_col="value",
+        target_date=pd.Timestamp(stats.target_date),
+        window_years=window_years,
+        min_seasonal_obs=MIN_SEASONAL_OBS,
+    )
 
     return {
         "commodity": commodity,
@@ -103,6 +132,10 @@ def get_basis_percentile(
         "column": column,
         "window_years": window_years,
         **stats.as_dict(),
+        "percentile_all": stats.percentile,
+        "percentile_season": seasonal["percentile_season"],
+        "n_obs_season": seasonal["n_obs_season"],
+        "seasonal_reason": seasonal["seasonal_reason"],
         "interpretation": interp,
     }
 

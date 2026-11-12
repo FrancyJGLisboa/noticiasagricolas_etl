@@ -95,7 +95,9 @@ def _register_basis_view(conn: duckdb.DuckDBPyConnection) -> None:
                 NULL::DOUBLE AS ptax,
                 NULL::DOUBLE AS basis_brl,
                 NULL::DOUBLE AS basis_usd,
-                NULL::DOUBLE AS basis_pct
+                NULL::DOUBLE AS basis_pct,
+                NULL::DOUBLE AS basis_centavos_sc,
+                NULL::DOUBLE AS basis_cents_bu
             WHERE false
         """)
         logger.warning("No basis Parquet files found in %s — created empty view", PARQUET_BASIS_DIR)

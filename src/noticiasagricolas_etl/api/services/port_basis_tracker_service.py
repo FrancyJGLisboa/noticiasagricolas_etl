@@ -1,8 +1,8 @@
 """Port basis tracker — basis percentile across all Brazilian export ports.
 
 For one (commodity, futures_indicator), iterates the known export ports and
-returns a list ranked by percentile so a trader sees at a glance which port is
-in extreme territory (cheap basis = buy signal, expensive = wait or sell).
+returns a list ranked by percentile so a user can compare each port with its
+own history.
 
 Composition over the existing `basis_percentile_service`. No new math —
 the percentile/bucketing logic lives in `analytics.diagnostic`.
@@ -73,7 +73,7 @@ def get_port_basis_tracker(
             "interpretation": r["interpretation"],
         })
 
-    # Cheapest basis first (low percentile = below typical = buy signal).
+    # Lowest historical percentile first.
     results.sort(key=lambda r: r["percentile"])
 
     return {

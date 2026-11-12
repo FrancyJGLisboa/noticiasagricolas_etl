@@ -610,13 +610,11 @@ async def get_port_basis_tracker(
     window_years: int = 5,
     column: str = "basis_brl",
 ) -> str:
-    """Basis percentile across all Brazilian export ports, ranked cheapest first.
+    """Basis percentile across all Brazilian export ports, ranked from low to high.
 
-    Use to spot when one port is at extreme territory vs its own 5y history.
-    Low percentile (<P25) = basis abaixo do típico, sinal de compra/acumulação;
-    high percentile (>P75) = basis caro, janela de venda física. Returns one
-    row per port with value, percentile (0-100), bucket-based PT interpretation,
-    and reference stats (mean / p25 / p50 / p75 / min / max / n_obs).
+    Use it to compare each port with its own five-year history. The result has
+    one row per port with a percentile, descriptive interpretation, and
+    reference statistics.
 
     Args:
         commodity: 'soja' | 'milho' | etc.
