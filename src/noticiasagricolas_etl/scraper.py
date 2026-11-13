@@ -24,6 +24,10 @@ from .config import (
 logger = logging.getLogger(__name__)
 
 
+class FetchError(RuntimeError):
+    """A source request failed and the caller must not treat it as empty data."""
+
+
 class Scraper:
     def __init__(
         self,
@@ -84,8 +88,11 @@ class Scraper:
 
             return html
         except requests.RequestException as e:
-            logger.error(f"Request failed for {url}: {e}")
-            return None
+            status = e.response.status_code if e.response is not None else None
+            detail = f"HTTP {status}" if status is not None else str(e)
+            message = f"{detail} for {url}"
+            logger.error("Request failed: %s", message)
+            raise FetchError(message) from e
 
     def fetch_page(self, slug: str, target_date: Optional[date] = None) -> Optional[str]:
         """Fetch a cotacoes page, optionally for a specific date."""

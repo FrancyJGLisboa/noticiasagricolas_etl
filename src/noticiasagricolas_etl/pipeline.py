@@ -35,6 +35,23 @@ class UpdateSummary:
     total_records: int = 0
     indicators_attempted: int = 0
     per_indicator: dict[str, int] = field(default_factory=dict)
+    errors: dict[str, str] = field(default_factory=dict)
+
+
+class UpdateFailed(RuntimeError):
+    """The incremental update cannot be trusted."""
+
+    def __init__(self, summary: UpdateSummary):
+        self.summary = summary
+        if summary.error_count:
+            noun = "indicator fetch" if summary.error_count == 1 else "indicator fetches"
+            message = f"{summary.error_count} {noun} failed"
+            if summary.errors:
+                first_key, first_error = next(iter(summary.errors.items()))
+                message += f"; first error: {first_key}: {first_error}"
+        else:
+            message = f"0 of {summary.indicators_attempted} indicators returned records"
+        super().__init__(message)
 
 logger = logging.getLogger(__name__)
 
@@ -245,6 +262,7 @@ def update(
     error_count = 0
     total_records = 0
     per_indicator: dict[str, int] = {}
+    errors: dict[str, str] = {}
 
     for i, entry in enumerate(target_entries, 1):
         logger.info(f"[{i}/{total}] Updating {entry.commodity}/{entry.slug}")
@@ -269,6 +287,7 @@ def update(
         except Exception as e:
             logger.error(f"Error updating {entry_key}: {e}")
             error_count += 1
+            errors[entry_key] = str(e)
             state[entry_key] = {
                 **state.get(entry_key, {}),
                 "last_update_error": str(e),
@@ -281,13 +300,17 @@ def update(
         f"{total_records} total records across {total} indicators"
     )
 
-    return UpdateSummary(
+    summary = UpdateSummary(
         success_count=success_count,
         error_count=error_count,
         total_records=total_records,
         indicators_attempted=total,
         per_indicator=per_indicator,
+        errors=errors,
     )
+    if error_count or success_count == 0:
+        raise UpdateFailed(summary)
+    return summary
 
 
 def test_parse(

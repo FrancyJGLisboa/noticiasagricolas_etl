@@ -24,6 +24,7 @@ def mocked_steps():
 
     with (
         patch("noticiasagricolas_etl.pipelines.daily.pipeline.update") as update_mock,
+        patch("noticiasagricolas_etl.pipelines.daily.validate_critical_freshness") as freshness_mock,
         patch("noticiasagricolas_etl.pipelines.daily.storage.export_csv") as export_csv_mock,
         patch("noticiasagricolas_etl.pipelines.daily.storage.export_all_csv") as export_all_mock,
         patch("noticiasagricolas_etl.pipelines.daily.basis_builder.build_all") as build_all_mock,
@@ -35,15 +36,23 @@ def mocked_steps():
         )
         build_all_mock.return_value = {"soja-b3": 100, "milho-b3": 50}
         generate_mock.return_value = {"soja-b3": {"seasonality": "ok"}}
-        yield update_mock, export_csv_mock, export_all_mock, build_all_mock, generate_mock
+        yield (
+            update_mock,
+            freshness_mock,
+            export_csv_mock,
+            export_all_mock,
+            build_all_mock,
+            generate_mock,
+        )
 
 
 class TestDailyPipeline:
-    def test_default_runs_all_four_steps(self, mocked_steps) -> None:
-        update_mock, _, export_all_mock, build_all_mock, generate_mock = mocked_steps
+    def test_default_runs_all_five_steps(self, mocked_steps) -> None:
+        update_mock, freshness_mock, _, export_all_mock, build_all_mock, generate_mock = mocked_steps
         summary = DailyPipeline().run()
-        assert summary.steps_run == ["update", "export", "basis", "charts"]
+        assert summary.steps_run == ["update", "freshness", "export", "basis", "charts"]
         assert update_mock.called
+        assert freshness_mock.called
         assert export_all_mock.called
         assert build_all_mock.called
         assert generate_mock.called
@@ -55,26 +64,26 @@ class TestDailyPipeline:
         assert summary.update_summary.total_records == 42
 
     def test_skip_basis_omits_basis_step(self, mocked_steps) -> None:
-        _, _, _, build_all_mock, _ = mocked_steps
+        _, _, _, _, build_all_mock, _ = mocked_steps
         summary = DailyPipeline(DailyConfig(skip_basis=True)).run()
         assert "basis" not in summary.steps_run
         assert not build_all_mock.called
 
     def test_skip_charts_omits_chart_step(self, mocked_steps) -> None:
-        _, _, _, _, generate_mock = mocked_steps
+        _, _, _, _, _, generate_mock = mocked_steps
         summary = DailyPipeline(DailyConfig(skip_charts=True)).run()
         assert "charts" not in summary.steps_run
         assert not generate_mock.called
 
     def test_skip_export_omits_export_step(self, mocked_steps) -> None:
-        _, export_csv_mock, export_all_mock, _, _ = mocked_steps
+        _, _, export_csv_mock, export_all_mock, _, _ = mocked_steps
         summary = DailyPipeline(DailyConfig(skip_export=True)).run()
         assert "export" not in summary.steps_run
         assert not export_csv_mock.called
         assert not export_all_mock.called
 
     def test_commodity_filter_routes_to_export_csv_not_export_all(self, mocked_steps) -> None:
-        _, export_csv_mock, export_all_mock, _, _ = mocked_steps
+        _, _, export_csv_mock, export_all_mock, _, _ = mocked_steps
         summary = DailyPipeline(DailyConfig(commodity="soja")).run()
         assert export_csv_mock.called
         assert not export_all_mock.called
@@ -88,7 +97,7 @@ class TestDailyPipeline:
 
     def test_summary_tracks_partial_progress_on_exception(self, mocked_steps) -> None:
         # Make basis step fail; update + export should still appear in steps_run
-        _, _, _, build_all_mock, _ = mocked_steps
+        _, _, _, _, build_all_mock, _ = mocked_steps
         build_all_mock.side_effect = RuntimeError("basis builder boom")
         pipeline = DailyPipeline()
         with pytest.raises(RuntimeError):
@@ -106,3 +115,22 @@ class TestDailyPipeline:
         assert s.basis_summary == {}
         assert s.csvs_exported == []
         assert s.basis_total_rows == 0
+
+    def test_freshness_failure_prevents_all_later_steps(self, mocked_steps) -> None:
+        (
+            _,
+            freshness_mock,
+            export_csv_mock,
+            export_all_mock,
+            build_all_mock,
+            generate_mock,
+        ) = mocked_steps
+        freshness_mock.side_effect = RuntimeError("critical data stale")
+
+        with pytest.raises(RuntimeError, match="critical data stale"):
+            DailyPipeline().run()
+
+        assert not export_csv_mock.called
+        assert not export_all_mock.called
+        assert not build_all_mock.called
+        assert not generate_mock.called

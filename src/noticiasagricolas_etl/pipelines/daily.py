@@ -1,4 +1,4 @@
-"""Daily orchestrator: scrape → export → basis → charts.
+"""Daily orchestrator: scrape → freshness → export → basis → charts.
 
 Holds the four steps that `na-etl daily` runs in order. Each step is one of
 the existing modules — this wrapper exists to (a) consolidate the skip-flag
@@ -8,9 +8,10 @@ spawning the CLI subprocess.
 
 Step contracts:
   1. update     — pipeline.update(commodity, category) — scrapes latest pages
-  2. export     — storage.export_csv / export_all_csv  — regenerates CSVs
-  3. basis      — basis_builder.build_all(commodities) → {pair: row_count}
-  4. charts     — viz.orchestrator.generate(commodities, viz="all") → dict
+  2. freshness  — validates publication-critical CBOT and PTAX dates
+  3. export     — storage.export_csv / export_all_csv  — regenerates CSVs
+  4. basis      — basis_builder.build_all(commodities) → {pair: row_count}
+  5. charts     — viz.orchestrator.generate(commodities, viz="all") → dict
 
 Failure semantics: any step's exception bubbles through. The summary records
 which steps completed before the exception, so a partial run is observable.
@@ -20,11 +21,12 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import date, datetime
 from typing import Any
 
 from .. import basis_builder, pipeline, storage
 from ..catalog import load_catalog
+from ..freshness import FreshnessReport, validate_critical_freshness
 from ..pipeline import UpdateSummary
 
 logger = logging.getLogger(__name__)
@@ -45,6 +47,7 @@ class DailyConfig:
     skip_export: bool = False
     skip_basis: bool = False
     skip_charts: bool = False
+    expected_date: date | None = None
 
 
 @dataclass
@@ -65,6 +68,7 @@ class DailySummary:
     update_summary: UpdateSummary | None = None
     basis_summary: dict[str, int] = field(default_factory=dict)
     chart_summary: Any = None
+    freshness_report: FreshnessReport | None = None
     csvs_exported: list[str] = field(default_factory=list)
     error: str | None = None
 
@@ -89,6 +93,9 @@ class DailyPipeline:
         try:
             summary.update_summary = self._run_update()
             summary.steps_run.append("update")
+
+            summary.freshness_report = validate_critical_freshness(cfg.expected_date)
+            summary.steps_run.append("freshness")
 
             if not cfg.skip_export:
                 summary.csvs_exported = self._run_export()

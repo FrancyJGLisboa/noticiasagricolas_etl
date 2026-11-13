@@ -52,7 +52,10 @@ def backfill(commodity, category, start_date, end_date, slug, delay, no_resume):
 @click.option("--category", default=None, help="Filter by category (e.g. grains, oilseeds)")
 def update(commodity, category):
     """Incremental update with latest data."""
-    summary = pipeline.update(commodity=commodity, category=category)
+    try:
+        summary = pipeline.update(commodity=commodity, category=category)
+    except pipeline.UpdateFailed as exc:
+        raise click.ClickException(str(exc)) from exc
     click.echo(
         f"Update: {summary.success_count}/{summary.indicators_attempted} indicators ok, "
         f"{summary.error_count} errors, {summary.total_records:,} records."
@@ -198,6 +201,28 @@ def export(commodity, category):
     click.echo("CSV export complete.")
 
 
+@cli.command("validate-freshness")
+@click.option(
+    "--expected-date",
+    type=click.DateTime(formats=["%Y-%m-%d"]),
+    envvar="NA_ETL_EXPECTED_DATE",
+    help="Required latest date for critical inputs (YYYY-MM-DD)",
+)
+def validate_freshness(expected_date):
+    """Block publication when CBOT or PTAX data is absent or stale."""
+    from .freshness import CriticalFreshnessError, validate_critical_freshness
+
+    required = expected_date.date() if expected_date else None
+    try:
+        report = validate_critical_freshness(required)
+    except CriticalFreshnessError as exc:
+        raise click.ClickException(str(exc)) from exc
+
+    click.echo(f"Expected date: {report.expected_date}")
+    for row in report.indicators:
+        click.echo(f"{row.label}: {row.latest_date}")
+
+
 @cli.command("list")
 @click.option("--category", default=None, help="Filter by category")
 @click.option("--detail", is_flag=True, help="Show source, frequency, and description")
@@ -256,15 +281,22 @@ def basis(commodity, force):
 @click.option("--skip-basis", is_flag=True, help="Skip basis rebuild step")
 @click.option("--skip-export", is_flag=True, help="Skip CSV export step")
 @click.option("--skip-charts", is_flag=True, help="Skip chart generation step")
-def daily(commodity, category, skip_basis, skip_export, skip_charts):
+@click.option(
+    "--expected-date",
+    type=click.DateTime(formats=["%Y-%m-%d"]),
+    envvar="NA_ETL_EXPECTED_DATE",
+    help="Required latest date for critical inputs (YYYY-MM-DD)",
+)
+def daily(commodity, category, skip_basis, skip_export, skip_charts, expected_date):
     """Daily update: scrape latest prices, export CSVs, rebuild basis, regenerate charts.
 
     \b
-    Runs four steps in order:
+    Runs five steps in order:
       1. Update — scrape latest ~10 days from all indicators
-      2. Export  — regenerate CSV files from Parquet
-      3. Basis   — rebuild basis (physical - futures) time series
-      4. Charts  — regenerate Plotly visualizations
+      2. Freshness — verify CBOT and PTAX dates
+      3. Export  — regenerate CSV files from Parquet
+      4. Basis   — rebuild basis (physical - futures) time series
+      5. Charts  — regenerate Plotly visualizations
 
     \b
     Examples:
@@ -280,13 +312,19 @@ def daily(commodity, category, skip_basis, skip_export, skip_charts):
         skip_export=skip_export,
         skip_basis=skip_basis,
         skip_charts=skip_charts,
+        expected_date=expected_date.date() if expected_date else None,
     )
 
     click.echo("=" * 60)
-    click.echo("Step 1/4: Updating prices (scraping latest pages)...")
+    click.echo("Step 1/5: Updating prices (scraping latest pages)...")
     click.echo("=" * 60)
 
-    summary = DailyPipeline(cfg).run()
+    from .freshness import CriticalFreshnessError
+
+    try:
+        summary = DailyPipeline(cfg).run()
+    except (pipeline.UpdateFailed, CriticalFreshnessError) as exc:
+        raise click.ClickException(str(exc)) from exc
 
     if summary.update_summary is not None:
         u = summary.update_summary
@@ -295,35 +333,41 @@ def daily(commodity, category, skip_basis, skip_export, skip_charts):
             f"{u.error_count} errors, {u.total_records:,} records scraped."
         )
 
+    if summary.freshness_report is not None:
+        click.echo(
+            f"Step 2/5: Critical inputs fresh through "
+            f"{summary.freshness_report.expected_date}."
+        )
+
     if "export" in summary.steps_run:
         click.echo("\n" + "=" * 60)
-        click.echo("Step 2/4: Exporting CSVs from Parquet...")
+        click.echo("Step 3/5: Exporting CSVs from Parquet...")
         click.echo("=" * 60)
         click.echo(f"CSV export complete ({', '.join(summary.csvs_exported)}).")
     else:
-        click.echo("\nStep 2/4: Skipped CSV export.")
+        click.echo("\nStep 3/5: Skipped CSV export.")
 
     if "basis" in summary.steps_run:
         click.echo("\n" + "=" * 60)
-        click.echo("Step 3/4: Rebuilding basis time series...")
+        click.echo("Step 4/5: Rebuilding basis time series...")
         click.echo("=" * 60)
         for label, count in sorted(summary.basis_summary.items()):
             status_str = f"{count:>10,} rows" if count > 0 else "   skipped"
             click.echo(f"  {label:<20} {status_str}")
         click.echo(f"  {'TOTAL':<20} {summary.basis_total_rows:>10,} rows")
     else:
-        click.echo("\nStep 3/4: Skipped basis rebuild.")
+        click.echo("\nStep 4/5: Skipped basis rebuild.")
 
     if "charts" in summary.steps_run:
         click.echo("\n" + "=" * 60)
-        click.echo("Step 4/4: Regenerating Plotly charts...")
+        click.echo("Step 5/5: Regenerating Plotly charts...")
         click.echo("=" * 60)
         chart_summary = summary.chart_summary or {}
         for pair_label, viz_paths in sorted(chart_summary.items()):
             produced = sum(1 for p in viz_paths.values() if p is not None)
             click.echo(f"  {pair_label:<20} {produced}/{len(viz_paths)} viz produced")
     else:
-        click.echo("\nStep 4/4: Skipped chart regeneration.")
+        click.echo("\nStep 5/5: Skipped chart regeneration.")
 
     click.echo()
     click.echo("Daily update complete.")

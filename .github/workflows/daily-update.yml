@@ -4,10 +4,19 @@ name: Daily Update
 on:
   schedule:
     - cron: "0 22 * * 1-5"
-  workflow_dispatch: {} # allows manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      expected_date:
+        description: "Expected latest source date (YYYY-MM-DD). Use for holidays only."
+        required: false
+        type: string
 
 permissions:
   contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: true
 
 jobs:
   update:
@@ -55,10 +64,18 @@ jobs:
 
       # ── 3. Run the daily update ───────────────────────────────
       #    Step 1: scrape latest prices (all 158 indicators)
-      #    Step 2: export CSVs from Parquet
-      #    Step 3: rebuild basis time series
+      #    Step 2: validate critical source dates
+      #    Step 3: export CSVs from Parquet
+      #    Step 4: rebuild basis time series
       - name: Run daily update
         run: na-etl daily
+        env:
+          NA_ETL_EXPECTED_DATE: ${{ inputs.expected_date }}
+
+      - name: Validate critical data freshness
+        run: na-etl validate-freshness
+        env:
+          NA_ETL_EXPECTED_DATE: ${{ inputs.expected_date }}
 
       - name: Show summary
         run: |
