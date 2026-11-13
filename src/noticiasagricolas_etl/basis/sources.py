@@ -16,6 +16,7 @@ import pandas as pd
 
 from ..config import PARQUET_DIR
 from .locations import indicator_location, normalize_and_aggregate, normalize_location
+from .quote_quality import filter_physical_outliers
 
 logger = logging.getLogger(__name__)
 
@@ -60,6 +61,7 @@ def load_physical_prices(
     conn: duckdb.DuckDBPyConnection,
     indicators: tuple[str, ...],
     commodity: str,
+    outlier_policy: str = "none",
 ) -> pd.DataFrame:
     """Load physical (mercado-físico / indicator) prices for one commodity-pair's source slugs.
 
@@ -71,8 +73,18 @@ def load_physical_prices(
     quote_rows = load_physical_quote_rows(conn, indicators, commodity)
     if quote_rows.empty:
         return pd.DataFrame(columns=empty_cols)
-
-    return normalize_and_aggregate(quote_rows)
+    valid_rows, blocked_rows = filter_physical_outliers(quote_rows, outlier_policy)
+    if not blocked_rows.empty:
+        logger.warning(
+            "Blocked %d physical quote outlier(s) for %s: %s",
+            len(blocked_rows),
+            commodity,
+            ", ".join(
+                f"{row.date} {row.location}={row.physical_price_brl}"
+                for row in blocked_rows.head(5).itertuples(index=False)
+            ),
+        )
+    return normalize_and_aggregate(valid_rows)
 
 
 def load_physical_quote_rows(

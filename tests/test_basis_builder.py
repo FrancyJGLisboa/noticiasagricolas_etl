@@ -688,12 +688,12 @@ class TestBuildAll:
 # ── Config helpers ───────────────────────────────────────────────────────────
 
 class TestBasisConfig:
-    def test_all_9_pairs_defined(self):
-        assert len(BASIS_PAIRS) == 9
+    def test_all_11_pairs_defined(self):
+        assert len(BASIS_PAIRS) == 11
 
     def test_get_pairs_filter(self):
         soja_pairs = get_pairs(["soja"])
-        assert len(soja_pairs) == 2
+        assert len(soja_pairs) == 3
         assert all(p.commodity == "soja" for p in soja_pairs)
 
     def test_get_pairs_no_filter(self):
@@ -715,12 +715,27 @@ class TestBasisConfig:
             assert isinstance(p.physical_indicators, tuple)
             assert len(p.physical_indicators) >= 1
 
-    def test_soja_has_two_physical_indicators(self):
+    def test_current_soja_pairs_keep_two_physical_indicators(self):
         soja_pairs = get_pairs(["soja"])
-        for p in soja_pairs:
+        for p in [pair for pair in soja_pairs if pair.physical_source != "imea"]:
             assert len(p.physical_indicators) == 2
             assert "soja-mercado-fisico-sindicatos-e-cooperativas" in p.physical_indicators
             assert "soja-mercado-fisico-ms" in p.physical_indicators
+
+    def test_imea_pairs_are_separate_and_attributed(self):
+        expected = {
+            "soja-imea-cbot": "soja-disponivel-imea",
+            "milho-imea-cbot": "milho-disponivel-imea",
+        }
+        pairs = {pair.label: pair for pair in BASIS_PAIRS}
+        for label, indicator in expected.items():
+            pair = pairs[label]
+            assert pair.physical_indicators == (indicator,)
+            assert pair.physical_source == "imea"
+            assert pair.source_name == "IMEA, via Notícias Agrícolas"
+            assert "noticiasagricolas.com.br" in pair.source_url
+            assert "imea.com.br" in pair.methodology_url
+            assert pair.outlier_policy == "cross_section_ratio"
 
     def test_b3_pairs_declare_contract_roll_policies(self):
         policies = {

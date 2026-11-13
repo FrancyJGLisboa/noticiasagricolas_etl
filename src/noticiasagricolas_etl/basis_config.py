@@ -10,6 +10,7 @@ ContractRollPolicy = Literal[
     "b3_icf",
     "b3_bgi",
 ]
+OutlierPolicy = Literal["none", "cross_section_ratio"]
 
 # Conversion constants (USDA/CME official)
 LB_PER_KG = 2.20462
@@ -46,9 +47,14 @@ class BasisPairConfig:
     # trigo=2.2046). Used to derive `basis_cents_bu` (CBOT-style ¢/bu quote).
     # None for non-grain commodities (algodão, café, boi gordo).
     contract_roll_policy: ContractRollPolicy = "nearest_available"
+    physical_source: str = "mercado-fisico"
+    source_name: str = "Notícias Agrícolas"
+    source_url: str = "https://www.noticiasagricolas.com.br/cotacoes/"
+    methodology_url: str = ""
+    outlier_policy: OutlierPolicy = "none"
 
 
-# ── 9 pair definitions ────────────────────────────────────────────────────────
+# ── 11 pair definitions ───────────────────────────────────────────────────────
 
 BASIS_PAIRS: list[BasisPairConfig] = [
     # 1. Soja B3: US$/sc60kg -> BRL/sc60kg (just currency)
@@ -82,6 +88,24 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         convert_futures=lambda fut, ptax: fut * BU_PER_SC_SOJA * ptax,
         bu_per_sc=BU_PER_SC_SOJA,
     ),
+    # IMEA remains a separate physical series. Never aggregate or splice it
+    # with the regional-market pair above.
+    BasisPairConfig(
+        commodity="soja",
+        physical_indicators=("soja-disponivel-imea",),
+        futures_indicator="soja-bolsa-de-chicago-cme-group",
+        label="soja-imea-cbot",
+        physical_unit="R$/sc60kg",
+        futures_unit="US$/bu",
+        needs_ptax=True,
+        convert_futures=lambda fut, ptax: fut * BU_PER_SC_SOJA * ptax,
+        bu_per_sc=BU_PER_SC_SOJA,
+        physical_source="imea",
+        source_name="IMEA, via Notícias Agrícolas",
+        source_url="https://www.noticiasagricolas.com.br/cotacoes/soja/soja-disponivel-imea",
+        methodology_url="https://www.imea.com.br/imea-site/view/uploads/metodologia/soja/SojaPreco.pdf",
+        outlier_policy="cross_section_ratio",
+    ),
     # 3. Milho B3: R$/sc60kg -> R$/sc60kg (direct, no conversion)
     BasisPairConfig(
         commodity="milho",
@@ -105,6 +129,22 @@ BASIS_PAIRS: list[BasisPairConfig] = [
         needs_ptax=True,
         convert_futures=lambda fut, ptax: fut * BU_PER_SC_CORN * ptax,
         bu_per_sc=BU_PER_SC_CORN,
+    ),
+    BasisPairConfig(
+        commodity="milho",
+        physical_indicators=("milho-disponivel-imea",),
+        futures_indicator="milho-bolsa-de-chicago-cme-group",
+        label="milho-imea-cbot",
+        physical_unit="R$/sc60kg",
+        futures_unit="US$/bu",
+        needs_ptax=True,
+        convert_futures=lambda fut, ptax: fut * BU_PER_SC_CORN * ptax,
+        bu_per_sc=BU_PER_SC_CORN,
+        physical_source="imea",
+        source_name="IMEA, via Notícias Agrícolas",
+        source_url="https://www.noticiasagricolas.com.br/cotacoes/milho/milho-disponivel-imea",
+        methodology_url="https://www.imea.com.br/imea-site/view/uploads/metodologia/milho/MilhoPreco.pdf",
+        outlier_policy="cross_section_ratio",
     ),
     # 5. Trigo CBOT: US$/bu -> BRL/sc60kg (unit + currency)
     BasisPairConfig(

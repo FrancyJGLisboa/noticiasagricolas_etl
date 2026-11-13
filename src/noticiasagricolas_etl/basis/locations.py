@@ -29,6 +29,16 @@ _PORT_PATTERNS: list[tuple[re.Pattern, str]] = [
 
 # Bare city names from soja-mercado-fisico-ms (no state code attached upstream).
 _BARE_CITY_STATE: dict[str, str] = {
+    "Alto Araguaia": "MT",
+    "Campo Verde": "MT",
+    "Canarana": "MT",
+    "Diamantino": "MT",
+    "Lucas do Rio Verde": "MT",
+    "Primavera do Leste": "MT",
+    "Rondonópolis": "MT",
+    "Sapezal": "MT",
+    "Sorriso": "MT",
+    "Tangará da Serra": "MT",
     "Paranaguá": "PR",
     "Maringá": "PR",
     "Campo Grande": "MS",

@@ -38,6 +38,11 @@ BASIS_SCHEMA = pa.schema([
     ("basis_usd_adj", pa.float64()),
     ("basis_centavos_sc_adj", pa.float64()),
     ("basis_cents_bu_adj", pa.float64()),
+    ("basis_pair", pa.string()),
+    ("physical_source", pa.string()),
+    ("source_name", pa.string()),
+    ("source_url", pa.string()),
+    ("methodology_url", pa.string()),
 ])
 
 
@@ -57,6 +62,7 @@ def export_basis_csv(commodity: str, df: pd.DataFrame) -> Path:
     """Write basis DataFrame to data/csv/basis-{commodity}.csv."""
     CSV_DIR.mkdir(parents=True, exist_ok=True)
     path = CSV_DIR / f"basis-{commodity}.csv"
-    df.to_csv(path, index=False)
+    ordered_columns = [field.name for field in BASIS_SCHEMA]
+    df.loc[:, ordered_columns].to_csv(path, index=False)
     logger.info("Exported basis CSV: %s (%d rows)", path, len(df))
     return path

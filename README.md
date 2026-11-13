@@ -194,6 +194,20 @@ Adjusted levels are analytical series for changes, swings, and anomaly detection
 They are not prices that a market participant traded.
 Current-level percentiles must continue to use the unadjusted basis columns.
 
+### IMEA physical-price series
+
+The ETL publishes `soja-imea-cbot` and `milho-imea-cbot` as independent series. It never averages, joins, or extends them with another physical-price source. Every output row carries `basis_pair`, `physical_source`, `source_name`, `source_url`, and `methodology_url`.
+
+IMEA defines this indicator as the available purchase price paid to producers. Values exclude tax discounts and use R$/60 kg bag. Collection occurs daily after the CBOT close. IMEA calculates a municipal average after it removes outliers. The required attribution is [IMEA](https://www.imea.com.br/), via [Notícias Agrícolas](https://www.noticiasagricolas.com.br/cotacoes/).
+
+Before any basis, percentile, or route calculation, the ETL applies a second defensive check to IMEA rows. For each source date, it blocks positive values outside 0.5 to 2 times the cross-location median when at least three locations exist. It records the count, rule, and examples in `quote-quality.csv`. It does not correct the source value. This rule blocks Campo Verde soybean at R$ 1,399.01 on 2026-11-05.
+
+Run the independent source-ref validation with:
+
+```text
+uv run python scripts/validate_imea_series.py --git-ref origin/data
+```
+
 ---
 
 ## Auth (REST API only)

@@ -18,6 +18,7 @@ from .basis import (
     compute_basis_columns,
     export_basis_csv,
     export_quote_quality_csv,
+    filter_physical_outliers,
     load_futures_prices,
     load_physical_prices,
     load_physical_quote_rows,
@@ -44,7 +45,12 @@ def build_pair(
     against the joined frame. Returns the wide BASIS_SCHEMA DataFrame; empty
     if any source slice is empty.
     """
-    physical = load_physical_prices(conn, config.physical_indicators, config.commodity)
+    physical = load_physical_prices(
+        conn,
+        config.physical_indicators,
+        config.commodity,
+        outlier_policy=config.outlier_policy,
+    )
     futures_raw = load_futures_prices(conn, config.futures_indicator, config.commodity)
     front_month = select_front_month(
         futures_raw,
@@ -93,22 +99,35 @@ def build_all(
     for commodity, dfs in commodity_dfs.items():
         combined = pd.concat(dfs, ignore_index=True)
         combined = combined.sort_values(
-            ["date", "futures_indicator", "location"]
+            ["date", "basis_pair", "location"]
         ).reset_index(drop=True)
         write_basis_parquet(commodity, combined)
         export_basis_csv(commodity, combined)
 
-        indicators = tuple(dict.fromkeys(
-            indicator
-            for pair in pairs
-            if pair.commodity == commodity
-            for indicator in pair.physical_indicators
-        ))
-        quotes = load_physical_quote_rows(conn, indicators, commodity)
-        for snapshot_date in combined.groupby("futures_indicator")["date"].max().unique():
-            quality_frames.append(
-                summarize_quote_quality(quotes, commodity, snapshot_date)
+        for pair in [item for item in pairs if item.commodity == commodity]:
+            pair_basis = combined[combined["basis_pair"] == pair.label]
+            if pair_basis.empty:
+                continue
+            quotes = load_physical_quote_rows(
+                conn,
+                pair.physical_indicators,
+                commodity,
             )
+            valid_quotes, blocked_quotes = filter_physical_outliers(
+                quotes,
+                pair.outlier_policy,
+            )
+            quality_frames.append(summarize_quote_quality(
+                valid_quotes,
+                commodity,
+                pair_basis["date"].max(),
+                basis_pair=pair.label,
+                physical_source=pair.physical_source,
+                source_name=pair.source_name,
+                source_url=pair.source_url,
+                methodology_url=pair.methodology_url,
+                blocked_rows=blocked_quotes,
+            ))
 
     if processed_commodities:
         export_quote_quality_csv(quality_frames, processed_commodities)

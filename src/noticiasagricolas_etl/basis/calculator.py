@@ -186,6 +186,8 @@ def compute_basis_columns(
         "futures_price_raw", "futures_price_brl", "ptax",
         "basis_brl", "basis_usd", "basis_pct",
         "basis_centavos_sc", "basis_cents_bu",
+        "basis_pair", "physical_source", "source_name", "source_url",
+        "methodology_url",
     ]
 
     if physical.empty:
@@ -248,6 +250,11 @@ def compute_basis_columns(
         merged["basis_cents_bu"] = np.nan
 
     merged["futures_indicator"] = config.futures_indicator
+    merged["basis_pair"] = config.label
+    merged["physical_source"] = config.physical_source
+    merged["source_name"] = config.source_name
+    merged["source_url"] = config.source_url
+    merged["methodology_url"] = config.methodology_url
 
     result = merged[columns].copy()
     return result.sort_values(["date", "location"]).reset_index(drop=True)

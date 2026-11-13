@@ -44,6 +44,12 @@ PAIR_DISPLAY: dict[str, PairDisplay] = {
         yaxis="Basis (¢/bu)",
         short_unit="¢/bu",
     ),
+    "soja-imea-cbot": PairDisplay(
+        column="basis_cents_bu",
+        title="Soja IMEA — Basis vs CBOT",
+        yaxis="Basis (¢/bu)",
+        short_unit="¢/bu",
+    ),
     "milho-b3": PairDisplay(
         column="basis_brl",
         title="Milho — Basis vs B3",
@@ -53,6 +59,12 @@ PAIR_DISPLAY: dict[str, PairDisplay] = {
     "milho-cbot": PairDisplay(
         column="basis_cents_bu",
         title="Milho — Basis vs CBOT",
+        yaxis="Basis (¢/bu)",
+        short_unit="¢/bu",
+    ),
+    "milho-imea-cbot": PairDisplay(
+        column="basis_cents_bu",
+        title="Milho IMEA — Basis vs CBOT",
         yaxis="Basis (¢/bu)",
         short_unit="¢/bu",
     ),
@@ -120,6 +132,7 @@ def historical_value_column(pair: BasisPairConfig, df: pd.DataFrame) -> tuple[st
 
 PRACA_COORDS: dict[str, tuple[float, float]] = {
     "Alto Garças/MT": (-16.9408, -53.5269),
+    "Alto Araguaia/MT": (-17.3153, -53.2181),
     "Amambai/MS": (-23.1031, -55.2253),
     "Assis/SP": (-22.6614, -50.4119),
     "Brasília/DF": (-15.7942, -47.8822),
@@ -127,13 +140,16 @@ PRACA_COORDS: dict[str, tuple[float, float]] = {
     "Cafelândia/PR": (-24.6175, -53.5644),
     "Campinas/SP": (-22.9099, -47.0626),
     "Campo Grande/MS": (-20.4486, -54.6295),
+    "Campo Verde/MT": (-15.5450, -55.1626),
     "Campo Novo do Parecis/MT": (-13.6750, -57.8919),
     "Campos Gerais/MG": (-21.2336, -45.7589),
     "Cascavel/PR": (-24.9558, -53.4553),
     "Castro/PR": (-24.7903, -50.0119),
     "Chapadão do Sul/MS": (-18.7864, -52.6261),
     "Cândido Mota/SP": (-22.7475, -50.3878),
+    "Canarana/MT": (-13.5515, -52.2705),
     "Dourados/MS": (-22.2231, -54.8056),
+    "Diamantino/MT": (-14.4089, -56.4458),
     "Eldorado/MS": (-23.7889, -54.2839),
     "Esp. Sto. do Pinhal/SP": (-22.1908, -46.7464),
     "Franca/SP": (-20.5386, -47.4006),
@@ -143,6 +159,7 @@ PRACA_COORDS: dict[str, tuple[float, float]] = {
     "Itiquira/MT": (-17.2061, -54.1456),
     "Jataí/GO": (-17.8814, -51.7256),
     "Londrina/PR": (-23.3045, -51.1696),
+    "Lucas do Rio Verde/MT": (-13.0583, -55.9042),
     "Luís Eduardo Magalhães/BA": (-12.0908, -45.8022),
     "Machado/MG": (-21.6736, -45.9229),
     "Maracaju/MS": (-21.6139, -55.1683),
@@ -168,6 +185,7 @@ PRACA_COORDS: dict[str, tuple[float, float]] = {
     "Rio Verde/GO": (-17.7969, -50.9264),
     "Rio do Sul/SC": (-27.2150, -49.6428),
     "Rondonópolis/MT": (-16.4706, -54.6358),
+    "Sapezal/MT": (-13.5403, -58.8133),
     "Sidrolândia/MS": (-20.9322, -54.9608),
     "Sonora/MS": (-17.5778, -54.7569),
     "Sorriso/MT": (-12.5447, -55.7211),
@@ -188,7 +206,7 @@ def pick_value_column(pair: BasisPairConfig) -> str:
 
 
 def load_pair_data(pair: BasisPairConfig) -> pd.DataFrame:
-    """Load materialized basis Parquet filtered to this pair's futures indicator.
+    """Load materialized basis Parquet filtered to the exact pair.
 
     Returns DataFrame with the chosen value column renamed to 'value' for uniform
     downstream handling. Empty DataFrame if no data exists.
@@ -198,7 +216,10 @@ def load_pair_data(pair: BasisPairConfig) -> pd.DataFrame:
         return pd.DataFrame()
 
     df = pd.read_parquet(parquet_path)
-    df = df[df["futures_indicator"] == pair.futures_indicator].copy()
+    if "basis_pair" in df.columns and df["basis_pair"].notna().any():
+        df = df[df["basis_pair"] == pair.label].copy()
+    else:
+        df = df[df["futures_indicator"] == pair.futures_indicator].copy()
     if df.empty:
         return df
 

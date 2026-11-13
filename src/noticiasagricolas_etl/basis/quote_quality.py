@@ -26,6 +26,14 @@ QUOTE_QUALITY_COLUMNS = [
     "quote_types",
     "physical_indicators",
     "source_labels",
+    "basis_pair",
+    "physical_source",
+    "source_name",
+    "source_url",
+    "methodology_url",
+    "blocked_outlier_count",
+    "outlier_rule",
+    "blocked_examples",
 ]
 
 _MONTH_YEAR = re.compile(
@@ -50,11 +58,54 @@ def classify_quote_type(source_label: str) -> str:
     return "unspecified"
 
 
+def filter_physical_outliers(
+    rows: pd.DataFrame,
+    policy: str = "none",
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Split valid quotes from source anomalies without correcting values.
+
+    The IMEA policy compares positive prices from the same indicator and date.
+    It needs at least three municipalities. A quote outside 0.5 to 2 times the
+    cross-sectional median is blocked before basis computation.
+    """
+    if rows.empty or policy == "none":
+        return rows.copy(), pd.DataFrame(columns=[*rows.columns, "blocked_reason"])
+    if policy != "cross_section_ratio":
+        raise ValueError(f"Unsupported physical outlier policy: {policy}")
+
+    working = rows.copy()
+    prices = pd.to_numeric(working["physical_price_brl"], errors="coerce")
+    working["_positive_price"] = prices.where(prices > 0)
+    grouped = working.groupby(
+        ["date", "physical_indicator"],
+        dropna=False,
+    )["_positive_price"]
+    medians = grouped.transform("median")
+    counts = grouped.transform("count")
+    ratios = prices / medians
+    blocked_mask = (
+        (counts >= 3)
+        & medians.notna()
+        & ((ratios < 0.5) | (ratios > 2.0))
+    )
+    valid = working.loc[~blocked_mask, rows.columns].reset_index(drop=True)
+    blocked = working.loc[blocked_mask, rows.columns].copy()
+    blocked["blocked_reason"] = "cross_section_ratio"
+    return valid, blocked.reset_index(drop=True)
+
+
 def summarize_quote_quality(
     rows: pd.DataFrame,
     commodity: str,
     snapshot_date: date | str,
     tolerance: float = 0.001,
+    *,
+    basis_pair: str = "",
+    physical_source: str = "mercado-fisico",
+    source_name: str = "Notícias Agrícolas",
+    source_url: str = "",
+    methodology_url: str = "",
+    blocked_rows: pd.DataFrame | None = None,
 ) -> pd.DataFrame:
     """Summarize individual quotes for one commodity and basis date."""
     if rows.empty:
@@ -68,6 +119,22 @@ def summarize_quote_quality(
         return pd.DataFrame(columns=QUOTE_QUALITY_COLUMNS)
 
     current["quote_type"] = current["source_label"].map(classify_quote_type)
+    blocked = blocked_rows if blocked_rows is not None else pd.DataFrame()
+    blocked_count = len(blocked)
+    blocked_reasons = (
+        "|".join(sorted(set(blocked["blocked_reason"].astype(str))))
+        if blocked_count and "blocked_reason" in blocked
+        else ""
+    )
+    examples: list[str] = []
+    if blocked_count:
+        ordered_blocked = blocked.copy()
+        ordered_blocked["date"] = pd.to_datetime(ordered_blocked["date"]).dt.date
+        ordered_blocked = ordered_blocked.sort_values(["date", "location"])
+        for row in ordered_blocked.head(5).itertuples(index=False):
+            examples.append(
+                f"{row.date.isoformat()} {row.location} {float(row.physical_price_brl):.2f}"
+            )
     records: list[dict] = []
     for location, group in current.groupby("location", sort=True):
         quote_types = sorted(set(group["quote_type"].astype(str)))
@@ -95,6 +162,14 @@ def summarize_quote_quality(
             "quote_types": "|".join(quote_types),
             "physical_indicators": "|".join(sorted(set(group["physical_indicator"].astype(str)))),
             "source_labels": "|".join(sorted(set(group["source_label"].astype(str)))),
+            "basis_pair": basis_pair,
+            "physical_source": physical_source,
+            "source_name": source_name,
+            "source_url": source_url,
+            "methodology_url": methodology_url,
+            "blocked_outlier_count": blocked_count,
+            "outlier_rule": blocked_reasons,
+            "blocked_examples": "|".join(examples),
         })
     return pd.DataFrame(records, columns=QUOTE_QUALITY_COLUMNS)
 
@@ -116,7 +191,9 @@ def export_quote_quality_csv(
     parts.extend(frame[QUOTE_QUALITY_COLUMNS] for frame in new_rows)
     combined = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=QUOTE_QUALITY_COLUMNS)
     if not combined.empty:
-        combined = combined.sort_values(["commodity", "date", "location"]).reset_index(drop=True)
+        combined = combined.sort_values(
+            ["commodity", "basis_pair", "date", "location"]
+        ).reset_index(drop=True)
     CSV_DIR.mkdir(parents=True, exist_ok=True)
     combined.to_csv(path, index=False)
     logger.info("Exported quote quality CSV: %s (%d rows)", path, len(combined))

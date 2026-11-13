@@ -9,6 +9,7 @@ from noticiasagricolas_etl.basis.quote_quality import (
     QUOTE_QUALITY_COLUMNS,
     classify_quote_type,
     export_quote_quality_csv,
+    filter_physical_outliers,
     summarize_quote_quality,
 )
 
@@ -59,6 +60,34 @@ def test_source_dispersion_preserves_mean_and_labels():
     assert row["source_labels"] == "A/MT (Fonte 1)|A/MT (Fonte 2)"
 
 
+def test_imea_cross_section_rule_blocks_extreme_price_without_correcting_it():
+    rows = pd.DataFrame([
+        quote("Campo Verde/MT", 1399.01, indicator="soja-disponivel-imea"),
+        quote("Canarana/MT", 131.25, indicator="soja-disponivel-imea"),
+        quote("Diamantino/MT", 136.35, indicator="soja-disponivel-imea"),
+        quote("Sorriso/MT", 135.10, indicator="soja-disponivel-imea"),
+    ])
+    valid, blocked = filter_physical_outliers(rows, "cross_section_ratio")
+    assert set(valid["location"]) == {"Canarana/MT", "Diamantino/MT", "Sorriso/MT"}
+    assert blocked[["location", "physical_price_brl", "blocked_reason"]].to_dict("records") == [{
+        "location": "Campo Verde/MT",
+        "physical_price_brl": 1399.01,
+        "blocked_reason": "cross_section_ratio",
+    }]
+
+
+def test_cross_section_rule_needs_three_prices_and_preserves_normal_spread():
+    two = pd.DataFrame([quote("A/MT", 100), quote("B/MT", 500)])
+    valid, blocked = filter_physical_outliers(two, "cross_section_ratio")
+    assert len(valid) == 2
+    assert blocked.empty
+
+    normal = pd.DataFrame([quote("A/MT", 100), quote("B/MT", 130), quote("C/MT", 180)])
+    valid, blocked = filter_physical_outliers(normal, "cross_section_ratio")
+    assert len(valid) == 3
+    assert blocked.empty
+
+
 def test_mixed_delivery_requires_explicit_spot_and_dated_labels():
     result = summarize([
         quote("Porto X/PR", 160, "Porto X (disponível)"),
@@ -102,6 +131,46 @@ def test_export_preserves_unprocessed_commodity(tmp_path, monkeypatch):
     result = export_quote_quality_csv([soy], {"soja"})
     assert list(result["commodity"]) == ["milho", "soja"]
     assert list(result.columns) == QUOTE_QUALITY_COLUMNS
+
+
+def test_quality_key_and_attribution_preserve_basis_series():
+    rows = pd.DataFrame([quote("Sorriso/MT", 135.1, indicator="soja-disponivel-imea")])
+    result = summarize_quote_quality(
+        rows,
+        "soja",
+        date(2026, 11, 11),
+        basis_pair="soja-imea-cbot",
+        physical_source="imea",
+        source_name="IMEA, via Notícias Agrícolas",
+        source_url="https://example.test/imea",
+        methodology_url="https://example.test/metodologia",
+    )
+    row = result.iloc[0]
+    assert row["basis_pair"] == "soja-imea-cbot"
+    assert row["physical_source"] == "imea"
+    assert row["source_name"] == "IMEA, via Notícias Agrícolas"
+    assert row["source_url"] == "https://example.test/imea"
+    assert row["methodology_url"] == "https://example.test/metodologia"
+
+
+def test_quality_explains_historical_outlier_block():
+    rows = pd.DataFrame([quote("Sorriso/MT", 135.1, indicator="soja-disponivel-imea")])
+    blocked = pd.DataFrame([{
+        **quote("Campo Verde/MT", 1399.01, indicator="soja-disponivel-imea", day=date(2026, 11, 5)),
+        "blocked_reason": "cross_section_ratio",
+    }])
+    result = summarize_quote_quality(
+        rows,
+        "soja",
+        date(2026, 11, 11),
+        basis_pair="soja-imea-cbot",
+        physical_source="imea",
+        blocked_rows=blocked,
+    )
+    row = result.iloc[0]
+    assert row["blocked_outlier_count"] == 1
+    assert row["outlier_rule"] == "cross_section_ratio"
+    assert "2026-11-05 Campo Verde/MT 1399.01" in row["blocked_examples"]
 
 
 def test_empty_processed_commodity_removes_stale_rows(tmp_path, monkeypatch):
