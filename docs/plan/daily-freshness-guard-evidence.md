@@ -1,6 +1,6 @@
 # Evidência: proteção de atualização e frescor diário
 
-Status: `IMPLEMENTED_WITH_UPSTREAM_ACCESS_BLOCKED`
+Status: `COMPLETE_WITH_UPSTREAM_ACCESS_BLOCKED`
 
 ## Resultado
 
@@ -18,6 +18,7 @@ Status: `IMPLEMENTED_WITH_UPSTREAM_ACCESS_BLOCKED`
 | Zero registros interrompe a atualização | Engenharia | teste de pipeline vazio | PASS | não mede disponibilidade externa |
 | Dados atrasados bloqueiam etapas posteriores | Produto | teste do orquestrador e comando CLI | PASS | usa dias úteis sem calendário de feriados |
 | Publicação ocorre depois da validação | Engenharia | teste da ordem do workflow | PASS | não executa o GitHub Actions localmente |
+| Falha real não publica dados antigos | Produto | GitHub Actions `43454346390` | PASS | o provedor ainda bloqueia o runner |
 | Fonte atual alcança 12/11/2026 | Produto | coleta e parse ao vivo dos três indicadores | PASS | executado fora do GitHub Actions |
 | Dependências sem vulnerabilidades conhecidas | Engenharia | `uvx pip-audit` | PASS | depende da base pública do auditor |
 
@@ -37,6 +38,17 @@ uv run python -m compileall -q src tests
 
 uvx pip-audit
 # No known vulnerabilities found
+
+gh run view 43454346390 --log
+# Update complete: 0 ok, 158 errors, 0 total records
+# Error: 158 indicator fetches failed; first error contains HTTP 403
+# freshness, release and data publication: skipped
+
+git log -1 origin/data
+# 6287ab2 data: 2026-11-13, publicado antes da execução bloqueada
+
+gh release view data-latest
+# publishedAt: 2026-11-13T15:08:25Z, sem substituição pela execução bloqueada
 
 # Coleta ao vivo com os parsers do projeto:
 # expected=2026-11-12 fresh=True
