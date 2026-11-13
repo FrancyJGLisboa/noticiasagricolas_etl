@@ -15,7 +15,7 @@ import duckdb
 import pandas as pd
 
 from ..config import PARQUET_DIR
-from .locations import indicator_location, normalize_and_aggregate
+from .locations import indicator_location, normalize_and_aggregate, normalize_location
 
 logger = logging.getLogger(__name__)
 
@@ -67,16 +67,42 @@ def load_physical_prices(
     physical_price_brl) with location names already normalized and same-day
     duplicates averaged.
     """
-    parquet_path = PARQUET_DIR / f"commodity={commodity}" / "data.parquet"
     empty_cols = ["date", "location", "state", "physical_indicator", "physical_price_brl"]
-    if not parquet_path.exists():
+    quote_rows = load_physical_quote_rows(conn, indicators, commodity)
+    if quote_rows.empty:
         return pd.DataFrame(columns=empty_cols)
 
+    return normalize_and_aggregate(quote_rows)
+
+
+def load_physical_quote_rows(
+    conn: duckdb.DuckDBPyConnection,
+    indicators: tuple[str, ...],
+    commodity: str,
+) -> pd.DataFrame:
+    """Load individual physical rows while preserving their source labels.
+
+    The function uses the same source filters and unit conversion as
+    ``load_physical_prices``. It does not average rows with the same canonical
+    location. Consumers can inspect the quotes behind the published mean.
+    """
+    parquet_path = PARQUET_DIR / f"commodity={commodity}" / "data.parquet"
+    columns = [
+        "date",
+        "location",
+        "state",
+        "physical_indicator",
+        "physical_price_brl",
+        "source_label",
+    ]
+    if not parquet_path.exists():
+        return pd.DataFrame(columns=columns)
+
     frames: list[pd.DataFrame] = []
-    for indicator in indicators:
+    for indicator in dict.fromkeys(indicators):
         df = conn.execute("""
             SELECT date, indicator AS physical_indicator, location, state,
-                   value AS physical_price_brl
+                   value AS physical_price_brl, location AS source_label
             FROM read_parquet(?)
             WHERE indicator = ?
               AND measure = 'price'
@@ -89,8 +115,6 @@ def load_physical_prices(
             df["date"] = pd.to_datetime(df["date"]).dt.date
             frames.append(df)
 
-        # Indicator-only rows (no location) — assign a synthetic location so
-        # the basis join pattern still works.
         df_ind = conn.execute("""
             SELECT date, indicator AS physical_indicator,
                    value AS physical_price_brl
@@ -106,13 +130,21 @@ def load_physical_prices(
             df_ind["date"] = pd.to_datetime(df_ind["date"]).dt.date
             df_ind["location"] = indicator_location(indicator)
             df_ind["state"] = None
+            df_ind["source_label"] = df_ind["location"]
             frames.append(df_ind)
 
     if not frames:
-        return pd.DataFrame(columns=empty_cols)
+        return pd.DataFrame(columns=columns)
 
     combined = pd.concat(frames, ignore_index=True)
-    return normalize_and_aggregate(combined)
+    kg_mask = combined["location"].str.contains(r"\(kg\)", na=False)
+    combined.loc[kg_mask, "physical_price_brl"] *= 15.0
+    combined = combined[combined["physical_price_brl"] > 0].copy()
+    combined["location"] = combined["location"].apply(normalize_location)
+
+    from ..normalize import extract_state
+    combined["state"] = combined["location"].apply(extract_state)
+    return combined[columns].reset_index(drop=True)
 
 
 def load_futures_prices(

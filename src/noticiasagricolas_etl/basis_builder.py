@@ -17,10 +17,13 @@ from .basis import (
     add_roll_adjustments,
     compute_basis_columns,
     export_basis_csv,
+    export_quote_quality_csv,
     load_futures_prices,
     load_physical_prices,
+    load_physical_quote_rows,
     load_ptax,
     select_front_month,
+    summarize_quote_quality,
     write_basis_parquet,
 )
 from .basis.sources import parquet_exists
@@ -85,6 +88,8 @@ def build_all(
         if not df.empty:
             commodity_dfs.setdefault(pair.commodity, []).append(df)
 
+    quality_frames: list[pd.DataFrame] = []
+    processed_commodities = {pair.commodity for pair in pairs if parquet_exists(pair.commodity)}
     for commodity, dfs in commodity_dfs.items():
         combined = pd.concat(dfs, ignore_index=True)
         combined = combined.sort_values(
@@ -92,6 +97,21 @@ def build_all(
         ).reset_index(drop=True)
         write_basis_parquet(commodity, combined)
         export_basis_csv(commodity, combined)
+
+        indicators = tuple(dict.fromkeys(
+            indicator
+            for pair in pairs
+            if pair.commodity == commodity
+            for indicator in pair.physical_indicators
+        ))
+        quotes = load_physical_quote_rows(conn, indicators, commodity)
+        for snapshot_date in combined.groupby("futures_indicator")["date"].max().unique():
+            quality_frames.append(
+                summarize_quote_quality(quotes, commodity, snapshot_date)
+            )
+
+    if processed_commodities:
+        export_quote_quality_csv(quality_frames, processed_commodities)
 
     conn.close()
     return summary

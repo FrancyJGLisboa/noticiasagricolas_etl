@@ -65,11 +65,15 @@ def setup_dirs(tmp_path, monkeypatch):
     parquet_dir.mkdir()
     basis_dir = tmp_path / "parquet_basis"
     basis_dir.mkdir()
+    csv_dir = tmp_path / "csv"
+    csv_dir.mkdir()
     monkeypatch.setattr("noticiasagricolas_etl.config.PARQUET_DIR", parquet_dir)
     monkeypatch.setattr("noticiasagricolas_etl.config.PARQUET_BASIS_DIR", basis_dir)
     # Patch the names where they're actually looked up at call-time
     monkeypatch.setattr("noticiasagricolas_etl.basis.sources.PARQUET_DIR", parquet_dir)
     monkeypatch.setattr("noticiasagricolas_etl.basis.output.PARQUET_BASIS_DIR", basis_dir)
+    monkeypatch.setattr("noticiasagricolas_etl.basis.output.CSV_DIR", csv_dir)
+    monkeypatch.setattr("noticiasagricolas_etl.basis.quote_quality.CSV_DIR", csv_dir)
     return parquet_dir, basis_dir
 
 
@@ -648,6 +652,13 @@ class TestBuildAll:
         # Only milho pairs should be in summary
         assert "milho-b3" in summary
         assert "soja-b3" not in summary
+        quality = pd.read_csv(parquet_dir.parent / "csv" / "quote-quality.csv")
+        assert quality[["commodity", "date", "location", "classification"]].to_dict("records") == [{
+            "commodity": "milho",
+            "date": "2025-03-10",
+            "location": "Campinas/SP",
+            "classification": "single",
+        }]
 
     def test_writes_parquet_output(self, setup_dirs):
         """build_all writes Parquet files to parquet_basis directory."""

@@ -157,6 +157,23 @@ The agent quotes it; no prompt-engineering needed for narrative output.
 
 Daily refresh: `na-etl daily` runs scrape → CSV export → basis rebuild → chart regen as one transactional sequence.
 
+### Daily quote quality snapshot
+
+Each basis rebuild also writes `data/csv/quote-quality.csv`.
+The file contains one row for each `(commodity, date, location)` needed by the latest rebuilt basis references.
+It preserves the number, minimum, maximum, mean, range, indicators, and raw labels behind each physical mean.
+
+`classification` uses four values:
+
+- `single`: one physical quote.
+- `consensus`: multiple quotes with the same value.
+- `source_dispersion`: multiple quotes with different values.
+- `mixed_delivery`: source labels explicitly contain both a spot quote and a dated delivery quote.
+
+The ETL does not infer delivery terms from an unspecified label.
+A filtered commodity build replaces that commodity and preserves the other commodity rows already in the file.
+Consumers must reject a row when its date or mean does not match the basis snapshot.
+
 ### Roll-adjusted basis columns
 
 Every `basis-*.csv` appends roll metadata and four adjusted basis columns.
